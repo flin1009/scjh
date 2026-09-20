@@ -27,13 +27,13 @@
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -94,7 +94,7 @@
     border-bottom: 1.5px solid #cbd8e6;
     padding-bottom: 4px;
     margin-bottom: 8px;
-    font-size: 8.5pt;
+    font-size: 10pt;
     font-weight: 700;
     color: #486581;
   }
@@ -107,7 +107,7 @@
     justify-content: space-between;
     border-top: 1px solid #e2e8f0;
     padding-top: 4px;
-    font-size: 8pt;
+    font-size: 9.5pt;
     color: #829ab1;
   }
 
@@ -123,7 +123,7 @@
   .q-head {
     display: flex;
     gap: 8px;
-    font-size: 8.5pt;
+    font-size: 10.5pt;
     margin-bottom: 4px;
   }
   .q-num {
@@ -136,7 +136,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    font-size: 8pt;
+    font-size: 10.5pt;
     flex-shrink: 0;
   }
   .q-stem {
@@ -149,7 +149,7 @@
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -161,7 +161,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 3px 10px;
     margin-left: 30px;
-    font-size: 8pt;
+    font-size: 10pt;
     margin-top: 4px;
   }
   .q-opt {
@@ -183,7 +183,7 @@
     position: absolute;
     top: 2px;
     right: 5px;
-    font-size: 7pt;
+    font-size: 9pt;
     color: #9fb3c8;
   }
 
@@ -194,7 +194,7 @@
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -206,11 +206,11 @@
   }
   .card-title {
     font-weight: 800;
-    font-size: 8.5pt;
+    font-size: 11pt;
     color: #2b4c7e;
   }
   .badge-stars {
-    font-size: 8pt;
+    font-size: 10pt;
     font-weight: 700;
     color: #c07d32;
     margin-left: 4px;
@@ -218,7 +218,7 @@
   .badge-pass {
     background: #334e68;
     color: #ffffff;
-    font-size: 7.5pt;
+    font-size: 9.5pt;
     padding: 1px 6px;
     border-radius: 10px;
     font-weight: 600;
@@ -226,7 +226,7 @@
   .badge-cat {
     background: #fef3e2;
     color: #a8581e;
-    font-size: 7pt;
+    font-size: 9.5pt;
     padding: 1px 5px;
     border-radius: 4px;
     font-weight: 700;
@@ -235,7 +235,7 @@
   }
   .card-body {
     padding: 5px 8px;
-    font-size: 8pt;
+    font-size: 10pt;
     line-height: 1.4;
   }
   .tech-box {
@@ -256,7 +256,7 @@
     background: #f8fafc;
     border-top: 1px dashed #d9e2ec;
     padding: 3px 8px;
-    font-size: 7pt;
+    font-size: 9.5pt;
     color: #486581;
   }
   .check-tags {
@@ -311,12 +311,49 @@
     border: 1px solid #cbd8e6;
     border-radius: 6px;
     padding: 15px 25px;
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #243342;
     text-align: left;
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級數學排版與字體 */
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 11pt;
+  }
+  .card-body {
+    font-size: 10pt;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -355,13 +392,13 @@
     <span>【試題破譯與題目任務】115年寫作測驗</span>
     <span>會考寫作題目深度解析</span>
   </div>
-  <div style="padding: 10px 5px; font-size: 8.5pt; line-height: 1.6;">
+  <div style="padding: 10px 5px; font-size: 10.5pt; line-height: 1.6;">
     <h3 style="color: #2b4c7e; font-size: 11pt; margin-top: 0;">題目任務：翻新事物、賦予新面貌（免訂題）</h3>
     <div style="background: #f0f4f8; border: 1px solid #cbd8e6; padding: 10px 14px; border-radius: 6px; margin-bottom: 12px;">
       請先閱讀以下資訊，並按題意要求完成一篇文章。<br>在日常生活中，有些事物只要加入巧思、翻新樣式、結合新元素……就可以呈現不同的面貌、開展出其他的用途。你想賦予什麼事物新面貌？又會怎麼做？請結合你的經驗或見聞，寫下對此的感受、想法。<br>※不必訂題　※不可在文中洩漏私人身分　※不可使用詩歌體
     </div>
     <div class="q-img" style="text-align: center;">
-      <img src="images/writing_prompt_115.png" style="max-height: 110mm; border: 1px solid #cbd8e6; border-radius: 4px; padding: 4px; background: #fff;" alt="寫作試題圖例">
+      <img src="images/writing_prompt_115.png" style="max-height: none; border: 1px solid #cbd8e6; border-radius: 4px; padding: 4px; background: #fff;" alt="寫作試題圖例">
     </div>
   </div>
   <div class="page-footer">
@@ -376,9 +413,9 @@
     <span>【評分規準與層次突破】115年寫作測驗</span>
     <span>4級分躍升5至6級分操作手冊</span>
   </div>
-  <div style="padding: 10px 5px; font-size: 8.5pt; line-height: 1.6;">
+  <div style="padding: 10px 5px; font-size: 10.5pt; line-height: 1.6;">
     <h3 style="color: #2b4c7e; font-size: 11pt; margin-top: 0;">📊 六級分評分規準關鍵指標對照</h3>
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 8pt;">
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 10pt;">
       <tr style="background: #eef3f9; color: #2b4c7e; border-bottom: 2px solid #cbd8e6;">
         <th style="padding: 6px; border: 1px solid #cbd8e6; width: 15%;">級分</th>
         <th style="padding: 6px; border: 1px solid #cbd8e6; width: 25%;">立意取材</th>

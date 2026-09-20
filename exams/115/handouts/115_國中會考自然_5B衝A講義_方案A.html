@@ -39,13 +39,13 @@ window.MathJax = {
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -106,7 +106,7 @@ window.MathJax = {
     border-bottom: 1.5px solid #cbd8e6;
     padding-bottom: 4px;
     margin-bottom: 8px;
-    font-size: 8.5pt;
+    font-size: 10pt;
     font-weight: 700;
     color: #486581;
   }
@@ -119,7 +119,7 @@ window.MathJax = {
     justify-content: space-between;
     border-top: 1px solid #e2e8f0;
     padding-top: 4px;
-    font-size: 8pt;
+    font-size: 9.5pt;
     color: #829ab1;
   }
 
@@ -135,7 +135,7 @@ window.MathJax = {
   .q-head {
     display: flex;
     gap: 8px;
-    font-size: 8.5pt;
+    font-size: 10.5pt;
     margin-bottom: 4px;
   }
   .q-num {
@@ -148,7 +148,7 @@ window.MathJax = {
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    font-size: 8pt;
+    font-size: 10.5pt;
     flex-shrink: 0;
   }
   .q-stem {
@@ -161,7 +161,7 @@ window.MathJax = {
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -173,7 +173,7 @@ window.MathJax = {
     grid-template-columns: repeat(2, 1fr);
     gap: 3px 10px;
     margin-left: 30px;
-    font-size: 8pt;
+    font-size: 10pt;
     margin-top: 4px;
   }
   .q-opt {
@@ -195,7 +195,7 @@ window.MathJax = {
     position: absolute;
     top: 2px;
     right: 5px;
-    font-size: 7pt;
+    font-size: 9pt;
     color: #9fb3c8;
   }
 
@@ -206,7 +206,7 @@ window.MathJax = {
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -218,11 +218,11 @@ window.MathJax = {
   }
   .card-title {
     font-weight: 800;
-    font-size: 8.5pt;
+    font-size: 11pt;
     color: #2b4c7e;
   }
   .badge-stars {
-    font-size: 8pt;
+    font-size: 10pt;
     font-weight: 700;
     color: #c07d32;
     margin-left: 4px;
@@ -230,7 +230,7 @@ window.MathJax = {
   .badge-pass {
     background: #334e68;
     color: #ffffff;
-    font-size: 7.5pt;
+    font-size: 9.5pt;
     padding: 1px 6px;
     border-radius: 10px;
     font-weight: 600;
@@ -238,7 +238,7 @@ window.MathJax = {
   .badge-cat {
     background: #fef3e2;
     color: #a8581e;
-    font-size: 7pt;
+    font-size: 9.5pt;
     padding: 1px 5px;
     border-radius: 4px;
     font-weight: 700;
@@ -247,7 +247,7 @@ window.MathJax = {
   }
   .card-body {
     padding: 5px 8px;
-    font-size: 8pt;
+    font-size: 10pt;
     line-height: 1.4;
   }
   .tech-box {
@@ -268,7 +268,7 @@ window.MathJax = {
     background: #f8fafc;
     border-top: 1px dashed #d9e2ec;
     padding: 3px 8px;
-    font-size: 7pt;
+    font-size: 9.5pt;
     color: #486581;
   }
   .check-tags {
@@ -323,12 +323,82 @@ window.MathJax = {
     border: 1px solid #cbd8e6;
     border-radius: 6px;
     padding: 15px 25px;
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #243342;
     text-align: left;
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級字體與自然圖片排版 */
+  .passage-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-left: 4px solid #2b4c7e;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0 12px 0;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #1e293b;
+  }
+  .passage-title {
+    font-weight: 800;
+    color: #1e3a8a;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #cbd5e1;
+  }
+  .passage-content {
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+  .passage-img {
+    text-align: center;
+    margin: 8px 0;
+  }
+  .passage-img img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 11pt;
+  }
+  .card-body {
+    font-size: 10pt;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -368,9 +438,9 @@ window.MathJax = {
     <span>【考前算牌矩陣】115年自然科</span>
     <span>衝 A 門檻與命題難度落點分佈</span>
   </div>
-  <div style="padding: 10px 5px; font-size: 8.5pt; line-height: 1.6;">
+  <div style="padding: 10px 5px; font-size: 10.5pt; line-height: 1.6;">
     <h3 style="color: #2b4c7e; margin-top: 0; font-size: 11pt;">📊 命題難度星級與各題分佈矩陣</h3>
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 8pt; text-align: center;">
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 10pt; text-align: center;">
       <thead>
         <tr style="background: #eef3f9; color: #2b4c7e; border-bottom: 2px solid #cbd8e6;">
           <th style="padding: 5px; border: 1px solid #cbd8e6;">難度星級</th>
@@ -488,17 +558,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 80.3%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -521,17 +591,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 86.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.38</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.38</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -554,17 +624,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 74.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -587,17 +657,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 82.3%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -659,7 +729,7 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">8</span>
-      <div class="q-stem">以下為裝設在學校的地震預警系統，預警流程簡述： <br>1. 地震發生後，設置在學校的地震儀接收到訊號。 <br>2. 估算出學校可能的震度，判斷是否發送警報。 <br>3. 在劇烈搖晃前，學校的跑馬燈警示強度幾級的震波將在幾秒後到達。 <br>某次地震發生後，某學校跑馬燈的警示如圖(六)。 <br> <br> <br> <br> <br> <br> <br>根據上述資訊，我們可以得知下列何者？</div>
+      <div class="q-stem">以下為裝設在學校的地震預警系統，預警流程簡述： <br>1. 地震發生後，設置在學校的地震儀接收到訊號。 <br>2. 估算出學校可能的震度，判斷是否發送警報。 <br>3. 在劇烈搖晃前，學校的跑馬燈警示強度幾級的震波將在幾秒後到達。 <br>某次地震發生後，某學校跑馬燈的警示如圖(六)。 <br><br>根據上述資訊，我們可以得知下列何者？</div>
     </div>
     <div class="q-img"><img src="images/nature_q8_1.jpeg" alt="題號 8 附圖"></div>
 
@@ -688,17 +758,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 76.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -721,17 +791,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 87.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.42</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.42</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -754,17 +824,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 63.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -787,17 +857,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 89.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.4</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.4</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -858,7 +928,7 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">12</span>
-      <div class="q-stem">下列實驗探討鹼的濃度對皂化反應的影響，步驟如下： <br>1. 準備四份30 g 的椰子油。 <br>2. 配製四杯同體積、不同濃度的氫氧化鈉溶液。 <br>3. 將四份椰子油分別都和固定量的乙醇混合，再加入上述的鹼，邊加熱邊攪拌直到溶液出現黏<br>稠狀態為止，並停止實驗。 <br>4. 將產物分離出來並測量其質量，結果如表(一)： <br> <br> <br> <br> <br>從上述資訊，是否可知道鹼的濃度與反應速率之關係？</div>
+      <div class="q-stem">下列實驗探討鹼的濃度對皂化反應的影響，步驟如下： <br>1. 準備四份30 g 的椰子油。 <br>2. 配製四杯同體積、不同濃度的氫氧化鈉溶液。 <br>3. 將四份椰子油分別都和固定量的乙醇混合，再加入上述的鹼，邊加熱邊攪拌直到溶液出現黏<br>稠狀態為止，並停止實驗。 <br>4. 將產物分離出來並測量其質量，結果如表(一)： <br><br>從上述資訊，是否可知道鹼的濃度與反應速率之關係？</div>
     </div>
     <div class="q-img"><img src="images/nature_q12_1.jpeg" alt="題號 12 附圖"></div>
 
@@ -887,17 +957,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 75.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -920,17 +990,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 62.1%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -953,17 +1023,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 66.7%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.55</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.55</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -986,17 +1056,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 63.3%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1035,7 +1105,7 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">14</span>
-      <div class="q-stem">小芳連續14 天朝南方觀察住家附近的月相，其中第8 天到第14 天的月相如圖(九)。 <br> <br> <br> <br> <br> <br> <br>根據觀察結果，下列何者最可能是他前7 天所觀察到的月相變化？</div>
+      <div class="q-stem">小芳連續14 天朝南方觀察住家附近的月相，其中第8 天到第14 天的月相如圖(九)。 <br><br>根據觀察結果，下列何者最可能是他前7 天所觀察到的月相變化？</div>
     </div>
     <div class="q-img"><img src="images/nature_q14_1.jpeg" alt="題號 14 附圖"></div>
 <div class="q-img"><img src="images/nature_q14_2.jpeg" alt="題號 14 附圖"></div>
@@ -1057,7 +1127,7 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">16</span>
-      <div class="q-stem">小忠被室友大勇的打鼾聲吵得無法入眠，因此決定用手機量測大勇睡著時的打鼾聲，以實際數<br>據來呈現此問題，其過程如圖(十)： <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>以上對話中「……」處小忠說出下列哪一句話，最符合他想呈現的問題？</div>
+      <div class="q-stem">小忠被室友大勇的打鼾聲吵得無法入眠，因此決定用手機量測大勇睡著時的打鼾聲，以實際數<br>據來呈現此問題，其過程如圖(十)： <br><br>以上對話中「……」處小忠說出下列哪一句話，最符合他想呈現的問題？</div>
     </div>
     <div class="q-img"><img src="images/nature_q16_1.jpeg" alt="題號 16 附圖"></div>
 
@@ -1086,17 +1156,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 56.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.65</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.65</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">棋盤方格與生理流程圖：先判斷顯隱性特徵（有中生無或無中生有），鎖定基因型比例。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">棋盤方格與生理流程圖：先判斷顯隱性特徵（有中生無或無中生有），鎖定基因型比例。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆有性生殖與無性生殖之染色體套數變化。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆有性生殖與無性生殖之染色體套數變化。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1119,17 +1189,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 80.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.41</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.41</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1152,17 +1222,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 46.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.4</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.4</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1185,17 +1255,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 69.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1285,17 +1355,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 67.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1318,17 +1388,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 60.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1351,17 +1421,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 65.7%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1384,17 +1454,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 51.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.33</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.33</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1484,17 +1554,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 55.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.34</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.34</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1517,17 +1587,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 62.7%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1550,17 +1620,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 60.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.51</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.51</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1583,17 +1653,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 56.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.62</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.62</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1683,17 +1753,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 52.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1716,17 +1786,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 44.3%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.61</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.61</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1749,17 +1819,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 56.1%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1782,17 +1852,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 55.1%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1882,17 +1952,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 53.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.36</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.36</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1915,17 +1985,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 51.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.65</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.65</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1948,17 +2018,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 58.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.55</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.55</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1981,17 +2051,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 38.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.33</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.33</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2081,17 +2151,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 45.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.37</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.37</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2114,17 +2184,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 46.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2147,17 +2217,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 43.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2180,17 +2250,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 45.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.69</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.69</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2281,17 +2351,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 41.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2314,17 +2384,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 41.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2347,17 +2417,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 41.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2380,17 +2450,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 26.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.22</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.22</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2427,13 +2497,17 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列敘述後，回答42～43題</div>
+  <div class="passage-img"><img src="images/nature_passage_q42_q43_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q42_q43_2.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">42</span>
       <div class="q-stem">圖(二十七)中，造成兩種結果差異的其他原因，最可能為下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q42_q43_1.jpeg" alt="題號 42 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q42_q43_2.jpeg" alt="題號 42 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 該市酸雨的發生機率高，超過50%</div><div class="q-opt"><span class="opt-label">(B)</span> 環保署與該市環保局對於酸雨的定義不同</div><div class="q-opt"><span class="opt-label">(C)</span> 環保署所測出的該市雨水pH 值太接近5.0</div><div class="q-opt"><span class="opt-label">(D)</span> 單一測站的測量結果會與多個測站平均值有差異</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2444,19 +2518,23 @@ window.MathJax = {
       <span class="q-num">43</span>
       <div class="q-stem">將表(三)的資料分成甲、乙兩組，最可能是想用來了解下列哪一個問題？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q42_q43_1.jpeg" alt="題號 43 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q42_q43_2.jpeg" alt="題號 43 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 位於東北季風迎、背風面是否會影響判定酸雨的標準</div><div class="q-opt"><span class="opt-label">(B)</span> 位於東北季風迎、背風面是否會影響雨水pH 值的平均</div><div class="q-opt"><span class="opt-label">(C)</span> 各地區雨水pH 值的平均高低是否影響酸雨發生的機率</div><div class="q-opt"><span class="opt-label">(D)</span> 各地區雨水pH 值的平均高低是否影響人為汙染物的種類</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列敘述後，回答44～45題</div>
+  <div class="passage-img"><img src="images/nature_passage_q44_q45_1.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">44</span>
       <div class="q-stem">根據本文，下列對圖(二十九)數據的敘述何者正確？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q44_q45_1.jpeg" alt="題號 44 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 0～1 時之間沒有發生蒸散作用</div><div class="q-opt"><span class="opt-label">(B)</span> 3～4 時之間沒有發生蒸散作用</div><div class="q-opt"><span class="opt-label">(C)</span> 12～13 時的平均蒸散速率為一天中最大值</div><div class="q-opt"><span class="opt-label">(D)</span> 6～7 時的平均蒸散速率較7～8 時的平均蒸散速率大</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2483,17 +2561,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 22.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.22</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.22</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2516,17 +2594,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 72.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2549,17 +2627,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 69.7%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2582,17 +2660,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 76.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2623,19 +2701,23 @@ window.MathJax = {
       <span class="q-num">45</span>
       <div class="q-stem">若依據暄暄的方式操作實驗，但將實驗裝置移至通風良好的乾燥室內放置兩天，則最不可能發<br>生下列哪一種情況？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q44_q45_1.jpeg" alt="題號 45 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 第一、二天記錄到的氣泡移動距離總和相近</div><div class="q-opt"><span class="opt-label">(B)</span> 在兩天的相同時段中，氣泡移動的距離相近</div><div class="q-opt"><span class="opt-label">(C)</span> 植物氣孔關閉減緩蒸散，使管中氣泡移動量很小</div><div class="q-opt"><span class="opt-label">(D)</span> 植物從氣孔吸收水分向下運輸，使管中氣泡向左移動</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列敘述後，回答46～47題</div>
+  <div class="passage-img"><img src="images/nature_passage_q46_q47_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q46_q47_2.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">46</span>
       <div class="q-stem">科學家想要觀察水滴以不同的速度，衝擊石英板時的變化情形，若不考慮空氣阻力，則他調整<br>下列哪一項實驗條件最合理？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q46_q47_1.jpeg" alt="題號 46 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q46_q47_2.jpeg" alt="題號 46 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 調整水滴的溫度，以改變水滴的密度</div><div class="q-opt"><span class="opt-label">(B)</span> 調整針頭的孔徑，以改變水滴的直徑與重量</div><div class="q-opt"><span class="opt-label">(C)</span> 調整針頭的高度，以改變水滴落下的垂直距離</div><div class="q-opt"><span class="opt-label">(D)</span> 調整攝影機的設定，以改變攝影機每秒拍攝畫面的張數</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2646,22 +2728,26 @@ window.MathJax = {
       <span class="q-num">47</span>
       <div class="q-stem">根據本文，已知石英板作用在水滴的力為F′，F′即F 的反作用力，則圖(三十一)中呈現的四個狀<br>態，哪一個狀態下F′的大小最大？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q46_q47_1.jpeg" alt="題號 47 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q46_q47_2.jpeg" alt="題號 47 附圖"></div>
+    
+
 <div class="q-img"><img src="images/nature_q47_1.jpeg" alt="題號 47 附圖"></div>
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> </div><div class="q-opt"><span class="opt-label">(B)</span> </div><div class="q-opt"><span class="opt-label">(C)</span> </div><div class="q-opt"><span class="opt-label">(D)</span> </div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列敘述後，回答48～50題</div>
+  <div class="passage-img"><img src="images/nature_passage_q48_q50_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q48_q50_2.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q48_q50_3.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">48</span>
       <div class="q-stem">組別一、四通入針筒內的兩種氣體，可依序使用下列何種反應來製備？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q48_q50_1.jpeg" alt="題號 48 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q48_q50_2.jpeg" alt="題號 48 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q48_q50_3.jpeg" alt="題號 48 附圖"></div>
+    
+
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 鹽酸和鎂帶反應、雙氧水分解反應</div><div class="q-opt"><span class="opt-label">(B)</span> 鹽酸和鎂帶反應、鹽酸和碳酸鈣反應</div><div class="q-opt"><span class="opt-label">(C)</span> 雙氧水分解反應、鹽酸和鎂帶反應</div><div class="q-opt"><span class="opt-label">(D)</span> 雙氧水分解反應、鹽酸和碳酸鈣反應</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2688,17 +2774,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 63.1%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2721,17 +2807,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 64.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2754,17 +2840,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 49.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2787,17 +2873,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 59.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.64</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.64</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2828,9 +2914,9 @@ window.MathJax = {
       <span class="q-num">49</span>
       <div class="q-stem">若忽略針筒內鐵粉所占去的體積，試判斷組別二針筒內的氧氣是否完全耗盡？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q48_q50_1.jpeg" alt="題號 49 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q48_q50_2.jpeg" alt="題號 49 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q48_q50_3.jpeg" alt="題號 49 附圖"></div>
+    
+
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 全耗盡，消耗氣體比例等於氧氣含量</div><div class="q-opt"><span class="opt-label">(B)</span> 全耗盡，消耗氣體比例已超過氧氣含量</div><div class="q-opt"><span class="opt-label">(C)</span> 未耗盡，消耗氣體比例高於氧氣含量的2 3</div><div class="q-opt"><span class="opt-label">(D)</span> 未耗盡，消耗氣體比例接近氧氣含量的一半</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2841,9 +2927,9 @@ window.MathJax = {
       <span class="q-num">50</span>
       <div class="q-stem">依據活性大小，判斷組別四針筒內的鐵粉理論上是否與氣體發生氧化還原反應？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q48_q50_1.jpeg" alt="題號 50 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q48_q50_2.jpeg" alt="題號 50 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q48_q50_3.jpeg" alt="題號 50 附圖"></div>
+    
+
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 因鐵的活性較小，故鐵粉不會被氧化</div><div class="q-opt"><span class="opt-label">(B)</span> 因鐵的活性較小，反應後鐵粉會被氧化</div><div class="q-opt"><span class="opt-label">(C)</span> 因鐵的活性較小，反應後氣體會被氧化</div><div class="q-opt"><span class="opt-label">(D)</span> 因鐵的活性較大，反應後鐵粉會被氧化</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2870,17 +2956,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 37.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2903,17 +2989,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 41.6%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
       </div>
     </div>
     <div class="note-grid">

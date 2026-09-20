@@ -39,13 +39,13 @@ window.MathJax = {
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -106,7 +106,7 @@ window.MathJax = {
     border-bottom: 1.5px solid #cbd8e6;
     padding-bottom: 4px;
     margin-bottom: 8px;
-    font-size: 8.5pt;
+    font-size: 10pt;
     font-weight: 700;
     color: #486581;
   }
@@ -119,7 +119,7 @@ window.MathJax = {
     justify-content: space-between;
     border-top: 1px solid #e2e8f0;
     padding-top: 4px;
-    font-size: 8pt;
+    font-size: 9.5pt;
     color: #829ab1;
   }
 
@@ -135,7 +135,7 @@ window.MathJax = {
   .q-head {
     display: flex;
     gap: 8px;
-    font-size: 8.5pt;
+    font-size: 10.5pt;
     margin-bottom: 4px;
   }
   .q-num {
@@ -148,7 +148,7 @@ window.MathJax = {
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    font-size: 8pt;
+    font-size: 10.5pt;
     flex-shrink: 0;
   }
   .q-stem {
@@ -161,7 +161,7 @@ window.MathJax = {
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -173,7 +173,7 @@ window.MathJax = {
     grid-template-columns: repeat(2, 1fr);
     gap: 4px 12px;
     margin-left: 30px;
-    font-size: 8pt;
+    font-size: 10pt;
     margin-top: 5px;
   }
   .q-opt {
@@ -197,7 +197,7 @@ window.MathJax = {
     position: absolute;
     top: 2px;
     right: 5px;
-    font-size: 7pt;
+    font-size: 9pt;
     color: #9fb3c8;
   }
 
@@ -208,7 +208,7 @@ window.MathJax = {
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -220,11 +220,11 @@ window.MathJax = {
   }
   .card-title {
     font-weight: 800;
-    font-size: 8.5pt;
+    font-size: 11pt;
     color: #2b4c7e;
   }
   .badge-stars {
-    font-size: 8pt;
+    font-size: 10pt;
     font-weight: 700;
     color: #c07d32;
     margin-left: 4px;
@@ -232,7 +232,7 @@ window.MathJax = {
   .badge-pass {
     background: #334e68;
     color: #ffffff;
-    font-size: 7.5pt;
+    font-size: 9.5pt;
     padding: 1px 6px;
     border-radius: 10px;
     font-weight: 600;
@@ -240,7 +240,7 @@ window.MathJax = {
   .badge-cat {
     background: #fef3e2;
     color: #a8581e;
-    font-size: 7pt;
+    font-size: 9.5pt;
     padding: 1px 5px;
     border-radius: 4px;
     font-weight: 700;
@@ -249,7 +249,7 @@ window.MathJax = {
   }
   .card-body {
     padding: 5px 8px;
-    font-size: 8pt;
+    font-size: 10pt;
     line-height: 1.4;
   }
   .tech-box {
@@ -270,7 +270,7 @@ window.MathJax = {
     background: #f8fafc;
     border-top: 1px dashed #d9e2ec;
     padding: 3px 8px;
-    font-size: 7pt;
+    font-size: 9.5pt;
     color: #486581;
   }
   .check-tags {
@@ -325,12 +325,49 @@ window.MathJax = {
     border: 1px solid #cbd8e6;
     border-radius: 6px;
     padding: 15px 25px;
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #243342;
     text-align: left;
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級數學排版與字體 */
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 11pt;
+  }
+  .card-body {
+    font-size: 10pt;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -370,9 +407,9 @@ window.MathJax = {
     <span>【考前算牌矩陣】114年數學科</span>
     <span>衝 A 門檻與命題難度落點分佈</span>
   </div>
-  <div style="padding: 10px 5px; font-size: 8.5pt; line-height: 1.6;">
+  <div style="padding: 10px 5px; font-size: 10.5pt; line-height: 1.6;">
     <h3 style="color: #2b4c7e; margin-top: 0; font-size: 11pt;">📊 命題難度星級與各題分佈矩陣</h3>
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 8pt; text-align: center;">
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 10pt; text-align: center;">
       <thead>
         <tr style="background: #eef3f9; color: #2b4c7e; border-bottom: 2px solid #cbd8e6;">
           <th style="padding: 5px; border: 1px solid #cbd8e6;">難度星級</th>
@@ -480,18 +517,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 84.5%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.52</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.52</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：底數相同時，乘法指數相加、除法指數相減：$a^m \times a^n = a^{m+n}$，$a^m \div a^n = a^{m-n}$。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：指數直接心算：$10 + 2 - 4 = 8$，故答案為 $7^8$，秒選 (C)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：底數相同時，乘法指數相加、除法指數相減：$a^m \times a^n = a^{m+n}$，$a^m \div a^n = a^{m-n}$。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：指數直接心算：$10 + 2 - 4 = 8$，故答案為 $7^8$，秒選 (C)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 學生常誤把底數 7 拿去乘除（算成 $49$ 或其他數字），或是誤將乘除視為指數相乘除（誤算成 $10 \times 2 \div 4 = 5$ 選 B）。記住：同底相乘指數加，同底相除指數減！</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 學生常誤把底數 7 拿去乘除（算成 $49$ 或其他數字），或是誤將乘除視為指數相乘除（誤算成 $10 \times 2 \div 4 = 5$ 選 B）。記住：同底相乘指數加，同底相除指數減！</div>
       </div>
     </div>
     <div class="note-grid">
@@ -514,18 +551,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 83.1%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.51</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.51</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：括號前是負號，去括號時**每一項都要變號**：$-(4 - 3x) = -4 + 3x$。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：去括號合併同類項：一次項為 $-2x - (-3x) = -2x + 3x = +x$，常數項為 $-4$。秒選 (B)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：括號前是負號，去括號時**每一項都要變號**：$-(4 - 3x) = -4 + 3x$。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：去括號合併同類項：一次項為 $-2x - (-3x) = -2x + 3x = +x$，常數項為 $-4$。秒選 (B)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 學生最容易去括號只變第一項符號，把 $-(-3x)$ 寫成 $-3x$ 導致算成 $-5x$ 而誤選 C 或 D。負負得正一定要檢查！</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 學生最容易去括號只變第一項符號，把 $-(-3x)$ 寫成 $-3x$ 導致算成 $-5x$ 而誤選 C 或 D。負負得正一定要檢查！</div>
       </div>
     </div>
     <div class="note-grid">
@@ -548,18 +585,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 77.2%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.54</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.54</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：擦去對稱軸兩側互相對應的線段，圖形仍保持對稱；若破壞對稱結構則不再對稱。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：觀察原圖的垂直與水平對稱軸：1 和 3 分別位於不同對稱位置，擦去後無法找到任何對稱軸，故選 (B)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：擦去對稱軸兩側互相對應的線段，圖形仍保持對稱；若破壞對稱結構則不再對稱。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：觀察原圖的垂直與水平對稱軸：1 和 3 分別位於不同對稱位置，擦去後無法找到任何對稱軸，故選 (B)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易只看水平或垂直對稱軸，忽略斜向對稱軸的可能性。動筆在方格紙上畫出對稱軸檢驗最保險。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易只看水平或垂直對稱軸，忽略斜向對稱軸的可能性。動筆在方格紙上畫出對稱軸檢驗最保險。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -636,18 +673,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 76.8%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.58</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.58</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：$+2y$ 與 $-2y$ 係數互為相反數，兩式直接相加消去 $y$。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：第(1)式 + 第(2)式：$(37+23)x = 81+39 \implies 60x = 120 \implies x = 2$ ($a=2$)。代入第(1)式：$74 + 2y = 81 \implies 2y = 7$ ($2b=7$)。所求 $a+2b = 2 + 7 = 9$？等一下，算清楚！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：$+2y$ 與 $-2y$ 係數互為相反數，兩式直接相加消去 $y$。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：第(1)式 + 第(2)式：$(37+23)x = 81+39 \implies 60x = 120 \implies x = 2$ ($a=2$)。代入第(1)式：$74 + 2y = 81 \implies 2y = 7$ ($2b=7$)。所求 $a+2b = 2 + 7 = 9$？等一下，算清楚！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">代入計算小心：$37(2) + 2y = 81 \implies 74 + 2y = 81 \implies 2y = 7$。題目問的是 $a+2b$，若問 $a+2b$ 就是 $2+7=9$？等等，讓我們先檢查會考官方答案！</div>
+        <div style="font-size: 10pt; line-height: 1.55;">代入計算小心：$37(2) + 2y = 81 \implies 74 + 2y = 81 \implies 2y = 7$。題目問的是 $a+2b$，若問 $a+2b$ 就是 $2+7=9$？等等，讓我們先檢查會考官方答案！</div>
       </div>
     </div>
     <div class="note-grid">
@@ -670,18 +707,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 74.2%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.55</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.55</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：利用三角形內角和等於 $180^\circ$ 或外角定理列式相加。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：在圖中標示的兩個三角形內角和分別為 $180^\circ$，相加後扣除已知角度即可秒殺得 $160$。</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：利用三角形內角和等於 $180^\circ$ 或外角定理列式相加。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：在圖中標示的兩個三角形內角和分別為 $180^\circ$，相加後扣除已知角度即可秒殺得 $160$。</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易將外角與相鄰內角搞混，直接標註各角度數最安全。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易將外角與相鄰內角搞混，直接標註各角度數最安全。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -704,18 +741,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 79.1%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.48</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.48</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：向右移動代表 $x$ 坐標增加（$x > -1$），向下移動代表 $y$ 坐標減少（$y < 2$）。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：檢查條件：$x > -1$ 且 $y < 2$。只有 $(4, 1)$ 同時滿足 $4 > -1$ 且 $1 < 2$！秒選 (A)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：向右移動代表 $x$ 坐標增加（$x > -1$），向下移動代表 $y$ 坐標減少（$y < 2$）。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：檢查條件：$x > -1$ 且 $y < 2$。只有 $(4, 1)$ 同時滿足 $4 > -1$ 且 $1 < 2$！秒選 (A)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 學生容易把向右與向左（正負）、向上與向下搞混。記住：右正左負，上正下負！</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 學生容易把向右與向左（正負）、向上與向下搞混。記住：右正左負，上正下負！</div>
       </div>
     </div>
     <div class="note-grid">
@@ -792,18 +829,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 72.5%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.52</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.52</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：題眼：「**60 歲以上**」代表包含 60～69、70～79、80 歲以上各組數值直接加總！</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：找出 60 歲以上各長條數值並加總正負數，得到增加 207 萬人，選 (A)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：題眼：「**60 歲以上**」代表包含 60～69、70～79、80 歲以上各組數值直接加總！</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：找出 60 歲以上各長條數值並加總正負數，得到增加 207 萬人，選 (A)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易把 60 歲以下也加進去，或者看漏負號與柱狀圖組距邊界。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易把 60 歲以下也加進去，或者看漏負號與柱狀圖組距邊界。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -826,18 +863,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 71.0%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.56</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.56</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：乘法分配律：$(a + b) \times c = a \times c + b \times c$；根式乘法：$\sqrt{a} \times \sqrt{b} = \sqrt{ab}$。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：分配展開：$2\sqrt{3} \times \sqrt{2} + \sqrt{6} \times \sqrt{2} = 2\sqrt{6} + \sqrt{12} = 2\sqrt{6} + 2\sqrt{3}$？等等，原式是不是 $2\sqrt{3}$ 或 $2\sqrt{6}$？若化簡得 $4\sqrt{3}$，秒選 (A)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：乘法分配律：$(a + b) \times c = a \times c + b \times c$；根式乘法：$\sqrt{a} \times \sqrt{b} = \sqrt{ab}$。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：分配展開：$2\sqrt{3} \times \sqrt{2} + \sqrt{6} \times \sqrt{2} = 2\sqrt{6} + \sqrt{12} = 2\sqrt{6} + 2\sqrt{3}$？等等，原式是不是 $2\sqrt{3}$ 或 $2\sqrt{6}$？若化簡得 $4\sqrt{3}$，秒選 (A)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">根號乘法容易漏乘其中一項，或化簡 $\sqrt{12} = 2\sqrt{3}$ 時開根號算錯。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">根號乘法容易漏乘其中一項，或化簡 $\sqrt{12} = 2\sqrt{3}$ 時開根號算錯。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -860,18 +897,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 68.4%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.53</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.53</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：算清總共有幾個停車位、幾個下車區：20 個車位共需幾處共用下車區？</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：20 個車位有 $20 \times 200 = 4000$ 公分；共用下車區共 19 個（或含兩側），總計 $4000 + 19 \times 150 = 6850$ 公分，秒選 (A)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：算清總共有幾個停車位、幾個下車區：20 個車位共需幾處共用下車區？</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：20 個車位有 $20 \times 200 = 4000$ 公分；共用下車區共 19 個（或含兩側），總計 $4000 + 19 \times 150 = 6850$ 公分，秒選 (A)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">植樹問題盲點：20 個車位之間有 19 個間隔，容易多算或少算一個 150 公分。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">植樹問題盲點：20 個車位之間有 19 個間隔，容易多算或少算一個 150 公分。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -948,18 +985,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 65.2%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.57</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.57</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：平方差公式：$A^2 - B^2 = (A - B)(A + B)$。每一項都因式分解成兩數相乘！</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：(A) $102 \times 110 \times 106 \times 110$；(B) $104 \times 110 \times 106 \times 108$；比較各選項因數分解後乘積，(C) 與其他不同，秒選 (C)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：平方差公式：$A^2 - B^2 = (A - B)(A + B)$。每一項都因式分解成兩數相乘！</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：(A) $102 \times 110 \times 106 \times 110$；(B) $104 \times 110 \times 106 \times 108$；比較各選項因數分解後乘積，(C) 與其他不同，秒選 (C)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">千萬不要硬算展開大數字平方！看到平方差公式立刻因式分解成相乘形式比對。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">千萬不要硬算展開大數字平方！看到平方差公式立刻因式分解成相乘形式比對。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -982,18 +1019,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 63.6%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.54</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.54</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：兩人各蓋住 3 張牌，總共有 $3 \times 3 = 9$ 種等可能的翻牌組合。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：畫出 $3 \times 3$ 雙向表格，阿嘉大於小楊的情況數共有 6 種，機率 $= \frac{6}{9} = \frac{2}{3}$，秒選 (B)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：兩人各蓋住 3 張牌，總共有 $3 \times 3 = 9$ 種等可能的翻牌組合。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：畫出 $3 \times 3$ 雙向表格，阿嘉大於小楊的情況數共有 6 種，機率 $= \frac{6}{9} = \frac{2}{3}$，秒選 (B)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 考生常以為總共有 25 種情況，忽略題目指定「只從自己蓋住的 3 張牌中翻開」，分母是 $3 \times 3 = 9$。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 考生常以為總共有 25 種情況，忽略題目指定「只從自己蓋住的 3 張牌中翻開」，分母是 $3 \times 3 = 9$。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1016,18 +1053,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 61.2%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.56</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.56</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：正三角錐由一個正三角形底面與三個全等的等腰三角形側面圍成，且側面頂點需能在立體空間閉合（側稜在底面正投影長度需大於底面中心到頂點距離）。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：由三角錐立體高必須為實數（高平方 $> 0$），檢驗兩人側稜長度，小博側稜夠長能閉合，阿林太短無法組成立體，故選 (D)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：正三角錐由一個正三角形底面與三個全等的等腰三角形側面圍成，且側面頂點需能在立體空間閉合（側稜在底面正投影長度需大於底面中心到頂點距離）。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：由三角錐立體高必須為實數（高平方 $> 0$），檢驗兩人側稜長度，小博側稜夠長能閉合，阿林太短無法組成立體，故選 (D)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易只看平面三角形是否能構成，忘記三角錐立體「側邊長必須大於底面外接圓半徑」的空間幾何限制。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易只看平面三角形是否能構成，忘記三角錐立體「側邊長必須大於底面外接圓半徑」的空間幾何限制。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1104,18 +1141,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 60.2%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.55</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.55</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：平方數性質：任何實數的平方必大於或等於 0。若平方等於負數，則無實數解！</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：甲：$(x-4)^2 = 9 > 0 \implies x - 4 = \pm 3$（兩相異解）；乙：$(x+9)^2 = -4 < 0$（無實數解）。秒選 (A)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：平方數性質：任何實數的平方必大於或等於 0。若平方等於負數，則無實數解！</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：甲：$(x-4)^2 = 9 > 0 \implies x - 4 = \pm 3$（兩相異解）；乙：$(x+9)^2 = -4 < 0$（無實數解）。秒選 (A)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 學生常誤把 $(x+9)^2 = -4$ 硬開根號寫成 $\pm 2$ 或 $-2$，記住國中階段負數不能開根號，平方等於負數必「無解」！</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 學生常誤把 $(x+9)^2 = -4$ 硬開根號寫成 $\pm 2$ 或 $-2$，記住國中階段負數不能開根號，平方等於負數必「無解」！</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1138,18 +1175,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 57.3%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.59</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.59</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：設早餐組合售出 $x$ 套，則單賣咖啡有 $120 - x$ 杯，單賣三明治有 $100 - x$ 個，依總收入列式求解。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：依菜單單價列出一元一次方程式求解 $x$，算出早餐組合套數後乘以單價即可得到收入落於 4500～4599 元，選 (C)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：設早餐組合售出 $x$ 套，則單賣咖啡有 $120 - x$ 杯，單賣三明治有 $100 - x$ 個，依總收入列式求解。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：依菜單單價列出一元一次方程式求解 $x$，算出早餐組合套數後乘以單價即可得到收入落於 4500～4599 元，選 (C)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">長篇情境題容易慌張，冷靜列出未知數 $x$ 是一元一次方程式，計算量極小。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">長篇情境題容易慌張，冷靜列出未知數 $x$ 是一元一次方程式，計算量極小。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1172,18 +1209,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 55.2%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.61</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.61</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：令每段長度為 1 單位，利用絕對值為原點距離的幾何性質代入反推原點位置。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：設原點距離各點位置，由 $|a|+|b|=|e|$ 推導出原點必在 $\overline{BC}$ 上且更靠近 $C$ 點，選 (B)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：令每段長度為 1 單位，利用絕對值為原點距離的幾何性質代入反推原點位置。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：設原點距離各點位置，由 $|a|+|b|=|e|$ 推導出原點必在 $\overline{BC}$ 上且更靠近 $C$ 點，選 (B)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 考生常對抽象代數點心生恐懼，只要在數線上假設每段等長為 1，令原點坐標為 $x$ 代入絕對值即可破題。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 考生常對抽象代數點心生恐懼，只要在數線上假設每段等長為 1，令原點坐標為 $x$ 代入絕對值即可破題。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1263,18 +1300,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 54.0%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.58</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.58</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：由 $\overline{EF} // \overline{BC}$ 得比例線段：$\overline{AE} : \overline{EB} = \overline{AF} : \overline{FC} = 7 : 3$。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：設 $\overline{AB} = 10$，則 $\overline{AE} = 7, \overline{EB} = 3$。中點 $D$ 處 $\overline{AD} = 5$，故 $\overline{DE} = 7 - 5 = 2$。比較 $\overline{DE} = 2 < \overline{EB} = 3$；再檢驗比例不相等故不平行，秒選 (D)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：由 $\overline{EF} // \overline{BC}$ 得比例線段：$\overline{AE} : \overline{EB} = \overline{AF} : \overline{FC} = 7 : 3$。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：設 $\overline{AB} = 10$，則 $\overline{AE} = 7, \overline{EB} = 3$。中點 $D$ 處 $\overline{AD} = 5$，故 $\overline{DE} = 7 - 5 = 2$。比較 $\overline{DE} = 2 < \overline{EB} = 3$；再檢驗比例不相等故不平行，秒選 (D)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 考生常被多條線段搞得眼花撩亂，直接假設具體長度（令 $\overline{AB} = 10$）標在圖上，10 秒心算出答案！</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 考生常被多條線段搞得眼花撩亂，直接假設具體長度（令 $\overline{AB} = 10$）標在圖上，10 秒心算出答案！</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1297,18 +1334,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 52.1%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.62</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.62</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：利用標示角度構造 $30^\circ-60^\circ-90^\circ$ 特殊直角三角形，邊長比為 $1 : \sqrt{3} : 2$。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：由三角比推導螺紋深度與螺紋間距比值，答案必含 $\sqrt{3}$，排除 A、B；精確比值計算得 $\frac{5\sqrt{3}}{16}$，選 (D)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：利用標示角度構造 $30^\circ-60^\circ-90^\circ$ 特殊直角三角形，邊長比為 $1 : \sqrt{3} : 2$。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：由三角比推導螺紋深度與螺紋間距比值，答案必含 $\sqrt{3}$，排除 A、B；精確比值計算得 $\frac{5\sqrt{3}}{16}$，選 (D)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易將對邊與鄰邊搞混，先在圖上標出直角與角度再列式。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易將對邊與鄰邊搞混，先在圖上標出直角與角度再列式。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1331,18 +1368,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 51.1%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.6</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.6</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：三數的最大公因數必能整除兩數的最大公因數（$\gcd(a,b,c) \le \gcd(a,b) = 11$）；三數的最小公倍數必為兩數最小公倍數的倍數（$\operatorname{lcm}(a,b,c) \ge \operatorname{lcm}(a,b) = 88$）。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：「公因數只會越取越小，公倍數只會越取越大！」所以甲說比 11 大必錯，乙說比 88 小必錯，兩人皆錯誤，秒選 (B)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：三數的最大公因數必能整除兩數的最大公因數（$\gcd(a,b,c) \le \gcd(a,b) = 11$）；三數的最小公倍數必為兩數最小公倍數的倍數（$\operatorname{lcm}(a,b,c) \ge \operatorname{lcm}(a,b) = 88$）。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：「公因數只會越取越小，公倍數只會越取越大！」所以甲說比 11 大必錯，乙說比 88 小必錯，兩人皆錯誤，秒選 (B)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">很多 5B 學生被文字繞暈。口訣牢記：加入新數字後，最大公因數「不增」，最小公倍數「不減」！</div>
+        <div style="font-size: 10pt; line-height: 1.55;">很多 5B 學生被文字繞暈。口訣牢記：加入新數字後，最大公因數「不增」，最小公倍數「不減」！</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1419,18 +1456,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 49.8%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.63</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.63</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：對比單買與套餐價格，利用套餐組合省錢最大化，再將剩餘預算全買爆米花。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：先滿足 16 人的票和飲料基本需求，搭配雙人套餐或個人套餐找出最低總花費，剩餘金額除以爆米花單價求最大整數，得最多 5 盒，選 (C)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：對比單買與套餐價格，利用套餐組合省錢最大化，再將剩餘預算全買爆米花。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：先滿足 16 人的票和飲料基本需求，搭配雙人套餐或個人套餐找出最低總花費，剩餘金額除以爆米花單價求最大整數，得最多 5 盒，選 (C)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易全部用單點價格計算導致花費過高，一定要看清楚套餐優惠組合。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易全部用單點價格計算導致花費過高，一定要看清楚套餐優惠組合。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1453,18 +1490,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 48.1%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.64</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.64</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：摺疊前後對應角相等；平角 $180^\circ$ 摺入後平分，因此 $\angle 3 + \angle 4 = 90^\circ$；大邊對大角判斷角度大小。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：摺疊重疊於平角線上，兩倍角和為 $180^\circ \implies \angle 3 + \angle 4 = 90^\circ$（先排除 C、D）；再利用 $\overline{BE} > \overline{FE}$ 大邊對大角，秒選 (A)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：摺疊前後對應角相等；平角 $180^\circ$ 摺入後平分，因此 $\angle 3 + \angle 4 = 90^\circ$；大邊對大角判斷角度大小。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：摺疊重疊於平角線上，兩倍角和為 $180^\circ \implies \angle 3 + \angle 4 = 90^\circ$（先排除 C、D）；再利用 $\overline{BE} > \overline{FE}$ 大邊對大角，秒選 (A)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">五邊形摺疊看似複雜，只要抓住「摺疊前後完全全等」與「直線平角 $180^\circ$ 被平分」兩個定理即可破解。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">五邊形摺疊看似複雜，只要抓住「摺疊前後完全全等」與「直線平角 $180^\circ$ 被平分」兩個定理即可破解。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1487,18 +1524,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 46.2%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.65</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.65</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：原頂點在 $(-7, 12)$，拋物線開口向下。拋物線向右移動時，對稱軸由 $x = -7$ 移動到 $x = 3$（經過 $y$ 軸）。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：拋物線開口朝下，頂點最高！向右移動時，頂點穿過 $y$ 軸，因此與 $y$ 軸交點先升到最高點（頂點 $12$）再下降，必為「先向上再向下」，秒選 (D)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：原頂點在 $(-7, 12)$，拋物線開口向下。拋物線向右移動時，對稱軸由 $x = -7$ 移動到 $x = 3$（經過 $y$ 軸）。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：拋物線開口朝下，頂點最高！向右移動時，頂點穿過 $y$ 軸，因此與 $y$ 軸交點先升到最高點（頂點 $12$）再下降，必為「先向上再向下」，秒選 (D)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">5B 學生常憑空想像而想反。動手畫一個開口朝下的拋物線由左往右平移，看著 $y$ 軸上的交點，一目了然！</div>
+        <div style="font-size: 10pt; line-height: 1.55;">5B 學生常憑空想像而想反。動手畫一個開口朝下的拋物線由左往右平移，看著 $y$ 軸上的交點，一目了然！</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1575,18 +1612,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 44.1%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.66</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.66</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：利用重心性質：重心與頂點連線切出面積比例（$\triangle ABG = \frac{1}{3}\triangle ABC$），再利用共角三角形面積比等於底邊比求解。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：$\triangle AEG = \frac{3}{7} \triangle ABG = \frac{3}{7} \times \frac{1}{3} = \frac{1}{7}$；又 $\triangle ADG = \frac{5}{2} \triangle AEG = \frac{5}{2} \times \frac{1}{7} \times \frac{1}{3}\dots = \frac{5}{21}$，秒選 (D)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：利用重心性質：重心與頂點連線切出面積比例（$\triangle ABG = \frac{1}{3}\triangle ABC$），再利用共角三角形面積比等於底邊比求解。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：$\triangle AEG = \frac{3}{7} \triangle ABG = \frac{3}{7} \times \frac{1}{3} = \frac{1}{7}$；又 $\triangle ADG = \frac{5}{2} \triangle AEG = \frac{5}{2} \times \frac{1}{7} \times \frac{1}{3}\dots = \frac{5}{21}$，秒選 (D)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">比例層層相扣容易眼花。在紙上標記各子三角形面積比例份數，逐一推算即可攻破難題！</div>
+        <div style="font-size: 10pt; line-height: 1.55;">比例層層相扣容易眼花。在紙上標記各子三角形面積比例份數，逐一推算即可攻破難題！</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1609,18 +1646,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 42.1%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.67</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.67</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：旋轉前後圖形全等：$\overline{AB} = \overline{AB'}$ 形成等腰三角形 $\triangle ABB'$；圓周角等於所對弧度數的一半。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：算出圓周其他各弧度數，利用等腰三角形頂角與底角關係求出旋轉角，扣除已知角得 $x = 37$，選 (D)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：旋轉前後圖形全等：$\overline{AB} = \overline{AB'}$ 形成等腰三角形 $\triangle ABB'$；圓周角等於所對弧度數的一半。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：算出圓周其他各弧度數，利用等腰三角形頂角與底角關係求出旋轉角，扣除已知角得 $x = 37$，選 (D)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易忽略旋轉半徑相等（$\overline{AB} = \overline{AB'}$）產生的等腰三角形性質。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易忽略旋轉半徑相等（$\overline{AB} = \overline{AB'}$）產生的等腰三角形性質。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1643,18 +1680,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 43.1%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.65</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.65</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：題眼：「**齒輪比越大，自行車踩起來越費力**」；齒輪比 $= \frac{\text{前齒輪}}{\text{後齒輪}}$。因此要找數值最大的齒輪比！</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：比較比值：(A) $\frac{33}{18} = 1.83$；(B) $\frac{33}{24} = 1.375$；(C) $\frac{22}{21} = 1.05$；(D) $\frac{44}{21} = 2.095$。顯然 (D) 的比值最大，最費力，秒選 (D)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：題眼：「**齒輪比越大，自行車踩起來越費力**」；齒輪比 $= \frac{\text{前齒輪}}{\text{後齒輪}}$。因此要找數值最大的齒輪比！</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：比較比值：(A) $\frac{33}{18} = 1.83$；(B) $\frac{33}{24} = 1.375$；(C) $\frac{22}{21} = 1.05$；(D) $\frac{44}{21} = 2.095$。顯然 (D) 的比值最大，最費力，秒選 (D)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">長篇素養閱讀別害怕！圈出核心定義式：分子越大、分母越小則分數越大。要最費力就是找前齒輪越大、後齒輪越小的選項。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">長篇素養閱讀別害怕！圈出核心定義式：分子越大、分母越小則分數越大。要最費力就是找前齒輪越大、後齒輪越小的選項。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1711,18 +1748,18 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 40.2%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.68</span>
+        <span style="font-size: 10pt; color: #718096; line-height: 1.55; margin-left: 4px;">鑑別度 0.68</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
         <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：表(一)前齒輪有：22、33、44；後齒輪有：12、14、16、18、21、24。檢查哪一個最簡分數能由多組搭配約分得到。</div>
-        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：檢驗 $\frac{11}{6}$：$\frac{22}{12} = \frac{11}{6}$、$\frac{33}{18} = \frac{11}{6}$、$\frac{44}{24} = \frac{11}{6}$，居然有高達 3 種組合！秒選 (A)！</div>
+        <div style="font-size: 10pt; line-height: 1.55; margin-bottom: 2px;"><strong>題眼</strong>：表(一)前齒輪有：22、33、44；後齒輪有：12、14、16、18、21、24。檢查哪一個最簡分數能由多組搭配約分得到。</div>
+        <div style="font-size: 10pt; color: #2d6a4f; line-height: 1.55;"><strong>秒殺</strong>：檢驗 $\frac{11}{6}$：$\frac{22}{12} = \frac{11}{6}$、$\frac{33}{18} = \frac{11}{6}$、$\frac{44}{24} = \frac{11}{6}$，居然有高達 3 種組合！秒選 (A)！</div>
       </div>
       <div class="trap-box">
         <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">找公倍數倍數擴分：前齒輪都是 11 的倍數 (2, 3, 4)，後齒輪對應看是否有 (12, 18, 24)，一眼就能抓出 (A) 有三種組合。</div>
+        <div style="font-size: 10pt; line-height: 1.55;">找公倍數倍數擴分：前齒輪都是 11 的倍數 (2, 3, 4)，後齒輪對應看是否有 (12, 18, 24)，一眼就能抓出 (A) 有三種組合。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1751,18 +1788,18 @@ window.MathJax = {
   <div class="q-item no-break" style="margin-bottom: 12px; padding-bottom: 8px;">
     <div class="q-head">
       <span class="q-num" style="background: #2b4c7e; color: #fff;">非選1</span>
-      <div class="q-stem" style="font-size: 8.5pt;"><strong>非選擇題 第一題：民調年齡結構與加權調整倍率</strong><br>某民調公司訪問 A 市的成年民眾對於某項政策的態度，並依年齡分成 3 組。因受訪者的年齡分布與全體成年人口的年齡分布有落差，於是利用「調整倍率」讓調整後的結果更接近全體的民意，如表(二)所示。<br>其中：<br>• 人口占比 $= \frac{\text{該組人口總數}}{\text{全體成年人口總數}} \times 100\%$<br>• 調查比率 $= \frac{\text{該組受訪者數}}{\text{所有受訪者數}} \times 100\%$<br>• 調整倍率 $= \frac{\text{該組人口占比}}{\text{該組調查比率}}$<br>• 調整後比率 $=$ 該組調整前比率 $\times$ 調整倍率<br><br>請根據上述資訊回答下列問題，完整寫出你的解題過程並詳細解釋：<br>(1) 計算 60 歲以上組的調整倍率為何？<br>(2) 求 40 ～ 59 歲組與 60 歲以上組的調整前贊成比率分別為何？</div>
+      <div class="q-stem" style="font-size: 10.5pt;"><strong>非選擇題 第一題：民調年齡結構與加權調整倍率</strong><br>某民調公司訪問 A 市的成年民眾對於某項政策的態度，並依年齡分成 3 組。因受訪者的年齡分布與全體成年人口的年齡分布有落差，於是利用「調整倍率」讓調整後的結果更接近全體的民意，如表(二)所示。<br>其中：<br>• 人口占比 $= \frac{\text{該組人口總數}}{\text{全體成年人口總數}} \times 100\%$<br>• 調查比率 $= \frac{\text{該組受訪者數}}{\text{所有受訪者數}} \times 100\%$<br>• 調整倍率 $= \frac{\text{該組人口占比}}{\text{該組調查比率}}$<br>• 調整後比率 $=$ 該組調整前比率 $\times$ 調整倍率<br><br>請根據上述資訊回答下列問題，完整寫出你的解題過程並詳細解釋：<br>(1) 計算 60 歲以上組的調整倍率為何？<br>(2) 求 40 ～ 59 歲組與 60 歲以上組的調整前贊成比率分別為何？</div>
     </div>
-    <div class="q-img"><img src="images/math_non_q1_1.jpeg" alt="非選擇題 第一題：民調年齡結構與加權調整倍率 附圖" style="max-height: 40mm;"></div>
+    <div class="q-img"><img src="images/math_non_q1_1.jpeg" alt="非選擇題 第一題：民調年齡結構與加權調整倍率 附圖" style="max-height: none;"></div>
     <div class="scratch-area" style="height: 28mm;"><span class="scratch-label">非選擇題作答草稿與書寫區</span></div>
   </div>
 
   <div class="q-item no-break" style="margin-bottom: 12px; padding-bottom: 8px;">
     <div class="q-head">
       <span class="q-num" style="background: #2b4c7e; color: #fff;">非選2</span>
-      <div class="q-stem" style="font-size: 8.5pt;"><strong>非選擇題 第二題：長方形藝術紙片相鄰密鋪</strong><br>商店中販賣一款包含 A、B 兩種圖案的藝術紙片組合包，形狀分別為 $16\text{ 公分} \times 5\text{ 公分}$、$18\text{ 公分} \times 5\text{ 公分}$ 的長方形，如圖(十七)所示。<br>小燦打算在不裁切紙片的情況下，將這兩種藝術紙片以緊密相鄰的方式貼成圖(十八)的長方形，其中奇數層為 A 圖案，偶數層為 B 圖案，且最後一層為 A 圖案，而相同圖案的藝術紙片皆為相同的方向。<br><br>請根據上述資訊回答下列問題，完整寫出你的解題過程並詳細解釋：<br>(1) 以上述方式貼成的長方形，第一層最少有幾個 A 圖案？<br>(2) 已知每個組合包中 A、B 兩種圖案的藝術紙片數量比為 4：3，若小燦想購買一些組合包，貼成圖(十八)的長方形，其中第一層的 A 圖案數量與 (1) 求出之值相同，判斷他是否可能恰好把購買的藝術紙片用完？請說明理由。</div>
+      <div class="q-stem" style="font-size: 10.5pt;"><strong>非選擇題 第二題：長方形藝術紙片相鄰密鋪</strong><br>商店中販賣一款包含 A、B 兩種圖案的藝術紙片組合包，形狀分別為 $16\text{ 公分} \times 5\text{ 公分}$、$18\text{ 公分} \times 5\text{ 公分}$ 的長方形，如圖(十七)所示。<br>小燦打算在不裁切紙片的情況下，將這兩種藝術紙片以緊密相鄰的方式貼成圖(十八)的長方形，其中奇數層為 A 圖案，偶數層為 B 圖案，且最後一層為 A 圖案，而相同圖案的藝術紙片皆為相同的方向。<br><br>請根據上述資訊回答下列問題，完整寫出你的解題過程並詳細解釋：<br>(1) 以上述方式貼成的長方形，第一層最少有幾個 A 圖案？<br>(2) 已知每個組合包中 A、B 兩種圖案的藝術紙片數量比為 4：3，若小燦想購買一些組合包，貼成圖(十八)的長方形，其中第一層的 A 圖案數量與 (1) 求出之值相同，判斷他是否可能恰好把購買的藝術紙片用完？請說明理由。</div>
     </div>
-    <div class="q-img"><img src="images/math_non_q2_1.jpeg" alt="非選擇題 第二題：長方形藝術紙片相鄰密鋪 附圖" style="max-height: 40mm;"></div>
+    <div class="q-img"><img src="images/math_non_q2_1.jpeg" alt="非選擇題 第二題：長方形藝術紙片相鄰密鋪 附圖" style="max-height: none;"></div>
     <div class="scratch-area" style="height: 28mm;"><span class="scratch-label">非選擇題作答草稿與書寫區</span></div>
   </div>
 
@@ -1785,10 +1822,10 @@ window.MathJax = {
         <span class="badge-cat" style="background: #2b4c7e; color: #fff; border: none;">滿分 3 分</span>
       </div>
       <div>
-        <span style="font-size: 7.5pt; color: #2d6a4f; font-weight: 700;">主題：統計加權倍率與二元一次方程式應用</span>
+        <span style="font-size: 9.5pt; color: #2d6a4f; font-weight: 700;">主題：統計加權倍率與二元一次方程式應用</span>
       </div>
     </div>
-    <div class="card-body" style="font-size: 7.5pt; line-height: 1.45;">
+    <div class="card-body" style="font-size: 9.5pt; line-height: 1.45;">
       <div style="background: #fbfcfd; border: 1px solid #cbd8e6; border-radius: 4px; padding: 6px; margin-bottom: 5px;">
         <div style="font-weight: 700; color: #2b4c7e; margin-bottom: 2px;">📝【官方滿分範例指引】</div>
         <div style="color: #243342; font-family: monospace, sans-serif;">【完整作答規範範例】<br>(1) <br>依據表格資料：<br>• 60 歲以上組的人口占比 $= 100\% - 40\% - 35\% = 25\%$<br>• 60 歲以上組的調查比率 $= 100\% - 20\% - 30\% = 50\%$<br>因此 60 歲以上組的調整倍率 $= \frac{25\%}{50\%} = 0.5$（或 $\frac{1}{2}$）。<br>答：0.5（或 $\frac{1}{2}$）<br><br>(2)<br>設 40～59 歲組調整前贊成比率為 $x\%$，60 歲以上組調整前贊成比率為 $y\%$。<br>• 40～59 歲組調整倍率 $= \frac{35\%}{30\%} = \frac{7}{6}$<br>依題意列出聯立方程式：<br>全體調整前贊成比率：$8\% + x\% + y\% = 48\% \implies x + y = 40$<br>全體調整後贊成比率：$16\% + \frac{7}{6}x\% + 0.5y\% = 46\% \implies \frac{7}{6}x + \frac{1}{2}y = 30$<br>同乘 6 得：$7x + 3y = 180$<br>將 $y = 40 - x$ 代入：$7x + 3(40 - x) = 180 \implies 4x + 120 = 180 \implies 4x = 60 \implies x = 15$<br>則 $y = 40 - 15 = 25$。<br>答：40～59 歲組調整前贊成比率為 15%，60 歲以上組為 25%。</div>
@@ -1812,10 +1849,10 @@ window.MathJax = {
         <span class="badge-cat" style="background: #2b4c7e; color: #fff; border: none;">滿分 3 分</span>
       </div>
       <div>
-        <span style="font-size: 7.5pt; color: #2d6a4f; font-weight: 700;">主題：最小公倍數、因數與偶數奇數層幾何拼接</span>
+        <span style="font-size: 9.5pt; color: #2d6a4f; font-weight: 700;">主題：最小公倍數、因數與偶數奇數層幾何拼接</span>
       </div>
     </div>
-    <div class="card-body" style="font-size: 7.5pt; line-height: 1.45;">
+    <div class="card-body" style="font-size: 9.5pt; line-height: 1.45;">
       <div style="background: #fbfcfd; border: 1px solid #cbd8e6; border-radius: 4px; padding: 6px; margin-bottom: 5px;">
         <div style="font-weight: 700; color: #2b4c7e; margin-bottom: 2px;">📝【官方滿分範例指引】</div>
         <div style="color: #243342; font-family: monospace, sans-serif;">【完整作答規範範例】<br>(1)<br>長方形每一層的長度皆相等。<br>奇數層由長度 16 公分的 A 紙片拼接，偶數層由長度 18 公分的 B 紙片拼接。<br>因此長方形的長必須同時為 16 與 18 的公倍數。<br>求 16 與 18 的最小公倍數：<br>$16 = 2^4$，$18 = 2 \times 3^2$<br>$\operatorname{lcm}(16, 18) = 2^4 \times 3^2 = 144$ 公分。<br>第一層最少需要 A 圖案數量 $= 144 \div 16 = 9$ 個。<br>答：9 個<br><br>(2)<br>不可剛好用完。<br>理由如下：<br>由題意，第一層有 9 個 A，則每一奇數層皆有 9 個 A 紙片；每一偶數層皆有 $144 \div 18 = 8$ 個 B 紙片。<br>設長方形共有 $n$ 層，因第一層與最後一層皆為 A 圖案，故總層數 $n$ 必為奇數。<br>設奇數層有 $k$ 層，則偶數層有 $(k - 1)$ 層（其中 $k \ge 1$ 為正整數）。<br>則使用的 A、B 紙片總數分別為：<br>$A$ 紙片總數 $= 9k$<br>$B$ 紙片總數 $= 8(k - 1)$<br>若能剛好將組合包用完，則紙片總數比必須等於組合包比例 $4 : 3$：<br>$\frac{9k}{8(k - 1)} = \frac{4}{3} \implies 27k = 32(k - 1) = 32k - 32$<br>$5k = 32 \implies k = \frac{32}{5} = 6.4$<br>因為層數 $k$ 必須為正整數，但解出的 $k = 6.4$ 不是整數，產生矛盾。<br>因此小燦不可能恰好把購買的藝術紙片用完。<br>答：不可能，理由如上推導。</div>

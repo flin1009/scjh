@@ -39,13 +39,13 @@ window.MathJax = {
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -106,7 +106,7 @@ window.MathJax = {
     border-bottom: 1.5px solid #cbd8e6;
     padding-bottom: 4px;
     margin-bottom: 8px;
-    font-size: 8.5pt;
+    font-size: 10pt;
     font-weight: 700;
     color: #486581;
   }
@@ -119,7 +119,7 @@ window.MathJax = {
     justify-content: space-between;
     border-top: 1px solid #e2e8f0;
     padding-top: 4px;
-    font-size: 8pt;
+    font-size: 9.5pt;
     color: #829ab1;
   }
 
@@ -135,7 +135,7 @@ window.MathJax = {
   .q-head {
     display: flex;
     gap: 8px;
-    font-size: 8.5pt;
+    font-size: 10.5pt;
     margin-bottom: 4px;
   }
   .q-num {
@@ -148,7 +148,7 @@ window.MathJax = {
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    font-size: 8pt;
+    font-size: 10.5pt;
     flex-shrink: 0;
   }
   .q-stem {
@@ -161,7 +161,7 @@ window.MathJax = {
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -173,7 +173,7 @@ window.MathJax = {
     grid-template-columns: repeat(2, 1fr);
     gap: 3px 10px;
     margin-left: 30px;
-    font-size: 8pt;
+    font-size: 10pt;
     margin-top: 4px;
   }
   .q-opt {
@@ -195,7 +195,7 @@ window.MathJax = {
     position: absolute;
     top: 2px;
     right: 5px;
-    font-size: 7pt;
+    font-size: 9pt;
     color: #9fb3c8;
   }
 
@@ -206,7 +206,7 @@ window.MathJax = {
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -218,11 +218,11 @@ window.MathJax = {
   }
   .card-title {
     font-weight: 800;
-    font-size: 8.5pt;
+    font-size: 11pt;
     color: #2b4c7e;
   }
   .badge-stars {
-    font-size: 8pt;
+    font-size: 10pt;
     font-weight: 700;
     color: #c07d32;
     margin-left: 4px;
@@ -230,7 +230,7 @@ window.MathJax = {
   .badge-pass {
     background: #334e68;
     color: #ffffff;
-    font-size: 7.5pt;
+    font-size: 9.5pt;
     padding: 1px 6px;
     border-radius: 10px;
     font-weight: 600;
@@ -238,7 +238,7 @@ window.MathJax = {
   .badge-cat {
     background: #fef3e2;
     color: #a8581e;
-    font-size: 7pt;
+    font-size: 9.5pt;
     padding: 1px 5px;
     border-radius: 4px;
     font-weight: 700;
@@ -247,7 +247,7 @@ window.MathJax = {
   }
   .card-body {
     padding: 5px 8px;
-    font-size: 8pt;
+    font-size: 10pt;
     line-height: 1.4;
   }
   .tech-box {
@@ -268,7 +268,7 @@ window.MathJax = {
     background: #f8fafc;
     border-top: 1px dashed #d9e2ec;
     padding: 3px 8px;
-    font-size: 7pt;
+    font-size: 9.5pt;
     color: #486581;
   }
   .check-tags {
@@ -323,12 +323,82 @@ window.MathJax = {
     border: 1px solid #cbd8e6;
     border-radius: 6px;
     padding: 15px 25px;
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #243342;
     text-align: left;
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級字體與自然圖片排版 */
+  .passage-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-left: 4px solid #2b4c7e;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0 12px 0;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #1e293b;
+  }
+  .passage-title {
+    font-weight: 800;
+    color: #1e3a8a;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #cbd5e1;
+  }
+  .passage-content {
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+  .passage-img {
+    text-align: center;
+    margin: 8px 0;
+  }
+  .passage-img img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 11pt;
+  }
+  .card-body {
+    font-size: 10pt;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -368,9 +438,9 @@ window.MathJax = {
     <span>【考前算牌矩陣】111年國文科</span>
     <span>衝 A 門檻與命題難度落點分佈</span>
   </div>
-  <div style="padding: 10px 5px; font-size: 8.5pt; line-height: 1.6;">
+  <div style="padding: 10px 5px; font-size: 10.5pt; line-height: 1.6;">
     <h3 style="color: #2b4c7e; margin-top: 0; font-size: 11pt;">📊 命題難度星級與各題分佈矩陣</h3>
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 8pt; text-align: center;">
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 10pt; text-align: center;">
       <thead>
         <tr style="background: #eef3f9; color: #2b4c7e; border-bottom: 2px solid #cbd8e6;">
           <th style="padding: 5px; border: 1px solid #cbd8e6;">難度星級</th>
@@ -489,17 +559,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 88.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -522,17 +592,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 82.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -555,17 +625,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 86.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -588,17 +658,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 85.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.43</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.43</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -685,17 +755,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 82.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -718,17 +788,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 80.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -751,17 +821,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 77.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -784,17 +854,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 67.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.59</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.59</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -843,12 +913,19 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">11</span>
-      <div class="q-stem">根據這則說明，下列做法何者最符合健康概念？</div>
+      <div class="q-stem">
+        <div style="border: 1px solid #cbd8e6; background: #f8fafc; padding: 8px 12px; border-radius: 4px; margin-bottom: 8px; font-size: 10.5pt; line-height: 1.6;">
+          <div style="font-weight: 700; text-align: center; margin-bottom: 4px;">背包與健康</div>
+          (一) 重量：背包後背時，內容物的重量最好在體重 10% 以內，側背時則建議低於 5%。<br>
+          (二) 背法：背包的背帶越短、靠身體越近，力量承受度越小，背起來越輕鬆。<br>
+          (三) 放法：最重的東西應放在背包中間，步行時比較不會影響身體的姿勢。
+        </div>
+        根據這則說明，下列做法何者最符合健康概念？
+      </div>
     </div>
-    <div class="q-img"><img src="images/chinese_q11_1.jpeg" alt="題號 11 附圖"></div>
-<div class="q-img"><img src="images/chinese_q11_opts.png" alt="題號 11 附圖"></div>
+    <div class="q-img"><img src="images/chinese_q11_1.jpeg" alt="題號 11 選項對照表 (A)至(D)"></div>
 
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> <img src="images/chinese_q11_opts.png" style="max-height: 48mm;" alt="選項對照表 (A)至(D)"></div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> </div><div class="q-opt"><span class="opt-label">(B)</span> </div><div class="q-opt"><span class="opt-label">(C)</span> </div><div class="q-opt"><span class="opt-label">(D)</span> </div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
@@ -883,17 +960,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 82.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -916,17 +993,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 71.3%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.54</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.54</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -949,17 +1026,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 85.3%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -982,17 +1059,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 57.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.37</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.37</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1079,17 +1156,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 61.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1112,17 +1189,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 39.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">字義推敲與語境代入法：拆解字根部首，代入上下文檢驗語氣是否和諧流暢。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">字義推敲與語境代入法：拆解字根部首，代入上下文檢驗語氣是否和諧流暢。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">常被字面表象誤導，忽略成語之褒貶色彩或特定適用對象。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">常被字面表象誤導，忽略成語之褒貶色彩或特定適用對象。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1145,17 +1222,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 61.3%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.37</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.37</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1178,17 +1255,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 57.6%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.3</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.3</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1275,17 +1352,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 55.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1308,17 +1385,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 77.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1341,17 +1418,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 50.3%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1374,17 +1451,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 52.3%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1430,6 +1507,12 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【文言選讀】莊子釣於濮水</div>
+  <div class="passage-content">莊子釣於濮水，楚王使大夫二人往先焉，曰：「願以境內累矣 1！」莊子持竿不顧，曰：「吾聞楚有神龜，死已三千歲矣，王巾笥 2 而藏之廟堂之上。此龜者，寧其死為留骨而貴乎？寧其生而曳尾於塗中乎？」二大夫曰：「寧生而曳尾塗中。」莊子曰：「往矣！吾將曳尾於塗中。」
+
+【注釋】1.願以境內累矣：希望勞煩您協助國事  2.笥：放物品的竹器</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">23</span>
@@ -1471,17 +1554,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 59.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1504,17 +1587,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 44.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.35</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.35</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1537,17 +1620,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 46.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.43</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.43</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1570,17 +1653,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 52.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.54</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.54</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1617,12 +1700,29 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下海報，並回答26～27題：</div>
+  <div class="passage-img"><img src="images/chinese_passage_q26_q27_1.png" alt="Q26-27 題組材料"></div>
+  <div class="passage-content">二、題組：（26～42題）
+
+2
+3
+6
+
+7
+8
+:
+21
+
+4
+5</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">26</span>
       <div class="q-stem">根據這張海報，下列關於綠能家電診所維修內容的敘述，何者最恰當？</div>
     </div>
-    <div class="q-img"><img src="images/chinese_passage_q26_q27_1.jpeg" alt="題號 26 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 可電話預約時間，專人到府收件</div><div class="q-opt"><span class="opt-label">(B)</span> 維修費用依家電的大小而有不同</div><div class="q-opt"><span class="opt-label">(C)</span> 只要維修合於規定的家電，都需繳交工本費</div><div class="q-opt"><span class="opt-label">(D)</span> 領件時若未攜帶取貨聯單，可以維修單代替</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -1633,12 +1733,39 @@ window.MathJax = {
       <span class="q-num">27</span>
       <div class="q-stem">下列四人聲稱曾到綠能家電診所送修電器，何人所述與這張海報的內容最相符？</div>
     </div>
-    <div class="q-img"><img src="images/chinese_passage_q26_q27_1.jpeg" alt="題號 27 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 小強：週一 14：00 送修咖啡機，週四 09：00 就拿到了</div><div class="q-opt"><span class="opt-label">(B)</span> 小顏：週三 10：00 送修飲水機，週五 13：00 就領件了</div><div class="q-opt"><span class="opt-label">(C)</span> 小燕：週六 16：00 送修電子鍋，接到通知後憑取貨聯單領回</div><div class="q-opt"><span class="opt-label">(D)</span> 小龍：週二 08：00 送修熱水瓶，先繳交50 元特殊材料費才能檢修</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下短文，並回答28～29題：</div>
+  <div class="passage-content">摺紙必須精準，切忌反覆翻弄，將紙摺磨得失去挺度。若紙起皺，邊線就
+會失去俐落的線條，摺出來的物件都會像失了精神般的軟癱。
+
+小學時認識了一位大哥哥，手極巧，曾摺了一隻立體獨角仙給我。它有著
+厚實而層疊的腹部，擎起的獨角末端還如鹿角分岔。我珍藏多年，直至年長搬
+家方不知去向。
+
+我從未能重現這隻獨角仙，人生也不若它的摺線一般乾淨俐落。【甲】我反覆
+把自己摺成不同的生物，試圖符合人生為我準備的每一個坑洞。
+
+【乙】一群圓滑形狀的人們聚在一起談天，我小心翼翼斂起方正的直角，
+化為類似的圓體，悄悄滾近。另外也會遇上有稜有角的人們，我則對摺自己，
+讓角度更加突出。然而時間一長便洩了底，他們看穿，他們草草應付，藉機散
+去，剩下我獨自揣摩下次該變成哪種樣子。【丙】幾次把紙弄得殘破不堪後，
+勉強找到約略符合自己形狀的角落，適應下來了。
+
+但當我決定把自己送往另一個城市，困惑又悄悄蔓延。以往公司宣告「我
+們要的是稀有動物」，因此我們的生活宗旨是特立獨行、轟轟烈烈。但向新單
+位報到的第一天，主管卻說：「這是一個叢林！那些需要特殊照顧與環境才能
+生存的稀有動物，比如說大象、孔雀，在這裡是無法生存的！【丁】我們需要
+的是蟑螂、是老鼠！」雖然明白他的誇飾，但還是受到了極大的震撼。
+
+我又慌張了，這次，我應該把自己摺成什麼呢？
+                                                                          ―― 改寫自謝子凡〈摺疊人生〉</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">28</span>
@@ -1670,17 +1797,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 50.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1703,17 +1830,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 89.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.43</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.43</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1736,17 +1863,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 72.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.43</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.43</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1769,17 +1896,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 82.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1815,6 +1942,34 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下小說，並回答30～31題：</div>
+  <div class="passage-content">證道會過後不久，天氣開始熱了。眼看六月底就要到來。證道會那個星期天
+下了場遲來的雨，次日，夏天的氣燄便忽地在天空與屋舍上方爆發開來。首先是
+一陣焚熱強風吹拂一整天，把牆壁都吹乾了。接著太陽定住不動，城裡鎮日洶湧
+著一波接一波的熱浪光影。除了拱廊街與公寓樓房之外，城裡好像沒有一處見不
+到刺眼欲盲的反光。【甲】陽光大街小巷地追著市民跑，一等他們停下來便立刻
+出擊。由於暑熱乍到，死亡人數也剛好急遽上升，每星期約有七百人，奧蘭城於
+是籠罩在一種沮喪的氣氛中。郊區裡，平坦街道與平頂房舍之間不再生氣勃勃，
+而且這一區的居民平常總是坐在門口，如今卻是所有的門戶窗扉緊閉，也不知道
+是想躲瘟疫還是太陽。不過有幾戶人家家裡傳出呻吟聲。以前要是發生這種事，
+經常可以看見好奇民眾站在路上留神傾聽。【乙】但經過這長久下來的警戒之
+後，好像每個人的心腸都變硬了，無論是走路時或生活中聽到痛苦呻吟聲都能置
+若罔聞，彷彿那是人類的自然語言。
+
+在各城門的打鬥迫使警察不得不使用武器，也同時引發一種暗地裡的騷動。
+【丙】打鬥中當然會有人受傷，但在城裡由於受到燠熱與恐懼的影響，所有事情
+都被誇大了，因此便有傳聞說死了人。總之民眾不滿的情緒確實不斷擴大，政府也
+確實擔心發生最壞情況，而認真考慮了萬一這群被困在疫病當中的民眾發生暴動，
+應該採取哪些措施。報上公布了一些法令，再次重申出城的禁令，違者可能得坐
+牢。城裡派出巡邏隊巡視。在那些空蕩蕩又熱得發燙的街頭上，經常會先聽到馬蹄
+聲，接著便會看見騎馬的衛兵從兩排緊閉的窗戶之間經過。【丁】巡邏隊的身影消
+失後，受威脅的城區便再次陷入一片沉重且充滿猜疑的寂靜之中。每隔一段時間
+都會有槍聲響起，那是幾支武裝的特殊小隊最近奉命撲殺貓狗，因為牠們也可能
+傳播跳蚤。這些冷硬的槍聲更增添城裡的肅殺氣氛。
+
+――  節錄自卡繆《鼠疫》</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">30</span>
@@ -1835,6 +1990,27 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下短文，並回答32～33題：</div>
+  <div class="passage-content">日本 美秀美術館（Miho Museum）有一種奇特的「烏托邦式美學」，首先
+是載客的白色電動車安靜地穿梭接待中心與美術館間，有如過去科幻電影中，
+關於未來烏托邦世界的描述。
+
+白色電動車象徵著美秀美術館對於美學近乎潔癖的要求，電動車安靜地運
+作，不會干擾到青山綠水間的蟲鳴鳥叫，使得這座烏托邦式的美術館區，永遠
+呈現出一種寧靜的氛圍。更有趣的是，白色電動車的駕駛穿著白色制服，臉上
+表情肅穆，不禁令人懷疑這些駕駛是否為科幻片中的複製人或機械人？
+
+不過我們不得不佩服美秀美術館的周到服務：雨天下電動車時，館方提供
+踏腳墊，以及擦去雨滴的白抹布。即便是貴婦人，仍然可以輕鬆地在美術館中
+喝下午茶。然後乾乾淨淨，一塵不染地離去。
+
+當遊客在雨天蒞臨，美術館人員便會送來一整排赭紅色、印著MIHO字樣
+的雨傘，並要求大家將自己的傘留在車上。其用意是不希望旅客花花綠綠的雨
+傘，破壞了烏托邦視覺上的統一美感。
+
+―― 改寫自李清志〈烏托邦美術館：美秀美術館〉</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">32</span>
@@ -1866,17 +2042,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 82.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1899,17 +2075,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 80.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1932,17 +2108,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 73.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1965,17 +2141,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 79.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2011,12 +2187,47 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下短文，並回答34～35題：</div>
+  <div class="passage-img"><img src="images/chinese_passage_q34_q35_1.jpeg" alt="Q34-35 題組材料"></div>
+  <div class="passage-content">很多人早就預言紙本書會消失，被網路閱讀取代，但我相信紙本書有其獨
+特價值。我不時自問：要怎麼描述紙本書的獨特價值？今天和未來，大家為何
+要透過紙本書來閱讀？
+
+我一度覺得紙本書的價值比較接近藝術
+品，但藝術品是陽春白雪，和一般人的距離
+較遠。我想找出來的是：紙本書對一般人也
+是必需的獨特價值。思索十幾年後，我試著
+將「數位及網路閱讀」與「紙本閱讀」的特
+質分述兩邊，列出右邊的圖像：
+
+我發現這兩列特質的總結，不就是白晝
+與黑夜的對比嗎？網路閱讀的特質，可喻為白
+晝；紙本閱讀的特質，可喻為黑夜。而一旦把
+紙本的獨特價值和黑夜連接，答案就跳出來
+了。人類從來都是需要代表黑夜和白晝的閱讀
+並存，也就是書和書以外的閱讀並存。
+
+就像人類有電燈後，雖然可以延長白晝，但還是需要黑夜，我們對紙本書
+的需求也是。不論我們可以從網路、手機得到多少訊息、知識、多媒體的閱讀
+樂趣，最後還是有打開紙本書的需求。人，沒有黑夜，是會生病的。我們沒有
+紙本書的閱讀，也如此。不論從心理或生理上來說，都如此。黑夜不是和少數
+人相關的藝術品，而是每個人不可或缺的必需品。
+
+我們現今透過簡訊、臉書，隨時都在使用文字表達自己、與人溝通，對文
+字的需求日益提高，而紙本書是最能讓我們學習、體會文字力量的一種媒介。
+一首雋永的古詩，印在紙本書上，和呈現在電子書上，會有截然不同的氣場，
+我們閱讀的感受也截然不同。這就是紙本書對每個人都具備的意義，不論這個
+社會多麼網路化、數位化。
+
+―― 改寫自郝明義〈當紙本書是一個黑夜〉</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">34</span>
       <div class="q-stem">根據本文，作者認為紙本書對一般人的獨特價值最可能是下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/chinese_passage_q34_q35_1.jpeg" alt="題號 34 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 紙本書才能傳承經典與藝術</div><div class="q-opt"><span class="opt-label">(B)</span> 閱讀紙本書不受晝夜的限制</div><div class="q-opt"><span class="opt-label">(C)</span> 紙本書可讓文字散發不同的渲染力</div><div class="q-opt"><span class="opt-label">(D)</span> 城鄉數位落差因紙本書才得以彌補</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2027,12 +2238,31 @@ window.MathJax = {
       <span class="q-num">35</span>
       <div class="q-stem">關於本文的寫作分析，下列敘述何者最恰當？</div>
     </div>
-    <div class="q-img"><img src="images/chinese_passage_q34_q35_1.jpeg" alt="題號 35 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 以多面向的特質比較來強調數位資訊不如紙本</div><div class="q-opt"><span class="opt-label">(B)</span> 用夜以繼日來說明紙本閱讀是數位閱讀的延續</div><div class="q-opt"><span class="opt-label">(C)</span> 透過圖表的分析，陳述紙本閱讀無限發展的可能</div><div class="q-opt"><span class="opt-label">(D)</span> 藉由晝夜的對照，表達紙本與數位閱讀應該並存</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀並回答36～38題：</div>
+  <div class="passage-content">以下是柏拉圖知名的「洞穴寓言」，請閱讀並回答36～38題：
+
+有個洞穴中有一群人，他們的身子被鍊著，無法轉向，只能面向洞穴的內
+壁。他們無法看見身旁每一個人，亦無法看見身後的洞口。洞穴裡唯一的光源
+是一堆營火。有一道遮蔽物擋在這群人與營火之間，遮蔽物後有人高舉著人類
+和動物雕像來來往往。那些被鍊著的人看不見雕像，只能在內壁看到遮蔽物後
+雕像的影子，且這些黑影配合洞穴裡的回音舞動。對那些被鍊著的人來說，這
+些影子是真實的事物。他們無事可做，只能談論這些影子。
+
+如果被鍊著的人中有一人被釋放，得以起身走出洞穴。陽光會讓這個人感
+到極大的痛苦，因為他只習慣於黑暗。等他習慣了光線，看見遮蔽物後真正發
+生的事情，他就能發現真相，得到啟蒙。
+
+當這個人再回到洞內，試著告訴其他人外界的真相，其他人卻很可能無法
+理解並認為這個人是瘋狂的。就算這個人將他們釋放，想拉他們走出洞穴，他
+們依然只願相信內壁上的影子才是真實，甚至可能將這個人殺死。</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">36</span>
@@ -2065,17 +2295,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 64.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.31</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.31</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2098,17 +2328,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 78.6%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.55</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.55</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2131,17 +2361,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 81.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2164,17 +2394,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 45.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.25</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.25</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2220,6 +2450,26 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下兩篇短文，並回答39～40題：</div>
+  <div class="passage-content">【甲】
+
+文帝時，莢錢 1 益多，輕，乃更鑄四銖錢，上鑄「半兩」字樣，民亦得自鑄
+錢。故吳王就山鑄錢，富等天子，其後以此叛逆。又有大夫鄧通者，亦以鑄
+錢富甲天下。故吳、鄧氏錢布天下，而後乃生鑄錢之禁。
+
+―― 改寫自《史記．平準書》
+
+【乙】
+
+漢文帝時，鄧通得賜蜀銅山，聽得鑄錢，形制文字重量，皆與天子四銖錢同。
+時吳王亦有銅山鑄錢，故有吳錢，微重，形制文字，與天子錢不異。
+
+―― 改寫自《西京雜記》
+
+【注釋】
+1.莢錢：西漢初年所鑄銅錢，形如榆莢，故名</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">39</span>
@@ -2261,17 +2511,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 69.1%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2294,17 +2544,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 73.3%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2327,17 +2577,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 71.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.59</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.59</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2360,17 +2610,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 42.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.35</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.35</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2396,6 +2646,20 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下短文，並回答41～42題：</div>
+  <div class="passage-content">王起主文柄 1，欲以白敏中為狀元，病其與賀拔惎為友。惎有文而落拓。
+乃密令門人申意，俾敏中與惎絕。門人復約敏中，具以告之。敏中曰：「皆如所
+教。」既而惎果造門，左右欺以敏中他適，惎遲留不言而去。俄頃，敏中躍出，
+連呼左右召惎，悉以實告，曰：「一第何患不致，奈輕負至交！」相與歡醉。門
+人睹之，大怒而去。懇告於起，且云不可必矣。起曰：「我原只得白敏中，今當
+更取賀拔惎矣。」
+
+―― 改寫自《唐摭言》
+
+【注釋】
+1.主文柄：主持科舉考試</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">41</span>
@@ -2437,17 +2701,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 47.7%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2470,17 +2734,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 39.7%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.33</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.33</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">

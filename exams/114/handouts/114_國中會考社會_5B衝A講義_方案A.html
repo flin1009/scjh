@@ -39,13 +39,13 @@ window.MathJax = {
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -106,7 +106,7 @@ window.MathJax = {
     border-bottom: 1.5px solid #cbd8e6;
     padding-bottom: 4px;
     margin-bottom: 8px;
-    font-size: 8.5pt;
+    font-size: 10pt;
     font-weight: 700;
     color: #486581;
   }
@@ -119,7 +119,7 @@ window.MathJax = {
     justify-content: space-between;
     border-top: 1px solid #e2e8f0;
     padding-top: 4px;
-    font-size: 8pt;
+    font-size: 9.5pt;
     color: #829ab1;
   }
 
@@ -135,7 +135,7 @@ window.MathJax = {
   .q-head {
     display: flex;
     gap: 8px;
-    font-size: 8.5pt;
+    font-size: 10.5pt;
     margin-bottom: 4px;
   }
   .q-num {
@@ -148,7 +148,7 @@ window.MathJax = {
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    font-size: 8pt;
+    font-size: 10.5pt;
     flex-shrink: 0;
   }
   .q-stem {
@@ -161,7 +161,7 @@ window.MathJax = {
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -173,7 +173,7 @@ window.MathJax = {
     grid-template-columns: repeat(2, 1fr);
     gap: 3px 10px;
     margin-left: 30px;
-    font-size: 8pt;
+    font-size: 10pt;
     margin-top: 4px;
   }
   .q-opt {
@@ -195,7 +195,7 @@ window.MathJax = {
     position: absolute;
     top: 2px;
     right: 5px;
-    font-size: 7pt;
+    font-size: 9pt;
     color: #9fb3c8;
   }
 
@@ -206,7 +206,7 @@ window.MathJax = {
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -218,11 +218,11 @@ window.MathJax = {
   }
   .card-title {
     font-weight: 800;
-    font-size: 8.5pt;
+    font-size: 11pt;
     color: #2b4c7e;
   }
   .badge-stars {
-    font-size: 8pt;
+    font-size: 10pt;
     font-weight: 700;
     color: #c07d32;
     margin-left: 4px;
@@ -230,7 +230,7 @@ window.MathJax = {
   .badge-pass {
     background: #334e68;
     color: #ffffff;
-    font-size: 7.5pt;
+    font-size: 9.5pt;
     padding: 1px 6px;
     border-radius: 10px;
     font-weight: 600;
@@ -238,7 +238,7 @@ window.MathJax = {
   .badge-cat {
     background: #fef3e2;
     color: #a8581e;
-    font-size: 7pt;
+    font-size: 9.5pt;
     padding: 1px 5px;
     border-radius: 4px;
     font-weight: 700;
@@ -247,7 +247,7 @@ window.MathJax = {
   }
   .card-body {
     padding: 5px 8px;
-    font-size: 8pt;
+    font-size: 10pt;
     line-height: 1.4;
   }
   .tech-box {
@@ -268,7 +268,7 @@ window.MathJax = {
     background: #f8fafc;
     border-top: 1px dashed #d9e2ec;
     padding: 3px 8px;
-    font-size: 7pt;
+    font-size: 9.5pt;
     color: #486581;
   }
   .check-tags {
@@ -323,12 +323,82 @@ window.MathJax = {
     border: 1px solid #cbd8e6;
     border-radius: 6px;
     padding: 15px 25px;
-    font-size: 9.5pt;
+    font-size: 10.5pt;
     color: #243342;
     text-align: left;
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級字體與自然圖片排版 */
+  .passage-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-left: 4px solid #2b4c7e;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0 12px 0;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #1e293b;
+  }
+  .passage-title {
+    font-weight: 800;
+    color: #1e3a8a;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #cbd5e1;
+  }
+  .passage-content {
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+  .passage-img {
+    text-align: center;
+    margin: 8px 0;
+  }
+  .passage-img img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 11pt;
+  }
+  .card-body {
+    font-size: 10pt;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -368,9 +438,9 @@ window.MathJax = {
     <span>【考前算牌矩陣】114年社會科</span>
     <span>衝 A 門檻與命題難度落點分佈</span>
   </div>
-  <div style="padding: 10px 5px; font-size: 8.5pt; line-height: 1.6;">
+  <div style="padding: 10px 5px; font-size: 10.5pt; line-height: 1.6;">
     <h3 style="color: #2b4c7e; margin-top: 0; font-size: 11pt;">📊 命題難度星級與各題分佈矩陣</h3>
-    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 8pt; text-align: center;">
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 10pt; text-align: center;">
       <thead>
         <tr style="background: #eef3f9; color: #2b4c7e; border-bottom: 2px solid #cbd8e6;">
           <th style="padding: 5px; border: 1px solid #cbd8e6;">難度星級</th>
@@ -488,17 +558,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 91.1%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.35</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.35</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -521,17 +591,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 86.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -554,17 +624,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 83.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -587,17 +657,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 62.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">經緯度與氣候地圖定位法：由緯度看熱量帶、由距海遠近看降水，配合等高線判讀地形。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">經緯度與氣候地圖定位法：由緯度看熱量帶、由距海遠近看降水，配合等高線判讀地形。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易死記地名而忽略地圖圖例與比例尺換算。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易死記地名而忽略地圖圖例與比例尺換算。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -686,17 +756,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 81.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.4</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.4</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -719,17 +789,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 85.1%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -752,17 +822,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 79.3%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -785,17 +855,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 65.6%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">時代坐標時序法：抓關鍵人名、制度或外在事件，將事件精確置於時代背景脈絡中。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">時代坐標時序法：抓關鍵人名、制度或外在事件，將事件精確置於時代背景脈絡中。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆各國近代條約開放口岸與割讓土地之順序。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆各國近代條約開放口岸與割讓土地之順序。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -883,17 +953,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 51.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">時代坐標時序法：抓關鍵人名、制度或外在事件，將事件精確置於時代背景脈絡中。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">時代坐標時序法：抓關鍵人名、制度或外在事件，將事件精確置於時代背景脈絡中。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆各國近代條約開放口岸與割讓土地之順序。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆各國近代條約開放口岸與割讓土地之順序。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -916,17 +986,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 61.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -949,17 +1019,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 89.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.35</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.35</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -982,17 +1052,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 88.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1082,17 +1152,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 73.6%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.38</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.38</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1115,17 +1185,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 62.6%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1148,17 +1218,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 77.7%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.51</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.51</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1181,17 +1251,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 74.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.41</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.41</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1282,17 +1352,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 59.6%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1315,17 +1385,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 72.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1348,17 +1418,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 66.7%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1381,17 +1451,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 65.1%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.42</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.42</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1483,17 +1553,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 63.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">時代坐標時序法：抓關鍵人名、制度或外在事件，將事件精確置於時代背景脈絡中。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">時代坐標時序法：抓關鍵人名、制度或外在事件，將事件精確置於時代背景脈絡中。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆各國近代條約開放口岸與割讓土地之順序。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆各國近代條約開放口岸與割讓土地之順序。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1516,17 +1586,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 72.1%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1549,17 +1619,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 68.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1582,17 +1652,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 82.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1684,17 +1754,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 73.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.41</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.41</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1717,17 +1787,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 73.7%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1750,17 +1820,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 71.2%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1783,17 +1853,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 62.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.55</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.55</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1824,12 +1894,12 @@ window.MathJax = {
       <span class="q-num">29</span>
       <div class="q-stem">小綸從網站上取得2021 年中國各省級行政區年降水量資料，他以當年全國平均降水量691.6 毫米<br>作為標準，若省級行政區的年降水量低於此一數值，則在該區塗上深灰色。根據上述原則，小綸繪<br>製出的地圖最可能為下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_q29_1.jpeg" alt="題號 29 附圖"></div>
-<div class="q-img"><img src="images/society_q29_2.jpeg" alt="題號 29 附圖"></div>
-<div class="q-img"><img src="images/society_q29_3.jpeg" alt="題號 29 附圖"></div>
-<div class="q-img"><img src="images/society_q29_4.jpeg" alt="題號 29 附圖"></div>
-
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> </div><div class="q-opt"><span class="opt-label">(B)</span> </div><div class="q-opt"><span class="opt-label">(C)</span> </div><div class="q-opt"><span class="opt-label">(D)</span> </div></div>
+    <div class="q-opts" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+      <div class="q-opt"><span class="opt-label">(A)</span><br><img src="images/society_q29_1.jpeg" alt="選項 A" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 4px; padding: 2px;"></div>
+      <div class="q-opt"><span class="opt-label">(B)</span><br><img src="images/society_q29_2.jpeg" alt="選項 B" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 4px; padding: 2px;"></div>
+      <div class="q-opt"><span class="opt-label">(C)</span><br><img src="images/society_q29_3.jpeg" alt="選項 C" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 4px; padding: 2px;"></div>
+      <div class="q-opt"><span class="opt-label">(D)</span><br><img src="images/society_q29_4.jpeg" alt="選項 D" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 4px; padding: 2px;"></div>
+    </div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
@@ -1886,17 +1956,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 57.1%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">經緯度與氣候地圖定位法：由緯度看熱量帶、由距海遠近看降水，配合等高線判讀地形。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">經緯度與氣候地圖定位法：由緯度看熱量帶、由距海遠近看降水，配合等高線判讀地形。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易死記地名而忽略地圖圖例與比例尺換算。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易死記地名而忽略地圖圖例與比例尺換算。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1919,17 +1989,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 66.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1952,17 +2022,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 64.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.61</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.61</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -1985,17 +2055,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 70.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2085,17 +2155,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 38.1%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2118,17 +2188,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 53.3%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2151,17 +2221,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 77.1%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2184,17 +2254,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 67.7%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2283,17 +2353,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 43.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.24</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.24</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2316,17 +2386,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 43.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.35</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.35</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2349,17 +2419,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 65.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.55</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.55</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2382,17 +2452,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 45.8%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2440,18 +2510,63 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】二、題組：(43～54題)
+閱讀下列選文，回答第 43 至 45 題：</div>
+  <div class="passage-img"><img src="images/society_passage_q43_q45_1.jpeg" alt="題組材料" style="margin: 4px;"></div>
+  <div class="passage-content">位於墨西哥首都的國立人類學博物館，館藏以當地古文明的文物為主，大約
+有六十萬件。博物館的建築設計，呼應該地古文明信仰中的四種自然力量：風、
+火、水、土元素，充滿與大自然的共融感。
+
+一樓的展示廳為常設展，其中一塊區域專門展示當
+地古文明的農業。由於農業發展與宗教神話有密不可分
+的關係，因此展覽廳特別展示了保佑農業生產的神官雕
+像，如圖(十九)所示。神官雕像手中握著的物品，是原
+產於美洲的作物，也是當地古文明所倚重的主食。
+
+雖然博物館的收藏相當豐富，但在展品的說明上，
+受過去殖民歷史影響，大多僅採用今日當地的官方語
+文。若改善上述不足之處，勢必能造福更多到館參觀的
+外國旅客，增進對當地文化的了解。
+
+表(六)
+時間
+
+類型
+
+2020
+年
+
+2021
+年
+
+民事事件
+200
+230
+刑事案件
+180
+150
+
+法律諮詢
+服務總數
+380
+380
+
+單位：件
+
+圖(十九)</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">43</span>
       <div class="q-stem">下列何項展品，最可能屬於該博物館的主要館藏？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q43_q45_1.jpeg" alt="題號 43 附圖"></div>
-<div class="q-img"><img src="images/society_q43_1.jpeg" alt="題號 43 附圖"></div>
-<div class="q-img"><img src="images/society_q43_2.jpeg" alt="題號 43 附圖"></div>
-<div class="q-img"><img src="images/society_q43_3.jpeg" alt="題號 43 附圖"></div>
-<div class="q-img"><img src="images/society_q43_4.jpeg" alt="題號 43 附圖"></div>
-
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> </div><div class="q-opt"><span class="opt-label">(B)</span> </div><div class="q-opt"><span class="opt-label">(C)</span> </div><div class="q-opt"><span class="opt-label">(D)</span> </div></div>
+    <div class="q-opts" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+      <div class="q-opt"><span class="opt-label">(A)</span><br><img src="images/society_q43_1.jpeg" alt="選項 A" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 4px; padding: 2px;"></div>
+      <div class="q-opt"><span class="opt-label">(B)</span><br><img src="images/society_q43_2.jpeg" alt="選項 B" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 4px; padding: 2px;"></div>
+      <div class="q-opt"><span class="opt-label">(C)</span><br><img src="images/society_q43_3.jpeg" alt="選項 C" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 4px; padding: 2px;"></div>
+      <div class="q-opt"><span class="opt-label">(D)</span><br><img src="images/society_q43_4.jpeg" alt="選項 D" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 4px; padding: 2px;"></div>
+    </div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
@@ -2460,7 +2575,7 @@ window.MathJax = {
       <span class="q-num">44</span>
       <div class="q-stem">圖(十九)神官雕像手中所持的物品，最可能是下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q43_q45_1.jpeg" alt="題號 44 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 玉米</div><div class="q-opt"><span class="opt-label">(B)</span> 橄欖</div><div class="q-opt"><span class="opt-label">(C)</span> 小麥</div><div class="q-opt"><span class="opt-label">(D)</span> 稻米</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2487,17 +2602,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 31.7%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2520,17 +2635,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 60.3%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2553,17 +2668,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 71.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2586,17 +2701,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 65.0%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">時代坐標時序法：抓關鍵人名、制度或外在事件，將事件精確置於時代背景脈絡中。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">時代坐標時序法：抓關鍵人名、制度或外在事件，將事件精確置於時代背景脈絡中。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆各國近代條約開放口岸與割讓土地之順序。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆各國近代條約開放口岸與割讓土地之順序。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2627,12 +2742,28 @@ window.MathJax = {
       <span class="q-num">45</span>
       <div class="q-stem">文中博物館的展品說明，最可能以何種語文為主？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q43_q45_1.jpeg" alt="題號 45 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 英文</div><div class="q-opt"><span class="opt-label">(B)</span> 法文</div><div class="q-opt"><span class="opt-label">(C)</span> 葡萄牙文</div><div class="q-opt"><span class="opt-label">(D)</span> 西班牙文</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列選文，回答第 46 至 48 題：</div>
+  <div class="passage-content">我國現行汽、機車車牌號碼的編碼規則，原則上每組號碼皆是由英文字母與
+阿拉伯數字組成，但在民意反應及諸多考量下，有些數字、英文字母或是特定組
+合，已不再使用於新發放的車牌。例如：數字的「4」，是因為其發音與「死」字
+相近，一般民眾認為觸霉頭而不願使用；英文字母的「I」、「O」不再被使用，
+是因為與數字「1」、「0」太相似；至於BAD、BUM、END等，則由於字母組合
+具有負面意涵，因此也加以排除。
+
+除此之外，政府也開放民眾可額外付費選擇號碼，有些民眾會想要擁有
+6666、8888、9999等特殊號碼的車牌，因此這些號碼的價格常遠高於其他車牌；也
+有另一些民眾只對與生日、特殊紀念日有關的號碼組合有興趣，因此選擇購買這
+些特定號碼。至於不在意車牌號碼的民眾，則可接受政府發放一般組合的車牌，
+無需額外支付選號費。但不論最後是選擇哪一個車牌號碼，汽、機車所有人都要
+將車牌懸掛在指定位置，違規者將被警察依《道路交通管理處罰條例》開罰。</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">46</span>
@@ -2684,17 +2815,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 66.7%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2717,17 +2848,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 56.6%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.38</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.38</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2750,17 +2881,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 81.6%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2783,17 +2914,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 49.7%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2819,12 +2950,36 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列選文，回答第 49 至 51 題：</div>
+  <div class="passage-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題組材料" style="margin: 4px;"></div>
+  <div class="passage-content">巴斯人的祖先原本居住於伊朗高原一帶，七世紀上半葉，阿拉伯軍隊擊敗
+統治當地的薩珊王朝國王伊嗣俟，不願被穆斯林統治的人們遠離故鄉，遷徙至
+印度半島西部避難。此後數個世紀，伊斯蘭教勢力逐漸進入印度，但印度的穆
+斯林統治者對於不同的宗教和文化，表現出較為寬容的態度。這使巴斯人得以
+在印度從事貿易等行業，並世代信仰發源於伊朗高原的宗教。
+
+十七世紀後期，善於經商的巴斯人，開始與歐
+洲商人合作，既促進印度西部城市孟買等地的繁
+榮，也使得巴斯人隨著歐洲商人來到中國進行貿
+易。十八世紀後期至十九世紀中期，巴斯商人在歐
+洲殖民勢力對中國的貿易網絡之中，扮演重要角
+色，並與控制印度的殖民者一起在中國活動。當時
+巴斯商人留下許多會館與墓園，圖(二十)墓碑即為
+一例。
+
+十九世紀中期以後，因為美國內戰導致紡織業原料短缺，以及蘇伊士運河
+開通促進航運事業發展等影響，巴斯商人傾向加強投資印度和歐洲的產業，而
+對中國的商貿占比則逐漸下降。
+
+圖(二十)</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">49</span>
       <div class="q-stem">巴斯人的宗教信仰，最可能是下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題號 49 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 祆教</div><div class="q-opt"><span class="opt-label">(B)</span> 佛教</div><div class="q-opt"><span class="opt-label">(C)</span> 猶太教</div><div class="q-opt"><span class="opt-label">(D)</span> 基督教</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2835,7 +2990,7 @@ window.MathJax = {
       <span class="q-num">50</span>
       <div class="q-stem">十九世紀上半葉，巴斯人與中國商人的主要貿易模式，最可能是下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題號 50 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 巴斯人賣瓷器到中國以換取茶葉</div><div class="q-opt"><span class="opt-label">(B)</span> 巴斯人賣鴉片到中國以取得白銀</div><div class="q-opt"><span class="opt-label">(C)</span> 巴斯人賣鹿皮到中國以獲得棉花</div><div class="q-opt"><span class="opt-label">(D)</span> 巴斯人賣茶葉到中國以交換工業品</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2846,18 +3001,43 @@ window.MathJax = {
       <span class="q-num">51</span>
       <div class="q-stem">關於圖(二十)墓碑文字的解讀，下列何者最適當？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題號 51 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 當時類似的巴斯墓葬，多集中於今日山東 青島一帶</div><div class="q-opt"><span class="opt-label">(B)</span> 根據時間可確認，此人於《南京條約》簽訂前來華</div><div class="q-opt"><span class="opt-label">(C)</span> 此人為孟買出身，顯示其生前主要與日本商行合作</div><div class="q-opt"><span class="opt-label">(D)</span> 碑刻的紀年方式，反映巴斯人珍視薩珊王朝的歷史</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列選文，回答第 52 至 54 題：</div>
+  <div class="passage-img"><img src="images/society_passage_q52_q54_1.jpeg" alt="題組材料" style="margin: 4px;"></div>
+  <div class="passage-content">坐落在南大西洋的南喬治亞島，其
+位置如圖(二十一)所示。冰天雪地的環
+境下，島上仍孕育了為數眾多的海獅、
+象鼻海豹、國王企鵝和特有種鳥類。
+
+1775年庫克船長登島後，宣布其為
+英國領土並以當時的英王命名。二十
+世紀初該島設有數個捕鯨站，目前皆
+已廢棄。1927年，鄰近該島的甲國聲稱
+擁有該島主權，此領土紛爭成為日後
+與英國爆發戰爭的原因之一，1982年戰
+爭結束後，該島仍為英國所管轄。目
+前該島幾乎沒有常住人口，為觀光船
+行程的中繼站。
+
+2017年，一座面積約4,200平方公里的龐大冰山，脫離陸地後持續在海上漂
+流，圖(二十一)顯示該冰山於不同時間的位置。該冰山雖然持續崩裂、融化，但
+仍相當巨大，2020年科學家依據過去其他冰山漂流的軌跡，推測它極有可能撞
+上南喬治亞島，並研判可能產生的影響。
+
+圖(二十一)</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">52</span>
       <div class="q-stem">根據圖(二十一)中的資訊判斷，與英國產生領土紛爭的國家應為下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q52_q54_1.jpeg" alt="題號 52 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 南非</div><div class="q-opt"><span class="opt-label">(B)</span> 澳洲</div><div class="q-opt"><span class="opt-label">(C)</span> 阿根廷</div><div class="q-opt"><span class="opt-label">(D)</span> 紐西蘭</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2884,17 +3064,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 55.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2917,17 +3097,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 58.9%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2950,17 +3130,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 63.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.45</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.45</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -2983,17 +3163,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 49.5%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -3024,7 +3204,7 @@ window.MathJax = {
       <span class="q-num">53</span>
       <div class="q-stem">依據上文及圖(二十一)中的資訊判斷，該冰山漂流的方向應為下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q52_q54_1.jpeg" alt="題號 53 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 東北向西南</div><div class="q-opt"><span class="opt-label">(B)</span> 西南向東北</div><div class="q-opt"><span class="opt-label">(C)</span> 東南向西北</div><div class="q-opt"><span class="opt-label">(D)</span> 西北向東南</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -3035,7 +3215,7 @@ window.MathJax = {
       <span class="q-num">54</span>
       <div class="q-stem">上述冰山若撞上南喬治亞島，其產生的影響最可能為下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q52_q54_1.jpeg" alt="題號 54 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 巨浪侵襲島嶼陸地，阻礙工業發展</div><div class="q-opt"><span class="opt-label">(B)</span> 附近海水鹽度上升，改變海洋生態</div><div class="q-opt"><span class="opt-label">(C)</span> 威脅北美洲與非洲之間的船隻安全</div><div class="q-opt"><span class="opt-label">(D)</span> 島嶼海岸遭受破壞，危及動物棲地</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -3062,17 +3242,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 45.1%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
       </div>
     </div>
     <div class="note-grid">
@@ -3095,17 +3275,17 @@ window.MathJax = {
       </div>
       <div>
         <span class="badge-pass">通過率 73.4%</span>
-        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.51</span>
+        <span style="font-size: 9.5pt; color: #718096; margin-left: 3px;">鑑別度 0.51</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8pt; color: #1e4620;">經緯度與氣候地圖定位法：由緯度看熱量帶、由距海遠近看降水，配合等高線判讀地形。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 10.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 10pt; color: #1e4620; line-height: 1.55;">經緯度與氣候地圖定位法：由緯度看熱量帶、由距海遠近看降水，配合等高線判讀地形。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8pt;">容易死記地名而忽略地圖圖例與比例尺換算。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 10.5pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 10pt; line-height: 1.55;">容易死記地名而忽略地圖圖例與比例尺換算。</div>
       </div>
     </div>
     <div class="note-grid">
