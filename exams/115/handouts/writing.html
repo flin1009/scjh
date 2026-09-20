@@ -27,13 +27,13 @@
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -149,7 +149,7 @@
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -194,7 +194,7 @@
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -317,6 +317,43 @@
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級數學排版與字體 */
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 10pt !important;
+  }
+  .card-body {
+    font-size: 9.5pt !important;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -361,7 +398,7 @@
       請先閱讀以下資訊，並按題意要求完成一篇文章。<br>在日常生活中，有些事物只要加入巧思、翻新樣式、結合新元素……就可以呈現不同的面貌、開展出其他的用途。你想賦予什麼事物新面貌？又會怎麼做？請結合你的經驗或見聞，寫下對此的感受、想法。<br>※不必訂題　※不可在文中洩漏私人身分　※不可使用詩歌體
     </div>
     <div class="q-img" style="text-align: center;">
-      <img src="images/writing_prompt_115.png" style="max-height: 110mm; border: 1px solid #cbd8e6; border-radius: 4px; padding: 4px; background: #fff;" alt="寫作試題圖例">
+      <img src="images/writing_prompt_115.png" style="max-height: none; border: 1px solid #cbd8e6; border-radius: 4px; padding: 4px; background: #fff;" alt="寫作試題圖例">
     </div>
   </div>
   <div class="page-footer">

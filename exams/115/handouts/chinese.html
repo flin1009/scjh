@@ -45,7 +45,7 @@ window.MathJax = {
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible; min-height: 297mm; height: auto;
     border-radius: 4px;
   }
   @media print {
@@ -134,47 +134,87 @@ window.MathJax = {
   }
   .q-head {
     display: flex;
-    gap: 8px;
-    font-size: 8.5pt;
-    margin-bottom: 4px;
+    gap: 10px;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
   }
   .q-num {
     font-weight: 800;
     color: #2b4c7e;
     background: #eef3f9;
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    font-size: 8pt;
+    font-size: 9pt;
     flex-shrink: 0;
   }
   .q-stem {
     flex-grow: 1;
-    line-height: 1.45;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: #1e293b;
   }
   .q-img {
     text-align: center;
-    margin: 5px 0;
+    margin: 8px 0;
   }
-  .q-img img {
-    max-width: 95%;
-    max-height: 48mm;
+  .q-img img, .passage-img img {
+    max-width: 100%;
+    height: auto;
     object-fit: contain;
     border-radius: 4px;
-    border: 1px solid #d9e2ec;
+    border: 1px solid #cbd5e1;
     background: #ffffff;
-    padding: 3px;
+    padding: 4px;
+    display: inline-block;
   }
   .q-opts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3px 10px;
-    margin-left: 30px;
-    font-size: 8pt;
-    margin-top: 4px;
+    gap: 6px 14px;
+    margin-left: 34px;
+    font-size: 10pt;
+    line-height: 1.5;
+    margin-top: 6px;
+  }
+  .passage-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-left: 4px solid #2b4c7e;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 12px 0 14px 0;
+  }
+  .passage-title {
+    font-weight: 800;
+    color: #1e3a8a;
+    font-size: 10pt;
+    margin-bottom: 6px;
+    border-bottom: 1px dashed #cbd5e1;
+    padding-bottom: 4px;
+  }
+  .passage-text {
+    font-size: 10pt;
+    line-height: 1.65;
+    color: #334155;
+    text-align: justify;
+  }
+  .passage-text p {
+    margin: 0 0 8px 0;
+    text-indent: 2em;
+  }
+  .passage-text p:last-child {
+    margin-bottom: 0;
+  }
+  .passage-notes {
+    margin-top: 6px;
+    padding-top: 4px;
+    border-top: 1px dashed #e2e8f0;
+    font-size: 9pt;
+    color: #64748b;
   }
   .q-opt {
     color: #334e68;
@@ -842,6 +882,11 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-text">
+      所謂的「寫真式描寫」注重的是清楚明確，以細密的筆觸刻畫完整的形象，讓讀者有身歷其境的真實感。其描寫則依次序按部就班，傳達時力求客觀。但既是創作，就不可能像攝影一樣完全「再現」，也難免會滲入少許暗示性、象徵性的語彙。
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">11</span>
@@ -1019,6 +1064,11 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-text">
+      齊高帝善草書，篤好不已，祖述子敬，稍乏風骨。嘗與王僧虔賭書，書畢曰：「誰為第一？」對曰：「臣書臣中第一，陛下書帝中第一。」帝笑曰：「卿可謂善自謀矣。」然高帝與僧虔賭書，亦猶雞之搏狸，稍不自知量力也。
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">13</span>
@@ -1029,6 +1079,11 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-text">
+      2010年在名古屋舉辦的《聯合國生物多樣性公約》第10次大會，通過的20項「愛知目標」，其中一項目標是2020年底全球海洋保護區的面積要達到10%（又稱10 × 20目標），但這項目標後來只達到6～8%。2022年在蒙特婁舉行第15次大會，又擬定2030年以前全球的陸域和海域要有30%保護區（又稱30 × 30目標）。
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">14</span>
@@ -1246,6 +1301,11 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-text">
+      蔣堂為淮南轉運使，屬縣依例致賀，皆投書即還。有一縣令使人，獨求回書，左右諭之皆不聽，呵逐亦不去，曰：「寧得罪，不得書不敢回邑。」時蘇子美在座頗駭怪，曰：「小吏如此野狠，其令可知。」蔣曰：「不然，令必能者，使人不敢慢其命令如此。」乃為簡答之，方去。子美歸吳中月餘，得蔣書曰：「縣令果能者。」遂為之延譽，後卒為名臣。
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">20</span>
@@ -1412,6 +1472,14 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-text">
+      或問：「世間何物最硬？」曰：「石頭與鋼鐵。」其人曰：「石可碎，鐵可鏨<sup>1</sup>，安得為硬？以弟看來為兄面上髭鬚最硬，鐵石總不如也。」問其故，答曰：「兄面皮厚，竟被看出。」鬚者回嘲曰：「足下面皮更老，這等硬鬚還鑽不透。」
+    </div>
+    <div class="passage-notes">
+      📖 1. 鏨：雕鑿。
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">21</span>
@@ -1432,6 +1500,12 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-text" style="display: flex; flex-direction: column; gap: 4px;">
+      <div><strong>【甲】</strong>寒梅清秀誰知？霜禽翠羽同期。瀟灑寒塘月淡，暗香幽意，一枝雪裡偏宜。</div>
+      <div><strong>【乙】</strong>野橋當日誰栽？前村昨夜先開。雪散珍珠亂篩，多情嬌態，一枝風送香來。</div>
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">23</span>
@@ -1442,12 +1516,22 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">二、題組：（24 ～ 42題）<br>請閱讀以下詩作，並回答 24 ～ 25 題：</div>
+    <div class="passage-img" style="text-align: center; margin: 8px 0;">
+      <img src="images/chinese_passage_q24_q25_1.jpeg" alt="第二市場的故事味" style="max-width: 100%; height: auto;">
+    </div>
+    <div class="passage-notes">
+      📖 1. 麻薏：黃麻的嫩芽，處理後可煮成消暑的湯品。<br>
+      2. 黑白切：意為「隨便切」，泛指以豬肉、豬內臟為主的小菜。
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">24</span>
       <div class="q-stem">關於這二節詩的分析，下列敘述何者最恰當？</div>
     </div>
-    <div class="q-img"><img src="images/chinese_passage_q24_q25_1.jpeg" alt="題號 24 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 第一節以「野性」暗示作者正值年少</div><div class="q-opt"><span class="opt-label">(B)</span> 第二節以「切碎」呼應「零零落落」</div><div class="q-opt"><span class="opt-label">(C)</span> 第一節穿插驚嘆語句，表達吃不到的遺憾</div><div class="q-opt"><span class="opt-label">(D)</span> 第二節藉心肝腸肺的描摹，象徵人心險惡</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -1614,19 +1698,35 @@ window.MathJax = {
       <span class="q-num">25</span>
       <div class="q-stem">關於這二節詩的共同點，下列敘述何者最恰當？</div>
     </div>
-    <div class="q-img"><img src="images/chinese_passage_q24_q25_1.jpeg" alt="題號 25 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 皆透過描寫食物帶出生活的況味</div><div class="q-opt"><span class="opt-label">(B)</span> 皆引用典故連結食物與文化的關係</div><div class="q-opt"><span class="opt-label">(C)</span> 皆各自運用兩種顏色的對比，意象鮮明</div><div class="q-opt"><span class="opt-label">(D)</span> 皆以當季食材入詩，強調美好事物稍縱即逝</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">請閱讀以下資料，並回答 26 ～ 29 題：</div>
+    <div class="passage-text">
+      <p><strong>【甲】</strong><br>
+      2050年全球將有七成的人居住在城市，城市必須供養70億人口，但密集開發的城市哪還有多餘的土地可耕作？為解決城市糧食供應的問題，垂直農場應運而生。<br>
+      城市垂直農場是把水平的農場，改造成種滿植物的摩天大樓，用營養液代替土壤，用LED燈取代陽光，這些彷彿科幻小說的情節，在專家的努力下正一步步成真。垂直農法在密閉的室內種植農作物，壓縮了空間，讓效益極大化，節約土地也節約用水量，用水僅是傳統土壤種植的十分之一。而樓上種菜、樓下賣菜的經營方式，縮短了食物里程，減少了長途運送的資源浪費。<br>
+      垂直農場發想者的本意在解決全人類的問題，然而這種耕作方法現階段仍有個無法克服的難關，就是生產成本太高。目前只能為少數人服務，無法養活全世界。全球人口稠密的城市，有四分之三分布在亞洲，因此相較其他地方，亞洲的大都市更加支持垂直農場的發展。<br>
+      <span style="font-size: 8.5pt; color: #64748b;">――改寫自〈未來城市――垂直農場〉</span></p>
+      
+      <p><strong>【乙】</strong><br>
+      荷蘭某業者耗鉅資三億歐元，打造全球第一座海岸漂浮牧場。業者認為把牧場搬到城市的河岸或海岸線，一來節能減碳，二來也為氣候變遷海平面上升、土地減少的問題找到解決之道。<br>
+      這座位於鹿特丹港邊的建築，可說是荷蘭循環經濟的展示間。它的屋頂可收集雨水，旁邊的太陽能面板，可提供整棟建築所需的四成電力。①<u>上層的空間可容納40頭乳牛，一天約產出800公升的鮮奶</u>，②<u>乳牛的飼料來自當地高爾夫球場、運動場修剪後的草屑以及啤酒廠用過的穀物、麩，全部自動收割混合後，再定時、定量送到乳牛面前</u>。③<u>連擠牛奶和清理排泄物的工作，也都由機器代勞，且乳牛的排泄物會被回收再製成肥料</u>。樓層中設有加工區，④<u>可直接將乳製品銷往當地，減少運輸成本</u>。參觀者也可在現場按下開關直接購買未經高溫消毒的鮮奶。<br>
+      但也有研究人員指出這種模式可能較適合用在農業而非畜牧業。「乳牛應該在自然棲息地漫步。現在把牠們搬到非常工業化的環境，對許多人而言，會認為這不是對待牠們應有的方式。」<br>
+      <span style="font-size: 8.5pt; color: #64748b;">――改寫自〈鹿特丹海岸漂浮牧場落成開放參觀〉</span></p>
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">26</span>
       <div class="q-stem">根據甲文，下列關於垂直農場的推論，何者最恰當？</div>
     </div>
-    <div class="q-img"><img src="images/chinese_passage_q26_q29_1.jpeg" alt="題號 26 附圖"></div>
-<div class="q-img"><img src="images/chinese_passage_q26_q29_2.jpeg" alt="題號 26 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 產量與用水量皆高出土壤種植方式</div><div class="q-opt"><span class="opt-label">(B)</span> 受天然風災直接的影響少於傳統農業</div><div class="q-opt"><span class="opt-label">(C)</span> 亞洲因生產成本較低，更適合垂直農場的發展</div><div class="q-opt"><span class="opt-label">(D)</span> 2050 年全球將有七成的人必須吃垂直農場栽種的蔬菜</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -1637,8 +1737,8 @@ window.MathJax = {
       <span class="q-num">27</span>
       <div class="q-stem">「循環經濟」強調的是資源可持續回復，循環再生。乙文畫線處的做法，何者最能呼應「循環<br>經濟」？</div>
     </div>
-    <div class="q-img"><img src="images/chinese_passage_q26_q29_1.jpeg" alt="題號 27 附圖"></div>
-<div class="q-img"><img src="images/chinese_passage_q26_q29_2.jpeg" alt="題號 27 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> ①</div><div class="q-opt"><span class="opt-label">(B)</span> ②</div><div class="q-opt"><span class="opt-label">(C)</span> ③</div><div class="q-opt"><span class="opt-label">(D)</span> ④</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -1649,8 +1749,8 @@ window.MathJax = {
       <span class="q-num">28</span>
       <div class="q-stem">乙文提及「研究人員指出這種模式可能較適合用在農業而非畜牧業」，其原因最可能是下列何<br>者？</div>
     </div>
-    <div class="q-img"><img src="images/chinese_passage_q26_q29_1.jpeg" alt="題號 28 附圖"></div>
-<div class="q-img"><img src="images/chinese_passage_q26_q29_2.jpeg" alt="題號 28 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 友善動物</div><div class="q-opt"><span class="opt-label">(B)</span> 生產效能</div><div class="q-opt"><span class="opt-label">(C)</span> 產品價格</div><div class="q-opt"><span class="opt-label">(D)</span> 消費需求</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -1817,13 +1917,29 @@ window.MathJax = {
       <span class="q-num">29</span>
       <div class="q-stem">根據甲、乙二文，「垂直農場」與「漂浮牧場」共同的特點不包含下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/chinese_passage_q26_q29_1.jpeg" alt="題號 29 附圖"></div>
-<div class="q-img"><img src="images/chinese_passage_q26_q29_2.jpeg" alt="題號 29 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 可以減少食物里程</div><div class="q-opt"><span class="opt-label">(B)</span> 設置地點都在城市</div><div class="q-opt"><span class="opt-label">(C)</span> 生產所需的資金成本高</div><div class="q-opt"><span class="opt-label">(D)</span> 運作時需投入大量人力</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">請閱讀以下文章，並回答 30 ～ 32 題：</div>
+    <div class="passage-text">
+      <p>親愛的馬爾萬，在我童年的漫長夏天裡，那時我跟你現在一樣大，你叔叔們和我會在你爺爺的農舍屋頂上鋪開床墊，那是在霍姆斯城郊外。</p>
+      <p>馬爾萬，①<u>我希望你和我一樣記住霍姆斯。在它繁華的老城，有一座我們穆斯林的清真寺，一座我們基督徒鄰居的教堂，還有一座我們所有人的大市場，我們在那裡為金項鍊和新鮮食材以及新娘禮服討價還價。</u></p>
+      <p>我希望你記得那滿是炸羊肉丸子味道的擁擠小巷，還有那些晚上，②<u>我們和你媽媽一起在鐘樓廣場附近散步。但是那樣的生活，那個時候，現在看來都像是夢，就算對我來說，都像消失很久的傳聞。</u></p>
+      <p>先是抗議示威，然後是被圍困。天空布滿炸彈，到處是飢餓的人民，與接連不斷的葬禮，這些你是知道的。你知道的那些母親們、姊妹們和同學們有可能被埋在水泥、磚塊和外露的房梁間的狹窄細縫裡，陽光照射下的小塊皮膚在黑暗中閃閃發光。</p>
+      <p>你媽媽今晚也在這裡，馬爾萬，和我們在一起。在這寒冷的月光照耀的海灘上，在啼哭的嬰兒中間，在憂慮地說著我們不會講的語言的女人中間。阿富汗人、索馬利亞人、伊拉克人還有敘利亞人，我們所有人都在焦急地等待日出，所有人又在害怕日出，我們所有人都在尋找家園。</p>
+      <p>我聽說我們是不速之客，我們是不受歡迎的，我們應該把災禍帶到別處去。但我聽到了你媽媽的聲音，越過潮水，她在我耳邊低語：「噢，如果他們看見，親愛的，哪怕只有你所見的一半，只要他們能看見，他們一定會說出善意的話的。」</p>
+      <p>我看見你的側臉，在下弦月的光輝中，我的孩子，你的睫毛就像阿拉伯書法一樣，在你沉靜的睡眠中緊閉著。我對你說：「抓住我的手，不會有壞事發生。」</p>
+      <p>我今夜能想到的，是海有多深，多寬廣，多冷漠。我是多麼無能為力，沒能在它面前保護好你。我能做的就是祈禱，祈禱真主讓船航行在正確的方向。③<u>當海岸退出視野，我們只是波濤中的一個小點，一旦絆倒或站不穩，很容易就會被吞沒。</u></p>
+      <p>因為你，是珍貴的船貨，馬爾萬。④<u>有史以來最珍貴的船貨。</u></p>
+      <p>我多麼希望大海能明白這一點。</p>
+      <p style="font-size: 8.5pt; color: #64748b; text-align: right;">――改寫自卡勒德．胡賽尼《海的祈禱》</p>
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">30</span>
@@ -2010,6 +2126,17 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">請閱讀以下短文，並回答 33 ～ 34 題：</div>
+    <div class="passage-text">
+      <p>唐玄宗時，翰林有三種：翰林待詔、翰林供奉、翰林學士。</p>
+      <p>翰林待詔這個群體很雜，有詩人，有畫家，有經學家，有書法家，有醫生，還有算命先生。這些人被唐玄宗包養起來，辦公之餘，或者出遊的時候，把他們喊過去，陪著玩耍，說穿了，就是「幫閒」。</p>
+      <p>翰林供奉是翰林待詔裡的佼佼者，譬如說，你寫文章寫得非常漂亮，遠遠超過別的翰林待詔，皇帝喊你喊得特別頻繁，今天讓你寫這個，明天讓你寫那個，甚至讓你幫他處理奏章，那麼你就成了翰林供奉。</p>
+      <p>翰林學士又是翰林供奉裡的佼佼者，不光文筆一流，還通曉政治。朝廷把這批人才從待詔和供奉裡發掘出來，讓他們單獨辦公。</p>
+      <p>不管是翰林待詔、翰林供奉，還是翰林學士，都沒有專門的品級。不過翰林學士一般兼有其他職務，既是翰林學士，又是戶部尚書、禮部尚書、兵部侍郎、吏部侍郎等等。雖然翰林學士不領薪水，但是尚書、侍郎卻有不菲的薪水。翰林待詔和翰林供奉大都不兼職，可是他們卻有薪水，其中翰林待詔的薪水參照九品京官，翰林供奉的薪水參照八品京官。</p>
+      <p style="font-size: 8.5pt; color: #64748b; text-align: right;">――改寫自李開周〈翰林的薪水〉</p>
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">33</span>
@@ -2030,13 +2157,17 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">請閱讀以下資料，並回答 35 ～ 36 題：</div>
+    <div class="passage-img" style="text-align: center; margin: 8px 0;">
+      <img src="images/chinese_passage_q35_q36_1.jpeg" alt="投壺運動規則與計分" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 6px;">
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">35</span>
       <div class="q-stem">根據本文，下列關於投壺的敘述何者最恰當？</div>
     </div>
-    <div class="q-img"><img src="images/chinese_passage_q35_q36_1.jpeg" alt="題號 35 附圖"></div>
-
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 主人要讓分給客人</div><div class="q-opt"><span class="opt-label">(B)</span> 由先秦的娛樂競技演變而來</div><div class="q-opt"><span class="opt-label">(C)</span> 參賽者各以四箭算一局勝負</div><div class="q-opt"><span class="opt-label">(D)</span> 司正以三局分數的總和判定贏家</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
@@ -2044,11 +2175,39 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">36</span>
-      <div class="q-stem">右表為某場投壺比賽的計分表，「」表示投中，<br>「」表示未投中。根據本文及右表，下列敘述何者<br>正確？</div>
+      <div class="q-stem">右表為某場投壺比賽的計分表，「✓」表示投中，「✕」表示未投中。根據本文及右表，下列敘述何者正確？</div>
     </div>
-    <div class="q-img"><img src="images/chinese_passage_q35_q36_1.jpeg" alt="題號 36 附圖"></div>
+    
+    <div class="touhu-table-wrap" style="margin: 10px 0 12px 30px;">
+      <table class="exam-table touhu-table" style="border-collapse: collapse; text-align: center; font-size: 10pt; background: #ffffff; border: 1.5px solid #2b4c7e;">
+        <thead>
+          <tr style="background: #eef3f9; border-bottom: 1.5px solid #2b4c7e;">
+            <th style="padding: 6px 12px; border-right: 1px solid #cbd5e1;"></th>
+            <th style="padding: 6px 16px; border-right: 1px solid #cbd5e1; color: #2b4c7e; font-weight: 800;">客人投壺狀況</th>
+            <th style="padding: 6px 16px; color: #2b4c7e; font-weight: 800;">主人投壺狀況</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #e2e8f0;">
+            <td style="padding: 6px 12px; font-weight: 700; background: #f8fafc; border-right: 1px solid #cbd5e1;">第一局</td>
+            <td style="padding: 6px 16px; border-right: 1px solid #cbd5e1; letter-spacing: 4px; font-weight: bold;"><span style="color:#b83a3a;">✕</span> &nbsp;<span style="color:#2d6a4f;">✓</span> &nbsp;<span style="color:#b83a3a;">✕</span> &nbsp;<span style="color:#2d6a4f;">✓</span></td>
+            <td style="padding: 6px 16px; letter-spacing: 4px; font-weight: bold;"><span style="color:#2d6a4f;">✓</span> &nbsp;<span style="color:#b83a3a;">✕</span> &nbsp;<span style="color:#2d6a4f;">✓</span> &nbsp;<span style="color:#b83a3a;">✕</span></td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2e8f0;">
+            <td style="padding: 6px 12px; font-weight: 700; background: #f8fafc; border-right: 1px solid #cbd5e1;">第二局</td>
+            <td style="padding: 6px 16px; border-right: 1px solid #cbd5e1; letter-spacing: 4px; font-weight: bold;"><span style="color:#2d6a4f;">✓</span> &nbsp;<span style="color:#b83a3a;">✕</span> &nbsp;<span style="color:#b83a3a;">✕</span> &nbsp;<span style="color:#b83a3a;">✕</span></td>
+            <td style="padding: 6px 16px; letter-spacing: 4px; font-weight: bold;"><span style="color:#b83a3a;">✕</span> &nbsp;<span style="color:#2d6a4f;">✓</span> &nbsp;<span style="color:#2d6a4f;">✓</span> &nbsp;<span style="color:#b83a3a;">✕</span></td>
+          </tr>
+          <tr>
+            <td style="padding: 6px 12px; font-weight: 700; background: #f8fafc; border-right: 1px solid #cbd5e1;">第三局</td>
+            <td style="padding: 6px 16px; border-right: 1px solid #cbd5e1; letter-spacing: 4px; font-weight: bold;"><span style="color:#b83a3a;">✕</span> &nbsp;<span style="color:#b83a3a;">✕</span> &nbsp;<span style="color:#b83a3a;">✕</span> &nbsp;<span style="color:#2d6a4f;">✓</span></td>
+            <td style="padding: 6px 16px; letter-spacing: 4px; font-weight: bold;"><span style="color:#2d6a4f;">✓</span> &nbsp;<span style="color:#b83a3a;">✕</span> &nbsp;<span style="color:#b83a3a;">✕</span> &nbsp;<span style="color:#b83a3a;">✕</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 第一局客人勝</div><div class="q-opt"><span class="opt-label">(B)</span> 第二局主人勝</div><div class="q-opt"><span class="opt-label">(C)</span> 第三局客人勝</div><div class="q-opt"><span class="opt-label">(D)</span> 最終贏家是主人    客人投壺狀況 主人投壺狀況  第一局           第二局           第三局         </div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 第一局客人勝</div><div class="q-opt"><span class="opt-label">(B)</span> 第二局主人勝</div><div class="q-opt"><span class="opt-label">(C)</span> 第三局客人勝</div><div class="q-opt"><span class="opt-label">(D)</span> 最終贏家是主人</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
@@ -2208,6 +2367,17 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">請閱讀以下短文，並回答 37 ～ 38 題：</div>
+    <div class="passage-text">
+      <p>東非草原上，鐮莢金合歡樹提供原生舉尾蟻花蜜與住所，而舉尾蟻會保護金合歡免受食草性動物侵害，並攻擊啃食金合歡的非洲象。21世紀初，外來的熱帶大頭家蟻突然出現在肯亞，牠們會殺死舉尾蟻並吃掉其幼體，讓非洲象得以肆無忌憚地啃食金合歡。</p>
+      <p>另一方面，金合歡減少，也令獅子在捕獵斑馬時難以掩蔽。研究團隊為了解金合歡減少是否會影響獅子獵食，在肯亞保護區的稀樹草原上建立十幾個研究區塊，追蹤金合歡景觀變化、斑馬族群密度、熱帶大頭家蟻出現情況以及獅子殺死斑馬的情況。</p>
+      <p>經過3年的監測，團隊發現沒有舉尾蟻的金合歡被非洲象破壞的速度，比有舉尾蟻的樹快5～7倍。這些區域的金合歡覆蓋面積急劇減少，使獅子很難偷偷靠近並伏擊斑馬。而沒有熱帶大頭家蟻入侵的地區，斑馬遭獅子獵殺的情況較前者高出兩倍以上。</p>
+      <p>令人驚訝的是，雖然接觸主要獵物的機會減少，但研究區域的獅子數量卻保持穩定。根據其他研究數據，團隊發現當地獅子另外增加捕獵的對象：從2003年到2020年，獅子獵殺斑馬的比例從67%下降到42%，而獵殺水牛的比例從0%增加到42%。</p>
+      <p>針對這樣的結果，專家認為：這些入侵的螞蟻可能早就出現，但沒有人注意。我們現在發現牠們以非常微妙的方式改變了生態景觀。</p>
+      <p style="font-size: 8.5pt; color: #64748b; text-align: right;">――改寫自《Science》2024年1月號</p>
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">37</span>
@@ -2228,6 +2398,16 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">請閱讀以下短文，並回答 39 ～ 40 題：</div>
+    <div class="passage-text">
+      <p>僮僕遂者，閩之海山人，至忠。吾妻劉孺人逝時，遂侵曉起，私市餺飥<sup>1</sup>，漬茗跪進於靈次，拜不止。他僮笑之，遂怒曰：「我孝主母，弗類若不孝也！」嘗從余客荔城，過綿亭山，輿翻，遂咎輿夫曰：「明日再跌，當擇其平坦者，勿令碎吾主人輿中物也。」其愚如此。余來杭城，遂哭，將從余，余止之。後得家書，遂乃以今年五月十八日被疫死矣。嗚呼！吾聞南方多疫，勞者先死，是必吾家役之無方耳，傳之亦所以志余過也。</p>
+      <p style="font-size: 8.5pt; color: #64748b; text-align: right;">――改寫自林紓〈僮遂小傳〉</p>
+    </div>
+    <div class="passage-notes">
+      📖 1. 餺飥：湯餅。
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">39</span>
@@ -2404,6 +2584,16 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">請閱讀以下短文，並回答 41 ～ 42 題：</div>
+    <div class="passage-text">
+      <p>田饒事魯哀公，而不見察。謂哀公曰：「臣將去君，黃鵠舉矣。」哀公曰：「何謂也？」田饒曰：「君獨不見夫雞乎？頭戴冠者，文也；足傅距<sup>1</sup>者，武也；敵在前敢鬥者，勇也；見食相告者，仁也；守夜不失時者，信也。雞雖有此五德，君猶烹而食之者，何也？則以其所從來者近也。夫黃鵠一舉千里，止君園池，食君魚鱉，啄君黍粱，無此五德，君猶貴之者，何也？以其所從來者遠也。臣將去君，黃鵠舉矣。」遂去之燕，燕以為相，三年，燕政大平。</p>
+      <p style="font-size: 8.5pt; color: #64748b; text-align: right;">――改寫自韓嬰《韓詩外傳》</p>
+    </div>
+    <div class="passage-notes">
+      📖 1. 足傅距：腳上長著爪子。
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">41</span>

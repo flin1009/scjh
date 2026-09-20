@@ -33,7 +33,7 @@
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible; min-height: 297mm; height: auto;
     border-radius: 4px;
   }
   @media print {
@@ -94,7 +94,7 @@
     border-bottom: 1.5px solid #cbd8e6;
     padding-bottom: 4px;
     margin-bottom: 8px;
-    font-size: 8.5pt;
+    font-size: 10.5pt;
     font-weight: 700;
     color: #486581;
   }
@@ -123,7 +123,7 @@
   .q-head {
     display: flex;
     gap: 8px;
-    font-size: 8.5pt;
+    font-size: 10.5pt;
     margin-bottom: 4px;
   }
   .q-num {
@@ -147,21 +147,13 @@
     text-align: center;
     margin: 5px 0;
   }
-  .q-img img {
-    max-width: 95%;
-    max-height: 48mm;
-    object-fit: contain;
-    border-radius: 4px;
-    border: 1px solid #d9e2ec;
-    background: #ffffff;
-    padding: 3px;
-  }
+  .q-img img, .passage-img img { max-width: 100%; height: auto; object-fit: contain; border-radius: 4px; border: 1px solid #cbd5e1; background: #ffffff; padding: 4px; display: inline-block; }
   .q-opts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4px 12px;
     margin-left: 30px;
-    font-size: 8pt;
+    font-size: 10pt;
     margin-top: 5px;
   }
   .q-opt {
@@ -208,7 +200,7 @@
   }
   .card-title {
     font-weight: 800;
-    font-size: 8.5pt;
+    font-size: 10.5pt;
     color: #2b4c7e;
   }
   .badge-stars {
@@ -358,7 +350,7 @@
     <span>【考前算牌矩陣】114年英語（閱讀）科</span>
     <span>衝 A 門檻與命題難度落點分佈</span>
   </div>
-  <div style="padding: 10px 5px; font-size: 8.5pt; line-height: 1.6;">
+  <div style="padding: 10px 5px; font-size: 10.5pt; line-height: 1.6;">
     <h3 style="color: #2b4c7e; margin-top: 0; font-size: 11pt;">📊 命題難度星級與各題分佈矩陣</h3>
     <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 8pt; text-align: center;">
       <thead>
@@ -815,7 +807,7 @@
       <div class="q-stem">It is hard for trees to 　　　 along this beach because of the strong winds from the sea.</div>
     </div>
     
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> blow</div><div class="q-opt"><span class="opt-label">(B)</span> build</div><div class="q-opt"><span class="opt-label">(C)</span> follow</div><div class="q-opt"><span class="opt-label">(D)</span> grow 2 請翻頁繼續作答</div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> blow</div><div class="q-opt"><span class="opt-label">(B)</span> build</div><div class="q-opt"><span class="opt-label">(C)</span> follow</div><div class="q-opt"><span class="opt-label">(D)</span> grow</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿筆記區</span></div>
   </div>
 
@@ -1227,10 +1219,16 @@
       <div class="q-stem">It was very windy this morning.  Some of the shirts on the balcony were blown away in the pond.</div>
     </div>
     
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> fell</div><div class="q-opt"><span class="opt-label">(B)</span> and fell</div><div class="q-opt"><span class="opt-label">(C)</span> fallen</div><div class="q-opt"><span class="opt-label">(D)</span> and fallen 3 第二部分：題組 (第20 - 43題，共24題) (20-21)</div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> fell</div><div class="q-opt"><span class="opt-label">(B)</span> and fell</div><div class="q-opt"><span class="opt-label">(C)</span> fallen</div><div class="q-opt"><span class="opt-label">(D)</span> and fallen</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿筆記區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">第二部分：題組 (第 20 ～ 43 題，共 24 題)<br>(20-21) 請閱讀以下短文，並回答 20 ～ 21 題：</div>
+    <div class="passage-img" style="text-align:center; margin: 8px 0;">
+      <img src="images/english_passage_q20_q21_1.png" alt="Passage for Questions 20-21" style="max-width: 100%; height: auto;">
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">20</span>
@@ -1403,10 +1401,16 @@
       <div class="q-stem">How did the writer help Rex?</div>
     </div>
     
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> By calling the police.</div><div class="q-opt"><span class="opt-label">(B)</span> By making him exercise.</div><div class="q-opt"><span class="opt-label">(C)</span> By taking him to see a doctor.</div><div class="q-opt"><span class="opt-label">(D)</span> By looking for a new home for him. Rex is a dog that lives at the bakery next to our school.  He is cute and friendly. Every morning, he stands in front of the school to welcome everybody.  We all see Rex as one of us.  But one Monday morning, I was surprised that Rex was not there to say hello to us.  “Rex is in the hospital.  He was hit by a car last night,” my classmate told me. We went to see Rex in the hospital that day after school.  Two weeks later, Rex was much better, and we decided to take him for a walk every evening.  Because of the exercise, Rex became healthier and stronger.  Soon he could happily run and jump again.  He is now as handsome and strong as before! 4 請翻頁繼續作答 (22-23)</div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> By calling the police.</div><div class="q-opt"><span class="opt-label">(B)</span> By making him exercise.</div><div class="q-opt"><span class="opt-label">(C)</span> By taking him to see a doctor.</div><div class="q-opt"><span class="opt-label">(D)</span> By looking for a new home for him.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿筆記區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">(22-23) 請閱讀以下對話，並回答 22 ～ 23 題：</div>
+    <div class="passage-img" style="text-align:center; margin: 8px 0;">
+      <img src="images/english_passage_q22_q23_1.png" alt="Passage for Questions 22-23" style="max-width: 100%; height: auto;">
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">22</span>
@@ -1423,10 +1427,16 @@
       <div class="q-stem">Which is most likely an example of stealing someone＇s thunder?</div>
     </div>
     
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Dennis never changes his mind except when his wife tells him to.</div><div class="q-opt"><span class="opt-label">(B)</span> Melisa tells Tom she’ll go to the party but tells her mom she’ll stay home.</div><div class="q-opt"><span class="opt-label">(C)</span> Jeff tells everyone he’ll move abroad when Ivy is still telling them about her baby.</div><div class="q-opt"><span class="opt-label">(D)</span> Alisa says she doesn’t care what we have for lunch but also doesn’t like the restaurant we chose.   likely 可能 5 (24-25)</div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Dennis never changes his mind except when his wife tells him to.</div><div class="q-opt"><span class="opt-label">(B)</span> Melisa tells Tom she’ll go to the party but tells her mom she’ll stay home.</div><div class="q-opt"><span class="opt-label">(C)</span> Jeff tells everyone he’ll move abroad when Ivy is still telling them about her baby.</div><div class="q-opt"><span class="opt-label">(D)</span> Alisa says she doesn’t care what we have for lunch but also doesn’t like the restaurant we pick.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿筆記區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">(24-25) 請閱讀以下短文與圖表，並回答 24 ～ 25 題：</div>
+    <div class="passage-img" style="text-align:center; margin: 8px 0;">
+      <img src="images/english_passage_q24_q25_1.png" alt="Passage for Questions 24-25" style="max-width: 100%; height: auto;">
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">24</span>
@@ -1599,10 +1609,16 @@
       <div class="q-stem">Stacy is going to White Lake City and is staying at a hotel near the White Lake Main Station.  She wants to visit the Museum of White Lake City History on Friday and see White Lake on Saturday.  If she plans to buy (a) White Lake City Card(s), which of the four choices will be best for her and cost her the least?</div>
     </div>
     
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> A 3-day Card for Zone 1.</div><div class="q-opt"><span class="opt-label">(B)</span> A Weekend Card for Zones 1-3.</div><div class="q-opt"><span class="opt-label">(C)</span> A 1-day Card for Zone 1 and a Weekend Card for Zones 1-2.</div><div class="q-opt"><span class="opt-label">(D)</span> A 1-day Card for Zones 1-2 and a Weekend Card for Zones 1-2.   zone 區 Buy a White Lake City Card When You’re in the City  With any of the Cards, you can -	 visit the city by metro, bus, or train as many times as you want. * -	 take one child under 12 with you for free. -	 save 20% on tickets to public museums.  The 1-day, 3-day, and 5-day Cards are for trips from Monday to Friday, and the Weekend Card is for trips on weekends and holidays.  Check the map and buy the right Card for the zones you’ll be entering. Card Zone 1 Zones 1-2 Zones 1-3 1-day $20 $40 $60 3-day $40 $60 $80 5-day $50 $80 $110 Weekend $30 $50 $80 * The Cards are only for trips inside the three zones. ⓐ White Lake Main Station ⓑ Museum of White Lake City History ⓒ Museum of Modern Art ⓓ White Lake ⓔ White Lake Castle ⓕ White Lake Airport 6 請翻頁繼續作答 (26-28)</div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> A 3-day Card for Zone 1.</div><div class="q-opt"><span class="opt-label">(B)</span> A Weekend Card for Zones 1-3.</div><div class="q-opt"><span class="opt-label">(C)</span> A 1-day Card for Zone 1 and a Weekend Card for Zones 1-2.</div><div class="q-opt"><span class="opt-label">(D)</span> A 1-day Card for Zones 1-2 and a Weekend Card for Zones 1-2.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿筆記區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">(26-28) 請閱讀以下短文，並回答 26 ～ 28 題：</div>
+    <div class="passage-img" style="text-align:center; margin: 8px 0;">
+      <img src="images/english_passage_q26_q28_1.png" alt="Passage for Questions 26-28" style="max-width: 100%; height: auto;">
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">26</span>
@@ -1629,7 +1645,7 @@
       <div class="q-stem">What does making sacrifices mean?</div>
     </div>
     
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Learning to make money and use it wisely.</div><div class="q-opt"><span class="opt-label">(B)</span> Getting to know different sides of your family.</div><div class="q-opt"><span class="opt-label">(C)</span> Making excuses for failing to do something difficult.</div><div class="q-opt"><span class="opt-label">(D)</span> Giving up something important to do something else.   paragraph 段落 At 5 o’clock every morning, while most people are sleeping, 16-year-old Libby Larson is already up.  She mops the floor, gets the mail and the newspapers, and gets ready for visitors to Rolling Acres.  Libby’s grandparents started Rolling Acres in 1970, and since then all of the Larson family have been working there. Rolling Acres used to be just a sheep farm, but now, with its fruit trees, vegetable gardens, and many other kinds of animals, it has become a popular place for families to go on vacation.  Visitors can pick fruits, collect eggs, and feed the animals.  It is one of Libby’s jobs to show kids how to feed the baby sheep. For her work, Libby is paid $10 an hour.  This summer, she expects to make about $1,200 and plans to buy a cell phone.  Her friends think it’s great to make that much money in a summer.  However, for Libby, working at a family business also means making sacrifices. “I’d love to sleep until noon or go to summer camp like other kids.  My friends stopped inviting me on trips because I’m always busy in the summer.”  However, Libby also said, “But it’s better to see both sides.  Working with your family is great.  You feel closer to each other.” 7 (29-31) Around the year 400, people came to Easter Island. They used trees to make fire and build houses.  Because of the trees, people had a great life on the island. In their free time, they loved making statues with big rocks.  With the trees they cut down, they could move the statues around easily. Trees were needed and used in every part of their life. Years passed, and there were fewer and fewer trees on Easter Island. Without enough trees to keep water under the ground, the land became dry, and plants didn’t grow. So many trees here! I’m thirsty. And I’m hungry. 8 請翻頁繼續作答</div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Learning to make money and use it wisely.</div><div class="q-opt"><span class="opt-label">(B)</span> Getting to know different sides of your family.</div><div class="q-opt"><span class="opt-label">(C)</span> Making excuses for failing to do something difficult.</div><div class="q-opt"><span class="opt-label">(D)</span> Giving up something important to do something else.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿筆記區</span></div>
   </div>
 
@@ -1789,6 +1805,12 @@
     <span>會考模擬・計時實戰</span>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">(29-31) 請閱讀以下連環圖畫，並回答 29 ～ 31 題：</div>
+    <div class="passage-img" style="text-align:center; margin: 8px 0;">
+      <img src="images/english_passage_q29_q31_1.jpeg" alt="Passage for Questions 29-31" style="max-width: 100%; height: auto;">
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">29</span>
@@ -1815,10 +1837,16 @@
       <div class="q-stem">What does did it in Picture 7 mean?</div>
     </div>
     
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Fall to the ground.</div><div class="q-opt"><span class="opt-label">(B)</span> Cut down the last trees.</div><div class="q-opt"><span class="opt-label">(C)</span> Move the statues to fighting grounds.</div><div class="q-opt"><span class="opt-label">(D)</span> Understand how important trees were. People began to fight for water and food.  The statues were moved to fighting grounds to show their power.  The last trees were probably cut down at this time. Those who cut down the last trees surely understood how important trees were to them—but still, they did it.  When the last trees fell to the ground, people on the island fell, too. Let’s not make Earth, our only home, another Easter Island. 9 (32-34)</div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Fall to the ground.</div><div class="q-opt"><span class="opt-label">(B)</span> Cut down the last trees.</div><div class="q-opt"><span class="opt-label">(C)</span> Move the statues to fighting grounds.</div><div class="q-opt"><span class="opt-label">(D)</span> Understand how important trees were.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿筆記區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">(32-34) 請閱讀以下短文，並回答 32 ～ 34 題：</div>
+    <div class="passage-img" style="text-align:center; margin: 8px 0;">
+      <img src="images/english_passage_q32_q34_1.png" alt="Passage for Questions 32-34" style="max-width: 100%; height: auto;">
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">32</span>
@@ -1991,7 +2019,7 @@
       <div class="q-stem">Which is true about the origami study?</div>
     </div>
     
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Buyers would spend less on builders’ origami than builders would.</div><div class="q-opt"><span class="opt-label">(B)</span> Builders and buyers needed to decide a price on the origami they made.</div><div class="q-opt"><span class="opt-label">(C)</span> Builders knew others would not pay as much for the origami as they would.</div><div class="q-opt"><span class="opt-label">(D)</span> Buyers would spend more on builders’ origami after knowing how they were made. Many years ago, Dan Ariely bought a cabinet from IKEA.  IKEA is a famous furniture store that sells boxes of furniture parts.  People who buy them have to put all the parts together themselves.  It took Ariely hours to build his cabinet.  Ariely didn’t really enjoy himself when he was trying to put all the parts together.  However, after he finished, he felt quite good about himself and his cabinet. Later, he found that he loved his cabinet more than any of his other furniture. Ariely wanted to know if anyone shared his feelings, so he did a fun origami study.  He invited two groups of people to join his study.  He called one group “builders” and the other group “buyers.” Builders were told to make origami, like paper frogs or paper birds.  When they finished, they were asked how much they would spend on their works.  Ariely then showed the origami to buyers and asked them how much they would pay for them. The two groups gave very different answers.  Though buyers would pay only five cents for builders’ origami, builders would spend 25 cents!  Interestingly, builders believed others would think their works were good enough to cost that much money! Ariely’s study showed that he was not alone in his IKEA experience — we just love things more, sometimes blindly, when we make them ourselves.  Ariely called it “the IKEA effect.”   effect 效應　furniture 家具 10 請翻頁繼續作答</div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Buyers would spend less on builders’ origami than builders would.</div><div class="q-opt"><span class="opt-label">(B)</span> Builders and buyers needed to decide a price on the origami they made.</div><div class="q-opt"><span class="opt-label">(C)</span> Builders knew others would not pay as much for the origami as they would.</div><div class="q-opt"><span class="opt-label">(D)</span> Buyers would spend more on builders’ origami after knowing how they were made.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿筆記區</span></div>
   </div>
 
@@ -2001,17 +2029,23 @@
       <div class="q-stem">Jerry just can’t get his daughter Mia to eat more vegetables at dinner.  Every time he tries to do so, there is always a lot of shouting and crying.  If Jerry wants to have Mia eat more vegetables by using the IKEA effect, what should he do?</div>
     </div>
     
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Tell Mia that he cooks the vegetables just for her.</div><div class="q-opt"><span class="opt-label">(B)</span> Ask Mia to help him cook vegetables for her meal.</div><div class="q-opt"><span class="opt-label">(C)</span> Give Mia her favorite candy after she eats vegetables.</div><div class="q-opt"><span class="opt-label">(D)</span> Ask Mia what vegetables she likes and cook them for her. 11 (35-37)</div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Tell Mia that he cooks the vegetables just for her.</div><div class="q-opt"><span class="opt-label">(B)</span> Ask Mia to help him cook vegetables for her meal.</div><div class="q-opt"><span class="opt-label">(C)</span> Give Mia her favorite candy after she eats vegetables.</div><div class="q-opt"><span class="opt-label">(D)</span> Ask Mia what vegetables she likes and cook them for her.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿筆記區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">(35-37) 請閱讀以下短文與圖片，並回答 35 ～ 37 題：</div>
+    <div class="passage-img" style="text-align:center; margin: 8px 0;">
+      <img src="images/english_passage_q35_q37_1.png" alt="Passage for Questions 35-37" style="max-width: 100%; height: auto;">
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">35</span>
       <div class="q-stem">What is the reading mainly about?</div>
     </div>
     
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> The tips on using a picture to tell a story.</div><div class="q-opt"><span class="opt-label">(B)</span> The change that electricity brought to people’s lives.</div><div class="q-opt"><span class="opt-label">(C)</span> The history behind the picture of a UK electricity worker.</div><div class="q-opt"><span class="opt-label">(D)</span> The story of a famous UK electricity worker from the 1970s. In the picture is a UK electricity worker in the 1970s.  Pictures like this appeared in many newspapers at the time.  In 1972, electricity workers in the UK asked to be paid more, and they decided to stop working until their wish was answered.  The government worried that there wouldn’t be enough electricity for the country if these workers didn’t go to work, so it agreed to give them the pay rise.  However, the story didn’t end there. A year later, the electricity workers asked for another pay rise.  To get what they wanted, they worked shorter hours and acted like they would walk away from their job anytime.  But this time, the government decided to fight.  To save electricity, it made new rules for people to follow.  For example, each family could turn on the heat in only one room; TV stations had to stop their shows at 10:30 p.m.; businesses could open only three days a week. People’s lives were greatly changed.  Without enough heat to keep the house warm, people covered themselves in blankets all the time.  Hospitals had to use candles because they couldn’t keep all the lights on.  Factories couldn’t keep their machines working.  Many people lost their jobs.  For months, people were paying the price while the electricity workers were fighting for their wish.  In the end, the government agreed to the second pay rise.  This picture shows what many people thought of the electricity workers during the “dark” time.   electricity 電力　government 政府 12 請翻頁繼續作答</div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> The tips on using a picture to tell a story.</div><div class="q-opt"><span class="opt-label">(B)</span> The change that electricity brought to people’s lives.</div><div class="q-opt"><span class="opt-label">(C)</span> The history behind the picture of a UK electricity worker.</div><div class="q-opt"><span class="opt-label">(D)</span> The story of a famous UK electricity worker from the 1970s.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿筆記區</span></div>
   </div>
 
@@ -2187,10 +2221,16 @@
       <div class="q-stem">Why does the writer put the “ ” mark around the word dark in the last sentence?</div>
     </div>
     
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> To say that the “dark” time was actually not dark.</div><div class="q-opt"><span class="opt-label">(B)</span> To tell people that the word was said by the government.</div><div class="q-opt"><span class="opt-label">(C)</span> To mean both the days without lights and the difficult lives people lived.</div><div class="q-opt"><span class="opt-label">(D)</span> To show that the government and the electricity workers both lost their fights.   likely 可能 試題結束 13 (38-43)</div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> To say that the “dark” time was actually not dark.</div><div class="q-opt"><span class="opt-label">(B)</span> To tell people that the word was said by the government.</div><div class="q-opt"><span class="opt-label">(C)</span> To mean both the days without lights and the difficult lives people lived.</div><div class="q-opt"><span class="opt-label">(D)</span> To show that the government and the electricity workers both lost their fights.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿筆記區</span></div>
   </div>
 
+    <div class="passage-box">
+    <div class="passage-title">(38-43) 請閱讀以下短文，並回答 38 ～ 43 題：</div>
+    <div class="passage-img" style="text-align:center; margin: 8px 0;">
+      <img src="images/english_passage_q38_q43_1.png" alt="Passage for Questions 38-43" style="max-width: 100%; height: auto;">
+    </div>
+  </div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">38</span>
@@ -2403,7 +2443,7 @@
       <div class="q-stem">【克漏字填空】請依選文文意，選出最適合填入空格 (43) 的字詞或句子：</div>
     </div>
     
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> is going to give</div><div class="q-opt"><span class="opt-label">(B)</span> gives</div><div class="q-opt"><span class="opt-label">(C)</span> has given</div><div class="q-opt"><span class="opt-label">(D)</span> gave Most kids want gifts from their parents on their birthdays, but Cameron doesn’t.  On his birthday, he gives his mom a gift.  He 　38　 doing this in his first year of junior high school.  That year, during one class, he watched a video about how a baby is pushed from its mother’s body.  After class, 　39　 .  How brave a woman is to have a baby!  Thank God I’ll never have to do that! When Cameron came home that day, he held his mom in his arms for a long time.  He decided that his birthday 　40　 .  During those nine months inside his mom, he just ate and slept while his mom was doing all the hard work.  So why should he get a birthday gift for doing nothing?  If anyone should get a gift on his birthday, it should be his mom. The 　41　 “birthday gift” Cameron prepared was a bag of cookies he baked.  The cookies tasted so bad, but his mom said they were the best thing she ever got.  Hearing that 　42　 . It was so much better than getting a gift.  Now, on his birthday every year, Cameron makes a gift for his mother to thank her for giving him life. This year, Cameron 　43　 his mom a nice dress.  A few months ago, he learned to make dresses at school and decided to make one for his mom.  Now the dress is finished and hanging behind Cameron’s bedroom door.  He believes the gift will tell his mother how much he loves her.</div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> is going to give</div><div class="q-opt"><span class="opt-label">(B)</span> gives</div><div class="q-opt"><span class="opt-label">(C)</span> has given</div><div class="q-opt"><span class="opt-label">(D)</span> gave</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿筆記區</span></div>
   </div>
 

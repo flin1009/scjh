@@ -39,13 +39,13 @@ window.MathJax = {
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -161,7 +161,7 @@ window.MathJax = {
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -206,7 +206,7 @@ window.MathJax = {
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -329,6 +329,76 @@ window.MathJax = {
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級字體與自然圖片排版 */
+  .passage-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-left: 4px solid #2b4c7e;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0 12px 0;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #1e293b;
+  }
+  .passage-title {
+    font-weight: 800;
+    color: #1e3a8a;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #cbd5e1;
+  }
+  .passage-content {
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+  .passage-img {
+    text-align: center;
+    margin: 8px 0;
+  }
+  .passage-img img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 10pt !important;
+  }
+  .card-body {
+    font-size: 9.5pt !important;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -649,7 +719,7 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">7</span>
-      <div class="q-stem">氫氣因燃燒過程不會產生二氧化碳，是能源轉型的目標之一。依據製造方法的不同，可將氫氣<br>分成幾類，其中四類如表(一)所示。在減碳環保的要求下，期望產生的氫氣要盡量是綠氫。 <br> <br> <br>依據表中資訊，下列說明何者最合理？</div>
+      <div class="q-stem">氫氣因燃燒過程不會產生二氧化碳，是能源轉型的目標之一。依據製造方法的不同，可將氫氣<br>分成幾類，其中四類如表(一)所示。在減碳環保的要求下，期望產生的氫氣要盡量是綠氫。 <br><br>依據表中資訊，下列說明何者最合理？</div>
     </div>
     <div class="q-img"><img src="images/nature_q7_1.jpeg" alt="題號 7 附圖"></div>
 
@@ -847,7 +917,7 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">11</span>
-      <div class="q-stem">圖(六)為小琪進行實驗的步驟示意圖： <br> <br> <br> <br> <br> <br>關於此實驗，下列說明何者正確？</div>
+      <div class="q-stem">圖(六)為小琪進行實驗的步驟示意圖： <br><br>關於此實驗，下列說明何者正確？</div>
     </div>
     <div class="q-img"><img src="images/nature_q11_1.jpeg" alt="題號 11 附圖"></div>
 
@@ -2422,7 +2492,7 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">41</span>
-      <div class="q-stem">有甲、乙、丙三種固體純物質，三者對水的溶解情形及沸點如表(六)所示。有一份參雜甲、乙、<br>丙的混合物，可經由兩步驟(加熱、加水過濾)而分離出甲、乙、丙，如圖(二十五)所示。 <br> <br> <br> <br> <br> <br> <br> <br>依據上述資訊，下列推論何者最合理？</div>
+      <div class="q-stem">有甲、乙、丙三種固體純物質，三者對水的溶解情形及沸點如表(六)所示。有一份參雜甲、乙、<br>丙的混合物，可經由兩步驟(加熱、加水過濾)而分離出甲、乙、丙，如圖(二十五)所示。 <br><br>依據上述資訊，下列推論何者最合理？</div>
     </div>
     <div class="q-img"><img src="images/nature_q41_2.jpeg" alt="題號 41 附圖"></div>
 <div class="q-img"><img src="images/nature_q41_3.jpeg" alt="題號 41 附圖"></div>
@@ -2434,7 +2504,7 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">42</span>
-      <div class="q-stem">圖(二十六)、圖(二十七)兩種連接方式皆為甲、乙兩個燈泡並聯，小明與阿華皆認為圖(二十七)<br>的接法，燈泡甲較不會因為線路故障而不亮，以下為兩人的解釋： <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>小明：若燈泡乙的燈絲燒斷，在圖(二十六)中會使得燈泡甲不亮，而在圖(二十七)中燈泡甲仍會<br>發亮。 <br>阿華：若導線丙、丁其中一條斷裂，在圖(二十六)中會使得燈泡甲不亮，而在圖(二十七)中燈泡甲仍<br>會發亮。 <br>關於兩人的解釋是否合理？</div>
+      <div class="q-stem">圖(二十六)、圖(二十七)兩種連接方式皆為甲、乙兩個燈泡並聯，小明與阿華皆認為圖(二十七)<br>的接法，燈泡甲較不會因為線路故障而不亮，以下為兩人的解釋： <br><br>小明：若燈泡乙的燈絲燒斷，在圖(二十六)中會使得燈泡甲不亮，而在圖(二十七)中燈泡甲仍會<br>發亮。 <br>阿華：若導線丙、丁其中一條斷裂，在圖(二十六)中會使得燈泡甲不亮，而在圖(二十七)中燈泡甲仍<br>會發亮。 <br>關於兩人的解釋是否合理？</div>
     </div>
     <div class="q-img"><img src="images/nature_q42_1.jpeg" alt="題號 42 附圖"></div>
 
@@ -2442,13 +2512,17 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀下列敘述後，回答43～44題</div>
+  <div class="passage-img"><img src="images/nature_passage_q43_q44_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q43_q44_2.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">43</span>
       <div class="q-stem">若壯壯跟安安兩人對於早餐飲品的需求為： <br>壯壯：我想要攝取較多的胺基酸。 <br>安安：我要減少攝取糖。 <br>則根據營養比較表，在攝取相同容量飲品的情況下，推論兩人的選擇，下列何者最合理？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q43_q44_1.jpeg" alt="題號 43 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q43_q44_2.jpeg" alt="題號 43 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 兩人皆宜選擇牛奶</div><div class="q-opt"><span class="opt-label">(B)</span> 兩人皆宜選擇燕麥奶</div><div class="q-opt"><span class="opt-label">(C)</span> 壯壯選擇牛奶，安安選擇燕麥奶</div><div class="q-opt"><span class="opt-label">(D)</span> 壯壯選擇燕麥奶，安安選擇牛奶</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2459,8 +2533,8 @@ window.MathJax = {
       <span class="q-num">44</span>
       <div class="q-stem">根據本文，若只考量碳排放對於環境的影響，在相同的碳排放量下，推論下列何種飲品生產的<br>量最多？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q43_q44_1.jpeg" alt="題號 44 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q43_q44_2.jpeg" alt="題號 44 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 牛奶</div><div class="q-opt"><span class="opt-label">(B)</span> 米漿</div><div class="q-opt"><span class="opt-label">(C)</span> 燕麥奶</div><div class="q-opt"><span class="opt-label">(D)</span> 杏仁奶</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2622,13 +2696,17 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀下列敘述後，回答45～46題</div>
+  <div class="passage-img"><img src="images/nature_passage_q45_q46_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q45_q46_2.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">45</span>
       <div class="q-stem">根據本文第一段的資訊，下列有關Cp 的敘述，何者最合理？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q45_q46_1.jpeg" alt="題號 45 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q45_q46_2.jpeg" alt="題號 45 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 風力發電機葉片轉動的速率愈快，Cp 值會愈大</div><div class="q-opt"><span class="opt-label">(B)</span> 風力發電機葉片轉動的速率愈快，Cp 值會愈小</div><div class="q-opt"><span class="opt-label">(C)</span> 風力發電機葉片由風力獲得能量的比例愈高，Cp 值會愈大</div><div class="q-opt"><span class="opt-label">(D)</span> 風力發電機葉片由風力獲得能量的比例愈高，Cp 值會愈小</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2639,19 +2717,23 @@ window.MathJax = {
       <span class="q-num">46</span>
       <div class="q-stem">根據圖(三十)，假設風原始的風速v1 為10 m/s，通過發電機後，最後的風速v2 為多少時，會接<br>近最大的Cp 值？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q45_q46_1.jpeg" alt="題號 46 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q45_q46_2.jpeg" alt="題號 46 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 0</div><div class="q-opt"><span class="opt-label">(B)</span> 3.3 m/s</div><div class="q-opt"><span class="opt-label">(C)</span> 5.9 m/s</div><div class="q-opt"><span class="opt-label">(D)</span> 10 m/s</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀下列敘述後，回答47～48題</div>
+  <div class="passage-img"><img src="images/nature_passage_q47_q48_1.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">47</span>
       <div class="q-stem">阿洋提出以下觀點： <br>清水浸泡洗滌方法中，不用添加物比使用添加物的洗滌效果好 <br>清水直接沖洗比各種浸泡洗滌方法的效果好 <br>根據本文，關於阿洋的觀點，下列敘述何者合理？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q47_q48_1.jpeg" alt="題號 47 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 比較乙、丙的結果，可知觀點 不恰當</div><div class="q-opt"><span class="opt-label">(B)</span> 比較乙、丁的結果，可知觀點 不恰當</div><div class="q-opt"><span class="opt-label">(C)</span> 比較甲、戊的結果，可知觀點 不恰當</div><div class="q-opt"><span class="opt-label">(D)</span> 比較乙、戊的結果，可知觀點 不恰當</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2662,7 +2744,7 @@ window.MathJax = {
       <span class="q-num">48</span>
       <div class="q-stem">根據本文，「前處理」最可能為下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q47_q48_1.jpeg" alt="題號 48 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 所有小白菜皆不浸泡農藥</div><div class="q-opt"><span class="opt-label">(B)</span> 所有小白菜浸泡相同濃度的同一種農藥</div><div class="q-opt"><span class="opt-label">(C)</span> 小白菜分別浸泡相同濃度的不同種農藥</div><div class="q-opt"><span class="opt-label">(D)</span> 小白菜分別浸泡不同濃度的同一種農藥</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2824,13 +2906,17 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀下列敘述後，回答49～50題</div>
+  <div class="passage-img"><img src="images/nature_passage_q49_q50_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q49_q50_2.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">49</span>
       <div class="q-stem">根據本文，圖(三十一)中模擬地震參數所得到的結果，與下列何種資料所呈現的特性最直接相<br>關？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q49_q50_1.jpeg" alt="題號 49 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q49_q50_2.jpeg" alt="題號 49 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 地震強度</div><div class="q-opt"><span class="opt-label">(B)</span> 地震規模</div><div class="q-opt"><span class="opt-label">(C)</span> 地震的位置</div><div class="q-opt"><span class="opt-label">(D)</span> 斷層的類型</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2841,8 +2927,8 @@ window.MathJax = {
       <span class="q-num">50</span>
       <div class="q-stem">根據本文，當模擬的地震參數固定時，可利用圖(三十二)來說明下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q49_q50_1.jpeg" alt="題號 50 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q49_q50_2.jpeg" alt="題號 50 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 當岩層越厚時，可能會有較高的土壤液化潛勢</div><div class="q-opt"><span class="opt-label">(B)</span> 當砂土層越厚時，可能會有較高的土壤液化潛勢</div><div class="q-opt"><span class="opt-label">(C)</span> 當地下水位越高時，可能會有較高的土壤液化潛勢</div><div class="q-opt"><span class="opt-label">(D)</span> 當地層組成以砂土為主時，可能會有較高的土壤液化潛勢</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>

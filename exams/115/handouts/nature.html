@@ -39,13 +39,13 @@ window.MathJax = {
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -161,7 +161,7 @@ window.MathJax = {
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -206,7 +206,7 @@ window.MathJax = {
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -329,6 +329,76 @@ window.MathJax = {
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級字體與自然圖片排版 */
+  .passage-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-left: 4px solid #2b4c7e;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0 12px 0;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #1e293b;
+  }
+  .passage-title {
+    font-weight: 800;
+    color: #1e3a8a;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #cbd5e1;
+  }
+  .passage-content {
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+  .passage-img {
+    text-align: center;
+    margin: 8px 0;
+  }
+  .passage-img img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 10pt !important;
+  }
+  .card-body {
+    font-size: 9.5pt !important;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -659,7 +729,7 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">8</span>
-      <div class="q-stem">以下為裝設在學校的地震預警系統，預警流程簡述： <br>1. 地震發生後，設置在學校的地震儀接收到訊號。 <br>2. 估算出學校可能的震度，判斷是否發送警報。 <br>3. 在劇烈搖晃前，學校的跑馬燈警示強度幾級的震波將在幾秒後到達。 <br>某次地震發生後，某學校跑馬燈的警示如圖(六)。 <br> <br> <br> <br> <br> <br> <br>根據上述資訊，我們可以得知下列何者？</div>
+      <div class="q-stem">以下為裝設在學校的地震預警系統，預警流程簡述： <br>1. 地震發生後，設置在學校的地震儀接收到訊號。 <br>2. 估算出學校可能的震度，判斷是否發送警報。 <br>3. 在劇烈搖晃前，學校的跑馬燈警示強度幾級的震波將在幾秒後到達。 <br>某次地震發生後，某學校跑馬燈的警示如圖(六)。 <br><br>根據上述資訊，我們可以得知下列何者？</div>
     </div>
     <div class="q-img"><img src="images/nature_q8_1.jpeg" alt="題號 8 附圖"></div>
 
@@ -858,7 +928,7 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">12</span>
-      <div class="q-stem">下列實驗探討鹼的濃度對皂化反應的影響，步驟如下： <br>1. 準備四份30 g 的椰子油。 <br>2. 配製四杯同體積、不同濃度的氫氧化鈉溶液。 <br>3. 將四份椰子油分別都和固定量的乙醇混合，再加入上述的鹼，邊加熱邊攪拌直到溶液出現黏<br>稠狀態為止，並停止實驗。 <br>4. 將產物分離出來並測量其質量，結果如表(一)： <br> <br> <br> <br> <br>從上述資訊，是否可知道鹼的濃度與反應速率之關係？</div>
+      <div class="q-stem">下列實驗探討鹼的濃度對皂化反應的影響，步驟如下： <br>1. 準備四份30 g 的椰子油。 <br>2. 配製四杯同體積、不同濃度的氫氧化鈉溶液。 <br>3. 將四份椰子油分別都和固定量的乙醇混合，再加入上述的鹼，邊加熱邊攪拌直到溶液出現黏<br>稠狀態為止，並停止實驗。 <br>4. 將產物分離出來並測量其質量，結果如表(一)： <br><br>從上述資訊，是否可知道鹼的濃度與反應速率之關係？</div>
     </div>
     <div class="q-img"><img src="images/nature_q12_1.jpeg" alt="題號 12 附圖"></div>
 
@@ -1035,7 +1105,7 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">14</span>
-      <div class="q-stem">小芳連續14 天朝南方觀察住家附近的月相，其中第8 天到第14 天的月相如圖(九)。 <br> <br> <br> <br> <br> <br> <br>根據觀察結果，下列何者最可能是他前7 天所觀察到的月相變化？</div>
+      <div class="q-stem">小芳連續14 天朝南方觀察住家附近的月相，其中第8 天到第14 天的月相如圖(九)。 <br><br>根據觀察結果，下列何者最可能是他前7 天所觀察到的月相變化？</div>
     </div>
     <div class="q-img"><img src="images/nature_q14_1.jpeg" alt="題號 14 附圖"></div>
 <div class="q-img"><img src="images/nature_q14_2.jpeg" alt="題號 14 附圖"></div>
@@ -1057,7 +1127,7 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">16</span>
-      <div class="q-stem">小忠被室友大勇的打鼾聲吵得無法入眠，因此決定用手機量測大勇睡著時的打鼾聲，以實際數<br>據來呈現此問題，其過程如圖(十)： <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>以上對話中「……」處小忠說出下列哪一句話，最符合他想呈現的問題？</div>
+      <div class="q-stem">小忠被室友大勇的打鼾聲吵得無法入眠，因此決定用手機量測大勇睡著時的打鼾聲，以實際數<br>據來呈現此問題，其過程如圖(十)： <br><br>以上對話中「……」處小忠說出下列哪一句話，最符合他想呈現的問題？</div>
     </div>
     <div class="q-img"><img src="images/nature_q16_1.jpeg" alt="題號 16 附圖"></div>
 
@@ -2427,13 +2497,17 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列敘述後，回答42～43題</div>
+  <div class="passage-img"><img src="images/nature_passage_q42_q43_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q42_q43_2.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">42</span>
       <div class="q-stem">圖(二十七)中，造成兩種結果差異的其他原因，最可能為下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q42_q43_1.jpeg" alt="題號 42 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q42_q43_2.jpeg" alt="題號 42 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 該市酸雨的發生機率高，超過50%</div><div class="q-opt"><span class="opt-label">(B)</span> 環保署與該市環保局對於酸雨的定義不同</div><div class="q-opt"><span class="opt-label">(C)</span> 環保署所測出的該市雨水pH 值太接近5.0</div><div class="q-opt"><span class="opt-label">(D)</span> 單一測站的測量結果會與多個測站平均值有差異</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2444,19 +2518,23 @@ window.MathJax = {
       <span class="q-num">43</span>
       <div class="q-stem">將表(三)的資料分成甲、乙兩組，最可能是想用來了解下列哪一個問題？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q42_q43_1.jpeg" alt="題號 43 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q42_q43_2.jpeg" alt="題號 43 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 位於東北季風迎、背風面是否會影響判定酸雨的標準</div><div class="q-opt"><span class="opt-label">(B)</span> 位於東北季風迎、背風面是否會影響雨水pH 值的平均</div><div class="q-opt"><span class="opt-label">(C)</span> 各地區雨水pH 值的平均高低是否影響酸雨發生的機率</div><div class="q-opt"><span class="opt-label">(D)</span> 各地區雨水pH 值的平均高低是否影響人為汙染物的種類</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列敘述後，回答44～45題</div>
+  <div class="passage-img"><img src="images/nature_passage_q44_q45_1.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">44</span>
       <div class="q-stem">根據本文，下列對圖(二十九)數據的敘述何者正確？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q44_q45_1.jpeg" alt="題號 44 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 0～1 時之間沒有發生蒸散作用</div><div class="q-opt"><span class="opt-label">(B)</span> 3～4 時之間沒有發生蒸散作用</div><div class="q-opt"><span class="opt-label">(C)</span> 12～13 時的平均蒸散速率為一天中最大值</div><div class="q-opt"><span class="opt-label">(D)</span> 6～7 時的平均蒸散速率較7～8 時的平均蒸散速率大</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2623,19 +2701,23 @@ window.MathJax = {
       <span class="q-num">45</span>
       <div class="q-stem">若依據暄暄的方式操作實驗，但將實驗裝置移至通風良好的乾燥室內放置兩天，則最不可能發<br>生下列哪一種情況？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q44_q45_1.jpeg" alt="題號 45 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 第一、二天記錄到的氣泡移動距離總和相近</div><div class="q-opt"><span class="opt-label">(B)</span> 在兩天的相同時段中，氣泡移動的距離相近</div><div class="q-opt"><span class="opt-label">(C)</span> 植物氣孔關閉減緩蒸散，使管中氣泡移動量很小</div><div class="q-opt"><span class="opt-label">(D)</span> 植物從氣孔吸收水分向下運輸，使管中氣泡向左移動</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列敘述後，回答46～47題</div>
+  <div class="passage-img"><img src="images/nature_passage_q46_q47_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q46_q47_2.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">46</span>
       <div class="q-stem">科學家想要觀察水滴以不同的速度，衝擊石英板時的變化情形，若不考慮空氣阻力，則他調整<br>下列哪一項實驗條件最合理？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q46_q47_1.jpeg" alt="題號 46 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q46_q47_2.jpeg" alt="題號 46 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 調整水滴的溫度，以改變水滴的密度</div><div class="q-opt"><span class="opt-label">(B)</span> 調整針頭的孔徑，以改變水滴的直徑與重量</div><div class="q-opt"><span class="opt-label">(C)</span> 調整針頭的高度，以改變水滴落下的垂直距離</div><div class="q-opt"><span class="opt-label">(D)</span> 調整攝影機的設定，以改變攝影機每秒拍攝畫面的張數</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2646,22 +2728,26 @@ window.MathJax = {
       <span class="q-num">47</span>
       <div class="q-stem">根據本文，已知石英板作用在水滴的力為F′，F′即F 的反作用力，則圖(三十一)中呈現的四個狀<br>態，哪一個狀態下F′的大小最大？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q46_q47_1.jpeg" alt="題號 47 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q46_q47_2.jpeg" alt="題號 47 附圖"></div>
+    
+
 <div class="q-img"><img src="images/nature_q47_1.jpeg" alt="題號 47 附圖"></div>
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> </div><div class="q-opt"><span class="opt-label">(B)</span> </div><div class="q-opt"><span class="opt-label">(C)</span> </div><div class="q-opt"><span class="opt-label">(D)</span> </div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列敘述後，回答48～50題</div>
+  <div class="passage-img"><img src="images/nature_passage_q48_q50_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q48_q50_2.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q48_q50_3.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">48</span>
       <div class="q-stem">組別一、四通入針筒內的兩種氣體，可依序使用下列何種反應來製備？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q48_q50_1.jpeg" alt="題號 48 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q48_q50_2.jpeg" alt="題號 48 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q48_q50_3.jpeg" alt="題號 48 附圖"></div>
+    
+
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 鹽酸和鎂帶反應、雙氧水分解反應</div><div class="q-opt"><span class="opt-label">(B)</span> 鹽酸和鎂帶反應、鹽酸和碳酸鈣反應</div><div class="q-opt"><span class="opt-label">(C)</span> 雙氧水分解反應、鹽酸和鎂帶反應</div><div class="q-opt"><span class="opt-label">(D)</span> 雙氧水分解反應、鹽酸和碳酸鈣反應</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2828,9 +2914,9 @@ window.MathJax = {
       <span class="q-num">49</span>
       <div class="q-stem">若忽略針筒內鐵粉所占去的體積，試判斷組別二針筒內的氧氣是否完全耗盡？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q48_q50_1.jpeg" alt="題號 49 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q48_q50_2.jpeg" alt="題號 49 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q48_q50_3.jpeg" alt="題號 49 附圖"></div>
+    
+
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 全耗盡，消耗氣體比例等於氧氣含量</div><div class="q-opt"><span class="opt-label">(B)</span> 全耗盡，消耗氣體比例已超過氧氣含量</div><div class="q-opt"><span class="opt-label">(C)</span> 未耗盡，消耗氣體比例高於氧氣含量的2 3</div><div class="q-opt"><span class="opt-label">(D)</span> 未耗盡，消耗氣體比例接近氧氣含量的一半</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2841,9 +2927,9 @@ window.MathJax = {
       <span class="q-num">50</span>
       <div class="q-stem">依據活性大小，判斷組別四針筒內的鐵粉理論上是否與氣體發生氧化還原反應？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q48_q50_1.jpeg" alt="題號 50 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q48_q50_2.jpeg" alt="題號 50 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q48_q50_3.jpeg" alt="題號 50 附圖"></div>
+    
+
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 因鐵的活性較小，故鐵粉不會被氧化</div><div class="q-opt"><span class="opt-label">(B)</span> 因鐵的活性較小，反應後鐵粉會被氧化</div><div class="q-opt"><span class="opt-label">(C)</span> 因鐵的活性較小，反應後氣體會被氧化</div><div class="q-opt"><span class="opt-label">(D)</span> 因鐵的活性較大，反應後鐵粉會被氧化</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>

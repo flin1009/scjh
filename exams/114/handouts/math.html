@@ -39,13 +39,13 @@ window.MathJax = {
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -161,7 +161,7 @@ window.MathJax = {
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -208,7 +208,7 @@ window.MathJax = {
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -331,6 +331,43 @@ window.MathJax = {
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級數學排版與字體 */
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 10pt !important;
+  }
+  .card-body {
+    font-size: 9.5pt !important;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -1753,7 +1790,7 @@ window.MathJax = {
       <span class="q-num" style="background: #2b4c7e; color: #fff;">非選1</span>
       <div class="q-stem" style="font-size: 8.5pt;"><strong>非選擇題 第一題：民調年齡結構與加權調整倍率</strong><br>某民調公司訪問 A 市的成年民眾對於某項政策的態度，並依年齡分成 3 組。因受訪者的年齡分布與全體成年人口的年齡分布有落差，於是利用「調整倍率」讓調整後的結果更接近全體的民意，如表(二)所示。<br>其中：<br>• 人口占比 $= \frac{\text{該組人口總數}}{\text{全體成年人口總數}} \times 100\%$<br>• 調查比率 $= \frac{\text{該組受訪者數}}{\text{所有受訪者數}} \times 100\%$<br>• 調整倍率 $= \frac{\text{該組人口占比}}{\text{該組調查比率}}$<br>• 調整後比率 $=$ 該組調整前比率 $\times$ 調整倍率<br><br>請根據上述資訊回答下列問題，完整寫出你的解題過程並詳細解釋：<br>(1) 計算 60 歲以上組的調整倍率為何？<br>(2) 求 40 ～ 59 歲組與 60 歲以上組的調整前贊成比率分別為何？</div>
     </div>
-    <div class="q-img"><img src="images/math_non_q1_1.jpeg" alt="非選擇題 第一題：民調年齡結構與加權調整倍率 附圖" style="max-height: 40mm;"></div>
+    <div class="q-img"><img src="images/math_non_q1_1.jpeg" alt="非選擇題 第一題：民調年齡結構與加權調整倍率 附圖" style="max-height: none;"></div>
     <div class="scratch-area" style="height: 28mm;"><span class="scratch-label">非選擇題作答草稿與書寫區</span></div>
   </div>
 
@@ -1762,7 +1799,7 @@ window.MathJax = {
       <span class="q-num" style="background: #2b4c7e; color: #fff;">非選2</span>
       <div class="q-stem" style="font-size: 8.5pt;"><strong>非選擇題 第二題：長方形藝術紙片相鄰密鋪</strong><br>商店中販賣一款包含 A、B 兩種圖案的藝術紙片組合包，形狀分別為 $16\text{ 公分} \times 5\text{ 公分}$、$18\text{ 公分} \times 5\text{ 公分}$ 的長方形，如圖(十七)所示。<br>小燦打算在不裁切紙片的情況下，將這兩種藝術紙片以緊密相鄰的方式貼成圖(十八)的長方形，其中奇數層為 A 圖案，偶數層為 B 圖案，且最後一層為 A 圖案，而相同圖案的藝術紙片皆為相同的方向。<br><br>請根據上述資訊回答下列問題，完整寫出你的解題過程並詳細解釋：<br>(1) 以上述方式貼成的長方形，第一層最少有幾個 A 圖案？<br>(2) 已知每個組合包中 A、B 兩種圖案的藝術紙片數量比為 4：3，若小燦想購買一些組合包，貼成圖(十八)的長方形，其中第一層的 A 圖案數量與 (1) 求出之值相同，判斷他是否可能恰好把購買的藝術紙片用完？請說明理由。</div>
     </div>
-    <div class="q-img"><img src="images/math_non_q2_1.jpeg" alt="非選擇題 第二題：長方形藝術紙片相鄰密鋪 附圖" style="max-height: 40mm;"></div>
+    <div class="q-img"><img src="images/math_non_q2_1.jpeg" alt="非選擇題 第二題：長方形藝術紙片相鄰密鋪 附圖" style="max-height: none;"></div>
     <div class="scratch-area" style="height: 28mm;"><span class="scratch-label">非選擇題作答草稿與書寫區</span></div>
   </div>
 

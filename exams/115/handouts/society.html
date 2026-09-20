@@ -39,13 +39,13 @@ window.MathJax = {
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -161,7 +161,7 @@ window.MathJax = {
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -206,7 +206,7 @@ window.MathJax = {
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -329,6 +329,76 @@ window.MathJax = {
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級字體與自然圖片排版 */
+  .passage-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-left: 4px solid #2b4c7e;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0 12px 0;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #1e293b;
+  }
+  .passage-title {
+    font-weight: 800;
+    color: #1e3a8a;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #cbd5e1;
+  }
+  .passage-content {
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+  .passage-img {
+    text-align: center;
+    margin: 8px 0;
+  }
+  .passage-img img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 10pt !important;
+  }
+  .card-body {
+    font-size: 9.5pt !important;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -2449,12 +2519,64 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】二、題組：(44～54題)
+閱讀下列選文，回答第 44 至 45 題：</div>
+  <div class="passage-img"><img src="images/society_passage_q44_q45_1.jpeg" alt="題組材料" style="margin: 4px;"></div>
+  <div class="passage-content">「五腳基」為類似騎樓的建築型式，其源自歐洲國家殖民
+新加坡時，規定連棟店屋的一樓臨街部分，必須設置寬五呎且具
+有頂蓋的步行通道，作為公共空間供人行走，如圖(十三)。此種建
+築型式也常見於中國的某一地區，源於該地區因地形因素可耕地
+較少，糧食不足，部分人口外移至南洋。有些移民家族在南洋經
+商致富後，返回家鄉興建洋樓時將此種建築型式融入其中，至今
+這些洋樓成為特定時空環境下的重要紀錄。
+
+圖(十二)
+
+表(七)
+
+年分
+
+出生登記
+
+總人數
+
+( 人)
+
+約定
+從母姓
+比例(%)
+
+2012
+229,760
+1.5
+2013
+199,113
+1.6
+2014
+210,383
+1.8
+2015
+213,598
+1.9
+2016
+208,440
+2.1
+2017
+193,844
+2.1
+2018
+181,601
+2.3
+
+圖(十三)</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">44</span>
       <div class="q-stem">依據上文，建物設置「五腳基」的目的，最可能為下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q44_q45_1.jpeg" alt="題號 44 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 防止蚊蟲及毒蛇的侵擾</div><div class="q-opt"><span class="opt-label">(B)</span> 因應冬季道路積雪行走不便</div><div class="q-opt"><span class="opt-label">(C)</span> 躲避強風發生時產生的沙塵暴</div><div class="q-opt"><span class="opt-label">(D)</span> 避免溼熱氣候下強烈日晒及雨淋</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2621,20 +2743,87 @@ window.MathJax = {
       <span class="q-num">45</span>
       <div class="q-stem">上文中提及的洋樓，最主要分布於下列中國的哪一地區？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q44_q45_1.jpeg" alt="題號 45 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 西部的高山地區</div><div class="q-opt"><span class="opt-label">(B)</span> 北部的平原地區</div><div class="q-opt"><span class="opt-label">(C)</span> 東南部沿海地區</div><div class="q-opt"><span class="opt-label">(D)</span> 西北部綠洲地帶</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列選文，回答第 46 至 48 題：</div>
+  <div class="passage-img"><img src="images/society_passage_q46_q48_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/society_passage_q46_q48_2.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/society_passage_q46_q48_3.jpeg" alt="題組材料" style="margin: 4px;"></div>
+  <div class="passage-content">立法院在2019年通過《司法院釋字第七四八號
+解釋施行法》，合法保障同性婚姻。
+
+某日阿華收到一則網路訊息，他擔心訊息中提
+及的疾病傳染情況惡化，覺得應該讓身邊的朋友知
+道這個情況，所以將相關訊息發送至各通訊群組，
+希望廣為流傳，如圖(十四)所示。
+
+小明在群組上收到這則訊息，想確認訊息的真
+實性，於是上網查詢我國政府公開的統計資料，如
+表(八)。除此之外，小明也上網查詢其他各國的狀
+況，得知聯合國將愛滋病毒盛行率定義為15至49歲
+人口中感染愛滋病毒的人口比率，表(九)是其中部
+分國家的統計資料。
+
+表(九)
+國家
+中華民國
+新加坡
+泰國
+越南
+盛行率(%)
+0.3
+0.2
+1.1
+0.3
+國家
+馬來西亞
+西班牙
+法國
+美國
+盛行率(%)
+0.4
+0.3
+0.3
+0.3
+
+表(八)
+
+年分
+新增感染者
+個案數( 人)
+
+累積感染者
+個案數( 人)
+
+2017
+2,519
+35,935
+2018
+1,993
+37,919
+2019
+1,756
+39,669
+2020
+1,392
+41,033
+2021
+1,247
+42,263
+
+圖(十四)</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">46</span>
       <div class="q-stem">根據圖(十四)中內容判斷，阿華廣傳訊息所達成的效果，最可能是下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q46_q48_1.jpeg" alt="題號 46 附圖"></div>
-<div class="q-img"><img src="images/society_passage_q46_q48_2.jpeg" alt="題號 46 附圖"></div>
-<div class="q-img"><img src="images/society_passage_q46_q48_3.jpeg" alt="題號 46 附圖"></div>
+    
+
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 透過社群網路影響公共意見</div><div class="q-opt"><span class="opt-label">(B)</span> 善用大眾媒體爭取婚姻自由</div><div class="q-opt"><span class="opt-label">(C)</span> 利用網路科技提供醫學新知</div><div class="q-opt"><span class="opt-label">(D)</span> 成立民間團體推動法律變革</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2645,9 +2834,9 @@ window.MathJax = {
       <span class="q-num">47</span>
       <div class="q-stem">根據表(八)與表(九)的資訊判斷，關於圖(十四)中阿華所傳遞的訊息，下列何項解讀最適當？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q46_q48_1.jpeg" alt="題號 47 附圖"></div>
-<div class="q-img"><img src="images/society_passage_q46_q48_2.jpeg" alt="題號 47 附圖"></div>
-<div class="q-img"><img src="images/society_passage_q46_q48_3.jpeg" alt="題號 47 附圖"></div>
+    
+
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 內容符合事實，因我國通過修法之後導致累積感染者人數增加</div><div class="q-opt"><span class="opt-label">(B)</span> 內容符合事實，因我國的愛滋病毒盛行率比東南亞鄰近國家高</div><div class="q-opt"><span class="opt-label">(C)</span> 內容與事實不符，因我國統計數據顯示新增感染者人數逐年減少</div><div class="q-opt"><span class="opt-label">(D)</span> 內容與事實不符，因我國的愛滋病毒盛行率比歐、美先進國家低</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2658,9 +2847,9 @@ window.MathJax = {
       <span class="q-num">48</span>
       <div class="q-stem">根據文中小明檢視網路訊息的過程判斷，顯示下列何者的重要性？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q46_q48_1.jpeg" alt="題號 48 附圖"></div>
-<div class="q-img"><img src="images/society_passage_q46_q48_2.jpeg" alt="題號 48 附圖"></div>
-<div class="q-img"><img src="images/society_passage_q46_q48_3.jpeg" alt="題號 48 附圖"></div>
+    
+
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 對於跨越國界傳播的疾病，世界各國應共同合作防堵疫情</div><div class="q-opt"><span class="opt-label">(B)</span> 對於各種媒體傳播的資訊，閱聽大眾應具備媒體識讀能力</div><div class="q-opt"><span class="opt-label">(C)</span> 對於行政機關推動的政策，政府施政應秉持性別平等立場</div><div class="q-opt"><span class="opt-label">(D)</span> 對於網路串流平臺的作品，使用者應避免侵害智慧財產權</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2822,13 +3011,37 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列選文，回答第 49 至 51 題：</div>
+  <div class="passage-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/society_passage_q49_q51_2.jpeg" alt="題組材料" style="margin: 4px;"></div>
+  <div class="passage-content">自古以來人們就知道要從農
+作物找出有甜味的東西，製成糖
+來食用。因環境的不同，各地
+用來製糖的作物也有差異，如甜
+菜、楓樹等，但公認最適合製糖的
+是甘蔗。臺灣、印尼、菲律賓、
+斐濟和古巴，都曾以蔗糖為重要
+出口貨物。
+
+日治時期，臺灣蔗田種植面
+積廣大，當時政府為了增加產量，鼓勵設置新式製糖工廠，並公告製糖會社的
+「原料採取區域」，圖(十五)為1928年時的分布。戰後糖廠成為國營事業，其
+收入對當時國內的產業發展有極大助益，而為了提高產能，甚至有糖廠主管於
+1950年寫詞創作廠歌，每天播放以激勵員工士氣，歌詞內容如圖(十六)。
+然而時過境遷，糖廠的產品不侷限於糖，也產製酒精、有機肥、飼料等，
+目前糖廠大多以進口粗糖再加工精製成細砂糖，部分糖廠也已轉型成觀光用
+途，朝向多元化發展。
+
+圖(十五)
+圖(十六)</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">49</span>
       <div class="q-stem">上文中所述最適合製糖的作物，其主要生長環境最可能為下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題號 49 附圖"></div>
-<div class="q-img"><img src="images/society_passage_q49_q51_2.jpeg" alt="題號 49 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 年雨量小於500mm</div><div class="q-opt"><span class="opt-label">(B)</span> 最冷月均溫10°C 以下</div><div class="q-opt"><span class="opt-label">(C)</span> 海拔1,000 公尺以上的山坡地</div><div class="q-opt"><span class="opt-label">(D)</span> 南緯25 度到北緯25 度之間的地區</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2839,8 +3052,8 @@ window.MathJax = {
       <span class="q-num">50</span>
       <div class="q-stem">上文廠歌歌詞的創作背景及圖(十六)描繪的情景，與下列臺灣哪一產業發展階段的特色最相符？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題號 50 附圖"></div>
-<div class="q-img"><img src="images/society_passage_q49_q51_2.jpeg" alt="題號 50 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 外銷食品加工產品扶植國內輕工業</div><div class="q-opt"><span class="opt-label">(B)</span> 設立加工出口區吸引大量外商投資</div><div class="q-opt"><span class="opt-label">(C)</span> 因應石油危機推動交通、能源等基礎建設</div><div class="q-opt"><span class="opt-label">(D)</span> 持續推動農業轉型升級並發展高科技產業</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2851,13 +3064,30 @@ window.MathJax = {
       <span class="q-num">51</span>
       <div class="q-stem">上文提及糖廠的多元化發展，其最主要的目的為下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題號 51 附圖"></div>
-<div class="q-img"><img src="images/society_passage_q49_q51_2.jpeg" alt="題號 51 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 降低生產的運輸成本</div><div class="q-opt"><span class="opt-label">(B)</span> 減少粗糖的關稅成本</div><div class="q-opt"><span class="opt-label">(C)</span> 提高產業的附加價值</div><div class="q-opt"><span class="opt-label">(D)</span> 增加甘蔗的種植面積</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列選文，回答第 52 至 54 題：</div>
+  <div class="passage-content">1843年上海正式開港後不久，西方人就開始在上海租界內尋覓興建賽馬場的
+地點，舉辦賽馬活動。當時管理賽事的單位為上海跑馬總會，會員全由西方人
+組成。部分配合官方自強運動的中國商人家族，也想加入上海跑馬總會，卻總
+是被西方人拒絕。因此中國商人另行籌組萬國體育會，在租界外修建新的賽馬
+場，並於1911年開賽。
+
+賽馬除了作為運動賽事之外，更以販售馬票的方式開放下注，以高額獎金吸
+引民眾關注賽事。然而國民政府為籌措財源，於1933至1937年發行「航空公路
+建設獎券」，靠著更便宜的彩券、更高額的獎金，將馬票打得潰不成軍。
+
+1937年，租界外的賽馬場受到戰火破壞，租界內的賽馬場也在1941年後受到
+日本控制。日本為了宣傳自己是東亞民族的解放者，特地開放中國人自由使用
+租界內的賽馬場、足球場等體育設施，之後更進一步將租界交還日本扶植的中
+華民國南京政府，上海租界的歷史就此走入尾聲。</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">52</span>

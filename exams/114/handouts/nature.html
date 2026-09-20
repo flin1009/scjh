@@ -39,13 +39,13 @@ window.MathJax = {
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -161,7 +161,7 @@ window.MathJax = {
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -206,7 +206,7 @@ window.MathJax = {
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -329,6 +329,76 @@ window.MathJax = {
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級字體與自然圖片排版 */
+  .passage-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-left: 4px solid #2b4c7e;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0 12px 0;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #1e293b;
+  }
+  .passage-title {
+    font-weight: 800;
+    color: #1e3a8a;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #cbd5e1;
+  }
+  .passage-content {
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+  .passage-img {
+    text-align: center;
+    margin: 8px 0;
+  }
+  .passage-img img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 10pt !important;
+  }
+  .card-body {
+    font-size: 9.5pt !important;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -1424,7 +1494,7 @@ window.MathJax = {
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">21</span>
-      <div class="q-stem">購買高濃度的酒精，可自行稀釋及分裝成消毒用酒精，但並非所有的塑膠容器都適合盛裝高濃度酒<br>精，有些會被乙醇溶解或腐蝕而使容器變輕。下列研究將三種為熱塑性聚合物材質的容器，分別在<br>50℃和70℃的溫度下，浸入高濃度的酒精中，容器的質量變化率如圖(十一)： <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>僅依據上述資訊，下列說明何者最合理？</div>
+      <div class="q-stem">購買高濃度的酒精，可自行稀釋及分裝成消毒用酒精，但並非所有的塑膠容器都適合盛裝高濃度酒<br>精，有些會被乙醇溶解或腐蝕而使容器變輕。下列研究將三種為熱塑性聚合物材質的容器，分別在<br>50℃和70℃的溫度下，浸入高濃度的酒精中，容器的質量變化率如圖(十一)： <br><br>僅依據上述資訊，下列說明何者最合理？</div>
     </div>
     <div class="q-img"><img src="images/nature_q21_1.jpeg" alt="題號 21 附圖"></div>
 
@@ -1650,7 +1720,7 @@ window.MathJax = {
     <div class="q-img"><img src="images/nature_q27_1.jpeg" alt="題號 27 附圖"></div>
 <div class="q-img"><img src="images/nature_q27_2.jpeg" alt="題號 27 附圖"></div>
 
-    <div class="q-opts"><div class="q-img" style="grid-column: span 2; margin: 2px 0;"><img src="images/nature_q27_opts.png" style="max-height: 38mm;" alt="第27題顯微鏡對照表格"></div></div></div></div></div></div>
+    <div class="q-opts"><div class="q-img" style="grid-column: span 2; margin: 2px 0;"><img src="images/nature_q27_opts.png" style="max-height: none;" alt="第27題顯微鏡對照表格"></div></div></div></div></div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
@@ -2447,13 +2517,17 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列敘述後，回答43～44題</div>
+  <div class="passage-img"><img src="images/nature_passage_q43_q44_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q43_q44_2.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">43</span>
       <div class="q-stem">根據實驗結果，關於不同溫度對蒜頭變綠色的影響，下列說明何者最合理？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q43_q44_1.jpeg" alt="題號 43 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q43_q44_2.jpeg" alt="題號 43 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 全程在10℃，變色的速率最快</div><div class="q-opt"><span class="opt-label">(B)</span> 全程在25℃，變色的速率最快</div><div class="q-opt"><span class="opt-label">(C)</span> 先低溫處理，接著改在25℃放置會減緩變色的速率</div><div class="q-opt"><span class="opt-label">(D)</span> 先低溫處理，接著改在25℃放置會加快變色的速率</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2464,8 +2538,8 @@ window.MathJax = {
       <span class="q-num">44</span>
       <div class="q-stem">僅根據實驗三的結果，推測使蒜頭變綠色的有利環境，最可能是下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q43_q44_1.jpeg" alt="題號 44 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q43_q44_2.jpeg" alt="題號 44 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 酸性越弱的環境</div><div class="q-opt"><span class="opt-label">(B)</span> 酸性越強的環境</div><div class="q-opt"><span class="opt-label">(C)</span> 有– COOH 原子團的環境</div><div class="q-opt"><span class="opt-label">(D)</span> 沒有– COOH 原子團的環境</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2627,13 +2701,17 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列敘述後，回答45～46題</div>
+  <div class="passage-img"><img src="images/nature_passage_q45_q46_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q45_q46_3.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">45</span>
       <div class="q-stem">僅根據小花檢測的初步結果，下列推論何者最合理？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q45_q46_1.jpeg" alt="題號 45 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q45_q46_3.jpeg" alt="題號 45 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 出血時間過短，須進一步檢查</div><div class="q-opt"><span class="opt-label">(B)</span> 出血時間於容許範圍內，可能無異常</div><div class="q-opt"><span class="opt-label">(C)</span> 出血時間於容許範圍內，但可能罹患X 減少症或其他凝血因子異常</div><div class="q-opt"><span class="opt-label">(D)</span> 出血時間過長，可能罹患X 減少症或其他凝血因子異常</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2644,20 +2722,24 @@ window.MathJax = {
       <span class="q-num">46</span>
       <div class="q-stem">表中的X 最可能為下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q45_q46_1.jpeg" alt="題號 46 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q45_q46_3.jpeg" alt="題號 46 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 淋巴</div><div class="q-opt"><span class="opt-label">(B)</span> 白血球</div><div class="q-opt"><span class="opt-label">(C)</span> 紅血球</div><div class="q-opt"><span class="opt-label">(D)</span> 血小板</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列敘述後，回答47～48題</div>
+  <div class="passage-img"><img src="images/nature_passage_q47_q48_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q47_q48_2.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">47</span>
       <div class="q-stem">阿貴在做砝碼質量為200 g 的實驗時，他施一個鉛直向上的定力將彈簧秤以穩定且緩慢的速度提高<br>10 cm，並使砝碼上升5 cm，此過程彈簧秤拉力所作的功為多少gw．cm？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q47_q48_1.jpeg" alt="題號 47 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q47_q48_2.jpeg" alt="題號 47 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 1000</div><div class="q-opt"><span class="opt-label">(B)</span> 1500</div><div class="q-opt"><span class="opt-label">(C)</span> 2000</div><div class="q-opt"><span class="opt-label">(D)</span> 3000</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2668,8 +2750,8 @@ window.MathJax = {
       <span class="q-num">48</span>
       <div class="q-stem">阿貴經多次重複同樣的實驗所得結果均與圖(二十九)相同，而圖中的三點連線之延長線與縱軸F 交<br>點不是原點。若不考慮摩擦力，則關於交點不是原點的原因，下列敘述何者最合理？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q47_q48_1.jpeg" alt="題號 48 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q47_q48_2.jpeg" alt="題號 48 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 此實驗的誤差很大</div><div class="q-opt"><span class="opt-label">(B)</span> 此實驗裝置屬於費力的簡單機械</div><div class="q-opt"><span class="opt-label">(C)</span> 阿貴所記錄彈簧秤讀數F，其數值同時受到彈簧秤質量及砝碼質量的影響</div><div class="q-opt"><span class="opt-label">(D)</span> 阿貴所記錄彈簧秤讀數F，其數值同時受到動滑輪質量及砝碼質量的影響</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2831,13 +2913,17 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列敘述後，回答49～50題</div>
+  <div class="passage-img"><img src="images/nature_passage_q49_q50_1.jpeg" alt="題組材料" style="margin: 4px;"><img src="images/nature_passage_q49_q50_2.jpeg" alt="題組材料" style="margin: 4px;"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">49</span>
       <div class="q-stem">考量月球在甲、乙兩處的月相，下列俯視圖何者最可能是阿平進行模擬時，球於兩處的亮暗面分布<br>狀態？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q49_q50_1.jpeg" alt="題號 49 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q49_q50_2.jpeg" alt="題號 49 附圖"></div>
+    
+
 <div class="q-img"><img src="images/nature_q49_1.jpeg" alt="題號 49 附圖"></div>
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> </div><div class="q-opt"><span class="opt-label">(B)</span> </div><div class="q-opt"><span class="opt-label">(C)</span> </div><div class="q-opt"><span class="opt-label">(D)</span> </div></div>
@@ -2849,8 +2935,8 @@ window.MathJax = {
       <span class="q-num">50</span>
       <div class="q-stem">根據圖(三十一)模擬的月球移動路徑，當月球由甲處移動至乙處的這段時間，地球自轉或繞太陽公<br>轉了幾圈？</div>
     </div>
-    <div class="q-img"><img src="images/nature_passage_q49_q50_1.jpeg" alt="題號 50 附圖"></div>
-<div class="q-img"><img src="images/nature_passage_q49_q50_2.jpeg" alt="題號 50 附圖"></div>
+    
+
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 地球大約自轉了半圈</div><div class="q-opt"><span class="opt-label">(B)</span> 地球大約自轉了15 圈</div><div class="q-opt"><span class="opt-label">(C)</span> 地球繞太陽大約公轉了半圈</div><div class="q-opt"><span class="opt-label">(D)</span> 地球繞太陽大約公轉了15 圈</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>

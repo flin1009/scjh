@@ -39,13 +39,13 @@ window.MathJax = {
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -161,7 +161,7 @@ window.MathJax = {
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -206,7 +206,7 @@ window.MathJax = {
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -329,6 +329,76 @@ window.MathJax = {
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級字體與自然圖片排版 */
+  .passage-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-left: 4px solid #2b4c7e;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0 12px 0;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #1e293b;
+  }
+  .passage-title {
+    font-weight: 800;
+    color: #1e3a8a;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #cbd5e1;
+  }
+  .passage-content {
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+  .passage-img {
+    text-align: center;
+    margin: 8px 0;
+  }
+  .passage-img img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 10pt !important;
+  }
+  .card-body {
+    font-size: 9.5pt !important;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -1417,6 +1487,14 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【Reading Questions (22-23)】</div>
+  <div class="passage-content">It was around eight o’clock on Saturday night. Philip was at home with his little brother, Jason. Jason was hungry and kept crying. But Philip couldn’t cook and their father was not home yet because he was working late in the office. So Philip decided to take Jason out for some food.
+
+Half an hour later, when they came back home, Philip was surprised to find that their father was talking to the police and a woman outside their house. He didn’t know who the woman was. She looked scared and stood behind the police. Philip’s father was very angry and kept shouting, “I didn’t do anything wrong! I forgot my keys and was just trying to get into MY OWN HOUSE!” But the police didn’t believe him until Philip ran to them and explained everything.
+
+The police told Philip that the woman called 110 when she saw Philip’s father trying to get into a house through a window. That was how it all happened.</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">22</span>
@@ -1438,12 +1516,16 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【Reading Questions (24-25)】</div>
+  <div class="passage-img"><img src="images/english_passage_q24_q25_1.jpeg" alt="Questions 24-25 Reading Material"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">24</span>
       <div class="q-stem">Kevin is going to buy some fresh bread at Baker’s Kitchen. He loves white bread, his mom likes farm <br>bread, his father enjoys bagels, and his sister eats only challah. Which is the earliest possible time for him <br>to get all these breads for his family?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q24_q25_1.jpeg" alt="題號 24 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 11:00am.</div><div class="q-opt"><span class="opt-label">(B)</span> 4:00pm.</div><div class="q-opt"><span class="opt-label">(C)</span> 5:00pm.</div><div class="q-opt"><span class="opt-label">(D)</span> 7:00pm</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -1610,18 +1692,22 @@ window.MathJax = {
       <span class="q-num">25</span>
       <div class="q-stem">What do we know about Baker’s Kitchen?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q24_q25_1.jpeg" alt="題號 25 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> It is open five days a week.</div><div class="q-opt"><span class="opt-label">(B)</span> Its breads are half price one hour before closing.</div><div class="q-opt"><span class="opt-label">(C)</span> Its croissants and pretzels are sold on weekends.</div><div class="q-opt"><span class="opt-label">(D)</span> Its members can save $100 when they shop on Fridays.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【Reading Questions (26-27)】</div>
+  <div class="passage-img"><img src="images/english_passage_q26_q27_1.jpeg" alt="Questions 26-27 Reading Material"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">26</span>
       <div class="q-stem">What is recommended to people who want to visit the festival?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q26_q27_1.jpeg" alt="題號 26 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Using the free festival bus service.</div><div class="q-opt"><span class="opt-label">(B)</span> Visiting the festival on the weekend.</div><div class="q-opt"><span class="opt-label">(C)</span> Entering Satyr’s Park from Fox Street.</div><div class="q-opt"><span class="opt-label">(D)</span> Parking in Garden Square and walking to the festival.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -1632,18 +1718,22 @@ window.MathJax = {
       <span class="q-num">27</span>
       <div class="q-stem">What can we learn about the farmers’ market from the map?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q26_q27_1.jpeg" alt="題號 27 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> The farmers’ market is next to the flower market.</div><div class="q-opt"><span class="opt-label">(B)</span> The farmers’ market and the festival are on the same block.</div><div class="q-opt"><span class="opt-label">(C)</span> You can go to the farmers’ market by taking Bus No. 157 to Puppy Street.</div><div class="q-opt"><span class="opt-label">(D)</span> The nearest metro station to the farmers’ market is the Koala Street Station.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【Reading Questions (28-29)】</div>
+  <div class="passage-img"><img src="images/english_passage_q28_q29_1.jpeg" alt="Questions 28-29 Reading Material"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">28</span>
       <div class="q-stem">What kind of people do Yan’s and Chang’s friends most likely think Yan and Chang are?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q28_q29_1.jpeg" alt="題號 28 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> They enjoy good food.</div><div class="q-opt"><span class="opt-label">(B)</span> They don’t like to share.</div><div class="q-opt"><span class="opt-label">(C)</span> They like to make friends.</div><div class="q-opt"><span class="opt-label">(D)</span> They don’t like new things.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -1810,18 +1900,22 @@ window.MathJax = {
       <span class="q-num">29</span>
       <div class="q-stem">What is it in the second story?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q28_q29_1.jpeg" alt="題號 29 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> A big knife.</div><div class="q-opt"><span class="opt-label">(B)</span> The horse.</div><div class="q-opt"><span class="opt-label">(C)</span> Lunch.</div><div class="q-opt"><span class="opt-label">(D)</span> One of Chang’s ducks or chickens.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【Reading Questions (30-32)】</div>
+  <div class="passage-img"><img src="images/english_passage_q30_q32_1.jpeg" alt="Questions 30-32 Reading Material"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">30</span>
       <div class="q-stem">Why does the writer talk about doctors and a health center in the reading?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q30_q32_1.jpeg" alt="題號 30 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> To explain Chen’s services.</div><div class="q-opt"><span class="opt-label">(B)</span> To talk about Chen’s future plans.</div><div class="q-opt"><span class="opt-label">(C)</span> To explain Chen’s love for books.</div><div class="q-opt"><span class="opt-label">(D)</span> To show why bookstores are important.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -1832,7 +1926,7 @@ window.MathJax = {
       <span class="q-num">31</span>
       <div class="q-stem">Why is Chen Bing-Hong’s job important in the example he gave?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q30_q32_1.jpeg" alt="題號 31 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> It allows people to get books as gifts.</div><div class="q-opt"><span class="opt-label">(B)</span> It saves people money on new books.</div><div class="q-opt"><span class="opt-label">(C)</span> It gives people hope to follow their dreams.</div><div class="q-opt"><span class="opt-label">(D)</span> It helps people think of special moments in the past.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -1843,7 +1937,7 @@ window.MathJax = {
       <span class="q-num">32</span>
       <div class="q-stem">What is his magic?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q30_q32_1.jpeg" alt="題號 32 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Fixing books.</div><div class="q-opt"><span class="opt-label">(B)</span> Making book owners smile.</div><div class="q-opt"><span class="opt-label">(C)</span> Finding books that are long lost.</div><div class="q-opt"><span class="opt-label">(D)</span> Changing his bookstore into a library.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2005,12 +2099,16 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【Reading Questions (33-35)】</div>
+  <div class="passage-img"><img src="images/english_passage_q33_q35_1.jpeg" alt="Questions 33-35 Reading Material"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">33</span>
       <div class="q-stem">According to the reading, why did Rohla and Kreytenberg open Habibi & Hawara?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q33_q35_1.jpeg" alt="題號 33 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> To help refugees live better in Austria.</div><div class="q-opt"><span class="opt-label">(B)</span> To collect money to help Syria fight the war.</div><div class="q-opt"><span class="opt-label">(C)</span> To help Austrians learn about the war in Syria.</div><div class="q-opt"><span class="opt-label">(D)</span> To help refugees go back to their home countries.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2021,7 +2119,7 @@ window.MathJax = {
       <span class="q-num">34</span>
       <div class="q-stem">What can we learn about Habibi & Hawara?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q33_q35_1.jpeg" alt="題號 34 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> It was moved from Syria to Austria.</div><div class="q-opt"><span class="opt-label">(B)</span> It may finally be sold to its workers.</div><div class="q-opt"><span class="opt-label">(C)</span> It has cooking classes in Syrian food.</div><div class="q-opt"><span class="opt-label">(D)</span> It is an important meeting place for Syrians.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2032,18 +2130,22 @@ window.MathJax = {
       <span class="q-num">35</span>
       <div class="q-stem">What does it mean when people beg to differ?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q33_q35_1.jpeg" alt="題號 35 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> They do not agree.</div><div class="q-opt"><span class="opt-label">(B)</span> They look different.</div><div class="q-opt"><span class="opt-label">(C)</span> They cannot speak for others.</div><div class="q-opt"><span class="opt-label">(D)</span> They do not notice something.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【Reading Questions (36-39)】</div>
+  <div class="passage-img"><img src="images/english_passage_q36_q39_1.jpeg" alt="Questions 36-39 Reading Material"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">36</span>
       <div class="q-stem">What does it mean when someone is an advocate of something?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q36_q39_1.jpeg" alt="題號 36 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> They talk a lot but do little about it.</div><div class="q-opt"><span class="opt-label">(B)</span> They believe it is good and should be done.</div><div class="q-opt"><span class="opt-label">(C)</span> They have had some bad experiences with it.</div><div class="q-opt"><span class="opt-label">(D)</span> They are one of the first people who have done it.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2210,7 +2312,7 @@ window.MathJax = {
       <span class="q-num">37</span>
       <div class="q-stem">What is special about the extinct frog in Smith’s book?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q36_q39_1.jpeg" alt="題號 37 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> It can live in a dirty living space.</div><div class="q-opt"><span class="opt-label">(B)</span> It might help fix a health problem.</div><div class="q-opt"><span class="opt-label">(C)</span> It eats its babies when it cannot find food.</div><div class="q-opt"><span class="opt-label">(D)</span> It is the first extinct animal that people studied.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2221,7 +2323,7 @@ window.MathJax = {
       <span class="q-num">38</span>
       <div class="q-stem">Why does Ellen Zimmer use the words from Dr. Solomon Wang?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q36_q39_1.jpeg" alt="題號 38 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> To start a new topic.</div><div class="q-opt"><span class="opt-label">(B)</span> To share a big dream.</div><div class="q-opt"><span class="opt-label">(C)</span> To make her idea clearer.</div><div class="q-opt"><span class="opt-label">(D)</span> To invite people to take action.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2232,18 +2334,22 @@ window.MathJax = {
       <span class="q-num">39</span>
       <div class="q-stem">What does Ellen Zimmer most likely think about bringing back extinct animals?</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q36_q39_1.jpeg" alt="題號 39 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> It is possible.</div><div class="q-opt"><span class="opt-label">(B)</span> It is dangerous.</div><div class="q-opt"><span class="opt-label">(C)</span> It is not possible.</div><div class="q-opt"><span class="opt-label">(D)</span> It is not dangerous.</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【Reading Questions (40-43)】</div>
+  <div class="passage-img"><img src="images/english_passage_q40_q43_1.jpeg" alt="Questions 40-43 Reading Material"></div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">40</span>
       <div class="q-stem">【克漏字填空】請依選文文意，選出最適合填入空格 (40) 的字詞或句子：</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q40_q43_1.jpeg" alt="題號 40 附圖"></div>
+    
 <div class="q-img"><img src="images/english_q40_1.jpeg" alt="題號 40 附圖"></div>
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> is not a new idea</div><div class="q-opt"><span class="opt-label">(B)</span> has not been very useful</div><div class="q-opt"><span class="opt-label">(C)</span> may bring some problems</div><div class="q-opt"><span class="opt-label">(D)</span> is not welcomed by everyone</div></div>
@@ -2411,7 +2517,7 @@ window.MathJax = {
       <span class="q-num">41</span>
       <div class="q-stem">【克漏字填空】請依選文文意，選出最適合填入空格 (41) 的字詞或句子：</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q40_q43_1.jpeg" alt="題號 41 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Portland</div><div class="q-opt"><span class="opt-label">(B)</span> New York</div><div class="q-opt"><span class="opt-label">(C)</span> Denver</div><div class="q-opt"><span class="opt-label">(D)</span> Pittsburgh</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2422,7 +2528,7 @@ window.MathJax = {
       <span class="q-num">42</span>
       <div class="q-stem">【克漏字填空】請依選文文意，選出最適合填入空格 (42) 的字詞或句子：</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q40_q43_1.jpeg" alt="題號 42 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> had higher numbers of deaths</div><div class="q-opt"><span class="opt-label">(B)</span> stopped social distancing too soon</div><div class="q-opt"><span class="opt-label">(C)</span> began social distancing a second time</div><div class="q-opt"><span class="opt-label">(D)</span> had the most days of social distancing</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2433,7 +2539,7 @@ window.MathJax = {
       <span class="q-num">43</span>
       <div class="q-stem">【克漏字填空】請依選文文意，選出最適合填入空格 (43) 的字詞或句子：</div>
     </div>
-    <div class="q-img"><img src="images/english_passage_q40_q43_1.jpeg" alt="題號 43 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> Also</div><div class="q-opt"><span class="opt-label">(B)</span> At first</div><div class="q-opt"><span class="opt-label">(C)</span> However</div><div class="q-opt"><span class="opt-label">(D)</span> For example</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>

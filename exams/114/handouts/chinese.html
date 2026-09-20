@@ -39,13 +39,13 @@ window.MathJax = {
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -161,7 +161,7 @@ window.MathJax = {
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -206,7 +206,7 @@ window.MathJax = {
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -329,6 +329,141 @@ window.MathJax = {
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* Reading Passage Box */
+  .passage-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-left: 4px solid #2b4c7e;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0 12px 0;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #1e293b;
+  }
+  .passage-title {
+    font-weight: 800;
+    color: #1e3a8a;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #cbd5e1;
+  }
+  .passage-content {
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+  .passage-img {
+    text-align: center;
+    margin: 8px 0;
+  }
+  .passage-img img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none;
+  }
+  .q-head {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 10pt !important;
+  }
+  .card-body {
+    font-size: 9.5pt !important;
+    line-height: 1.5 !important;
+  }
+
+
+  /* 升級字體與自然圖片排版 */
+  .passage-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-left: 4px solid #2b4c7e;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0 12px 0;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #1e293b;
+  }
+  .passage-title {
+    font-weight: 800;
+    color: #1e3a8a;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #cbd5e1;
+  }
+  .passage-content {
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+  .passage-img {
+    text-align: center;
+    margin: 8px 0;
+  }
+  .passage-img img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 10pt !important;
+  }
+  .card-body {
+    font-size: 9.5pt !important;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -632,7 +767,7 @@ window.MathJax = {
     </div>
     <div class="q-img"><img src="images/chinese_q5_1.jpeg" alt="題號 5 附圖"></div>
 
-    <div class="q-opts"><div class="q-img" style="grid-column: span 2; margin: 2px 0;"><img src="images/chinese_q5_opts.png" style="max-height: 30mm;" alt="第5題選項封字字體圖"></div></div></div></div></div></div>
+    <div class="q-opts"><div class="q-img" style="grid-column: span 2; margin: 2px 0;"><img src="images/chinese_q5_opts.png" style="max-height: none;" alt="第5題選項封字字體圖"></div></div></div></div></div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
@@ -658,6 +793,11 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【散曲欣賞】貫雲石〈小梁州〉秋</div>
+  <div class="passage-content">芙蓉映水菊花黃，滿目秋光。枯荷葉底鷺鷥藏。金風盪，飄動桂枝香。
+雷峰塔畔登高望，見錢塘一派長江。湖水清，江潮漾。天邊斜月，新雁兩三行。</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">8</span>
@@ -824,6 +964,10 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【選文閱讀】中式花茶加工說明</div>
+  <div class="passage-content">中式花茶依加工方式，可分為三種：第一種是成品內沒有花但香氣濃郁的茶，如茉莉花茶；第二種是成品內有花的茶，如玫瑰烏龍茶；第三種是純花茶，成品內沒有茶葉，如菊花茶、蓮花茶等。其中第一種等級最高，又稱「香片」。香片是將乾燥後的茶葉與新鮮的香花依比例混合，靜置陰涼處，等茶葉吸收花的香氣後將花篩除，再烘乾製成。</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">9</span>
@@ -1040,6 +1184,10 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【選文閱讀】蒲松齡《聊齋志異》</div>
+  <div class="passage-content">蒲松齡《聊齋志異》共492篇，包括兩種作品：一是幾百字甚至幾十字的奇聞逸事，另一是長達數千言的故事，是真正的短篇小說，兩種作品各占一半。《聊齋志異》真正的短篇小說能從前人作品找到「本事」（原型）的約百篇，意即近二分之一的篇章不是作者獨創，而是改寫前人作品。魯迅說此書「亦頗有從唐傳奇轉化而出者」。</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">15</span>
@@ -1246,6 +1394,10 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【文言選讀】劉基進言</div>
+  <div class="passage-content">太祖以事責丞相李善長，劉基言：「善長勛舊，能調和諸將。」太祖曰：「是數欲害汝，汝竟為之言耶？吾將相汝矣。」基頓首曰：「是如易柱，須得大木。若束小木為之，且立覆。」</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">20</span>
@@ -1423,6 +1575,10 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【文言選讀】賣餅者之歌</div>
+  <div class="passage-content">安邑里巷口有賣餅者，吾每早過戶，未嘗不聞其歌。一日，召之與語，貧窘可憐。因與萬錢，令多其本，日取餅以償之。欣然持錢而去。後過其戶，則寂然不聞謳歌之聲。及呼乃至，謂曰：「爾何輟歌之遽乎？」曰：「本流既大，所謀益增，不暇唱曲矣。」</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">22</span>
@@ -1609,6 +1765,78 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下短文，並回答25 ～ 26題：</div>
+  <div class="passage-content">二、題組：（25 ～ 42題）
+
+高二的外孫跟我說了一顆蛤蜊的故事。
+這蛤蜊竟然有名字，叫「明」。明是隻北極圓蛤，目前已知最長壽的多細
+胞動物，活了超過五百年，科學家推估其出生於明朝，於是命名「明」。孫子
+再三強調：「據說，北極海底，隱藏著比明更老的蛤蜊！」
+
+我也講了另一種蛤蜊的故事給他聽。
+在外孫這年紀時，我跟著母親上山下海做各種勞動討生活。那個年代，累
+得不得了時，抬頭一看，發現大家都辛苦，也就不會覺得自己特別苦。諸多體
+力活中，我最喜歡到海邊挖「公呆」。
+
+牠們喜歡成群生活在淺灘，若有動物接近，會一起噴水警示。這樣做或許
+能嚇走水鳥，但正好讓人發現位置，勢眾又跑不快，是不是蛤蜊呆？所以被人
+叫做公「呆」。
+
+公呆不只呆，還很懶，總是攤平在爛泥表面，只求有層薄土蓋得住殼就好，
+又動不動就噴水虛張聲勢，更容易被發現。撿拾公呆不須花太多力氣，唯一要
+注意的是，公呆殼很薄，文蛤閉殼後像石頭，碰撞也不太會破損，但公呆殼用
+兩根手指一捏就碎裂，所以耙開土的動作要小，輕輕翻開土後再慢慢撿就好。
+
+「外婆，讓人這樣撿，很快會絕種！」講環保的一代不滿地抗議。
+「你以為所有蛤蜊都像那隻明，能活五百年？公呆本就活不過一年，秋天
+一到，天氣一冷，沒被吃掉，牠們也成群成群死掉，全變成白殼骨。」
+
+孫子說：「外婆，公呆不是因為懶惰而不潛得更深來保護自己，牠們實在
+是殼太薄，承受不了壓力，才會攤平在淺灘上！反正一輩子也沒多長，一起躺
+好晒晒太陽，還能趁活著時，享受一點溫暖和陪伴。要是像明一樣，活在冰冷
+的北極深海裡，公呆們應該是受不了的。」
+
+果然在躺平年代裡，更容易理解躺平生物。
+
+—— 改寫自毓秀〈公呆〉</div>
+</div>
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下短文，並回答25 ～ 26題：</div>
+  <div class="passage-content">二、題組：（25 ～ 42題）
+
+高二的外孫跟我說了一顆蛤蜊的故事。
+這蛤蜊竟然有名字，叫「明」。明是隻北極圓蛤，目前已知最長壽的多細
+胞動物，活了超過五百年，科學家推估其出生於明朝，於是命名「明」。孫子
+再三強調：「據說，北極海底，隱藏著比明更老的蛤蜊！」
+
+我也講了另一種蛤蜊的故事給他聽。
+在外孫這年紀時，我跟著母親上山下海做各種勞動討生活。那個年代，累
+得不得了時，抬頭一看，發現大家都辛苦，也就不會覺得自己特別苦。諸多體
+力活中，我最喜歡到海邊挖「公呆」。
+
+牠們喜歡成群生活在淺灘，若有動物接近，會一起噴水警示。這樣做或許
+能嚇走水鳥，但正好讓人發現位置，勢眾又跑不快，是不是蛤蜊呆？所以被人
+叫做公「呆」。
+
+公呆不只呆，還很懶，總是攤平在爛泥表面，只求有層薄土蓋得住殼就好，
+又動不動就噴水虛張聲勢，更容易被發現。撿拾公呆不須花太多力氣，唯一要
+注意的是，公呆殼很薄，文蛤閉殼後像石頭，碰撞也不太會破損，但公呆殼用
+兩根手指一捏就碎裂，所以耙開土的動作要小，輕輕翻開土後再慢慢撿就好。
+
+「外婆，讓人這樣撿，很快會絕種！」講環保的一代不滿地抗議。
+「你以為所有蛤蜊都像那隻明，能活五百年？公呆本就活不過一年，秋天
+一到，天氣一冷，沒被吃掉，牠們也成群成群死掉，全變成白殼骨。」
+
+孫子說：「外婆，公呆不是因為懶惰而不潛得更深來保護自己，牠們實在
+是殼太薄，承受不了壓力，才會攤平在淺灘上！反正一輩子也沒多長，一起躺
+好晒晒太陽，還能趁活著時，享受一點溫暖和陪伴。要是像明一樣，活在冰冷
+的北極深海裡，公呆們應該是受不了的。」
+
+果然在躺平年代裡，更容易理解躺平生物。
+
+—— 改寫自毓秀〈公呆〉</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">25</span>
@@ -1629,6 +1857,28 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下短文，並回答27 ～ 28題：</div>
+  <div class="passage-content">灰面鵟鷹是過境臺灣的候鳥。每年十月起，牠們遠從日本、西伯利亞或中國
+東北而來，經過墾丁，前往菲律賓的度冬地，到了三月，再集結北返。
+
+研究灰面鵟鷹十多年的人員曾經透過無線電追蹤，了解牠們的遷徙路線。春
+季牠們會從度冬地開始北遷，一條路線是從臺灣東南外海的蘭嶼，經過琉球北
+上，回到日本繁殖地。另一條路線則是從臺灣的西岸通過，回到中國東北、北
+韓或日本一帶。位在臺灣中部的八卦山，因為地理位置而成為牠們重要的休息
+站。
+
+每年春天，成千上萬的灰面鵟鷹從南方來，彰化人稱牠們「南路鷹」。
+八卦山的次生林環境，提供了豐富的食物來源。另外，猛禽遷徙過程依靠氣流
+滑翔，必須利用山脈地形，尋找上升氣流，再提升高度，八卦山正好就提供這
+樣的地理條件。
+
+——改寫自〈留住八卦驛站〉
+
+圖(一)
+
+圖(二)</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">27</span>
@@ -1809,6 +2059,88 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下兩則文本，並回答29 ～ 31題：</div>
+  <div class="passage-content">【甲】
+
+電影大師希區考克曾說：「製作一部偉大的電影需要三樣東西：劇本、劇
+本、劇本。」由此可見劇本對電影的重要性。在劇本中，對白固然重要，但劇
+本必須深植於令人感覺真實的世界裡，才能有生命，也才能攫住觀眾。而視覺
+化寫作，就能創造出這個世界來。
+
+劇本中的視覺化寫作指的是：除了對白之外的所有部分，亦即視覺描述。
+任何試圖藉由文字勾勒出圖像的描寫方式，就是視覺化寫作。視覺化寫作的要
+素有以下四種：
+
+一、場景外觀：劇中的地點看起來如何？須具體寫出地點的獨特之處。別
+只是說廚房裡有爐子和冰箱，而要說出這個廚房的特色。
+
+二、場景事件：場景中發生什麼事？火車呼嘯而過？小鳥飛過窗邊？角色
+周遭有什麼正在發生？
+
+三、角色外貌：劇中角色看起來是整潔體面還是不修邊幅？雙眼有神還是
+疲憊？他們穿的是制服或是便服？劇本作者選擇的視覺細節會透露角色的性格
+及當下的狀態。
+
+四、角色行動：角色如何行動？當這個角色聽見別人對他說「我愛你」，
+他是低頭沉默或歡喜地跳起來？角色的肢體動作可以反映出他們的心理。
+
+——改寫自〈視覺化寫作：4個電影劇本範例〉
+
+【乙】
+室內　安德魯的練習室
+安德魯正在陰暗狹小的練習室裡，試著打出雙跳。在他左前方銀灰色譜架上的
+電子節拍器，正在閃爍，紅色的電子數字顯示目前速度設定在380。
+安德魯停下，重新設定為390。又繼續打擊。試著跟上。再調整節拍器到400。
+現在完全跟不上。全力以赴、汗流浹背、雙手起泡，這時——
+喀啦。安德魯的右鼓棒斷成兩半。
+他停下來。疲憊。看著自己的手。渾身冒汗，雙手發痛。
+回頭看節拍器。仍在嗶嗶作響。他將它關上。
+抬頭看海報中的人物——巴迪．瑞奇俯在鼓上。
+
+——改寫自電影劇本《進擊的鼓手》</div>
+</div>
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下兩則文本，並回答29 ～ 31題：</div>
+  <div class="passage-content">【甲】
+
+電影大師希區考克曾說：「製作一部偉大的電影需要三樣東西：劇本、劇
+本、劇本。」由此可見劇本對電影的重要性。在劇本中，對白固然重要，但劇
+本必須深植於令人感覺真實的世界裡，才能有生命，也才能攫住觀眾。而視覺
+化寫作，就能創造出這個世界來。
+
+劇本中的視覺化寫作指的是：除了對白之外的所有部分，亦即視覺描述。
+任何試圖藉由文字勾勒出圖像的描寫方式，就是視覺化寫作。視覺化寫作的要
+素有以下四種：
+
+一、場景外觀：劇中的地點看起來如何？須具體寫出地點的獨特之處。別
+只是說廚房裡有爐子和冰箱，而要說出這個廚房的特色。
+
+二、場景事件：場景中發生什麼事？火車呼嘯而過？小鳥飛過窗邊？角色
+周遭有什麼正在發生？
+
+三、角色外貌：劇中角色看起來是整潔體面還是不修邊幅？雙眼有神還是
+疲憊？他們穿的是制服或是便服？劇本作者選擇的視覺細節會透露角色的性格
+及當下的狀態。
+
+四、角色行動：角色如何行動？當這個角色聽見別人對他說「我愛你」，
+他是低頭沉默或歡喜地跳起來？角色的肢體動作可以反映出他們的心理。
+
+——改寫自〈視覺化寫作：4個電影劇本範例〉
+
+【乙】
+室內　安德魯的練習室
+安德魯正在陰暗狹小的練習室裡，試著打出雙跳。在他左前方銀灰色譜架上的
+電子節拍器，正在閃爍，紅色的電子數字顯示目前速度設定在380。
+安德魯停下，重新設定為390。又繼續打擊。試著跟上。再調整節拍器到400。
+現在完全跟不上。全力以赴、汗流浹背、雙手起泡，這時——
+喀啦。安德魯的右鼓棒斷成兩半。
+他停下來。疲憊。看著自己的手。渾身冒汗，雙手發痛。
+回頭看節拍器。仍在嗶嗶作響。他將它關上。
+抬頭看海報中的人物——巴迪．瑞奇俯在鼓上。
+
+——改寫自電影劇本《進擊的鼓手》</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">29</span>
@@ -1839,6 +2171,56 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下短文，並回答32 ～ 33題：</div>
+  <div class="passage-content">30. 關於乙劇本的寫作分析，下列何者最恰當？
+(A)透過極簡的對白讓事件留有餘韻
+(B)藉「關上」一詞讓角色間有衝突
+(C)以節拍器故障凸顯角色性格的偏執
+(D)用狀聲詞「喀啦」製造情節的轉折
+
+31. 乙劇本畫線處的文句，最無法呼應甲文中哪一項視覺化寫作的要素？
+(A)場景外觀
+(B)場景事件
+(C)角色外貌
+(D)角色行動
+
+這個社會非常擔心沒有錢，所以實體化成一個一個「別人」，來問我們現
+在到底賺多少錢，將來能賺多少錢。問這些問題的人未必心裡有個數，知道多
+少錢叫做足夠。他們並不關切生活品質、工作熱忱、自我實現、健康狀態、人
+生信念，這些無形價值能不能在金錢天秤上等價換算，一心只想問出個金額，
+好與其他四處蒐羅而來的金額比大小。巨大的金額令他們心生羨嫉，微薄的金
+額則引發他們的焦慮，並且順手潑溼我們對未來的樂觀盼想。賺錢需要付出的
+代價從來都不便宜，要把「夠」放在哪個金額上，或許很難決定，但是出賣自
+我、夢想、健康、幸福、信念，到了「夠」的時候，沒有人能不說夠。
+
+——江鵝《俗女養成記》</div>
+</div>
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下短文，並回答32 ～ 33題：</div>
+  <div class="passage-content">30. 關於乙劇本的寫作分析，下列何者最恰當？
+(A)透過極簡的對白讓事件留有餘韻
+(B)藉「關上」一詞讓角色間有衝突
+(C)以節拍器故障凸顯角色性格的偏執
+(D)用狀聲詞「喀啦」製造情節的轉折
+
+31. 乙劇本畫線處的文句，最無法呼應甲文中哪一項視覺化寫作的要素？
+(A)場景外觀
+(B)場景事件
+(C)角色外貌
+(D)角色行動
+
+這個社會非常擔心沒有錢，所以實體化成一個一個「別人」，來問我們現
+在到底賺多少錢，將來能賺多少錢。問這些問題的人未必心裡有個數，知道多
+少錢叫做足夠。他們並不關切生活品質、工作熱忱、自我實現、健康狀態、人
+生信念，這些無形價值能不能在金錢天秤上等價換算，一心只想問出個金額，
+好與其他四處蒐羅而來的金額比大小。巨大的金額令他們心生羨嫉，微薄的金
+額則引發他們的焦慮，並且順手潑溼我們對未來的樂觀盼想。賺錢需要付出的
+代價從來都不便宜，要把「夠」放在哪個金額上，或許很難決定，但是出賣自
+我、夢想、健康、幸福、信念，到了「夠」的時候，沒有人能不說夠。
+
+——江鵝《俗女養成記》</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">32</span>
@@ -2015,6 +2397,44 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下短文，並回答34 ～ 35題：</div>
+  <div class="passage-img"><img src="images/chinese_passage_q34_q35_1.png" alt="Q34-35 題組閱讀材料"></div>
+  <div class="passage-content">包裝袋裡的空氣比洋芋片多？盒內的穀片變少了？這都不是你的錯覺，廠商
+這種「價格不變、分量減少」的「縮水式漲價」策略已重出江湖。近來許多商
+品以「偷斤減兩」的方式變相漲價，從衛生紙、早餐穀片到貓罐頭都有。
+
+某些品牌為了避免顧客看到售價上漲，採用「縮水式漲價」，讓顧客支付
+一樣的價格，但產品內容變少。甚至以更極端的手法「剋扣式漲價」，表面上
+價格不變，產品品質卻下降。
+
+調查發現，62%受調者表示，如果採用縮水式或剋扣式漲價，他們可能停止
+購買該產品，比單純漲價的反應還激烈。與其再繼續使用蹩腳的漲價方式，一
+些企業選擇走另一條路，比如：推出銅板價格的小包裝新品項，或是用搭售方
+式，讓消費者誤以為買到更便宜的產品。如此一來，消費者不易與原先的價格
+比較，也就緩和了抗拒購買的心理。
+
+——改寫自《商業周刊》</div>
+</div>
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下短文，並回答34 ～ 35題：</div>
+  <div class="passage-img"><img src="images/chinese_passage_q34_q35_1.png" alt="Q34-35 題組材料"></div>
+  <div class="passage-content">包裝袋裡的空氣比洋芋片多？盒內的穀片變少了？這都不是你的錯覺，廠商
+這種「價格不變、分量減少」的「縮水式漲價」策略已重出江湖。近來許多商
+品以「偷斤減兩」的方式變相漲價，從衛生紙、早餐穀片到貓罐頭都有。
+
+某些品牌為了避免顧客看到售價上漲，採用「縮水式漲價」，讓顧客支付
+一樣的價格，但產品內容變少。甚至以更極端的手法「剋扣式漲價」，表面上
+價格不變，產品品質卻下降。
+
+調查發現，62%受調者表示，如果採用縮水式或剋扣式漲價，他們可能停止
+購買該產品，比單純漲價的反應還激烈。與其再繼續使用蹩腳的漲價方式，一
+些企業選擇走另一條路，比如：推出銅板價格的小包裝新品項，或是用搭售方
+式，讓消費者誤以為買到更便宜的產品。如此一來，消費者不易與原先的價格
+比較，也就緩和了抗拒購買的心理。
+
+——改寫自《商業周刊》</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">34</span>
@@ -2022,7 +2442,7 @@ window.MathJax = {
     </div>
     <div class="q-img"><img src="images/chinese_q34_1.jpeg" alt="題號 34 附圖"></div>
 
-    <div class="q-opts"><div class="q-img" style="grid-column: span 2; margin: 2px 0;"><img src="images/chinese_q34_opts.png" style="max-height: 42mm;" alt="第34題選項店家公告圖"></div></div></div></div></div></div>
+    <div class="q-opts"><div class="q-img" style="grid-column: span 2; margin: 2px 0;"><img src="images/chinese_q34_opts.png" style="max-height: none;" alt="第34題選項店家公告圖"></div></div></div></div></div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
@@ -2036,6 +2456,72 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀並回答36 ～ 37題：</div>
+  <div class="passage-content">五代十國是指唐亡後至宋建國前，在各地分立興亡的諸國。當時北方有五個政權遞
+嬗的王朝，稱為「五代」。南方有十個並存的國家，稱為「十國」。以下短文是根
+據這樣的時代背景論述，請閱讀並回答36 ～ 37題：
+
+南唐 後主 李煜跪在明德樓前，白衣素袍，向宋太祖 趙匡胤歸降時，內心肯
+定百感交集。他想過以後的歷史，怎麼寫他嗎？《舊五代史》直接把十國裡凡稱
+帝的都貶為「僭偽列傳」，南唐當然也逃不了。《新五代史》稍稍客氣，但也僅
+以「世家1」定位。《舊五代史》南唐部分只寫到烈主 李昪、中主 李璟，並沒
+有後主 李煜。《新五代史》雖提及李後主，但入宋的部分不寫。
+
+為何新、舊《五代史》如此定位？這就必須了解中國史家重視傳統王朝興替的
+「正統情結」。趙匡胤是借「陳橋兵變」、「黃袍加身」而當上皇帝，其政權正當
+性，乃繼承北方中原的政權更替。以此史觀來看，唐朝滅亡後在中原相繼更迭的北方
+政權：後梁、後唐、後晉、後漢、後周，便被視為正統，其他政權則被視為僭越。
+
+然而紛亂的五代十國，主戰場就在北方中原。五代國祚最短的是後漢，三年
+多換了兩個君主。最長的是後梁，十七年四個皇帝。何況，五代王位之爭，經常是
+血腥暴力、骨肉相殘，朝廷難有建樹，更談不上人文建設、經濟民生。
+
+「君王唯兵強馬壯者得之」，五代帝王幾乎沒幾位是有高度文化修養的。反
+倒是十國裡的南唐前後維持近四十年，只經歷三個皇帝，沒有繼承權的紛亂，政權
+相對穩定。且南唐三位國君都重視文教，珍藏圖書，蒐羅書畫，建立教坊，網羅
+畫師，一時之間南唐成了文化重鎮。宋朝雖然滅了南唐，可是汴京皇城裡的文化資
+產，有多少是來自南唐啊！
+
+——改寫自蔡詩萍《李後主事件簿》
+
+【注釋】
+1.世家：紀傳體史書體例之一，諸侯王傳記的體例為  
+               「世家」，帝王則為「本紀」</div>
+</div>
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀並回答36 ～ 37題：</div>
+  <div class="passage-content">五代十國是指唐亡後至宋建國前，在各地分立興亡的諸國。當時北方有五個政權遞
+嬗的王朝，稱為「五代」。南方有十個並存的國家，稱為「十國」。以下短文是根
+據這樣的時代背景論述，請閱讀並回答36 ～ 37題：
+
+南唐 後主 李煜跪在明德樓前，白衣素袍，向宋太祖 趙匡胤歸降時，內心肯
+定百感交集。他想過以後的歷史，怎麼寫他嗎？《舊五代史》直接把十國裡凡稱
+帝的都貶為「僭偽列傳」，南唐當然也逃不了。《新五代史》稍稍客氣，但也僅
+以「世家1」定位。《舊五代史》南唐部分只寫到烈主 李昪、中主 李璟，並沒
+有後主 李煜。《新五代史》雖提及李後主，但入宋的部分不寫。
+
+為何新、舊《五代史》如此定位？這就必須了解中國史家重視傳統王朝興替的
+「正統情結」。趙匡胤是借「陳橋兵變」、「黃袍加身」而當上皇帝，其政權正當
+性，乃繼承北方中原的政權更替。以此史觀來看，唐朝滅亡後在中原相繼更迭的北方
+政權：後梁、後唐、後晉、後漢、後周，便被視為正統，其他政權則被視為僭越。
+
+然而紛亂的五代十國，主戰場就在北方中原。五代國祚最短的是後漢，三年
+多換了兩個君主。最長的是後梁，十七年四個皇帝。何況，五代王位之爭，經常是
+血腥暴力、骨肉相殘，朝廷難有建樹，更談不上人文建設、經濟民生。
+
+「君王唯兵強馬壯者得之」，五代帝王幾乎沒幾位是有高度文化修養的。反
+倒是十國裡的南唐前後維持近四十年，只經歷三個皇帝，沒有繼承權的紛亂，政權
+相對穩定。且南唐三位國君都重視文教，珍藏圖書，蒐羅書畫，建立教坊，網羅
+畫師，一時之間南唐成了文化重鎮。宋朝雖然滅了南唐，可是汴京皇城裡的文化資
+產，有多少是來自南唐啊！
+
+——改寫自蔡詩萍《李後主事件簿》
+
+【注釋】
+1.世家：紀傳體史書體例之一，諸侯王傳記的體例為  
+               「世家」，帝王則為「本紀」</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">36</span>
@@ -2212,6 +2698,16 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下短文，並回答38 ～ 39題：</div>
+  <div class="passage-content">公子光之父曰吳王 諸樊。諸樊弟三人：次曰餘祭，次曰夷眛，次曰季子札。
+諸樊知季子札賢而不立太子，以次傳三弟，欲卒致國於季子札。諸樊既死，傳
+餘祭。餘祭死，傳夷眛。夷眛死，當傳季子札。季子札逃不肯立，吳人乃立
+夷眛之子僚為王。公子光曰：「使以兄弟次邪，季子當立；必以子乎，則光真
+嫡嗣，當立。」
+
+——改寫自司馬遷《史記》</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">38</span>
@@ -2219,7 +2715,7 @@ window.MathJax = {
     </div>
     <div class="q-img"><img src="images/chinese_q38_1.jpeg" alt="題號 38 附圖"></div>
 
-    <div class="q-opts"><div class="q-img" style="grid-column: span 2; margin: 2px 0;"><img src="images/chinese_q38_opts.png" style="max-height: 42mm;" alt="第38題選項親屬關係圖"></div></div></div></div></div></div>
+    <div class="q-opts"><div class="q-img" style="grid-column: span 2; margin: 2px 0;"><img src="images/chinese_q38_opts.png" style="max-height: none;" alt="第38題選項親屬關係圖"></div></div></div></div></div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
@@ -2233,6 +2729,22 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】請閱讀以下短文，並回答40 ～ 42題：</div>
+  <div class="passage-content">日前令郎訪逮，出手筆並石月屏為贈，捧玩不勝愧喜。比來，數於都下朋
+從處見此屏，觀其天質圓瑩，非刻非繪，如秋高氣清，迥然在望，信乎天地之
+異氣、山澤之殊寶也。素心悅之，無從可得，豈意一旦不煩懇請，坐致握中。
+性本疏野，雅叶1所欲，雖受文錦十純2，白璧百雙，在光之愚，未為重賜。俗故
+忽忽，久不遑修謝，尤增悚懼。令郎注官3甚便，想加慰喜，未期接侍，倍希珍
+厚。
+
+——改寫自司馬光〈答薛虢州謝石月屏書〉
+
+【注釋】
+1.叶：音ㄒㄧㄝˊ，符合
+2.純：計量單位，布帛一段為一純
+3.注官：按照當時的官制授職</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">40</span>

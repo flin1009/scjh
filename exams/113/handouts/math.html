@@ -39,13 +39,13 @@ window.MathJax = {
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -161,7 +161,7 @@ window.MathJax = {
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -208,7 +208,7 @@ window.MathJax = {
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -331,6 +331,43 @@ window.MathJax = {
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級數學排版與字體 */
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 10pt !important;
+  }
+  .card-body {
+    font-size: 9.5pt !important;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -591,7 +628,7 @@ window.MathJax = {
       <div class="q-stem">若想在圖(二)的方格紙上沿著格線畫出坐標平面的 $x$ 軸、$y$ 軸並標記原點，且以小方格邊長作為單位長，則下列哪一種畫法可在方格紙的範圍內標出 $(5, 3)$、$(-4, -4)$、$(-3, 4)$、$(3, -5)$ 四點？</div>
     </div>
     <div class="q-img"><img src="images/math_q4_1.jpeg" alt="第 4 題附圖"></div>
-    <div class="q-opts" style="grid-template-columns: repeat(2, 1fr); gap: 8px;"><div class="q-opt"><span class="opt-label">(A)</span><br><img src="images/math_q4_2.jpeg" style="max-width: 90%; max-height: 25mm; border: 1px solid #d9e2ec; border-radius: 4px; padding: 2px;"></div><div class="q-opt"><span class="opt-label">(B)</span><br><img src="images/math_q4_3.jpeg" style="max-width: 90%; max-height: 25mm; border: 1px solid #d9e2ec; border-radius: 4px; padding: 2px;"></div><div class="q-opt"><span class="opt-label">(C)</span><br><img src="images/math_q4_4.jpeg" style="max-width: 90%; max-height: 25mm; border: 1px solid #d9e2ec; border-radius: 4px; padding: 2px;"></div><div class="q-opt"><span class="opt-label">(D)</span><br><img src="images/math_q4_5.jpeg" style="max-width: 90%; max-height: 25mm; border: 1px solid #d9e2ec; border-radius: 4px; padding: 2px;"></div></div>
+    <div class="q-opts" style="grid-template-columns: repeat(2, 1fr); gap: 8px;"><div class="q-opt"><span class="opt-label">(A)</span><br><img src="images/math_q4_2.jpeg" style="max-width: 90%; max-height: none; border: 1px solid #d9e2ec; border-radius: 4px; padding: 2px;"></div><div class="q-opt"><span class="opt-label">(B)</span><br><img src="images/math_q4_3.jpeg" style="max-width: 90%; max-height: none; border: 1px solid #d9e2ec; border-radius: 4px; padding: 2px;"></div><div class="q-opt"><span class="opt-label">(C)</span><br><img src="images/math_q4_4.jpeg" style="max-width: 90%; max-height: none; border: 1px solid #d9e2ec; border-radius: 4px; padding: 2px;"></div><div class="q-opt"><span class="opt-label">(D)</span><br><img src="images/math_q4_5.jpeg" style="max-width: 90%; max-height: none; border: 1px solid #d9e2ec; border-radius: 4px; padding: 2px;"></div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
@@ -1763,7 +1800,7 @@ window.MathJax = {
       <span class="q-num" style="background: #2b4c7e; color: #fff;">非選1</span>
       <div class="q-stem" style="font-size: 8.5pt;"><strong>非選擇題 第一題：健康飲食餐盤面積比與整數求解</strong><br>「健康飲食餐盤」是一種以圖畫呈現飲食指南的方式，圖畫中各類食物區塊的面積比，表示一個人每日所應攝取各類食物的份量比。某研究機構對於一般人如何搭配「穀類」、「蛋白質」、「蔬菜」、「水果」這四大類食物的攝取份量，以「健康標語」說明這四大類食物所應攝取份量的關係如圖(十七)，並繪製了「健康飲食餐盤」如圖(十八)。<br><br>健康標語：<br>① 蔬菜要比水果多<br>② 蔬菜穀類一樣多<br>③ 蔬菜水果合計占一半<br><br>請根據上述資訊回答下列問題，完整寫出你的解題過程並詳細解釋：<br>(1) 請根據圖(十七)的「健康標語」，判斷一個人每日所應攝取的「水果」和「蛋白質」份量之間的大小關係。<br>(2) 將圖(十八)的「健康飲食餐盤」簡化為一個矩形，且其中四大類食物的區塊皆為矩形，如圖(十九)所示。若要符合圖(十七)的「健康標語」，在紙上畫出圖(十九)的圖形，其中餐盤長為 16 公分，寬為 10 公分，則 $a$、$b$ 是否可能同時為正整數？</div>
     </div>
-    <div class="q-img"><img src="images/math_q1_1.jpeg" alt="非選擇題 第一題：健康飲食餐盤面積比與整數求解 附圖" style="max-height: 40mm;"></div>
+    <div class="q-img"><img src="images/math_q1_1.jpeg" alt="非選擇題 第一題：健康飲食餐盤面積比與整數求解 附圖" style="max-height: none;"></div>
     <div class="scratch-area" style="height: 28mm;"><span class="scratch-label">非選擇題作答草稿與書寫區</span></div>
   </div>
 
@@ -1772,7 +1809,7 @@ window.MathJax = {
       <span class="q-num" style="background: #2b4c7e; color: #fff;">非選2</span>
       <div class="q-stem" style="font-size: 8.5pt;"><strong>非選擇題 第二題：多功能圓桌拼接與畢氏定理線段比</strong><br>某教室內的桌子皆為同一款多功能桌，4 張此款桌子可緊密拼接成中間有圓形鏤空的大圓桌，上視圖如圖(二十)所示，其外圍及鏤空邊界為一大一小的同心圓，其中大圓的半徑為 80 公分，小圓的半徑為 20 公分，且任兩張相鄰桌子接縫的延長線皆通過圓心。<br>為了有效運用教室空間，老師考慮了圖(二十一)及圖(二十二)兩種拼接此款桌子的方式。<br>這兩種方式皆是將 2 張桌子的一邊完全貼合進行拼接。$A$、$B$ 兩點為圖(二十一)中距離最遠的兩個桌角，$C$、$D$ 兩點為圖(二十二)中距離最遠的兩個桌角，且 $\overline{CD}$ 與 2 張桌子的接縫 $\overline{EF}$ 相交於 $G$ 點，$G$ 為 $\overline{EF}$ 中點。<br><br>請根據上述資訊及圖(二十一)、圖(二十二)中的標示回答下列問題，完整寫出你的解題過程並詳細解釋：<br>(1) $\overline{GF}$ 的長度為多少公分？<br>(2) 判斷 $\overline{CD}$ 與 $\overline{AB}$ 的長度何者較大？請說明理由。</div>
     </div>
-    <div class="q-img"><img src="images/math_non_q2_1.jpeg" alt="非選擇題 第二題：多功能圓桌拼接與畢氏定理線段比 附圖" style="max-height: 40mm;"></div>
+    <div class="q-img"><img src="images/math_non_q2_1.jpeg" alt="非選擇題 第二題：多功能圓桌拼接與畢氏定理線段比 附圖" style="max-height: none;"></div>
     <div class="scratch-area" style="height: 28mm;"><span class="scratch-label">非選擇題作答草稿與書寫區</span></div>
   </div>
 

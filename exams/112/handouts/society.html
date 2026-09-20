@@ -39,13 +39,13 @@ window.MathJax = {
   }
   .page {
     width: 210mm;
-    min-height: 297mm;
+    min-min-height: 297mm; height: auto;
     margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
     box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 4px;
   }
   @media print {
@@ -161,7 +161,7 @@ window.MathJax = {
   }
   .q-img img {
     max-width: 95%;
-    max-height: 48mm;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
     border: 1px solid #d9e2ec;
@@ -206,7 +206,7 @@ window.MathJax = {
     border-radius: 6px;
     margin-bottom: 8px;
     box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
-    overflow: hidden;
+    overflow: visible;
   }
   .card-header {
     display: flex;
@@ -329,6 +329,76 @@ window.MathJax = {
     max-width: 150mm;
     line-height: 1.7;
   }
+
+  /* 升級字體與自然圖片排版 */
+  .passage-box {
+    background: #f8fafc;
+    border: 1.5px solid #cbd5e1;
+    border-left: 4px solid #2b4c7e;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0 12px 0;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #1e293b;
+  }
+  .passage-title {
+    font-weight: 800;
+    color: #1e3a8a;
+    font-size: 10.5pt;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #cbd5e1;
+  }
+  .passage-content {
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+  .passage-img {
+    text-align: center;
+    margin: 8px 0;
+  }
+  .passage-img img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+  }
+  .q-img img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+  .q-head {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-stem {
+    font-size: 10.5pt !important;
+    line-height: 1.55 !important;
+  }
+  .q-num {
+    font-size: 9.5pt !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .q-opts {
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+  }
+  .card-title {
+    font-size: 10pt !important;
+  }
+  .card-body {
+    font-size: 9.5pt !important;
+    line-height: 1.5 !important;
+  }
+  .page {
+    overflow: visible !important;
+    min-height: 297mm !important;
+    height: auto !important;
+  }
+
 </style>
 
 </head>
@@ -2240,7 +2310,7 @@ window.MathJax = {
     <div class="q-img"><img src="images/society_q39_1.jpeg" alt="題號 39 附圖"></div>
 <div class="q-img"><img src="images/society_q39_opts.png" alt="題號 39 附圖"></div>
 
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> <img src="images/society_q39_opts.png" style="max-height: 35mm;" alt="選項圖 (A)至(D)"></div></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> <img src="images/society_q39_opts.png" style="max-height: none;" alt="選項圖 (A)至(D)"></div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
@@ -2443,6 +2513,74 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】二、題組：(44～54題)
+閱讀下列選文，回答第 44 至 45 題：</div>
+  <div class="passage-content">表(八)
+
+原因
+年齡(歲)
+
+需照顧未滿
+
+12 歲子女
+需照顧65 歲
+
+以上家屬
+
+負責打理
+
+家務
+
+健康狀況
+
+不佳
+其他
+
+30-34
+65.37
+0.89
+11.43
+2.98
+19.33
+35-39
+55.35
+2.60
+21.39
+4.26
+16.40
+40-44
+35.36
+5.16
+39.70
+7.15
+12.63
+45-49
+  7.05
+8.10
+58.04
+5.50
+21.31
+50-54
+  0.53
+7.58
+56.69
+4.69
+30.51
+
+歷史上的琉球王國與中國關係密切，在雙方數百年的交流之下，琉球文化
+在飲食、語言、風俗，甚至武術都受到中國影響。例如十九世紀前期琉球武術
+家佐久川寬賀，數度跟隨使節團前往中國，得以拜訪大師精進武藝，並將中
+國拳法融入傳統武術之中，形成「唐手」，他也被琉球人尊稱為「唐手佐久
+川」。之後，「唐手」得到琉球士族的重視，成為士族間秘傳的武術。
+
+十九世紀末，由於政治局勢發生變化，琉球王國遭到他國併吞，國王與士
+族被迫前往新統治者的都城居住，「唐手」也隨之傳入該國。經過一段時間的
+發展，「唐手」名稱改為同音異字的「空手」，即為今日的「空手道」。空手
+道在世界各地逐漸普及，並曾經被納入奧運比賽項目。
+
+單位：%</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">44</span>
@@ -2619,12 +2757,87 @@ window.MathJax = {
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列選文，回答第 46 至 48 題：</div>
+  <div class="passage-img"><img src="images/society_passage_q46_q48_1.jpeg" alt="題組材料" style="margin: 4px;"></div>
+  <div class="passage-content">日本 富士山為一近似圓錐狀的火山，有四條主要的登山路線，開放時間為
+每年7月上旬至9月上旬，不同路線的開放時間會視情況而有幾天的差距。四條
+路線雖特色各異，但皆一路向上爬升，民眾可根據自身狀況及喜好選擇適合的
+上山路線，例如體力、經驗較為不足的人，會選擇坡度較緩的路線；而體力較
+好且經驗豐富者，則可以挑戰難度較高的上山路線。民眾需先搭乘巴士或其他
+代步工具至登山口(起點)後，再進入步道挑戰登頂。
+
+小婷登山經驗豐富，表(九)是她整理的四條登山路線部分資訊，她這次計畫
+選擇其中平均坡度最陡的路線攀登以挑戰自我。
+
+圖(十四)
+
+表(九)
+          路線
+項目
+甲
+乙
+丙
+丁
+
+起點海拔高度(公尺)
+2,305
+1,970 
+1,440 
+2,380 
+終點海拔高度(公尺)
+3,720
+3,720 
+3,715 
+3,715 
+上山路線長度(公里)
+    7.5 
+    7.8 
+  11.0 
+    5.0 
+上山路線平均坡度(%)
+  18.9 
+  22.4 
+  20.7 
+  26.7 
+註：路線平均坡度(%)＝(終點高度– 起點高度)/路線長度×100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+P
+
+
+
+
+P
+尵涜
+䰀涜
+㨣弑</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">46</span>
       <div class="q-stem">上文中登山步道開放的起始時間，主要是因為此時已具備下列何項條件？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q46_q48_1.jpeg" alt="題號 46 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 地質穩定且地震較少</div><div class="q-opt"><span class="opt-label">(B)</span> 山上的積雪大多已融化</div><div class="q-opt"><span class="opt-label">(C)</span> 乾季雨少，步道不溼滑</div><div class="q-opt"><span class="opt-label">(D)</span> 西北季風盛行，天氣涼爽</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2635,7 +2848,7 @@ window.MathJax = {
       <span class="q-num">47</span>
       <div class="q-stem">圖(十四)為其中一條登山路線，依據圖中資訊判<br>斷，最可能為表(九)中的何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q46_q48_1.jpeg" alt="題號 47 附圖"></div>
+    
 <div class="q-img"><img src="images/society_q47_1.jpeg" alt="題號 47 附圖"></div>
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲</div><div class="q-opt"><span class="opt-label">(B)</span> 乙</div><div class="q-opt"><span class="opt-label">(C)</span> 丙</div><div class="q-opt"><span class="opt-label">(D)</span> 丁</div></div>
@@ -2647,7 +2860,7 @@ window.MathJax = {
       <span class="q-num">48</span>
       <div class="q-stem">根據表(九)中資訊，小婷與體力、經驗較為不足的民眾，選擇的路線分別為下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q46_q48_1.jpeg" alt="題號 48 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 小婷選甲；體力、經驗較為不足的民眾選丁</div><div class="q-opt"><span class="opt-label">(B)</span> 小婷選乙；體力、經驗較為不足的民眾選丙</div><div class="q-opt"><span class="opt-label">(C)</span> 小婷選丙；體力、經驗較為不足的民眾選乙</div><div class="q-opt"><span class="opt-label">(D)</span> 小婷選丁；體力、經驗較為不足的民眾選甲</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2809,12 +3022,59 @@ window.MathJax = {
     <span>會考模擬・計時實戰</span>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列選文，回答第 49 至 51 題：</div>
+  <div class="passage-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題組材料" style="margin: 4px;"></div>
+  <div class="passage-content">位於非洲西南端的開普敦，是影
+響世界歷史的重要都市。荷蘭人在
+1652年來到此地，因當地氣候適合，
+可種植歐洲常見的蔬果並釀製葡萄
+酒，用以補充船隻上的飲食，於是逐
+步將其建造為海上貿易的補給站。圖
+(十五)中的好望堡為統治者在開普敦
+的辦公地點，是由奴隸所建造，其中
+一部分的奴隸是由荷蘭在亞洲的殖民
+地輸出。1869年蘇伊士運河開通後，
+大量從歐洲出發的船隻改走新的通航
+路線而使開普敦逐漸沒落。時至今
+日，開普敦則以多元文化及豐富生態
+成為非洲熱門觀光景點。
+圖(十五)
+
+只㙚Ⳁ斄ⶡ⛲
+
+圊㏽搵⩖⩖彶
+
+⠥䎤㳃䗝⪸
+
+⟥㐗⛀
+⠲敶⪬
+
+⟥摯″⛲
+
+摉㔬㐤ǴᲾ ăăⴲᶡ
+
+㜊⬯
+
+㟴Ⱉ䀋
+
+⠻㗙⛟
+
+
+P
+
+6
+
+(
+
+‪⊶㙚劚◐</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">49</span>
       <div class="q-stem">根據上文及圖(十五)的資訊判斷，上述都市的氣候特色應為下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題號 49 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 一月寒冷且年溫差大</div><div class="q-opt"><span class="opt-label">(B)</span> 一月溫暖且雨量較少</div><div class="q-opt"><span class="opt-label">(C)</span> 全年低溫且雨量稀少</div><div class="q-opt"><span class="opt-label">(D)</span> 終年有雨且夏雨較多</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2825,7 +3085,7 @@ window.MathJax = {
       <span class="q-num">50</span>
       <div class="q-stem">文中提及奴隸的輸出地最可能包含下列何者？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題號 50 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 南洋群島</div><div class="q-opt"><span class="opt-label">(B)</span> 朝鮮半島</div><div class="q-opt"><span class="opt-label">(C)</span> 伊比利半島</div><div class="q-opt"><span class="opt-label">(D)</span> 夏威夷群島</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -2836,18 +3096,56 @@ window.MathJax = {
       <span class="q-num">51</span>
       <div class="q-stem">文中提到船隻改走新的通航路線，是因此航路具備下列哪一優勢？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題號 51 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 大幅縮短至印度洋周邊的航行路程</div><div class="q-opt"><span class="opt-label">(B)</span> 可避免通過滿布浮冰的大西洋海域</div><div class="q-opt"><span class="opt-label">(C)</span> 可藉由北大西洋暖流加快航行速度</div><div class="q-opt"><span class="opt-label">(D)</span> 有助於疏解前往南美洲擁擠的航路</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
+  <div class="passage-box">
+  <div class="passage-title">【題組】閱讀下列選文，回答第 52 至 54 題：</div>
+  <div class="passage-img"><img src="images/society_passage_q52_q54_1.jpeg" alt="題組材料" style="margin: 4px;"></div>
+  <div class="passage-content">美國的反體罰組織於1998年發起「不打小孩日」的活動，目的是藉著這一
+天宣傳反體罰的兒童人權觀念。這個最先在美國推動的活動，迅速得到國際社
+會的響應，2001年起，其他反
+體罰及兒童人權團體也開始於
+4月30日這一天舉辦各種活動，
+倡議終止體罰兒童，並推廣正
+面的管教方式。2006年，在國
+內許多民間團體共同響應下，
+臺灣也參與「國際不打小孩
+日」的活動，圖(十六)是相關
+活動的宣傳標語。
+
+我國政府也致力建立更完善的法律制度來保障兒童權益，並以符合聯合國
+的標準為目標。例如，修訂《兒童及少年福利與權益保障法》，促使政府、社
+會大眾與家長正視兒童福利與虐待兒童的問題；修訂《教育基本法》，明文禁
+止校園體罰，藉由公權力保障學生不受體罰。政府的各種作法，目的是預防及
+保護兒童免於一切形式的暴力侵害，希望提供兒童更完善的成長環境。
+
+୾ርϛ҉ϊࡇС
+ᗝ፝
+ղ
+ၑၑࣽ
+ϛ्
+҉ϊࡇ
+ՎЎӶ೼ΚЉϛ्
+҉
+η೩ղཽึ
+౫
+஡ٿޠؑ
+ΚЉ
+ղഎϛሰ्
+҉
+
+圖(十六)</div>
+</div>
   <div class="q-item no-break">
     <div class="q-head">
       <span class="q-num">52</span>
       <div class="q-stem">關於文中活動理念對臺灣帶來影響的過程，最適合以下列何者說明？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q52_q54_1.jpeg" alt="題號 52 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 法律修改程序的變化</div><div class="q-opt"><span class="opt-label">(B)</span> 科技發展帶來的衝擊</div><div class="q-opt"><span class="opt-label">(C)</span> 風俗習慣的文化傳承</div><div class="q-opt"><span class="opt-label">(D)</span> 全球化下的文化交流</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -3014,7 +3312,7 @@ window.MathJax = {
       <span class="q-num">53</span>
       <div class="q-stem">根據圖(十六)判斷，關於這則宣傳標語所呈現的意義，下列敘述何者最適當？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q52_q54_1.jpeg" alt="題號 53 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 主張對實施體罰者提起訴訟加以處罰</div><div class="q-opt"><span class="opt-label">(B)</span> 藉由改變家長價值觀來帶動社會變遷</div><div class="q-opt"><span class="opt-label">(C)</span> 上街請願要求國家立法保障兒童福利</div><div class="q-opt"><span class="opt-label">(D)</span> 推廣法治教育教導兒童保護自身權益</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
@@ -3025,7 +3323,7 @@ window.MathJax = {
       <span class="q-num">54</span>
       <div class="q-stem">關於文末前、後所提及我國的二項法規，下列敘述何者最適當？</div>
     </div>
-    <div class="q-img"><img src="images/society_passage_q52_q54_1.jpeg" alt="題號 54 附圖"></div>
+    
 
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 以法律位階而言，前者具有最高性</div><div class="q-opt"><span class="opt-label">(B)</span> 以法律位階而言，後者具有固定性</div><div class="q-opt"><span class="opt-label">(C)</span> 以修法程序而言，皆須經總統公布後才生效</div><div class="q-opt"><span class="opt-label">(D)</span> 以修法程序而言，皆可由行政機關自行修訂</div></div>
     <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
