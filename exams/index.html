@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>國中教育會考 歷屆試題庫總覽 - 獅甲國中會考衝刺網</title>
+  <meta name="description" content="國中教育會考歷屆試題完整收錄：包含 115、114、113 年試卷 PDF 下載、官方參考解答、試題深度分析與各科 5B 衝 A 特訓講義。">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/exams.css">
+</head>
+<body>
+
+  <!-- ================= Top Navigation Bar ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand-link">
+        <span class="brand-badge">SCJH</span>
+        <div>
+          <span class="brand-title">獅甲國中會考衝刺網</span>
+          <span class="brand-subtitle">國三備考資源・歷屆考古題庫</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="切換選單">☰</button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="../index.html">🏠 首頁</a></li>
+        <li class="nav-item"><a href="index.html" class="active">📚 歷屆題庫</a></li>
+        <li class="nav-item"><a href="../index.html#handouts-section">🚀 5B衝A講義</a></li>
+        <li class="nav-item"><a href="../schedule.html">📅 國三課表與進度</a></li>
+        <li class="nav-item"><a href="../index.html#cutoffs-section">📊 計分標準</a></li>
+        <li class="nav-item"><a href="../index.html#downloads-section">📥 資源下載</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= Breadcrumb & Banner ================= -->
+  <section class="hero-banner" style="padding: 32px 0 28px;">
+    <div class="container hero-content">
+      <div class="hero-tag">
+        <span>📚 歷屆會考試題總庫</span>
+      </div>
+      <h1 class="hero-title" style="font-size: 1.85rem;">國中教育會考 歷年試題・解答・分析全收錄</h1>
+      <p class="hero-desc">
+        點選年份標籤即可切換 115、114、113 各年會考試題。每科均提供原卷下載、答案核對與試題分析，115 年更獨家提供 5B 衝 A 實戰講義！
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= Main Content ================= -->
+  <main class="container main-content">
+
+    <!-- Year Tabs -->
+    <div class="year-tabs-wrapper">
+      <div class="year-tabs" id="year-tabs-container">
+        <!-- Dynamically populated by exam-renderer.js -->
+      </div>
+      <a href="../index.html" class="section-link">← 回到首頁儀表板</a>
+    </div>
+
+    <!-- Year Title Banner -->
+    <div style="background: white; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px 24px; margin-bottom: 24px; box-shadow: var(--shadow-sm); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+      <div>
+        <h2 id="current-year-title" style="font-size: 1.35rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;">115 年國中教育會考</h2>
+        <p id="current-year-desc" style="font-size: 0.92rem; color: var(--gray);">收錄 115 年會考全套試題卷、官方解答、試題深度分析、5B衝A實戰講義及統計對照數據。</p>
+      </div>
+      <a href="https://cap.rcpet.edu.tw/examination.html" target="_blank" rel="noopener" style="font-size: 0.85rem; color: #2563eb; background: #eff6ff; padding: 8px 14px; border-radius: 6px; font-weight: 700; text-decoration: none;">
+        🌐 心測中心官方歷屆試題來源 ↗
+      </a>
+    </div>
+
+    <!-- Exam Subject Cards Grid -->
+    <div class="section-block">
+      <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 16px; color: var(--dark);">📝 各科試題卷與解答清單</h3>
+      <div class="exam-grid" id="exam-cards-grid">
+        <!-- Dynamically rendered by exam-renderer.js -->
+      </div>
+    </div>
+
+    <!-- Cutoff Table -->
+    <section class="section-block">
+      <div class="section-header">
+        <div>
+          <h3 class="section-title">📊 該年度各科等級加標示與答對題數對照表</h3>
+          <p class="section-subtitle">A++、A+、A（精熟）、B++、B+、B（基礎）、C（待加強）門檻</p>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="cutoff-table">
+          <thead>
+            <tr>
+              <th style="text-align: left; padding-left: 18px;">科目名稱</th>
+              <th>A++ (精熟)</th>
+              <th>A+ (精熟)</th>
+              <th>A (精熟)</th>
+              <th>B++ (基礎)</th>
+              <th>B+ (基礎)</th>
+              <th>B (基礎)</th>
+              <th>C (待加強)</th>
+            </tr>
+          </thead>
+          <tbody id="cutoff-table-tbody">
+            <!-- Populated dynamically by exam-renderer.js -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Official Documents & Reports -->
+    <section class="section-block">
+      <div class="section-header">
+        <div>
+          <h3 class="section-title">📥 官方統計數據與試題報告</h3>
+          <p class="section-subtitle">心測中心公布之各題通過率、鑑別度與計分說明報告</p>
+        </div>
+      </div>
+
+      <div class="download-grid" id="year-stats-docs">
+        <!-- Populated dynamically by exam-renderer.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        <p>© 2026 高雄市立獅甲國中 國三會考衝刺與學習資源網</p>
+        <p style="margin-top: 6px; font-size: 0.8rem; color: #64748b;">試題版權屬於 國立臺灣師範大學心理與教育測驗研究發展中心</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/exam-data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/exam-renderer.js"></script>
+</body>
+</html>

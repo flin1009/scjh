@@ -1,0 +1,421 @@
+{
+  "version": "2.0",
+  "updatedAt": "2026-09-20",
+  "officialSource": "https://cap.rcpet.edu.tw/examination.html",
+  "years": [
+    {
+      "year": 115,
+      "label": "115 年國中教育會考",
+      "tag": "最新完整版",
+      "featured": true,
+      "description": "提供心測中心官方試卷直連、標準答案、試題分析，以及獅甲國中 5B衝A特訓講義與答對題數等級對照。",
+      "subjects": [
+        {
+          "id": "chinese",
+          "name": "國文科",
+          "icon": "📖",
+          "questions": "單選 42 題",
+          "duration": "70 分鐘",
+          "a_cutoff": "答對 36 題達 A",
+          "exam_pdf": "https://drive.google.com/file/d/1FQtq4_a4GTsTKURdzPhDkKmONKRXtTJ9/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/1fxfOLQPMdCEMSuziD1qsQZg3vVOGt8df/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1jGFuoXvMF7kiCdIO63SDayH2dC4C5WEO?usp=drive_link",
+          "handout_html": "exams/115/handouts/chinese.html",
+          "handout_title": "115 國文 5B衝A實戰講義",
+          "cutoffs": {
+            "A++": "40-42 題",
+            "A+": "39 題",
+            "A": "36-38 題",
+            "B++": "32-35 題",
+            "B+": "28-31 題",
+            "B": "17-27 題",
+            "C": "0-16 題"
+          }
+        },
+        {
+          "id": "english",
+          "name": "英語科 (閱讀與聽力)",
+          "icon": "🎧",
+          "questions": "閱讀 43 題 / 聽力 21 題",
+          "duration": "閱讀 60 分鐘 / 聽力 25 分鐘",
+          "a_cutoff": "加權 90.70 分達 A",
+          "exam_pdf": "https://drive.google.com/file/d/1pzRZpkZEBg4x7GNTAIrdfGJCxNSKgok-/view?usp=drive_link",
+          "listening_pdf": "https://drive.google.com/file/d/1zRjsoyQhLRJfmmHtBJfi5qJa6ND1uVJ6/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/1fxfOLQPMdCEMSuziD1qsQZg3vVOGt8df/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1jGFuoXvMF7kiCdIO63SDayH2dC4C5WEO?usp=drive_link",
+          "handout_html": "exams/115/handouts/english.html",
+          "handout_title": "115 英語 5B衝A實戰講義",
+          "cutoffs": {
+            "A++": "加權 98.14-100",
+            "A+": "加權 96.28-98.13",
+            "A": "加權 90.70-96.27",
+            "B++": "加權 82.30-90.69",
+            "B+": "加權 69.28-82.29",
+            "B": "加權 38.43-69.27",
+            "C": "加權 0-38.42"
+          }
+        },
+        {
+          "id": "math",
+          "name": "數學科 (含非選擇題)",
+          "icon": "📐",
+          "questions": "選擇 25 題 / 非選 2 大題(6分)",
+          "duration": "80 分鐘",
+          "a_cutoff": "加權 77.10 分達 A",
+          "exam_pdf": "https://drive.google.com/file/d/1G-grfVw1NldMD3TRG-7Lco-yOuaoTKoK/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/1fxfOLQPMdCEMSuziD1qsQZg3vVOGt8df/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1jGFuoXvMF7kiCdIO63SDayH2dC4C5WEO?usp=drive_link",
+          "handout_html": "exams/115/handouts/math.html",
+          "handout_title": "115 數學 5B衝A實戰講義 (MathJax排版)",
+          "cutoffs": {
+            "A++": "加權 91.60-100",
+            "A+": "加權 85.70-91.59",
+            "A": "加權 77.10-85.69",
+            "B++": "加權 68.70-77.09",
+            "B+": "加權 59.40-68.69",
+            "B": "加權 39.00-59.39",
+            "C": "加權 0-38.99"
+          }
+        },
+        {
+          "id": "nature",
+          "name": "自然科 (理化/地科/生物)",
+          "icon": "🔬",
+          "questions": "單選 50 題",
+          "duration": "70 分鐘",
+          "a_cutoff": "答對 43 題達 A",
+          "exam_pdf": "https://drive.google.com/file/d/1ZJNPG9Wz3zuI8UkPGUY50URejxxZYmQ8/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/1fxfOLQPMdCEMSuziD1qsQZg3vVOGt8df/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1jGFuoXvMF7kiCdIO63SDayH2dC4C5WEO?usp=drive_link",
+          "handout_html": "exams/115/handouts/nature.html",
+          "handout_title": "115 自然 5B衝A實戰講義",
+          "cutoffs": {
+            "A++": "47-50 題",
+            "A+": "46 題",
+            "A": "43-45 題",
+            "B++": "36-42 題",
+            "B+": "29-35 題",
+            "B": "19-28 題",
+            "C": "0-18 題"
+          }
+        },
+        {
+          "id": "society",
+          "name": "社會科 (歷史/地理/公民)",
+          "icon": "🌏",
+          "questions": "單選 54 題",
+          "duration": "70 分鐘",
+          "a_cutoff": "答對 48 題達 A",
+          "exam_pdf": "https://drive.google.com/file/d/1ITxBlFhNSIbg1u1C7FrU2ODk951wt-RT/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/1fxfOLQPMdCEMSuziD1qsQZg3vVOGt8df/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1jGFuoXvMF7kiCdIO63SDayH2dC4C5WEO?usp=drive_link",
+          "handout_html": "exams/115/handouts/society.html",
+          "handout_title": "115 社會 5B衝A實戰講義",
+          "cutoffs": {
+            "A++": "52-54 題",
+            "A+": "51 題",
+            "A": "48-50 題",
+            "B++": "41-47 題",
+            "B+": "34-40 題",
+            "B": "20-33 題",
+            "C": "0-19 題"
+          }
+        },
+        {
+          "id": "writing",
+          "name": "寫作測驗",
+          "icon": "✍️",
+          "questions": "引導寫作 1 題",
+          "duration": "50 分鐘",
+          "a_cutoff": "5-6 級分為精熟",
+          "exam_pdf": "https://drive.google.com/file/d/1NceEHPUXT0fZo6UgdCuSdGApQ4embM0t/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/1uCImBYbMxkme8DxV2Wj5RdxBnNgTeD5n/view?usp=drive_link",
+          "sample1_pdf": "https://drive.google.com/file/d/1MSG0LyS7baOyiQljRUhAnav11YCl81AB/view?usp=drive_link",
+          "sample2_pdf": "https://drive.google.com/file/d/1ouJumyoxquh1ATPkquwmK0xfeeJGyW28/view?usp=drive_link",
+          "handout_html": "exams/115/handouts/writing.html",
+          "handout_title": "115 寫作 5B衝5至6級分實戰講義",
+          "cutoffs": {
+            "A++": "6 級分",
+            "A+": "5 級分",
+            "B": "3-4 級分",
+            "C": "1-2 級分"
+          }
+        }
+      ],
+      "stats_docs": [
+        {
+          "title": "115年各科等級加標示與答對題數對照表",
+          "file": "https://drive.google.com/file/d/1PpG5c7rijz5guz6T1XwkeIRwtrV3f0uL/view?usp=drive_link"
+        },
+        {
+          "title": "115年各科等級加標示人數百分比統計表",
+          "file": "https://drive.google.com/file/d/1Cosscfa4fXDuPmmjW5jKawtPr0yhPFdL/view?usp=drive_link"
+        },
+        {
+          "title": "115年各科各題通過率統計",
+          "file": "https://drive.google.com/file/d/18wrAaXAakCwra1WXdS1HPxLDvPBlyp_S/view?usp=drive_link"
+        },
+        {
+          "title": "115年各科各題鑑別度統計",
+          "file": "https://drive.google.com/file/d/1460OoCkq7sKCUc1UqyQY01kJR3agO2eA/view?usp=drive_link"
+        },
+        {
+          "title": "115年寫作測驗各級分人數百分比",
+          "file": "https://drive.google.com/file/d/1YUzK5n4Dju_PMNumnuUtnIFNiWeWBiS7/view?usp=drive_link"
+        },
+        {
+          "title": "115年試題疑義新聞稿暨釋復內容",
+          "file": "https://cap.rcpet.edu.tw/115doubt.html"
+        }
+      ]
+    },
+    {
+      "year": 114,
+      "label": "114 年國中教育會考",
+      "tag": "歷屆試題",
+      "featured": false,
+      "description": "收錄 114 年心測中心官方試卷、答案與各題分析直連，以及等級對照標準。",
+      "subjects": [
+        {
+          "id": "chinese",
+          "name": "國文科",
+          "icon": "📖",
+          "questions": "單選 42 題",
+          "duration": "70 分鐘",
+          "a_cutoff": "答對 36 題達 A",
+          "exam_pdf": "https://drive.google.com/file/d/102j8F3hoCvGgMCVP6x6oHN9cCd0R6_Ii/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/175hz0lHG4GTDNxYet9lrRDu0lmC_G08o/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1diphWMmFmHVSsLzkX8hvMgTHfbtfvc5f?usp=drive_link",
+          "cutoffs": {
+            "A++": "40-42 題",
+            "A+": "38-39 題",
+            "A": "36-37 題",
+            "B++": "32-35 題",
+            "B+": "28-31 題",
+            "B": "18-27 題",
+            "C": "0-17 題"
+          }
+        },
+        {
+          "id": "english",
+          "name": "英語科 (閱讀與聽力)",
+          "icon": "🎧",
+          "questions": "閱讀 43 題 / 聽力 21 題",
+          "duration": "閱讀 60 分鐘 / 聽力 25 分鐘",
+          "a_cutoff": "精熟等級",
+          "exam_pdf": "https://drive.google.com/file/d/1Or0bC16Jn2hA0uAF2zrryHoY46ywIQjK/view?usp=drive_link",
+          "listening_pdf": "https://drive.google.com/file/d/1NQNXowVBpE4N7i790_88YXZ03zt2ktFn/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/175hz0lHG4GTDNxYet9lrRDu0lmC_G08o/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1diphWMmFmHVSsLzkX8hvMgTHfbtfvc5f?usp=drive_link"
+        },
+        {
+          "id": "math",
+          "name": "數學科 (含非選擇題)",
+          "icon": "📐",
+          "questions": "選擇 25 題 / 非選 2 大題",
+          "duration": "80 分鐘",
+          "a_cutoff": "精熟等級",
+          "exam_pdf": "https://drive.google.com/file/d/1c2AGC67Bq344EdGSZkO9SZhrY50hHTJx/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/175hz0lHG4GTDNxYet9lrRDu0lmC_G08o/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1diphWMmFmHVSsLzkX8hvMgTHfbtfvc5f?usp=drive_link"
+        },
+        {
+          "id": "nature",
+          "name": "自然科 (理化/地科/生物)",
+          "icon": "🔬",
+          "questions": "單選 50 題",
+          "duration": "70 分鐘",
+          "a_cutoff": "答對 43 題達 A",
+          "exam_pdf": "https://drive.google.com/file/d/18_lHom7zYhyOoMvxHt4hKJS_CynFOoZ1/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/175hz0lHG4GTDNxYet9lrRDu0lmC_G08o/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1diphWMmFmHVSsLzkX8hvMgTHfbtfvc5f?usp=drive_link",
+          "cutoffs": {
+            "A++": "48-50 題",
+            "A+": "46-47 題",
+            "A": "43-45 題",
+            "B++": "36-42 題",
+            "B+": "29-35 題",
+            "B": "18-28 題",
+            "C": "0-17 題"
+          }
+        },
+        {
+          "id": "society",
+          "name": "社會科 (歷史/地理/公民)",
+          "icon": "🌏",
+          "questions": "單選 54 題",
+          "duration": "70 分鐘",
+          "a_cutoff": "答對 48 題達 A",
+          "exam_pdf": "https://drive.google.com/file/d/1vFl3qctoBXYcCtWbAqKUqhekIMgV6q-m/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/175hz0lHG4GTDNxYet9lrRDu0lmC_G08o/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1diphWMmFmHVSsLzkX8hvMgTHfbtfvc5f?usp=drive_link",
+          "cutoffs": {
+            "A++": "52-54 題",
+            "A+": "51 題",
+            "A": "48-50 題",
+            "B++": "41-47 題",
+            "B+": "35-40 題",
+            "B": "21-34 題",
+            "C": "0-20 題"
+          }
+        },
+        {
+          "id": "writing",
+          "name": "寫作測驗",
+          "icon": "✍️",
+          "questions": "引導寫作 1 題",
+          "duration": "50 分鐘",
+          "a_cutoff": "5-6 級分",
+          "exam_pdf": "https://drive.google.com/file/d/15yGt7NgV0OsYTP8LdYF7BCntfTjZwQ7q/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/11HW_piDqYm9Gq6qo-BSONsxZ-jgTri4h/view?usp=drive_link",
+          "sample1_pdf": "https://drive.google.com/file/d/12qsAjT9hZmLlUVlyIVuWXBVh2EwN_dNn/view?usp=drive_link",
+          "sample2_pdf": "https://drive.google.com/file/d/1-dF82RWJZmPur8ZS_H2FTZ94KEHFc5R5/view?usp=drive_link"
+        }
+      ],
+      "stats_docs": [
+        {
+          "title": "114年各科能力等級加標示與答對題數對照表",
+          "file": "https://drive.google.com/file/d/1ath-dpjr8pS9qG9MBgkmCrhjcGN_SRqX/view?usp=drive_link"
+        },
+        {
+          "title": "114年各科等級加標示人數百分比統計表",
+          "file": "https://drive.google.com/file/d/1HRUm5-qi-DR6FO5ofUQsEgKvlBOtyW0w/view?usp=drive_link"
+        },
+        {
+          "title": "114年各題通過率統計",
+          "file": "https://drive.google.com/file/d/1hwzaBmzmD0sYPw4q1KVCBW6Vq5OviriH/view?usp=drive_link"
+        },
+        {
+          "title": "114年各題鑑別度統計",
+          "file": "https://drive.google.com/file/d/1deYp06C-xErJpmPGVHJ6T7hptfEkkJ70/view?usp=drive_link"
+        },
+        {
+          "title": "114年試題疑義新聞稿暨釋覆內容",
+          "file": "https://cap.rcpet.edu.tw/114doubt.html"
+        }
+      ]
+    },
+    {
+      "year": 113,
+      "label": "113 年國中教育會考",
+      "tag": "歷屆試題",
+      "featured": false,
+      "description": "收錄 113 年心測中心官方試卷、答案與各題分析直連，以及等級對照標準。",
+      "subjects": [
+        {
+          "id": "chinese",
+          "name": "國文科",
+          "icon": "📖",
+          "questions": "單選 42 題",
+          "duration": "70 分鐘",
+          "a_cutoff": "答對 37 題達 A",
+          "exam_pdf": "https://drive.google.com/file/d/1Xr5AwMNQipYZblCEbZadyBvLVcT_8XSv/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/1cWlogP9FBRX1eD5kjgVDP2_6f8VCLSB4/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1f39LUoFXo4ygPCH3alu5j80K4TSpqsfl?usp=drive_link",
+          "cutoffs": {
+            "A++": "40-42 題",
+            "A+": "39 題",
+            "A": "37-38 題",
+            "B++": "33-36 題",
+            "B+": "30-32 題",
+            "B": "18-29 題",
+            "C": "0-17 題"
+          }
+        },
+        {
+          "id": "english",
+          "name": "英語科 (閱讀與聽力)",
+          "icon": "🎧",
+          "questions": "閱讀 43 題 / 聽力 21 題",
+          "duration": "閱讀 60 分鐘 / 聽力 25 分鐘",
+          "a_cutoff": "精熟等級",
+          "exam_pdf": "https://drive.google.com/file/d/1ZU8SG-4jdV1DGvPzpgzoi_hhRiD4NT3S/view?usp=drive_link",
+          "listening_pdf": "https://drive.google.com/file/d/1iAZySLpGHqKdwyIlriM58ve8vW9aMV0Q/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/1cWlogP9FBRX1eD5kjgVDP2_6f8VCLSB4/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1f39LUoFXo4ygPCH3alu5j80K4TSpqsfl?usp=drive_link"
+        },
+        {
+          "id": "math",
+          "name": "數學科 (含非選擇題)",
+          "icon": "📐",
+          "questions": "選擇 25 題 / 非選 2 大題",
+          "duration": "80 分鐘",
+          "a_cutoff": "精熟等級",
+          "exam_pdf": "https://drive.google.com/file/d/1MXfrOI_4KyxF6A-2NNd_J_eIuo3Epa46/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/1cWlogP9FBRX1eD5kjgVDP2_6f8VCLSB4/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1f39LUoFXo4ygPCH3alu5j80K4TSpqsfl?usp=drive_link"
+        },
+        {
+          "id": "nature",
+          "name": "自然科 (理化/地科/生物)",
+          "icon": "🔬",
+          "questions": "單選 50 題",
+          "duration": "70 分鐘",
+          "a_cutoff": "答對 44 題達 A",
+          "exam_pdf": "https://drive.google.com/file/d/1lO1_3Iq62BmTHR8m29or7I8VtS8qZdDR/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/1cWlogP9FBRX1eD5kjgVDP2_6f8VCLSB4/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1f39LUoFXo4ygPCH3alu5j80K4TSpqsfl?usp=drive_link",
+          "cutoffs": {
+            "A++": "48-50 題",
+            "A+": "47 題",
+            "A": "44-46 題",
+            "B++": "37-43 題",
+            "B+": "30-36 題",
+            "B": "19-29 題",
+            "C": "0-18 題"
+          }
+        },
+        {
+          "id": "society",
+          "name": "社會科 (歷史/地理/公民)",
+          "icon": "🌏",
+          "questions": "單選 54 題",
+          "duration": "70 分鐘",
+          "a_cutoff": "答對 48 題達 A",
+          "exam_pdf": "https://drive.google.com/file/d/1NJYibw-N2mHZP5lL8-rOhirWv_ZFQNiz/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/1cWlogP9FBRX1eD5kjgVDP2_6f8VCLSB4/view?usp=drive_link",
+          "analysis_pdf": "https://drive.google.com/drive/folders/1f39LUoFXo4ygPCH3alu5j80K4TSpqsfl?usp=drive_link",
+          "cutoffs": {
+            "A++": "52-54 題",
+            "A+": "50-51 題",
+            "A": "48-49 題",
+            "B++": "42-47 題",
+            "B+": "36-41 題",
+            "B": "21-35 題",
+            "C": "0-20 題"
+          }
+        },
+        {
+          "id": "writing",
+          "name": "寫作測驗",
+          "icon": "✍️",
+          "questions": "引導寫作 1 題",
+          "duration": "50 分鐘",
+          "a_cutoff": "5-6 級分",
+          "exam_pdf": "https://drive.google.com/file/d/1fhW7ywN8LoIGGroAMQS5JzqCStKlY2Ux/view?usp=drive_link",
+          "answer_pdf": "https://drive.google.com/file/d/1YzrMP9JN6st0fcL5Vg_D0J75wUSBHOpW/view?usp=drive_link",
+          "sample1_pdf": "https://drive.google.com/file/d/1K7Z2yQ9s-UpgoYSuOKhxnTvv9TlFwwFO/view?usp=drive_link",
+          "sample2_pdf": "https://drive.google.com/file/d/1RX4DlMGGUTXRUBIwueC4LGo6p7Lox4iN/view?usp=drive_link"
+        }
+      ],
+      "stats_docs": [
+        {
+          "title": "113年各科能力等級加標示與答對題數對照表",
+          "file": "https://drive.google.com/file/d/1t0f7uXr1iunZ7wPXCwhsiKhF9Rflr7tE/view?usp=drive_link"
+        },
+        {
+          "title": "113年各科各題通過率統計",
+          "file": "https://drive.google.com/file/d/1NpFiGL8A6KVR-Hyn_M7u1JhvXNOTqPOr/view?usp=drive_link"
+        },
+        {
+          "title": "113年各科各題鑑別度統計",
+          "file": "https://drive.google.com/file/d/1YOdEP_E1_m2AdpsFk5RnPhDndDrGJ--r/view?usp=drive_link"
+        },
+        {
+          "title": "113年試題疑義新聞稿暨釋覆內容",
+          "file": "https://cap.rcpet.edu.tw/113doubt.html"
+        }
+      ]
+    }
+  ]
+}
