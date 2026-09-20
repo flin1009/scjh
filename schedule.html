@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>獅甲國中 115學年度 國三（三年級）課表與複習小考進度總表</title>
+  <title>國三課表、小考進度與讀書計畫總表 - 獅甲國中會考衝刺網</title>
+  <meta name="description" content="高雄市立獅甲國中 115學年度國三第一學期每週小考日程、佳音英語補習銜接、段考模考時程、五大考科複習地圖與讀書計畫。">
+  
+  <!-- Global Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/exams.css">
+
   <style>
+    /* Page-specific styles for Schedule Tables, Badges, and Timeline Cards */
     :root {
       --primary: #2b4c7e;
       --primary-dark: #1f375b;
@@ -18,106 +25,26 @@
       --light-gray: #f8fafc;
       --border: #d9e2ec;
       --card-shadow: 0 4px 6px -1px rgb(36 51 66 / 0.08), 0 2px 4px -2px rgb(36 51 66 / 0.06);
-      --card-shadow-hover: 0 10px 15px -3px rgb(36 51 66 / 0.12), 0 4px 6px -4px rgb(36 51 66 / 0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
-      background: #f5f6f8;
-      color: var(--dark);
-      line-height: 1.6;
-      padding: 24px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* Header */
-    header {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2b4c7e 100%);
-      color: white;
-      padding: 32px 28px;
-      border-radius: 16px;
-      margin-bottom: 24px;
-      box-shadow: 0 8px 20px -4px rgba(30, 58, 95, 0.25);
-      position: relative;
-      overflow: hidden;
-    }
-
-    header::after {
-      content: "";
-      position: absolute;
-      right: -20px;
-      bottom: -40px;
-      width: 200px;
-      height: 200px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .header-badge {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(8px);
-      padding: 4px 12px;
-      border-radius: 9999px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 12px;
-      letter-spacing: 0.5px;
-    }
-
-    h1 {
-      font-size: 1.85rem;
-      font-weight: 800;
-      margin-bottom: 8px;
-      letter-spacing: -0.5px;
-    }
-
-    .header-info {
-      font-size: 1rem;
-      opacity: 0.9;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 10px;
-    }
-
-    .header-info span {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
     }
 
     /* Quote Banner */
     .quote-box {
-      background: #fff;
+      background: #ffffff;
       border-left: 4px solid var(--accent);
       padding: 16px 20px;
       border-radius: 0 12px 12px 0;
       margin-bottom: 24px;
-      box-shadow: var(--card-shadow);
+      box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
-
     .quote-item {
       font-size: 0.95rem;
       color: #475569;
     }
-
     .quote-item strong {
-      color: #d97706;
+      color: #c07d32;
     }
 
     /* Tabs & Controls */
@@ -129,7 +56,6 @@
       gap: 12px;
       margin-bottom: 20px;
     }
-
     .tabs {
       display: flex;
       gap: 8px;
@@ -138,36 +64,32 @@
       border-radius: 12px;
       flex-wrap: wrap;
     }
-
     .tab-btn {
       border: none;
       background: transparent;
-      padding: 10px 18px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--gray);
+      padding: 9px 16px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--slate);
       border-radius: 8px;
       cursor: pointer;
       transition: all 0.2s ease;
     }
-
     .tab-btn:hover {
       color: var(--dark);
     }
-
     .tab-btn.active {
-      background: white;
+      background: #ffffff;
       color: var(--primary);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 5px rgba(36, 51, 66, 0.1);
     }
-
     .action-btn {
-      background: white;
+      background: #ffffff;
       border: 1px solid var(--border);
-      padding: 9px 16px;
+      padding: 8px 16px;
       border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
+      font-size: 0.88rem;
+      font-weight: 700;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -175,7 +97,6 @@
       color: var(--dark);
       transition: all 0.2s;
     }
-
     .action-btn:hover {
       background: var(--light-gray);
       border-color: #cbd5e1;
@@ -188,292 +109,195 @@
       gap: 8px;
       flex-wrap: wrap;
       margin-bottom: 16px;
-      background: white;
+      background: #ffffff;
       padding: 12px 16px;
       border-radius: 12px;
-      box-shadow: var(--card-shadow);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
     }
-
     .filter-label {
       font-size: 0.85rem;
       font-weight: 700;
       color: var(--gray);
-      margin-right: 4px;
     }
-
     .filter-chip {
-      background: #f1f5f9;
-      border: 1px solid #e2e8f0;
+      border: 1px solid var(--border);
+      background: #ffffff;
       padding: 5px 12px;
       border-radius: 20px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: #475569;
       cursor: pointer;
-      transition: all 0.15s ease;
+      transition: all 0.2s;
     }
-
     .filter-chip:hover {
-      background: #e2e8f0;
+      border-color: var(--primary);
+      color: var(--primary);
     }
-
     .filter-chip.active {
       background: var(--primary);
-      color: white;
+      color: #ffffff;
       border-color: var(--primary);
     }
 
-    /* Tab Content Panels */
+    /* Tab Panels */
     .tab-panel {
       display: none;
     }
-
     .tab-panel.active {
       display: block;
     }
 
-    /* Table Design */
+    /* Schedule Table */
     .table-container {
-      background: white;
-      border-radius: 16px;
-      box-shadow: var(--card-shadow);
+      background: #ffffff;
+      border-radius: 12px;
       overflow-x: auto;
+      box-shadow: var(--shadow-sm);
       border: 1px solid var(--border);
+      margin-bottom: 24px;
     }
-
-    table {
+    .schedule-table {
       width: 100%;
       border-collapse: collapse;
-      text-align: left;
-      min-width: 860px;
+      font-size: 0.88rem;
     }
-
-    th {
-      background: #f8fafc;
-      color: #475569;
-      font-size: 0.875rem;
+    .schedule-table th, .schedule-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .schedule-table th {
+      background: #f1f5f9;
       font-weight: 700;
-      text-transform: uppercase;
-      padding: 14px 16px;
-      border-bottom: 2px solid var(--border);
-      letter-spacing: 0.5px;
+      color: var(--dark);
+      white-space: nowrap;
+      position: sticky;
+      top: 0;
+      text-align: left;
     }
-
-    td {
-      padding: 14px 16px;
-      border-bottom: 1px solid #f1f5f9;
-      font-size: 0.92rem;
-      vertical-align: top;
-    }
-
-    tr:last-child td {
+    .schedule-table tr:last-child td {
       border-bottom: none;
     }
-
-    tr:hover td {
-      background: #f8fafc;
+    .schedule-table tr:hover {
+      background-color: #f8fafc;
     }
 
-    /* Tag and Event Badges */
-    .tag {
+    /* Badges */
+    .badge {
       display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
       font-size: 0.75rem;
       font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 6px;
-      margin-bottom: 4px;
+      white-space: nowrap;
     }
+    .badge-exam { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }
+    .badge-mock { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+    .badge-normal { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+    .badge-holiday { background: #fefce8; color: #a16207; border: 1px solid #fef08a; }
 
-    .tag-exam {
-      background: #fee2e2;
-      color: #b91c1c;
-      border: 1px solid #fca5a5;
-    }
-
-    .tag-trip {
-      background: #fef3c7;
-      color: #b45309;
-      border: 1px solid #fde68a;
-    }
-
-    .tag-holiday {
-      background: #dcfce7;
-      color: #15803d;
-      border: 1px solid #86efac;
-    }
-
-    .tag-new {
-      background: #e0e7ff;
-      color: #4338ca;
-    }
-
-    .subject-title {
-      font-weight: 700;
-      color: #0f172a;
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .subject-desc {
-      color: #475569;
-      font-size: 0.875rem;
-      line-height: 1.4;
-    }
-
-    .date-badge {
-      font-weight: 800;
-      color: var(--primary);
-      font-size: 0.85rem;
-      display: inline-block;
-      margin-bottom: 4px;
-    }
-
-    /* Special Highlight Rows */
-    .row-highlight-exam {
-      background: #fff7ed;
-    }
-    .row-highlight-exam:hover td {
-      background: #ffedd5 !important;
-    }
-
-    .row-highlight-holiday {
-      background: #f0fdf4;
-    }
-
-    /* Grid for Subjects */
+    /* Subject Cards & Grid */
     .subject-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 18px;
+      margin-bottom: 24px;
     }
-
     .subject-card {
-      background: white;
-      border-radius: 14px;
-      box-shadow: var(--card-shadow);
-      border: 1px solid var(--border);
+      background: #ffffff;
+      border-radius: 12px;
       overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
     }
-
-    .card-header {
-      padding: 16px 20px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: white;
+    .subject-card .card-header {
+      padding: 12px 16px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #ffffff;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+    .header-ch { background: #2b4c7e; }
+    .header-en { background: #2d6a4f; }
+    .header-ma { background: #c07d32; }
+    .header-sc { background: #6b5b95; }
+    .header-so { background: #b83a3a; }
 
-    .header-ch { background: linear-gradient(135deg, #dc2626, #ea580c); }
-    .header-en { background: linear-gradient(135deg, #0284c7, #2563eb); }
-    .header-ma { background: linear-gradient(135deg, #059669, #10b981); }
-    .header-sc { background: linear-gradient(135deg, #7c3aed, #9333ea); }
-    .header-so { background: linear-gradient(135deg, #d97706, #f59e0b); }
-
-    .card-body {
-      padding: 16px 20px;
-      flex-grow: 1;
+    .subject-card .card-body {
+      padding: 16px;
+      font-size: 0.88rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-
     .timeline-list {
       list-style: none;
+      padding: 0;
+      margin: 0;
     }
-
     .timeline-item {
-      position: relative;
-      padding-left: 20px;
-      padding-bottom: 14px;
-      border-left: 2px solid #e2e8f0;
-      font-size: 0.88rem;
+      margin-bottom: 8px;
+      line-height: 1.5;
     }
-
-    .timeline-item:last-child {
-      border-left-color: transparent;
-      padding-bottom: 0;
-    }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -5px;
-      top: 5px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--primary);
-    }
-
     .timeline-date {
+      display: inline-block;
+      width: 46px;
       font-weight: 700;
-      color: var(--primary-dark);
-      margin-right: 6px;
+      color: var(--primary);
     }
 
-    /* Exam Schedule Specific */
-    .mock-exam-card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: var(--card-shadow);
-      border: 1px solid var(--border);
-      padding: 24px;
-      margin-bottom: 24px;
-    }
-
-    .mock-days-grid {
+    /* Day Box for Mock Exam */
+    .mock-exam-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 20px;
-      margin-top: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 18px;
+      margin-bottom: 20px;
     }
-
     .day-box {
       border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
       background: #fafafa;
     }
-
     .day-box-header {
-      background: #1e293b;
-      color: white;
+      background: #243342;
+      color: #ffffff;
       padding: 12px 16px;
       font-weight: 700;
       font-size: 1rem;
       display: flex;
       justify-content: space-between;
     }
-
     .day-box-body {
       padding: 12px 16px;
     }
-
     .exam-period-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 8px 0;
       border-bottom: 1px dashed #e2e8f0;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
-
     .exam-period-item:last-child {
       border-bottom: none;
     }
-
     .period-time {
       font-weight: 600;
       color: #64748b;
       font-size: 0.85rem;
     }
-
     .period-subject {
       font-weight: 700;
       color: #0f172a;
     }
-
     .period-type {
       font-size: 0.75rem;
       background: #e2e8f0;
@@ -481,7 +305,6 @@
       border-radius: 4px;
       color: #475569;
     }
-
     .notice-box {
       background: #eff6ff;
       border-left: 4px solid var(--primary);
@@ -490,7 +313,6 @@
       margin-top: 20px;
       font-size: 0.9rem;
     }
-
     .notice-box ul {
       margin-left: 20px;
       margin-top: 6px;
@@ -502,119 +324,129 @@
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 16px;
     }
-
     .milestone-card {
-      background: white;
+      background: #ffffff;
       border-radius: 12px;
       padding: 16px;
       border: 1px solid var(--border);
-      box-shadow: var(--card-shadow);
+      box-shadow: var(--shadow-sm);
       position: relative;
     }
-
     .milestone-date {
       font-size: 0.8rem;
       font-weight: 700;
       color: var(--primary);
       text-transform: uppercase;
     }
-
     .milestone-title {
       font-size: 1.1rem;
       font-weight: 800;
       margin: 4px 0 8px;
       color: #1e293b;
     }
-
     .milestone-desc {
       font-size: 0.85rem;
       color: var(--gray);
     }
 
-    /* Print Styles */
     @media print {
-      body {
-        background: white;
-        padding: 0;
-        font-size: 12pt;
-      }
-      .nav-bar, .filter-bar, .action-btn, .quote-box {
+      .site-header, .hero-banner, .site-footer, .nav-bar, .filter-bar, .action-btn, .quote-box {
         display: none !important;
       }
-      header {
-        box-shadow: none;
-        border: 1px solid #ccc;
-        color: black;
-        background: none;
-        padding: 16px;
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
       }
       .tab-panel {
         display: block !important;
         margin-bottom: 30px;
       }
-      .table-container, .mock-exam-card, .subject-card {
-        box-shadow: none;
-        border: 1px solid #ccc;
-      }
-    }
-  <style>
-    @media print {
-      .site-global-topbar {
-        display: none !important;
+      .table-container, .subject-card, .day-box, .milestone-card {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
       }
     }
   </style>
 </head>
 <body>
 
-<div class="container">
+  <!-- ================= Top Navigation Bar ================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link">
+        <span class="brand-badge">SCJH</span>
+        <div>
+          <span class="brand-title">獅甲國中會考衝刺網</span>
+          <span class="brand-subtitle">國三備考資源・歷屆考古題庫</span>
+        </div>
+      </a>
 
-  <!-- Global Top Bar -->
-  <div class="site-global-topbar" style="background: #ffffff; border: 1px solid #e2e6eb; padding: 12px 20px; margin-bottom: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(36,51,66,0.04); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <span style="background: linear-gradient(135deg, #2b4c7e, #3a629b); color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 800;">SCJH</span>
-      <span style="font-weight: 800; font-size: 1.05rem; color: #243342;">獅甲國中會考衝刺與學習網</span>
-    </div>
-    <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-      <a href="index.html" style="color: #2b4c7e; text-decoration: none; font-weight: 700; font-size: 0.9rem; padding: 6px 12px; border-radius: 6px; background: #eef2f7;">🏠 回首頁儀表板</a>
-      <a href="exams/index.html" style="color: #475569; text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 6px 12px; border-radius: 6px; background: #f4f6f8;">📚 歷屆會考題庫</a>
-      <a href="index.html#handouts-section" style="color: #475569; text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 6px 12px; border-radius: 6px; background: #f4f6f8;">🚀 5B衝A講義</a>
-      <a href="index.html#cutoffs-section" style="color: #475569; text-decoration: none; font-weight: 600; font-size: 0.9rem; padding: 6px 12px; border-radius: 6px; background: #f4f6f8;">📊 計分標準</a>
-    </div>
-  </div>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="切換選單">☰</button>
 
-  <!-- Header -->
-  <header>
-    <div class="header-badge">115 學年度 第一學期</div>
-    <h1>國三（三年級）課表與複習小考進度總表</h1>
-    <div class="header-info">
-      <span>🏫 高雄市立獅甲國中</span>
-      
-      <span>📅 期間：2026/08/31 ～ 2027/01/22</span>
-      <span>🎯 目標：第一次/第二次模擬考、三次定期評量</span>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="index.html">🏠 首頁</a></li>
+        <li class="nav-item"><a href="exams/index.html">📚 歷屆題庫</a></li>
+        <li class="nav-item"><a href="index.html#handouts-section">🚀 5B衝A講義</a></li>
+        <li class="nav-item"><a href="schedule.html" class="active">📅 國三課表</a></li>
+        <li class="nav-item"><a href="index.html#cutoffs-section">📊 計分標準</a></li>
+      </ul>
     </div>
   </header>
 
-  <!-- Motivational Quote Banner -->
-  <div class="quote-box">
-    <div class="quote-item">★ <strong>「沒有白走的路，每一步算數。」</strong> 累積的過程或許枯燥，但成果會在終點線等著你。</div>
-    <div class="quote-item">★ <strong>「耐得住寂寞，才撐得起繁華。」</strong> 國三的孤獨是暫時的，現在的克制會換來未來的選擇權。</div>
-    <div class="quote-item">★ <strong>「乾坤未定，你我皆是黑馬。」</strong> 不到最後一刻，誰也說不準結局，你隨時都有逆襲的機會！</div>
-  </div>
-
-  <!-- Navigation & Toolbar -->
-  <div class="nav-bar">
-    <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab('weekly')">📅 全學期每週小考進度表</button>
-      <button class="tab-btn" onclick="switchTab('plan')">🎯 國三專屬讀書計畫 (含佳音英語)</button>
-      <button class="tab-btn" onclick="switchTab('mock1')">📝 第一次模擬考日程 (9/7-9/8)</button>
-      <button class="tab-btn" onclick="switchTab('subjects')">📚 各科複習地圖</button>
-      <button class="tab-btn" onclick="switchTab('milestones')">🚩 大考與重大行事曆</button>
+  <!-- ================= Hero Banner ================= -->
+  <section class="hero-banner" style="padding: 38px 0 32px;">
+    <div class="container hero-content">
+      <div class="hero-tag">
+        <span>📅 115 學年度 國三備考專區</span>
+      </div>
+      <h1 class="hero-title" style="font-size: 2.1rem;">國三（三年級）課表・複習小考與讀書計畫總表</h1>
+      <p class="hero-desc">
+        高雄市立獅甲國中・期間：2026/08/31 ～ 2027/01/22・整合每週小考日程、佳音英語補習銜接、三次段考與歷次模擬考時程
+      </p>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px;">
+        <a href="exams/index.html" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(4px); color: #ffffff; padding: 7px 16px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25);">📚 歷屆會考題庫門戶 →</a>
+        <a href="index.html#handouts-section" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(4px); color: #ffffff; padding: 7px 16px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25);">🚀 5B衝A特訓講義 →</a>
+        <a href="index.html#cutoffs-section" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(4px); color: #ffffff; padding: 7px 16px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; text-decoration: none; border: 1px solid rgba(255,255,255,0.25);">📊 各科答對題數門檻 →</a>
+      </div>
     </div>
-    <button class="action-btn" onclick="window.print()">🖨️ 列印進度表</button>
-  </div>
+  </section>
 
-  <!-- TAB 1: 全學期每週進度表 -->
+  <!-- ================= Main Content Container ================= -->
+  <main class="container main-content" style="padding: 28px 24px 60px;">
+
+    <!-- Seamless Resource Integration Banner -->
+    <div style="background: #ffffff; border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 22px; box-shadow: var(--shadow-sm); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+      <div>
+        <h4 style="font-weight: 800; color: var(--primary); font-size: 1rem; margin-bottom: 3px;">💡 備考實戰資源無縫對接</h4>
+        <p style="font-size: 0.88rem; color: var(--slate); margin: 0;">小考與段考章節複習完成後，請務必搭配歷屆真題與 5B 衝 A 講義驗收成效，掌握題眼圈選與避坑技巧！</p>
+      </div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <a href="exams/index.html" class="btn-resource btn-paper" style="padding: 7px 14px; font-size: 0.85rem; font-weight: 700;">📚 進入歷屆題庫</a>
+        <a href="index.html#handouts-section" class="btn-resource btn-handout" style="padding: 7px 14px; font-size: 0.85rem; font-weight: 700;">🌟 開啓 5B 衝 A 講義</a>
+      </div>
+    </div>
+
+    <!-- Motivational Quote Banner -->
+    <div class="quote-box">
+      <div class="quote-item">★ <strong>「沒有白走的路，每一步算數。」</strong> 累積的過程或許枯燥，但成果會在終點線等著你。</div>
+      <div class="quote-item">★ <strong>「耐得住寂寞，才撐得起繁華。」</strong> 國三的孤獨是暫時的，現在的克制會換來未來的選擇權。</div>
+      <div class="quote-item">★ <strong>「乾坤未定，你我皆是黑馬。」</strong> 不到最後一刻，誰也說不準結局，你隨時都有逆襲的機會！</div>
+    </div>
+
+    <!-- Navigation & Toolbar -->
+    <div class="nav-bar">
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('weekly')">📅 全學期每週小考進度表</button>
+        <button class="tab-btn" onclick="switchTab('plan')">🎯 國三專屬讀書計畫 (含佳音英語)</button>
+        <button class="tab-btn" onclick="switchTab('mock1')">📝 第一次模擬考日程 (9/7-9/8)</button>
+        <button class="tab-btn" onclick="switchTab('subjects')">📚 各科複習地圖</button>
+        <button class="tab-btn" onclick="switchTab('milestones')">🚩 大考與重大行事曆</button>
+      </div>
+      <button class="action-btn" onclick="window.print()">🖨️ 列印進度表</button>
+    </div>
+
+    <!-- ALL TAB PANELS -->
+    <!-- TAB 1: 全學期每週進度表 -->
   <div id="panel-weekly" class="tab-panel active">
 
     <!-- Filter Bar -->
@@ -977,6 +809,19 @@
         </ul>
       </div>
     </div>
+      <!-- Mock Exam Prep Resources -->
+      <div style="background: #ffffff; border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: var(--radius-md); padding: 18px 22px; margin-top: 24px; box-shadow: var(--shadow-sm); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;">
+        <div>
+          <h4 style="font-weight: 800; color: var(--primary); font-size: 1.02rem; margin-bottom: 4px;">🎯 第一次模擬考（1~2冊全）衝刺對照</h4>
+          <p style="font-size: 0.88rem; color: var(--slate); margin: 0;">模擬考考查國一至國二核心基礎，建議配合歷屆會考真題之前半段基礎題與 5B 衝 A 講義「穩賺基本盤」搶分！</p>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <a href="exams/index.html" class="btn-resource btn-paper" style="padding: 7px 15px; font-weight: 700;">📚 歷屆試卷題本</a>
+          <a href="index.html#handouts-section" class="btn-resource btn-handout" style="padding: 7px 15px; font-weight: 700;">🌟 5B衝A講義</a>
+          <a href="index.html#cutoffs-section" class="btn-resource btn-ans" style="padding: 7px 15px; font-weight: 700;">📊 各科A門檻對照</a>
+        </div>
+      </div>
+
   </div>
 
   <!-- TAB 3: 各科複習地圖 -->
@@ -1002,9 +847,7 @@
             <li class="timeline-item"><span class="timeline-date">12/07</span>國 第15回 B3-B4複習 / 公單元10 青少年法律</li>
             <li class="timeline-item"><span class="timeline-date">12/14</span>國 第16回 B1-B4複習 / 公 1~4冊複習</li>
             <li class="timeline-item"><span class="timeline-date">12/28~01/11</span>國 B5段考進度 / 公 B5L5~L6</li>
-          </ul>
-        </div>
-      </div>
+          </ul><div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #cbd5e1; display: flex; gap: 8px; flex-wrap: wrap;"><a href="exams/115/handouts/chinese.html" target="_blank" class="btn-resource btn-handout" style="font-size: 0.8rem; padding: 4px 10px;">🌟 115 國文 5B衝A講義</a><a href="exams/index.html" target="_blank" class="btn-resource btn-paper" style="font-size: 0.8rem; padding: 4px 10px;">📖 歷屆會考國文真題</a></div></div></div>
 
       <!-- 社會 (地/歷) -->
       <div class="subject-card">
@@ -1027,9 +870,7 @@
             <li class="timeline-item"><span class="timeline-date">12/01</span>地 第11回 B4漠南非洲 / 歷 第10回 3~4冊複習</li>
             <li class="timeline-item"><span class="timeline-date">12/08</span>地 第12回 1~4冊複習 / 歷 第11回 1~4冊複習</li>
             <li class="timeline-item"><span class="timeline-date">12/15~01/12</span>地/歷 B5L5~L6, 大洋洲兩極氣候</li>
-          </ul>
-        </div>
-      </div>
+          </ul><div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #cbd5e1; display: flex; gap: 8px; flex-wrap: wrap;"><a href="exams/115/handouts/society.html" target="_blank" class="btn-resource btn-handout" style="font-size: 0.8rem; padding: 4px 10px;">🌟 115 社會 5B衝A講義</a><a href="exams/index.html" target="_blank" class="btn-resource btn-paper" style="font-size: 0.8rem; padding: 4px 10px;">🌏 歷屆會考社會真題</a></div></div></div>
 
       <!-- 自然 (理化/生/地科) -->
       <div class="subject-card">
@@ -1054,9 +895,7 @@
             <li class="timeline-item"><span class="timeline-date">12/02~12/16</span>第二冊上 / 單元9反應速率平衡 / 第二冊下</li>
             <li class="timeline-item"><span class="timeline-date">12/23</span>單元11 力與壓力 (第2次模考)</li>
             <li class="timeline-item"><span class="timeline-date">12/30~01/20</span>單元10有機物 / B5 4-1~4-4 / B5第7章</li>
-          </ul>
-        </div>
-      </div>
+          </ul><div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #cbd5e1; display: flex; gap: 8px; flex-wrap: wrap;"><a href="exams/115/handouts/nature.html" target="_blank" class="btn-resource btn-handout" style="font-size: 0.8rem; padding: 4px 10px;">🌟 115 自然 5B衝A講義</a><a href="exams/index.html" target="_blank" class="btn-resource btn-paper" style="font-size: 0.8rem; padding: 4px 10px;">🔬 歷屆會考自然真題</a></div></div></div>
 
       <!-- 數學 -->
       <div class="subject-card">
@@ -1081,9 +920,7 @@
             <li class="timeline-item"><span class="timeline-date">12/10</span>第14回 三角形基本性質</li>
             <li class="timeline-item"><span class="timeline-date">12/17</span>第15回 平行與四邊形</li>
             <li class="timeline-item"><span class="timeline-date">12/31~01/14</span>B5 3-1證明推理 / 3-2外心內心重心 / 幾何證明</li>
-          </ul>
-        </div>
-      </div>
+          </ul><div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #cbd5e1; display: flex; gap: 8px; flex-wrap: wrap;"><a href="exams/115/handouts/math.html" target="_blank" class="btn-resource btn-handout" style="font-size: 0.8rem; padding: 4px 10px;">🌟 115 數學 5B衝A講義</a><a href="exams/index.html" target="_blank" class="btn-resource btn-paper" style="font-size: 0.8rem; padding: 4px 10px;">📐 歷屆會考數學真題</a></div></div></div>
 
       <!-- 英語 -->
       <div class="subject-card">
@@ -1108,9 +945,7 @@
             <li class="timeline-item"><span class="timeline-date">12/11</span>第一～四冊、聽力卷</li>
             <li class="timeline-item"><span class="timeline-date">12/18</span>英進度卷 B5L5</li>
             <li class="timeline-item"><span class="timeline-date">01/08~01/15</span>英進度卷 B5L6、B5L5～6</li>
-          </ul>
-        </div>
-      </div>
+          </ul><div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #cbd5e1; display: flex; gap: 8px; flex-wrap: wrap;"><a href="exams/115/handouts/english.html" target="_blank" class="btn-resource btn-handout" style="font-size: 0.8rem; padding: 4px 10px;">🌟 115 英語 5B衝A講義</a><a href="exams/index.html" target="_blank" class="btn-resource btn-paper" style="font-size: 0.8rem; padding: 4px 10px;">🎧 歷屆會考英聽讀真題</a></div></div></div>
 
     </div>
   </div>
@@ -1295,9 +1130,7 @@
             <li class="timeline-item"><strong>週一佳音專注：</strong>課前預習單字，課堂全心投入，課後 24 小時內完成作業鞏固長期記憶。</li>
             <li class="timeline-item"><strong>每週聽力實戰：</strong>週五搭配學校聽力卷，適應不同口音與語速，聽前先看題目選項抓關鍵字。</li>
             <li class="timeline-item"><strong>長篇圖表閱讀：</strong>多練習會考必考的跨頁長文、海報圖表、時刻表等實用資訊整合題。</li>
-          </ul>
-        </div>
-      </div>
+          </ul><div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #cbd5e1; display: flex; gap: 8px; flex-wrap: wrap;"><a href="exams/115/handouts/english.html" target="_blank" class="btn-resource btn-handout" style="font-size: 0.8rem; padding: 4px 10px;">🌟 115 英語 5B衝A講義</a><a href="exams/index.html" target="_blank" class="btn-resource btn-paper" style="font-size: 0.8rem; padding: 4px 10px;">🎧 歷屆會考英聽讀真題</a></div></div></div>
 
       <div class="subject-card">
         <div class="card-header header-ma"><span>數學科</span><span>每日動筆不中斷</span></div>
@@ -1306,9 +1139,7 @@
             <li class="timeline-item"><strong>每日動筆 5~8 題：</strong>保持算題手感，特別是第五冊幾何（連比例、相似形、圓形定理）。</li>
             <li class="timeline-item"><strong>非選步驟手寫訓練：</strong>切忌只在計算紙算答案，練習將推導邏輯寫成工整條列式算式。</li>
             <li class="timeline-item"><strong>專屬錯題本：</strong>記錄常錯的題型與陷阱點，段考與模考前一週只看錯題本。</li>
-          </ul>
-        </div>
-      </div>
+          </ul><div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #cbd5e1; display: flex; gap: 8px; flex-wrap: wrap;"><a href="exams/115/handouts/math.html" target="_blank" class="btn-resource btn-handout" style="font-size: 0.8rem; padding: 4px 10px;">🌟 115 數學 5B衝A講義</a><a href="exams/index.html" target="_blank" class="btn-resource btn-paper" style="font-size: 0.8rem; padding: 4px 10px;">📐 歷屆會考數學真題</a></div></div></div>
 
       <div class="subject-card">
         <div class="card-header header-sc"><span>自然科（理化/生物/地科）</span><span>觀念重於死背</span></div>
@@ -1317,9 +1148,7 @@
             <li class="timeline-item"><strong>理化公式理解：</strong>莫耳數、濃度、運動學、力與壓力等公式，重在物理意義而非死背套公式。</li>
             <li class="timeline-item"><strong>圖表與實驗解析：</strong>注意課本實驗步驟、對照組與實驗變因，會考實驗題佔比極高。</li>
             <li class="timeline-item"><strong>地科生物心智圖：</strong>利用週末整理板塊運動、大氣環流、遺傳法則等樹狀圖。</li>
-          </ul>
-        </div>
-      </div>
+          </ul><div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #cbd5e1; display: flex; gap: 8px; flex-wrap: wrap;"><a href="exams/115/handouts/nature.html" target="_blank" class="btn-resource btn-handout" style="font-size: 0.8rem; padding: 4px 10px;">🌟 115 自然 5B衝A講義</a><a href="exams/index.html" target="_blank" class="btn-resource btn-paper" style="font-size: 0.8rem; padding: 4px 10px;">🔬 歷屆會考自然真題</a></div></div></div>
 
       <div class="subject-card">
         <div class="card-header header-so"><span>社會科（歷史/地理/公民）</span><span>圖表時間軸記憶</span></div>
@@ -1376,10 +1205,54 @@
     </div>
   </div>
 
-</div>
+  </main>
 
-<script>
-  function switchTab(tabId) {
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>🏫 高雄市立獅甲國中 國三會考備考小組</h4>
+          <p>
+            本站專為國三同學與家長打造，整合校內小考日程、歷次模擬考進度與歷屆國中教育會考題庫。
+            希望陪伴每位學子在備考路上篤定前行，發揮實力！
+          </p>
+          <p style="font-size: 0.82rem; color: #64748b;">
+            試題版權屬於 國立臺灣師範大學心理與教育測驗研究發展中心（心測中心）。
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>🔗 快速導覽</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">首頁儀表板</a></li>
+            <li><a href="exams/index.html">歷屆試題庫總覽</a></li>
+            <li><a href="schedule.html">國三課表與進度總表</a></li>
+            <li><a href="index.html#handouts-section">5B衝A特訓講義</a></li>
+            <li><a href="index.html#cutoffs-section">各科等級加標示標準</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>🌐 相關官方資源</h4>
+          <ul class="footer-links">
+            <li><a href="https://cap.rcpet.edu.tw" target="_blank" rel="noopener">國中教育會考心測中心 ↗</a></li>
+            <li><a href="https://www.kh.edu.tw" target="_blank" rel="noopener">高雄市政府教育局 ↗</a></li>
+            <li><a href="https://scjh.kh.edu.tw" target="_blank" rel="noopener">高雄市立獅甲國中 ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 獅甲國中 國三會考衝刺與學習資源網・祝全體考生會考金榜題名！</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function switchTab(tabId) {
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     
@@ -1400,7 +1273,6 @@
       }
     });
   }
-</script>
-
+  </script>
 </body>
 </html>
