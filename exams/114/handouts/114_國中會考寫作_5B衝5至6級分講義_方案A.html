@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>114年國中教育會考【寫作測驗】5B衝5至6級分講義（A4左右對開版）</title>
+
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; break-after: page; }
+    .no-break { page-break-inside: avoid; break-inside: avoid; }
+    .no-print, .floating-nav { display: none !important; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color: #243342;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6f8;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 12px auto;
+    padding: 12mm 15mm;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; width: 100%; min-height: 100vh; padding: 10mm 12mm; border-radius: 0; }
+  }
+  
+  /* Floating Nav */
+  @media screen {
+    .floating-nav {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.96);
+      padding: 8px 14px;
+      border-radius: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      border: 1px solid #cbd8e6;
+      backdrop-filter: blur(6px);
+    }
+    .nav-btn {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b4c7e;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #f0f4f9;
+      border: 1px solid #cbd8e6;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-btn:hover {
+      background: #2b4c7e;
+      color: #ffffff;
+    }
+    .btn-print {
+      background: #2b4c7e;
+      color: #ffffff;
+      border: none;
+    }
+    .btn-print:hover {
+      background: #1c3559;
+    }
+  }
+
+  /* Header & Footer */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #cbd8e6;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #486581;
+  }
+  .page-footer {
+    position: absolute;
+    bottom: 8mm;
+    left: 15mm;
+    right: 15mm;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 4px;
+    font-size: 8pt;
+    color: #829ab1;
+  }
+
+  /* Question items */
+  .q-item {
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed #e2e8f0;
+  }
+  .q-item:last-child {
+    border-bottom: none;
+  }
+  .q-head {
+    display: flex;
+    gap: 8px;
+    font-size: 8.5pt;
+    margin-bottom: 4px;
+  }
+  .q-num {
+    font-weight: 800;
+    color: #2b4c7e;
+    background: #eef3f9;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 8pt;
+    flex-shrink: 0;
+  }
+  .q-stem {
+    flex-grow: 1;
+    line-height: 1.45;
+  }
+  .q-img {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .q-img img {
+    max-width: 95%;
+    max-height: 48mm;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid #d9e2ec;
+    background: #ffffff;
+    padding: 3px;
+  }
+  .q-opts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px 10px;
+    margin-left: 30px;
+    font-size: 8pt;
+    margin-top: 4px;
+  }
+  .q-opt {
+    color: #334e68;
+  }
+  .opt-label {
+    font-weight: 700;
+    color: #2b4c7e;
+  }
+  .scratch-area {
+    margin-top: 5px;
+    height: 10mm;
+    border: 1px dashed #cbd8e6;
+    border-radius: 4px;
+    background: #fbfcfd;
+    position: relative;
+  }
+  .scratch-label {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 7pt;
+    color: #9fb3c8;
+  }
+
+  /* Card Item */
+  .card-item {
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
+    overflow: hidden;
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f4f8;
+    border-bottom: 1px solid #d9e2ec;
+    padding: 3px 8px;
+  }
+  .card-title {
+    font-weight: 800;
+    font-size: 8.5pt;
+    color: #2b4c7e;
+  }
+  .badge-stars {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #c07d32;
+    margin-left: 4px;
+  }
+  .badge-pass {
+    background: #334e68;
+    color: #ffffff;
+    font-size: 7.5pt;
+    padding: 1px 6px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .badge-cat {
+    background: #fef3e2;
+    color: #a8581e;
+    font-size: 7pt;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-left: 3px;
+    border: 1px solid #f9dab3;
+  }
+  .card-body {
+    padding: 5px 8px;
+    font-size: 8pt;
+    line-height: 1.4;
+  }
+  .tech-box {
+    background: #f2f8f4;
+    border-left: 3px solid #2d6a4f;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+  }
+  .trap-box {
+    background: #fdf5f5;
+    border-left: 3px solid #b83a3a;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+  }
+  .note-grid {
+    background: #f8fafc;
+    border-top: 1px dashed #d9e2ec;
+    padding: 3px 8px;
+    font-size: 7pt;
+    color: #486581;
+  }
+  .check-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+  .note-lines {
+    height: 6mm;
+    background: repeating-linear-gradient(#f8fafc, #f8fafc 2.8mm, #e2e8f0 2.8mm, #e2e8f0 3.0mm);
+    border-radius: 2px;
+  }
+
+  /* Cover Styles */
+  .cover-container {
+    height: 265mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #cbd8e6;
+    border-radius: 8px;
+    padding: 20mm;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  }
+  .cover-badge {
+    background: #2b4c7e;
+    color: #ffffff;
+    font-size: 11pt;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  .cover-title {
+    font-size: 26pt;
+    font-weight: 900;
+    color: #102a43;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .cover-sub {
+    font-size: 12pt;
+    font-weight: 600;
+    color: #486581;
+    margin-bottom: 25px;
+  }
+  .cover-box {
+    background: #f0f4f8;
+    border: 1px solid #cbd8e6;
+    border-radius: 6px;
+    padding: 15px 25px;
+    font-size: 9.5pt;
+    color: #243342;
+    text-align: left;
+    max-width: 150mm;
+    line-height: 1.7;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="floating-nav no-print">
+  <a href="../../../index.html" class="nav-btn">🏠 獅甲會考專區</a>
+  <a href="../index.html" class="nav-btn">📂 回本屆題庫</a>
+  <button onclick="window.print()" class="nav-btn btn-print">🖨️ 列印 A4 講義</button>
+</div>
+
+
+<!-- 封面 -->
+<div class="page">
+  <div class="cover-container">
+    <div class="cover-badge">★ 國中教育會考・寫作測驗專題 ★</div>
+    <div class="cover-title">114 年國中教育會考<br>【寫作測驗】衝 5～6 級分實戰講義</div>
+    <div class="cover-sub">官方試題深度破譯 ✕ 評分規準解析 ✕ 5B跨越A級分文采升級秘笈</div>
+    <div class="cover-box">
+      <strong>🎯 寫作測驗 5B 躍升 5～6 級分核心關鍵：</strong><br>
+      • <strong>任務指令完全達成</strong>：緊扣題幹任務要求，選材聚焦，不離題偏題。<br>
+      • <strong>立意深化與文化思辨</strong>：從具體生活細節出發，昇華至心靈體悟、社會關懷或哲理反思。<br>
+      • <strong>結構嚴謹起承轉合</strong>：首段破題立意，中段夾敘夾議，末段前後呼應點題。<br>
+      • <strong>修辭豐富與句型變化</strong>：善用排比、映襯、摹寫與生動成語，字跡工整無錯別字。
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 1 頁（封面）</span>
+  </div>
+</div>
+
+<!-- 題目破譯與試題原卷 -->
+<div class="page">
+  <div class="page-header">
+    <span>【試題破譯與題目任務】114年寫作測驗</span>
+    <span>會考寫作題目深度解析</span>
+  </div>
+  <div style="padding: 10px 5px; font-size: 8.5pt; line-height: 1.6;">
+    <h3 style="color: #2b4c7e; font-size: 11pt; margin-top: 0;">題目任務：選定詞彙詮釋圖片・結合生活經驗與感悟（免訂題）</h3>
+    <div style="background: #f0f4f8; border: 1px solid #cbd8e6; padding: 10px 14px; border-radius: 6px; margin-bottom: 12px;">
+      請先閱讀以下資訊，並按題意要求完成一篇文章。<br>觀察圖一，並依下列條件完成寫作：<br>（一）從圖二選出你認為較能說明圖一情境的詞彙（耽溺、盲目、選擇、冒險、自由、牢籠），以此為依據進行書寫。<br>（二）文中先說明所選定的「詞彙」與「圖一」之間的關聯，並就選定的詞彙及對圖片的詮釋，結合你在生活中的觀察或個人經驗，寫下感受或想法。<br>※不必訂題　※不可在文中洩漏私人身分　※不可使用詩歌體
+    </div>
+    <div class="q-img" style="text-align: center;">
+      <img src="images/writing_prompt_114.png" style="max-height: 110mm; border: 1px solid #cbd8e6; border-radius: 4px; padding: 4px; background: #fff;" alt="寫作試題圖例">
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>114年國中教育會考・寫作測驗講義</span>
+    <span>第 2 頁（題目任務）</span>
+  </div>
+</div>
+
+<!-- 評分規準與4衝5-6字詞升級 -->
+<div class="page">
+  <div class="page-header">
+    <span>【評分規準與層次突破】114年寫作測驗</span>
+    <span>4級分躍升5至6級分操作手冊</span>
+  </div>
+  <div style="padding: 10px 5px; font-size: 8.5pt; line-height: 1.6;">
+    <h3 style="color: #2b4c7e; font-size: 11pt; margin-top: 0;">📊 六級分評分規準關鍵指標對照</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 8pt;">
+      <tr style="background: #eef3f9; color: #2b4c7e; border-bottom: 2px solid #cbd8e6;">
+        <th style="padding: 6px; border: 1px solid #cbd8e6; width: 15%;">級分</th>
+        <th style="padding: 6px; border: 1px solid #cbd8e6; width: 25%;">立意取材</th>
+        <th style="padding: 6px; border: 1px solid #cbd8e6; width: 25%;">結構組織</th>
+        <th style="padding: 6px; border: 1px solid #cbd8e6; width: 35%;">字詞修辭與標點</th>
+      </tr>
+      <tr>
+        <td style="padding: 6px; border: 1px solid #cbd8e6; font-weight: 700; color: #c07d32;">六級分</td>
+        <td style="padding: 6px; border: 1px solid #cbd8e6;">深刻豐富，見解獨到，感悟深刻</td>
+        <td style="padding: 6px; border: 1px solid #cbd8e6;">結構嚴謹，前後伏筆照應自然</td>
+        <td style="padding: 6px; border: 1px solid #cbd8e6;">精確生動，句型靈活，善用多種修辭，幾無錯別字</td>
+      </tr>
+      <tr style="background: #fbfcfd;">
+        <td style="padding: 6px; border: 1px solid #cbd8e6; font-weight: 700; color: #2b4c7e;">五級分</td>
+        <td style="padding: 6px; border: 1px solid #cbd8e6;">切合題意，取材適切，有個人體悟</td>
+        <td style="padding: 6px; border: 1px solid #cbd8e6;">結構完整，段落分明，轉折自然</td>
+        <td style="padding: 6px; border: 1px solid #cbd8e6;">語句通順，遣詞得當，能靈活運用修辭，錯別字少</td>
+      </tr>
+      <tr>
+        <td style="padding: 6px; border: 1px solid #cbd8e6; font-weight: 700; color: #718096;">四級分 (5B)</td>
+        <td style="padding: 6px; border: 1px solid #cbd8e6;">大致符合題意，內容稍平淡籠統</td>
+        <td style="padding: 6px; border: 1px solid #cbd8e6;">段落大致分明，連貫性略有瑕疵</td>
+        <td style="padding: 6px; border: 1px solid #cbd8e6;">文意尚可理解，詞彙重複單調，有部分錯別字與標點不當</td>
+      </tr>
+    </table>
+
+    <h3 style="color: #2b4c7e; font-size: 11pt;">⚡ 4 級分躍升 5～6 級分高分錦囊</h3>
+    <div style="background: #f2f8f4; border-left: 3px solid #2d6a4f; padding: 8px 12px; margin-bottom: 8px; border-radius: 2px;">
+      <strong>1. 首段秒抓眼球法（畫面破題）</strong>：不要從「在我們的生活中」開頭，改用特定感官畫面、情境聲音或強烈對比切入，迅速勾勒情境。
+    </div>
+    <div style="background: #fdf5f5; border-left: 3px solid #b83a3a; padding: 8px 12px; margin-bottom: 8px; border-radius: 2px;">
+      <strong>2. 避開 5B 口語流水帳陷阱</strong>：禁止大量使用「然後」、「而且」、「我覺得很開心」，換成精準描摹動詞與成語（如：如坐針氈、醍醐灌頂、茅塞頓開）。
+    </div>
+    <div style="background: #f0f4f8; border-left: 3px solid #2b4c7e; padding: 8px 12px; border-radius: 2px;">
+      <strong>3. 末段哲思昇華法</strong>：最後一段切忌草草總結「希望下次會更好」，務必將個人心境轉折與群體生命價值、社會文化連結，達到意在言外的昇華！
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>114年國中教育會考・寫作測驗講義</span>
+    <span>第 3 頁（評分規準）</span>
+  </div>
+</div>
+
+<!-- 封底 -->
+<div class="page">
+  <div class="cover-container" style="border-style: solid; border-color: #2b4c7e; justify-content: flex-start; padding-top: 30px;">
+    <div class="cover-badge" style="background: #2b4c7e;">★ 考前衝刺・寫作最後叮嚀 ★</div>
+    <div class="cover-title" style="font-size: 22pt;">寫作測驗【考場臨場 50 分鐘配速黃金準則】</div>
+    <div class="cover-box" style="margin-top: 15px; font-size: 9.5pt; line-height: 1.8;">
+      • <strong>第 1 ～ 5 分鐘【審題立意 ✕ 構思大綱】</strong>：圈出核心任務，草稿紙列出起承轉合 4 段關鍵句與核心材料。<br>
+      • <strong>第 6 ～ 15 分鐘【起・開篇立意 ✕ 畫面破題】</strong>：約 120 字，精緻遣詞，建立懸念或對比，點出主題核心。<br>
+      • <strong>第 16 ～ 35 分鐘【承、轉・具體敘事 ✕ 心境轉折】</strong>：約 450 字，細膩刻畫生活見聞，寫出前因後果與內在衝突。<br>
+      • <strong>第 36 ～ 45 分鐘【合・昇華反思 ✕ 首尾呼應】</strong>：約 150 字，哲理昇華，回扣開篇伏筆，留有餘味。<br>
+      • <strong>第 46 ～ 50 分鐘【潤飾校對 ✕ 抓除錯字】</strong>：逐字默讀檢查漏字、標點、錯別字，保持卷面清爽整潔！
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 4 頁（封底）</span>
+  </div>
+</div>
+</body>
+</html>

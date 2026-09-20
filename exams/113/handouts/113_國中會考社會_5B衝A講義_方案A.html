@@ -1,0 +1,3150 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>113年國中教育會考【社會科】5B逆襲衝A實戰講義（A4左右對開版）</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; break-after: page; }
+    .no-break { page-break-inside: avoid; break-inside: avoid; }
+    .no-print, .floating-nav { display: none !important; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color: #243342;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6f8;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 12px auto;
+    padding: 12mm 15mm;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; width: 100%; min-height: 100vh; padding: 10mm 12mm; border-radius: 0; }
+  }
+  
+  /* Floating Nav */
+  @media screen {
+    .floating-nav {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.96);
+      padding: 8px 14px;
+      border-radius: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      border: 1px solid #cbd8e6;
+      backdrop-filter: blur(6px);
+    }
+    .nav-btn {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b4c7e;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #f0f4f9;
+      border: 1px solid #cbd8e6;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-btn:hover {
+      background: #2b4c7e;
+      color: #ffffff;
+    }
+    .btn-print {
+      background: #2b4c7e;
+      color: #ffffff;
+      border: none;
+    }
+    .btn-print:hover {
+      background: #1c3559;
+    }
+  }
+
+  /* Header & Footer */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #cbd8e6;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #486581;
+  }
+  .page-footer {
+    position: absolute;
+    bottom: 8mm;
+    left: 15mm;
+    right: 15mm;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 4px;
+    font-size: 8pt;
+    color: #829ab1;
+  }
+
+  /* Question items */
+  .q-item {
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed #e2e8f0;
+  }
+  .q-item:last-child {
+    border-bottom: none;
+  }
+  .q-head {
+    display: flex;
+    gap: 8px;
+    font-size: 8.5pt;
+    margin-bottom: 4px;
+  }
+  .q-num {
+    font-weight: 800;
+    color: #2b4c7e;
+    background: #eef3f9;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 8pt;
+    flex-shrink: 0;
+  }
+  .q-stem {
+    flex-grow: 1;
+    line-height: 1.45;
+  }
+  .q-img {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .q-img img {
+    max-width: 95%;
+    max-height: 48mm;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid #d9e2ec;
+    background: #ffffff;
+    padding: 3px;
+  }
+  .q-opts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px 10px;
+    margin-left: 30px;
+    font-size: 8pt;
+    margin-top: 4px;
+  }
+  .q-opt {
+    color: #334e68;
+  }
+  .opt-label {
+    font-weight: 700;
+    color: #2b4c7e;
+  }
+  .scratch-area {
+    margin-top: 5px;
+    height: 10mm;
+    border: 1px dashed #cbd8e6;
+    border-radius: 4px;
+    background: #fbfcfd;
+    position: relative;
+  }
+  .scratch-label {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 7pt;
+    color: #9fb3c8;
+  }
+
+  /* Card Item */
+  .card-item {
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
+    overflow: hidden;
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f4f8;
+    border-bottom: 1px solid #d9e2ec;
+    padding: 3px 8px;
+  }
+  .card-title {
+    font-weight: 800;
+    font-size: 8.5pt;
+    color: #2b4c7e;
+  }
+  .badge-stars {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #c07d32;
+    margin-left: 4px;
+  }
+  .badge-pass {
+    background: #334e68;
+    color: #ffffff;
+    font-size: 7.5pt;
+    padding: 1px 6px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .badge-cat {
+    background: #fef3e2;
+    color: #a8581e;
+    font-size: 7pt;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-left: 3px;
+    border: 1px solid #f9dab3;
+  }
+  .card-body {
+    padding: 5px 8px;
+    font-size: 8pt;
+    line-height: 1.4;
+  }
+  .tech-box {
+    background: #f2f8f4;
+    border-left: 3px solid #2d6a4f;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+  }
+  .trap-box {
+    background: #fdf5f5;
+    border-left: 3px solid #b83a3a;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+  }
+  .note-grid {
+    background: #f8fafc;
+    border-top: 1px dashed #d9e2ec;
+    padding: 3px 8px;
+    font-size: 7pt;
+    color: #486581;
+  }
+  .check-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+  .note-lines {
+    height: 6mm;
+    background: repeating-linear-gradient(#f8fafc, #f8fafc 2.8mm, #e2e8f0 2.8mm, #e2e8f0 3.0mm);
+    border-radius: 2px;
+  }
+
+  /* Cover Styles */
+  .cover-container {
+    height: 265mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #cbd8e6;
+    border-radius: 8px;
+    padding: 20mm;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  }
+  .cover-badge {
+    background: #2b4c7e;
+    color: #ffffff;
+    font-size: 11pt;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  .cover-title {
+    font-size: 26pt;
+    font-weight: 900;
+    color: #102a43;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .cover-sub {
+    font-size: 12pt;
+    font-weight: 600;
+    color: #486581;
+    margin-bottom: 25px;
+  }
+  .cover-box {
+    background: #f0f4f8;
+    border: 1px solid #cbd8e6;
+    border-radius: 6px;
+    padding: 15px 25px;
+    font-size: 9.5pt;
+    color: #243342;
+    text-align: left;
+    max-width: 150mm;
+    line-height: 1.7;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="floating-nav no-print">
+  <a href="../../../index.html" class="nav-btn">🏠 獅甲會考專區</a>
+  <a href="../index.html" class="nav-btn">📂 回本屆題庫</a>
+  <button onclick="window.print()" class="nav-btn btn-print">🖨️ 列印 A4 講義</button>
+</div>
+
+
+<!-- 封面 -->
+<div class="page">
+  <div class="cover-container">
+    <div class="cover-badge">★ 國中教育會考・5B逆襲衝A專用 ★</div>
+    <div class="cover-title">113 年國中教育會考<br>【社會科】解題破譯實戰講義</div>
+    <div class="cover-sub">全 54 題題目剖析 ✕ 名師秒殺招 ✕ 5B避坑指南 ✕ 完整題圖</div>
+    
+    <div class="cover-box">
+      <strong>🎯 社會科 5B 衝 A 核心黃金法則：</strong><br>
+      • <strong>穩賺基本盤 100% 入袋</strong>：前 40% 的基本觀念題，審題圈關鍵字，一題不漏！<br>
+      • <strong>題眼圈選秒殺招</strong>：長篇情境題先看最後問句，看清圖表橫縱座標與極端值。<br>
+      • <strong>避開 5B 典型心魔</strong>：單位換算、正負號變號、未依題目限制條件盲目作答。<br>
+      • <strong>模擬實戰計時</strong>：左頁實戰模擬，右頁名師破譯與避坑自我檢核。
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 1 頁（封面）</span>
+  </div>
+</div>
+
+<!-- 考前叮嚀與各題通過率矩陣 -->
+<div class="page">
+  <div class="page-header">
+    <span>【考前算牌矩陣】113年社會科</span>
+    <span>衝 A 門檻與命題難度落點分佈</span>
+  </div>
+  <div style="padding: 10px 5px; font-size: 8.5pt; line-height: 1.6;">
+    <h3 style="color: #2b4c7e; margin-top: 0; font-size: 11pt;">📊 命題難度星級與各題分佈矩陣</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 8pt; text-align: center;">
+      <thead>
+        <tr style="background: #eef3f9; color: #2b4c7e; border-bottom: 2px solid #cbd8e6;">
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">難度星級</th>
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">類別定位</th>
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">通過率區間</th>
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">建議應對策略</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★☆☆☆</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">穩賺基本盤</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">P ≥ 75%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">秒殺送分題，細心圈題眼，確保 100% 答對率。</td>
+        </tr>
+        <tr style="background: #fbfcfd;">
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★★☆☆</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">進階核心題</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">60% ≤ P &lt; 75%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">考查單一核心概念或圖表推論，善用公式與圖解法。</td>
+        </tr>
+        <tr>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★★★☆</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">衝A勝負題</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">45% ≤ P &lt; 60%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">跨單元整合或多步驟計算，5B 躍升 A 的關鍵戰場！</td>
+        </tr>
+        <tr style="background: #fbfcfd;">
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★★★★</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">高鑑別挑戰題</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">P &lt; 45%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">長篇閱讀素養題，先排除不可能選項，善用代入法反推。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="color: #2b4c7e; font-size: 11pt;">📋 5B 衝 A 臨場應試心法</h3>
+    <ul style="padding-left: 20px; color: #334e68; line-height: 1.8;">
+      <li><strong>答題節奏嚴格控管</strong>：先易後難，卡住超過 90 秒立即做記號跳過，全卷答完再回頭攻堅。</li>
+      <li><strong>草稿欄充分利用</strong>：左頁設計「草稿與推導區」，動筆畫圖列式比大腦空想要精準 10 倍！</li>
+      <li><strong>畫卡雙重確認</strong>：每寫完 5 題對照一次題號與答案卡，嚴防跳題劃錯格的致命悲劇。</li>
+    </ul>
+  </div>
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 2 頁（策略導航）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 1 ～ 4 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">1</span>
+      <div class="q-stem">「格外品」意指市場規格之外但品質無虞的農產品，例如規格不符或賣相不佳。格外品會被農民分<br>享給親友或作為肥料跟飼料，盛產時還可能出現遭大量棄置的問題。下列何項作法較能有效解決上<br>述問題？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 推動從產地到餐桌的理念，降低食物里程</div><div class="q-opt"><span class="opt-label">(B)</span> 善用食品加工，以利農產品的保存與食用</div><div class="q-opt"><span class="opt-label">(C)</span> 鼓勵農民改採有機農法，提高農產品售價</div><div class="q-opt"><span class="opt-label">(D)</span> 種植基因改造作物，增加單位面積的產量</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">2</span>
+      <div class="q-stem">由波蘭、匈牙利、斯洛伐克、捷克組成的維謝格拉德集團，近年來約有20%至30%的商品出口至<br>德國，因此當德國經濟成長減緩時，該集團國家的產業可能衰退。根據上文，集團成員國最可能採<br>取下列何項政策，以減少產業衰退所帶來的負面影響？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 加速產業創新轉型及尋找新的貿易夥伴</div><div class="q-opt"><span class="opt-label">(B)</span> 採取促使各國貨幣升值的政策以利出口</div><div class="q-opt"><span class="opt-label">(C)</span> 退出歐盟並從非洲國家引進廉價勞動力</div><div class="q-opt"><span class="opt-label">(D)</span> 鼓勵國內勞力密集產業外移至西歐國家</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">3</span>
+      <div class="q-stem">臺灣某些聚落是以相對位置來命名，例如北門。下列為<br>某地區兩個地名由來的描述：在地勢較高處屯兵設營，<br>故稱為上營盤，其西北山腳處則稱為營盤腳，又名下營<br>盤。圖(一)為營盤腳附近的等高線地形圖，根據上述及圖<br>中資訊判斷，上營盤最可能位在圖中何處？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q3_1.jpeg" alt="題號 3 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲</div><div class="q-opt"><span class="opt-label">(B)</span> 乙</div><div class="q-opt"><span class="opt-label">(C)</span> 丙</div><div class="q-opt"><span class="opt-label">(D)</span> 丁</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">4</span>
+      <div class="q-stem">圖(二)為某網站繪製的世界語言使用圖，呈現全球23 種使用人數<br>超過5,000 萬人的語言，其中使用人數排第五名的語言主要分布<br>區為下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q4_1.jpeg" alt="題號 4 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 西亞、北非</div><div class="q-opt"><span class="opt-label">(B)</span> 東亞、南亞</div><div class="q-opt"><span class="opt-label">(C)</span> 南歐、南美洲</div><div class="q-opt"><span class="opt-label">(D)</span> 北美洲、大洋洲</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 3 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 1 ～ 4 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 1 題 【正確答案：(B)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 80.3%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 2 題 【正確答案：(A)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 78.0%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 3 題 【正確答案：(B)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 80.5%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">經緯度與氣候地圖定位法：由緯度看熱量帶、由距海遠近看降水，配合等高線判讀地形。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易死記地名而忽略地圖圖例與比例尺換算。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 4 題 【正確答案：(A)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 70.6%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.55</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 4 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 5 ～ 8 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">5</span>
+      <div class="q-stem">彰化平原上曾有一個稱為「七十二庄」的組織，由漳州人和客家人聯合成立，他們透過共同的宗教<br>活動，強化組織內部的連結，以抵抗鄰近泉州人的勢力。上述組織的成立，最可能與下列哪一現象<br>有關？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 鄭氏推行軍屯制度</div><div class="q-opt"><span class="opt-label">(B)</span> 清代民間械鬥頻傳</div><div class="q-opt"><span class="opt-label">(C)</span> 清朝政府開山撫番</div><div class="q-opt"><span class="opt-label">(D)</span> 日本鎮壓漢人抗日</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">6</span>
+      <div class="q-stem">圖(三)為一首歌曲部分歌詞的翻譯，其內容聚焦於中國歷史上<br>某一事件。歌詞中「在東方的血腥戰爭」，最可能是指下列何<br>者？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q6_1.jpeg" alt="題號 6 附圖"></div>
+<div class="q-img"><img src="images/society_q6_2.jpeg" alt="題號 6 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 蒙古大軍南下滅宋，成功入主中國</div><div class="q-opt"><span class="opt-label">(B)</span> 英國為鴉片貿易問題出兵攻打中國</div><div class="q-opt"><span class="opt-label">(C)</span> 八個國家組成聯軍向中國發動攻擊</div><div class="q-opt"><span class="opt-label">(D)</span> 國民政府誓師北伐，終結軍閥割據</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">7</span>
+      <div class="q-stem">古代人們在繪製地圖時，通常會將自己所處的區域放在地圖中央。圖(四)<br>是某地區出土的古世界地圖及其說明，該地區當時所使用的文字，最可能<br>為下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q7_1.jpeg" alt="題號 7 附圖"></div>
+<div class="q-img"><img src="images/society_q7_2.jpeg" alt="題號 7 附圖"></div>
+
+    <div class="q-opts"></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">8</span>
+      <div class="q-stem">「某國在十九世紀末設置一個機構，最初是顧及戰後返國的軍人，身上可能帶有病菌，因而先送往<br>此處進行消毒及隔離，後來也在此處收容戰爭俘虜。在該國曾參與的甲午戰爭、第一次世界大戰、<br>九一八事變，乃至於太平洋戰爭，此機構都曾發揮隔離檢疫的功能。」上述「某國」最可能是下列<br>何者？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 美國</div><div class="q-opt"><span class="opt-label">(B)</span> 德國</div><div class="q-opt"><span class="opt-label">(C)</span> 日本</div><div class="q-opt"><span class="opt-label">(D)</span> 法國</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 5 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 5 ～ 8 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 5 題 【正確答案：(B)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 81.4%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.61</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 6 題 【正確答案：(C)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 76.8%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.6</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 7 題 【正確答案：(D)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 79.5%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.51</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 8 題 【正確答案：(C)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 80.9%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.51</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 6 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 9 ～ 12 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">9</span>
+      <div class="q-stem">以下是學者對歷史上臺灣的土地開發模式，所做出的分析：「十七世紀時，『甲』透過提供土地、<br>耕牛、資金借貸，招募『乙』修築城堡、耕種稻米與甘蔗。甲、乙兩者之間雖然互相依賴，但甲常<br>透過強制力懲罰不願受約束的乙。」上述「甲」與「乙」，最可能是下列何者？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 荷蘭 聯合東印度公司與漢人</div><div class="q-opt"><span class="opt-label">(B)</span> 清帝國與福建、廣東的漢人</div><div class="q-opt"><span class="opt-label">(C)</span> 顏思齊集團與沿海的原住民</div><div class="q-opt"><span class="opt-label">(D)</span> 鄭氏政權與大肚王國原住民</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">10</span>
+      <div class="q-stem">圖(五)是老師在黑板上解釋某法律的部分內容，根據圖中內容判<br>斷，下列何者是該法律最主要的立法目的？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q10_1.jpeg" alt="題號 10 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 避免家庭暴力事件的發生</div><div class="q-opt"><span class="opt-label">(B)</span> 處理兒童及少年犯罪事件</div><div class="q-opt"><span class="opt-label">(C)</span> 確保兒童及少年身心發展</div><div class="q-opt"><span class="opt-label">(D)</span> 維護社會秩序及善良風俗</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">11</span>
+      <div class="q-stem">表(一)是小津整理的交易媒介比較表，表中甲、乙最可能為下列哪一組合？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q11_1.jpeg" alt="題號 11 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 商品貨幣與儲值卡</div><div class="q-opt"><span class="opt-label">(B)</span> 商品貨幣與信用卡</div><div class="q-opt"><span class="opt-label">(C)</span> 法定貨幣與儲值卡</div><div class="q-opt"><span class="opt-label">(D)</span> 法定貨幣與信用卡</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">12</span>
+      <div class="q-stem">新聞報導：大法官解釋第748 號解釋文，宣告《民法》中未有保障同性婚姻之規定，違反《憲法》<br>保障人民平等權與婚姻自由之意旨，相關機關應在兩年內完成法律修正或制定，若屆時未完成修<br>法，同性二人可依現行《民法》規定辦理結婚登記。上述內容顯示出我國《憲法》的哪一項特性？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 規範範圍最廣</div><div class="q-opt"><span class="opt-label">(B)</span> 法律位階最高</div><div class="q-opt"><span class="opt-label">(C)</span> 修改程序困難</div><div class="q-opt"><span class="opt-label">(D)</span> 條文內容簡要</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 7 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 9 ～ 12 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 9 題 【正確答案：(A)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 66.0%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 10 題 【正確答案：(C)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 92.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.4</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 11 題 【正確答案：(C)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 84.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 12 題 【正確答案：(B)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 75.2%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 8 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 13 ～ 16 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">13</span>
+      <div class="q-stem">小央花費數萬元購買限量模型，將商品帶回家後遭到父母反對，並立刻陪同小央返回店家要求退<br>貨。根據我國法律規定，就小央的年齡而言，此項契約須經法定代理人同意才具備效力，因此店家<br>只能辦理退貨。根據上述內容判斷，下列何者最可能是訂立該規定的用意？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 維護無行為能力人的權益</div><div class="q-opt"><span class="opt-label">(B)</span> 矯正未成年人的犯罪行為</div><div class="q-opt"><span class="opt-label">(C)</span> 保護限制行為能力人的權益</div><div class="q-opt"><span class="opt-label">(D)</span> 預防未成年人從事犯罪行為</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">14</span>
+      <div class="q-stem">我國原本允許進口新鮮山竹，但2003 年時，因新鮮山竹有引進害蟲的疑慮，所以政府禁止進口，<br>於是市面上只能買到進口的冷凍山竹。2019 年4 月，政府公告將開放經殺蟲處理的新鮮山竹進口；<br>同年9 月，新鮮山竹上架銷售，雖然價格高於冷凍山竹，仍在短時間銷售一空，後來各店家也持續<br>補貨販售。根據上述內容判斷，政府的開放政策帶來下列何項影響？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q14_1.jpeg" alt="題號 14 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 貿易出超金額因而擴大</div><div class="q-opt"><span class="opt-label">(B)</span> 農業出口總額因而上升</div><div class="q-opt"><span class="opt-label">(C)</span> 購物意願因價格變化而提高</div><div class="q-opt"><span class="opt-label">(D)</span> 產品選擇因而變得更加多元</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">15</span>
+      <div class="q-stem">圖(六)顯示臺灣某一沿海地區的土地利用變<br>遷，根據圖中資訊判斷，下列關於該地區土地<br>利用轉變的敘述何者正確？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q15_1.jpeg" alt="題號 15 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 可利用的土地因海岸侵蝕嚴重而減少</div><div class="q-opt"><span class="opt-label">(B)</span> 魚塭的面積變化呈現先減後增的趨勢</div><div class="q-opt"><span class="opt-label">(C)</span> 新的市區用地主要是由魚塭填土而來</div><div class="q-opt"><span class="opt-label">(D)</span> 聚落的範圍主要是由南向北逐漸擴張</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">16</span>
+      <div class="q-stem">隨著醫療衛生的進步，人類的平均壽命正逐漸提高，圖(七)<br>呈現1990 年與2019 年全球各區域平均壽命與人口數的變<br>化，圖中未標示的區域有「中南美洲」、「歐洲及北美洲」、<br>「東亞及東南亞」、「漠南非洲」。依據各區域的經濟發<br>展及醫療衛生條件判斷，圖(七)中甲、乙、丙、丁何者最可<br>能為漠南非洲？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q16_1.jpeg" alt="題號 16 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲</div><div class="q-opt"><span class="opt-label">(B)</span> 乙</div><div class="q-opt"><span class="opt-label">(C)</span> 丙</div><div class="q-opt"><span class="opt-label">(D)</span> 丁</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 9 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 13 ～ 16 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 13 題 【正確答案：(C)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 77.6%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.36</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 14 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 74.3%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 15 題 【正確答案：(C)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 73.9%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">經緯度與氣候地圖定位法：由緯度看熱量帶、由距海遠近看降水，配合等高線判讀地形。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易死記地名而忽略地圖圖例與比例尺換算。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 16 題 【正確答案：(C)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 74.0%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 10 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 17 ～ 20 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">17</span>
+      <div class="q-stem">日本某地因位處冬季季風迎風面，季風經日本海挾帶豐沛水氣形成大量降<br>雪，待降雪季節結束，積雪剷除後的道路兩側留下垂直壁立高達十多公尺的<br>雪壁，吸引大量遊客前來。上述雪壁景色最可能位於圖(八)中何地？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q17_1.jpeg" alt="題號 17 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲</div><div class="q-opt"><span class="opt-label">(B)</span> 乙</div><div class="q-opt"><span class="opt-label">(C)</span> 丙</div><div class="q-opt"><span class="opt-label">(D)</span> 丁</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">18</span>
+      <div class="q-stem">中國某行政區有一新建鐵路於2022 年6 月通車，與原有鐵路<br>部分路線共同構成一環形鐵路，其路線圖如圖(九)所示。該新<br>建鐵路通車後為了維持其正常運行，根據沿線環境特色判斷，<br>最可能需要進行下列何種維護措施？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q18_1.jpeg" alt="題號 18 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 加強防颱工程，預防強風及豪雨損壞鐵路設備</div><div class="q-opt"><span class="opt-label">(B)</span> 設置加熱系統，克服土壤結凍造成的軌道變形</div><div class="q-opt"><span class="opt-label">(C)</span> 種植固沙植物，防止風沙危及列車行駛的安全</div><div class="q-opt"><span class="opt-label">(D)</span> 興建河岸堤防，避免河流定期氾濫而淹沒鐵軌</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">19</span>
+      <div class="q-stem">圖(十)是二十世紀時，甲、乙二國領袖來往的信函，根據內容判斷，甲、乙二國最可能是下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q19_1.jpeg" alt="題號 19 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲：蘇聯、乙：東德</div><div class="q-opt"><span class="opt-label">(B)</span> 甲：西德、乙：美國</div><div class="q-opt"><span class="opt-label">(C)</span> 甲：美國、乙：蘇聯</div><div class="q-opt"><span class="opt-label">(D)</span> 甲：蘇聯、乙：美國</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">20</span>
+      <div class="q-stem">圖(十一)是兩張與天體運行有關的示意圖，<br>下列何者及其說明最能夠代表中世紀(中古)<br>歐洲天文學的主流觀點？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q20_1.jpeg" alt="題號 20 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 圖左，因為太陽繞行地球</div><div class="q-opt"><span class="opt-label">(B)</span> 圖左，因為水星繞行太陽</div><div class="q-opt"><span class="opt-label">(C)</span> 圖右，因為月球繞行地球</div><div class="q-opt"><span class="opt-label">(D)</span> 圖右，因為木星繞行太陽</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 11 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 17 ～ 20 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 17 題 【正確答案：(A)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 66.3%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">經緯度與氣候地圖定位法：由緯度看熱量帶、由距海遠近看降水，配合等高線判讀地形。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易死記地名而忽略地圖圖例與比例尺換算。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 18 題 【正確答案：(C)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 66.5%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 19 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 73.8%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 20 題 【正確答案：(A)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 73.8%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 12 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 21 ～ 24 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">21</span>
+      <div class="q-stem">「十四世紀時，由於此物產的生產與銷售，帶動一股商業活動：中國結合自身及波斯生產的原料，<br>製作成具有特色的商品後，由中國銷往印度、埃及、波斯等地。十六世紀起，此物產又由西班牙船<br>隻載運，從馬尼拉運往墨西哥城與利馬；在此同時，歐洲王公貴族對此物產風靡不已，紛紛下單訂<br>作。」此物產最可能是下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q21_1.jpeg" alt="題號 21 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 番薯</div><div class="q-opt"><span class="opt-label">(B)</span> 瓷器</div><div class="q-opt"><span class="opt-label">(C)</span> 鴉片</div><div class="q-opt"><span class="opt-label">(D)</span> 白銀</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">22</span>
+      <div class="q-stem">表(二)呈現五個國家2010 年某宗教信<br>徒占該國總人口數的比例，根據內容<br>判斷，此宗教的發源地最可能位於圖<br>(十二)中甲、乙、丙、丁何處？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q22_1.jpeg" alt="題號 22 附圖"></div>
+<div class="q-img"><img src="images/society_q22_2.jpeg" alt="題號 22 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲</div><div class="q-opt"><span class="opt-label">(B)</span> 乙</div><div class="q-opt"><span class="opt-label">(C)</span> 丙</div><div class="q-opt"><span class="opt-label">(D)</span> 丁</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">23</span>
+      <div class="q-stem">表(三)是2022 年8 月時，我國前四大外籍移工來源國的部分資料： <br> <br>根據表中資料，我們可觀察到關於外籍移工的何種現象？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q23_1.jpeg" alt="題號 23 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 外籍移工的勞動權益因國籍而受到差別待遇</div><div class="q-opt"><span class="opt-label">(B)</span> 外籍移工從事的工作類別存在明顯性別差異</div><div class="q-opt"><span class="opt-label">(C)</span> 我國第二級產業主要外籍移工來源國為印尼</div><div class="q-opt"><span class="opt-label">(D)</span> 我國第三級產業主要外籍移工來源國為越南</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">24</span>
+      <div class="q-stem">小華整理客廳時發現一疊紙張，如圖(十三)。他拍照上傳到社群網路詢問<br>它的功能，以下是網友的回覆： <br>甲：「我們稱它為高速公路回數票，以前沒有電子收費系統，經過收費站<br>時將它拿給收費員當通行費。在收費站前減速繳交回數票常會造成<br>塞車，現在用電子收費就沒這個問題了。」 <br>乙：「以前忘了帶錢時，把回數票當現金，少數店家也能接受，我還曾經<br>用它來買便當。」 <br>關於上述高速公路回數票的說明及收費方式的變革，下列敘述何者最適當？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q24_1.jpeg" alt="題號 24 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 科技發展使得交通運輸更順暢</div><div class="q-opt"><span class="opt-label">(B)</span> 高速公路回數票可在銀行換外幣</div><div class="q-opt"><span class="opt-label">(C)</span> 高速公路回數票具延遲支付功能</div><div class="q-opt"><span class="opt-label">(D)</span> 科技發展讓交通工具的選擇更多元</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 13 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 21 ～ 24 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 21 題 【正確答案：(B)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 82.2%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">時代坐標時序法：抓關鍵人名、制度或外在事件，將事件精確置於時代背景脈絡中。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆各國近代條約開放口岸與割讓土地之順序。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 22 題 【正確答案：(C)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 55.9%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 23 題 【正確答案：(B)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 85.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 24 題 【正確答案：(A)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 86.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.45</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 14 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 25 ～ 28 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">25</span>
+      <div class="q-stem">小惠在旅行的過程，曾借宿表(四)中四位親戚家，其中一位旁<br>系血親參選當地的市民代表，因此在借宿的那天晚上，他也參<br>與了掃街拜票。根據上述內容判斷，參選者最可能是表中何<br>者？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q25_1.jpeg" alt="題號 25 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 姨丈</div><div class="q-opt"><span class="opt-label">(B)</span> 舅舅</div><div class="q-opt"><span class="opt-label">(C)</span> 姑姑</div><div class="q-opt"><span class="opt-label">(D)</span> 伯母</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">26</span>
+      <div class="q-stem">圖(十四)為石門水庫集水區範圍圖，若要針對此水庫的相關問題<br>作整治並進行評估，則下列何者最為合理？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q26_1.jpeg" alt="題號 26 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 加強玉山山脈的水土保持可增加水庫使用年限</div><div class="q-opt"><span class="opt-label">(B)</span> 福山站附近的崩塌是造成水庫濁度增加的原因</div><div class="q-opt"><span class="opt-label">(C)</span> 復興區的土地利用方式將對水庫水質造成影響</div><div class="q-opt"><span class="opt-label">(D)</span> 疏濬石門(3)站旁河道的淤沙可維持水庫蓄水量</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">27</span>
+      <div class="q-stem">臺灣製鞋業在國內及海外約有3,000 多家工廠，為了拓展製鞋版圖，國內幾家製鞋大廠持續計畫在<br>其他國家籌設新廠。根據製鞋業的產業特色判斷，最可能前往具備下列何種條件的國家設置新廠？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 人口眾多且所得較低</div><div class="q-opt"><span class="opt-label">(B)</span> 原料豐富且地廣人稀</div><div class="q-opt"><span class="opt-label">(C)</span> 動力充足且市場廣大</div><div class="q-opt"><span class="opt-label">(D)</span> 資金豐沛且技術密集</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">28</span>
+      <div class="q-stem">圖(十五)呈現雲林縣某一環境災害在前、後兩個時期分布的變化，可以觀察出此災害最嚴重的地區<br>在後期有向某地區轉移的現象，下列何項措施較有助於緩解此災害在後期最嚴重的地區持續惡<br>化？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q28_1.jpeg" alt="題號 28 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 提高自來水水費以減少用水</div><div class="q-opt"><span class="opt-label">(B)</span> 鼓勵在高鐵沿線改種省水作物</div><div class="q-opt"><span class="opt-label">(C)</span> 補助受影響居民墊高房舍與路基</div><div class="q-opt"><span class="opt-label">(D)</span> 限制臺鐵通過此路段的運量與班次</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 15 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 25 ～ 28 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 25 題 【正確答案：(B)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 41.4%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 26 題 【正確答案：(C)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 54.4%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.43</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 27 題 【正確答案：(A)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 66.5%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.61</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 28 題 【正確答案：(B)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 47.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.34</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 16 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 29 ～ 32 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">29</span>
+      <div class="q-stem">荔枝為臺灣受歡迎的水果之一，目前主要種植在中南部。政府為了推<br>廣臺灣荔枝，與澳洲合作，推動南半球生產計畫，在澳洲尋找與臺灣<br>荔枝種植的氣候條件相似的地點，並於完成隔離檢疫後開始試種。根<br>據上文，圖(十六)中何處最有可能為試種的地點？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q29_1.jpeg" alt="題號 29 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲</div><div class="q-opt"><span class="opt-label">(B)</span> 乙</div><div class="q-opt"><span class="opt-label">(C)</span> 丙</div><div class="q-opt"><span class="opt-label">(D)</span> 丁</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">30</span>
+      <div class="q-stem">清末某位知識分子提出下述主張：「本世紀女權的問題，關鍵在於政治參與。我認為女子能成為議<br>員，也期望中國在海陸軍、財政部門、外交部門有女性任職，更希望女子能被選舉為總統。我們必<br>須以塑造尊重男女平權的新國民為起點，並追求組織新政權為終極目標。」根據上文，此人認為應<br>採取下列何種作法，最可能創造理想中的女性政治參與環境？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 接受西域的胡人文化</div><div class="q-opt"><span class="opt-label">(B)</span> 維護傳統的皇帝制度</div><div class="q-opt"><span class="opt-label">(C)</span> 推翻清朝政府建立共和</div><div class="q-opt"><span class="opt-label">(D)</span> 效法日本推動君主立憲</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">31</span>
+      <div class="q-stem">圖(十七)是一張十八世紀末的漫畫及其說明，作者所要傳遞的訊<br>息，最可能是下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q31_1.jpeg" alt="題號 31 附圖"></div>
+<div class="q-img"><img src="images/society_q31_2.jpeg" alt="題號 31 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 對北美十三州宣布獨立表示反對</div><div class="q-opt"><span class="opt-label">(B)</span> 對德意志帝國擴建海軍備感威脅</div><div class="q-opt"><span class="opt-label">(C)</span> 對義大利統一建國運動提出異議</div><div class="q-opt"><span class="opt-label">(D)</span> 對法國大革命向外蔓延感到不安</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">32</span>
+      <div class="q-stem">「東漢末年戰亂頻仍，知識分子四散遷徙，人才難覓。曹丕在正式建立曹魏政權前，為了改善人才<br>選用方式，於延康元年(220 年)實施此方法，在各郡設置中正官，……。」上文中未完的內容，最<br>適合放入下列何者？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 挑選各地賢能者，根據才學德行與資歷表現分為九等</div><div class="q-opt"><span class="opt-label">(B)</span> 與耶穌會傳教士進行交流，引進西方科學知識與技術</div><div class="q-opt"><span class="opt-label">(C)</span> 長期戰亂導致地方制度轉變，郡縣制度取代封建制度</div><div class="q-opt"><span class="opt-label">(D)</span> 主辦地方層級的科舉考試，使平民任官機會逐漸增加</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 17 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 29 ～ 32 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 29 題 【正確答案：(A)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 49.1%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">經緯度與氣候地圖定位法：由緯度看熱量帶、由距海遠近看降水，配合等高線判讀地形。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易死記地名而忽略地圖圖例與比例尺換算。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 30 題 【正確答案：(C)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 53.1%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.29</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">時代坐標時序法：抓關鍵人名、制度或外在事件，將事件精確置於時代背景脈絡中。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆各國近代條約開放口岸與割讓土地之順序。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 31 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 66.0%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 32 題 【正確答案：(A)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 50.9%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.54</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">時代坐標時序法：抓關鍵人名、制度或外在事件，將事件精確置於時代背景脈絡中。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆各國近代條約開放口岸與割讓土地之順序。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 18 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 33 ～ 36 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">33</span>
+      <div class="q-stem">目前的跨洋資訊傳輸多是透過海底電纜，表(五)<br>為四條海底電纜東、西端點的位置資訊。「太平<br>洋光纖電纜網路」為一條橫跨太平洋的海底電<br>纜，該電纜的興建可以提供兩個端點之間龐大的<br>網路流量需求，其中一端還能進一步連接東南亞<br>市場，此條電纜最可能是表中何者？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q33_1.jpeg" alt="題號 33 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲</div><div class="q-opt"><span class="opt-label">(B)</span> 乙</div><div class="q-opt"><span class="opt-label">(C)</span> 丙</div><div class="q-opt"><span class="opt-label">(D)</span> 丁</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">34</span>
+      <div class="q-stem">圖(十八)是小安過去的網路貼文，圖(十九)是當時動物之家認養規定的部分內容： <br> <br>根據圖(十八)、圖(十九)的內容判斷，小安參與的這兩次投票，先後順序最可能為下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q34_1.jpeg" alt="題號 34 附圖"></div>
+<div class="q-img"><img src="images/society_q34_2.jpeg" alt="題號 34 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 地方選舉、中央選舉</div><div class="q-opt"><span class="opt-label">(B)</span> 地方選舉、公民投票</div><div class="q-opt"><span class="opt-label">(C)</span> 中央選舉、公民投票</div><div class="q-opt"><span class="opt-label">(D)</span> 公民投票、中央選舉</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">35</span>
+      <div class="q-stem">近年甲國新聞中常見關於殺人案件的報導，許多<br>人因而認為治安不斷惡化，要求主管機關首長下<br>臺負責。曉晴想探究該國社會治安情況，在網路<br>上搜尋到的資料如圖(二十)，圖中顯示甲國近年<br>殺人案件數，以及用「殺人」為關鍵詞搜尋國內<br>網路新聞的搜尋結果數。根據上述內容判斷，下<br>列何者最可能是他探究的結論？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q35_1.jpeg" alt="題號 35 附圖"></div>
+<div class="q-img"><img src="images/society_q35_2.jpeg" alt="題號 35 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 社會治安不斷惡化顯示媒體未善盡監督政府責任</div><div class="q-opt"><span class="opt-label">(B)</span> 媒體與社群網路的報導內容會影響公共意見方向</div><div class="q-opt"><span class="opt-label">(C)</span> 公共意見雖經過反覆討論但形成後仍具有變動性</div><div class="q-opt"><span class="opt-label">(D)</span> 閱聽大眾喜好常會影響新聞媒體產業的企業收入</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">36</span>
+      <div class="q-stem">我國少子化與高齡化的情況日益嚴重，未來恐面臨勞動力不足的危機。政府除了促進人口成長以減<br>緩影響程度外，根據人力運用調查資料顯示，2018 年時約有150 萬的壯年人口，因須承擔無酬勞<br>動而未就業，有學者建議可設法提高這些人參與市場勞動的意願。根據上述內容判斷，下列何者最<br>可能是該學者的建議之一？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 延後高齡勞工的退休年齡</div><div class="q-opt"><span class="opt-label">(B)</span> 廣設優質平價的托育機構</div><div class="q-opt"><span class="opt-label">(C)</span> 增加中小企業的就業機會</div><div class="q-opt"><span class="opt-label">(D)</span> 健全國際志工的培訓制度</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 19 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 33 ～ 36 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 33 題 【正確答案：(D)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 48.4%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 34 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 69.1%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 35 題 【正確答案：(B)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 72.5%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 36 題 【正確答案：(B)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 32.0%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.27</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 20 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 37 ～ 40 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">37</span>
+      <div class="q-stem">中國實施「一帶一路」政策規畫了許多經濟走廊，<br>圖(二十一)為部分經濟走廊示意圖。其中有一條的<br>規畫目的，除可降低從波斯灣運石油至中國須經<br>印尼、馬來西亞間海峽及南海的風險外，也兼具促<br>進中國西部地區與西亞、南亞國家的能源和貿易<br>往來，此經濟走廊最可能為圖中何者？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q37_1.jpeg" alt="題號 37 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲</div><div class="q-opt"><span class="opt-label">(B)</span> 乙</div><div class="q-opt"><span class="opt-label">(C)</span> 丙</div><div class="q-opt"><span class="opt-label">(D)</span> 丁</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">38</span>
+      <div class="q-stem">「自來水管在租界內埋設，沿街每十數步設置四尺高的吸水鐵桶，鐵桶下面與水管連接，使用時將<br>鐵桶上的機關轉開，水就會激射而下。自來水管理單位有兩處，法國租界的管理處設在萬安里，英<br>國租界的管理處就設在儲水的水塔旁邊。管線外需要用水的居民也可以請水夫外送，不論遠近，每<br>擔水都收十文錢。」上述最可能是描寫下列何者的情形？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q38_1.jpeg" alt="題號 38 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 十八世紀初的北京</div><div class="q-opt"><span class="opt-label">(B)</span> 十八世紀末的廣州</div><div class="q-opt"><span class="opt-label">(C)</span> 十九世紀初的廈門</div><div class="q-opt"><span class="opt-label">(D)</span> 十九世紀末的上海</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">39</span>
+      <div class="q-stem">藍蟹原產於美洲，因國際貿易蓬勃發展，透過船舶的壓艙水被帶往地中海，由於該地氣候適宜生長<br>又缺乏天敵，藍蟹數量大幅增加，而使原生物種的生存空間受到擠壓。在法國 地中海沿岸，藍蟹已<br>成為常被捕捉到的漁獲，但這項食材在該國的食用者很少，使漁民生計受到衝擊；反觀北非 突尼西<br>亞，在原本漁獲減少的情況下，漁民轉而捕捉藍蟹販售，結果獲得不錯的收入。上述關於二國漁民<br>處境的內容，其所探討的主題最可能為下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q39_1.jpeg" alt="題號 39 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 漁民如何在市場競爭中受惠</div><div class="q-opt"><span class="opt-label">(B)</span> 漁民如何應對外來文化的衝擊</div><div class="q-opt"><span class="opt-label">(C)</span> 全球化現象如何影響漁民的生活</div><div class="q-opt"><span class="opt-label">(D)</span> 資訊科技發展如何便利漁民的生活</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">40</span>
+      <div class="q-stem">我國某地方法院在一段時間內的刑事案件判決件數，以及其中屬於非告訴<br>乃論刑事案件判決的件數，如圖(二十二)。當地調解委員會在同一段時間<br>內，也順利調解了許多刑事案件。若上述調解成立的案件，當初都沒能調<br>解成功，且這些案件皆改由該地方法院作出判決，則關於圖中甲、乙線段<br>的位置，下列何種變化最可能發生？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q40_1.jpeg" alt="題號 40 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲線段上移，乙線段上移</div><div class="q-opt"><span class="opt-label">(B)</span> 甲線段上移，乙線段不變</div><div class="q-opt"><span class="opt-label">(C)</span> 甲線段下移，乙線段上移</div><div class="q-opt"><span class="opt-label">(D)</span> 甲線段下移，乙線段不變</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 21 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 37 ～ 40 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 37 題 【正確答案：(C)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 55.6%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.6</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 38 題 【正確答案：(D)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 52.8%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 39 題 【正確答案：(C)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 50.9%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 40 題 【正確答案：(B)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 42.3%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.4</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 22 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 41 ～ 44 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">41</span>
+      <div class="q-stem">英國的英格蘭足球超級聯賽，在最接近11 月11 日的比賽日，會舉辦紀念活動：比賽前由軍人、球<br>員與觀眾一起進行默哀儀式，各隊球衣上印有紅花圖案，其餘參與者也在衣服上別著紅花。這是因<br>為英國及其殖民地為紀念第一次世界大戰犧牲將士，將11 月11 日訂為紀念日，許多殖民地在獨<br>立後，仍保留此節日。根據上文，下列何者最可能保有同樣的紀念活動？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 澳洲職業足球聯賽</div><div class="q-opt"><span class="opt-label">(B)</span> 巴西足球甲級聯賽</div><div class="q-opt"><span class="opt-label">(C)</span> 荷蘭足球甲級聯賽</div><div class="q-opt"><span class="opt-label">(D)</span> 韓國職業足球聯賽</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">42</span>
+      <div class="q-stem">1970 年11 月恆河出海口附近出現一座長3.5 公里、寬3 公里，最高點僅2 公尺的沙洲島，因其位<br>處印度與孟加拉領海交界處，引發兩國領土爭議，但在爭議還未解決之前，這座島嶼就消失了。根<br>據當地自然環境判斷，該島嶼形成的原因最可能是下列何者？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 位處板塊接觸帶，海底火山噴發</div><div class="q-opt"><span class="opt-label">(B)</span> 恆河集水區的水土保持持續改善</div><div class="q-opt"><span class="opt-label">(C)</span> 恆河河口附近的海平面持續上升</div><div class="q-opt"><span class="opt-label">(D)</span> 豪雨侵襲，河流帶來大量堆積物</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">43</span>
+      <div class="q-stem">表(六)為臺灣某時期四個主要港口，每十年的輸出額總和。根據表中資料，下列何者的推論最恰當？</div>
+    </div>
+    <div class="q-img"><img src="images/society_q43_1.jpeg" alt="題號 43 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 打狗港的輸出額變化，可能受到殖民母國對糖業的資本挹注影響</div><div class="q-opt"><span class="opt-label">(B)</span> 由於基隆離日本較近，其港口對殖民母國的輸出額占比較南部多</div><div class="q-opt"><span class="opt-label">(C)</span> 表中各港口占臺灣對外輸出額比重，與十八世紀後期的情況相仿</div><div class="q-opt"><span class="opt-label">(D)</span> 表中各港口輸出額的變動，應與當時的統治者推動十大建設有關</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">44</span>
+      <div class="q-stem">文中巫童悲劇的發生，主要反映出下列何種現象？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 文化的差異形成文化位階</div><div class="q-opt"><span class="opt-label">(B)</span> 法律的強制力高於宗教信仰</div><div class="q-opt"><span class="opt-label">(C)</span> 民眾行為會受到社會規範影響</div><div class="q-opt"><span class="opt-label">(D)</span> 公共意見是經由反覆辯論而形成</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 23 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 41 ～ 44 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 41 題 【正確答案：(A)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 63.8%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 42 題 【正確答案：(D)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 51.3%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 43 題 【正確答案：(A)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 59.0%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.54</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 44 題 【正確答案：(C)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 58.9%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 24 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 45 ～ 48 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">45</span>
+      <div class="q-stem">文中關於巫童所受待遇的描述，最能凸顯下列何者的重要性？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 基本人權應受到普遍性的保障</div><div class="q-opt"><span class="opt-label">(B)</span> 公權力的行使應受到法律約束</div><div class="q-opt"><span class="opt-label">(C)</span> 自由信仰宗教的權利應受法律保障</div><div class="q-opt"><span class="opt-label">(D)</span> 政府的權力應相互制衡以避免濫權</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">46</span>
+      <div class="q-stem">根據文中第一段內容判斷，相較於電動機車，部分民眾喜愛使用電動自行車的原因，最可能為下列<br>何者？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 該產品的市場競爭程度日漸提升</div><div class="q-opt"><span class="opt-label">(B)</span> 選擇使用該項產品的機會成本較低</div><div class="q-opt"><span class="opt-label">(C)</span> 受匯率變化影響，產品販售價格調降</div><div class="q-opt"><span class="opt-label">(D)</span> 負向誘因增加，民眾使用產品意願提高</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">47</span>
+      <div class="q-stem">文中政府於2022 年4 月所做的變革，其過程須經下列哪一程序？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 公民投票複決</div><div class="q-opt"><span class="opt-label">(B)</span> 憲法法庭審理</div><div class="q-opt"><span class="opt-label">(C)</span> 行政機關移請覆議</div><div class="q-opt"><span class="opt-label">(D)</span> 中央立法機關通過</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">48</span>
+      <div class="q-stem">根據文中內容判斷，在修正規定施行前已持有微型電動二輪車者，關於其領用車牌的敘述，下列何<br>者最適當？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 最晚要在2024 年5 月3 日領用車牌，以免遭受行政處罰</div><div class="q-opt"><span class="opt-label">(B)</span> 最晚要在2024 年5 月3 日領用車牌，以免遭受刑事處罰</div><div class="q-opt"><span class="opt-label">(C)</span> 最晚要在2024 年11 月29 日領用車牌，以免遭受行政處罰</div><div class="q-opt"><span class="opt-label">(D)</span> 最晚要在2024 年11 月29 日領用車牌，以免遭受刑事處罰</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 25 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 45 ～ 48 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 45 題 【正確答案：(A)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 83.5%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.53</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 46 題 【正確答案：(B)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 75.9%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 47 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 70.5%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 48 題 【正確答案：(C)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 72.9%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 26 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 49 ～ 52 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">49</span>
+      <div class="q-stem">根據上文及觀察圖(二十三)中不同年分各州眾議員席次的變化情形，可以推論美國人口在這段期間<br>有下列何項變動？</div>
+    </div>
+    <div class="q-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題號 49 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 南部州人口成長速度較東北部的州快</div><div class="q-opt"><span class="opt-label">(B)</span> 美國各州持續呈現人口負成長的狀態</div><div class="q-opt"><span class="opt-label">(C)</span> 加州因國際移民眾多而人口成長加快</div><div class="q-opt"><span class="opt-label">(D)</span> 禁止移民的政策主導德州人口的變化</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">50</span>
+      <div class="q-stem">影響美國各州人口多寡的因素眾多且不相同，觀察圖(二十三)中2020 年眾議院席次僅有1 席的州，<br>下列何者與這些州人口少的原因較無關聯？</div>
+    </div>
+    <div class="q-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題號 50 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 地形崎嶇</div><div class="q-opt"><span class="opt-label">(B)</span> 工業就業機會少</div><div class="q-opt"><span class="opt-label">(C)</span> 位居高緯且氣候嚴寒</div><div class="q-opt"><span class="opt-label">(D)</span> 深受殖民地式經濟影響</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">51</span>
+      <div class="q-stem">根據上文並參考圖(二十四)臺灣人口分布狀況，下列關於各行政區立委<br>席次分配的說明何者正確？</div>
+    </div>
+    <div class="q-img"><img src="images/society_passage_q49_q51_1.jpeg" alt="題號 51 附圖"></div>
+<div class="q-img"><img src="images/society_q51_1.jpeg" alt="題號 51 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 屏東縣區域立委席次少於臺東縣</div><div class="q-opt"><span class="opt-label">(B)</span> 新北市區域立委席次多於宜蘭縣</div><div class="q-opt"><span class="opt-label">(C)</span> 彰化縣區域立委席次為全臺最少</div><div class="q-opt"><span class="opt-label">(D)</span> 臺南市區域立委席次為全臺最多</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">52</span>
+      <div class="q-stem">根據上文，「新電影」出現之前的戰後臺灣電影，最不可能播映下列何種劇情？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 中國 明朝年間，來自各路的武功高手在龍門客棧展開激烈戰鬥</div><div class="q-opt"><span class="opt-label">(B)</span> 國軍將領對抗日軍時陣亡，蔣中正題字「英烈千秋」表示悼念</div><div class="q-opt"><span class="opt-label">(C)</span> 男主角與豪門望族的女兒產生戀情，並捲入家族間的恩怨情仇</div><div class="q-opt"><span class="opt-label">(D)</span> 主角因二二八事件遭到軍警處決，留下妻小長期受到政府監視</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 27 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 49 ～ 52 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 49 題 【正確答案：(A)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 70.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 50 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 63.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 51 題 【正確答案：(B)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 84.5%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.51</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 52 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 60.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 28 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 53 ～ 54 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">53</span>
+      <div class="q-stem">根據上文，「新電影」發展之初，最可能以下列何者作為電影題材？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 宣揚政府推行南進政策所帶來的經濟成就</div><div class="q-opt"><span class="opt-label">(B)</span> 關注一般農民、勞工等小人物生活中的困頓</div><div class="q-opt"><span class="opt-label">(C)</span> 受到美援影響，將美國流行文化作為劇情主軸</div><div class="q-opt"><span class="opt-label">(D)</span> 重視原住民文化，發揚原住民族音樂與神話傳說</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">54</span>
+      <div class="q-stem">上文「削蘋果事件」中，國家企圖限制的人民權利類型，與下列何者最相似？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 對法庭上的被告宣告褫奪公權</div><div class="q-opt"><span class="opt-label">(B)</span> 剝奪貪污罪犯應考公職的資格</div><div class="q-opt"><span class="opt-label">(C)</span> 禁止過度血腥暴力影像的出版</div><div class="q-opt"><span class="opt-label">(D)</span> 要求外國旅客入境應接受審查</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 29 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 53 ～ 54 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 53 題 【正確答案：(B)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 65.6%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 54 題 【正確答案：(C)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 58.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">權利義務與法理位階法：憲法 > 法律 > 命令；五院職權與地方自治權責精確分類。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆立法院質詢、彈劾、糾正（監察院）與釋憲（司法院憲法法庭）之職權分工。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>113年國中教育會考・社會科實戰講義</span>
+    <span>第 30 頁（名師解析）</span>
+  </div>
+</div>
+
+<!-- 封底 -->
+<div class="page">
+  <div class="cover-container" style="border-style: solid; border-color: #2b4c7e; justify-content: flex-start; padding-top: 30px;">
+    <div class="cover-badge" style="background: #2b4c7e;">★ 考前衝刺・名師最後叮嚀 ★</div>
+    <div class="cover-title" style="font-size: 22pt;">社會科【衝 A 臨場 4 大保命守則】</div>
+    
+    <div class="cover-box" style="margin-top: 15px; font-size: 9.5pt; line-height: 1.8;">
+      1. <strong>字斟句酌圈題眼</strong>：題幹中的「何者非」、「依據本文」、「唯一改變條件」務必用筆重重圈起！<br>
+      2. <strong>圖表橫縱軸先看清</strong>：圖表永遠是考題的心臟，看清單位（公尺/公里、秒/小時）才不會白白失分。<br>
+      3. <strong>卡題 60 秒果斷跳過</strong>：會考是算總分而非拼單題，先將能穩拿的分數全部放進口袋！<br>
+      4. <strong>相信第一直覺與常理</strong>：極端絕對的選項往往是陷阱，冷靜回歸基礎概念即可迎刃而解。
+    </div>
+
+    <div style="width: 100%; max-width: 150mm; margin-top: 25px; text-align: left;">
+      <h3 style="color: #2b4c7e; border-bottom: 2px solid #bee3f8; padding-bottom: 4px; font-size: 11pt;">📋 我的會考社會衝 A 自我檢核清單</h3>
+      <div style="font-size: 9pt; line-height: 2.2; color: #334e68;">
+        <label><input type="checkbox"> 我已確實訂正本講義中所有的「衝A勝負題」與「高鑑別挑戰題」</label><br>
+        <label><input type="checkbox"> 我能用自己的話向同學解釋本卷中 3 道最容易失分的題目</label><br>
+        <label><input type="checkbox"> 我已掌握每單元名師秒殺招，不再盲目耗費過多時間運算</label><br>
+        <label><input type="checkbox"> 我已準備好以沉著自信的狀態迎戰國中教育會考！</label>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 31 頁（封底）</span>
+  </div>
+</div>
+</body>
+</html>

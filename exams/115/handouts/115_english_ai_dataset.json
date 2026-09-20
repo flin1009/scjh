@@ -1,0 +1,824 @@
+{
+  "year": 115,
+  "subject": "英語",
+  "total_questions": 43,
+  "questions": [
+    {
+      "num": 1,
+      "topic": "用圖表表徵文意（單題）",
+      "content_code": "B-Ⅳ-6",
+      "pass_rate": 0.7013,
+      "discrimination": 0.58,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "Look at the picture. All of the students who are exercising are wearing _____.",
+      "options": {
+        "A": "caps",
+        "B": "glasses",
+        "C": "jackets",
+        "D": "pants"
+      },
+      "answer": "B",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 2,
+      "topic": "指出適合句中的單字或片語（單題）",
+      "content_code": "Ac-Ⅳ-4",
+      "pass_rate": 0.7373,
+      "discrimination": 0.65,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "Rita _____ her dogs many times a day. That’s why they’re too fat.",
+      "options": {
+        "A": "feeds",
+        "B": "kisses",
+        "C": "walks",
+        "D": "washes"
+      },
+      "answer": "A",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 3,
+      "topic": "指出適合句中的單字或片語（單題）",
+      "content_code": "Ac-Ⅳ-4",
+      "pass_rate": 0.7639,
+      "discrimination": 0.65,
+      "stars": "★☆☆☆",
+      "category": "穩賺基本盤",
+      "stem": "You can ask Sophia anything about butterflies and bees. She has great _____ of insects.",
+      "options": {
+        "A": "chances",
+        "B": "knowledge",
+        "C": "news",
+        "D": "power"
+      },
+      "answer": "B",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 4,
+      "topic": "指出適合句中的單字或片語（單題）",
+      "content_code": "Ac-Ⅳ-4",
+      "pass_rate": 0.706,
+      "discrimination": 0.67,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "Adam slept _____ last night because he kept waking up from bad dreams.",
+      "options": {
+        "A": "deeply",
+        "B": "early",
+        "C": "terribly",
+        "D": "quickly"
+      },
+      "answer": "C",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 5,
+      "topic": "指出適合句中的單字或片語（單題）",
+      "content_code": "Ac-Ⅳ-4",
+      "pass_rate": 0.5492,
+      "discrimination": 0.57,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "Tara enjoys being with all kinds of animals; she even _____ a snake as a pet.",
+      "options": {
+        "A": "drops",
+        "B": "gives",
+        "C": "keeps",
+        "D": "makes"
+      },
+      "answer": "C",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 6,
+      "topic": "指出適合句中的單字或片語（單題）",
+      "content_code": "Ac-Ⅳ-4",
+      "pass_rate": 0.7064,
+      "discrimination": 0.62,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "Little Eric chose the doll _____ big brown eyes because it was the cutest in the store.",
+      "options": {
+        "A": "at",
+        "B": "in",
+        "C": "on",
+        "D": "with"
+      },
+      "answer": "D",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 7,
+      "topic": "指出適合句中的單字或片語（單題）",
+      "content_code": "Ac-Ⅳ-4",
+      "pass_rate": 0.5998,
+      "discrimination": 0.65,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "After four hours of mountain climbing, Rosa’s legs got _____, so she took a rest on the top of the \nmountain.",
+      "options": {
+        "A": "dirty",
+        "B": "sick",
+        "C": "sore",
+        "D": "strong"
+      },
+      "answer": "C",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 8,
+      "topic": "指出句中正確的文法（單題）",
+      "content_code": "Ad-Ⅳ-1",
+      "pass_rate": 0.5252,
+      "discrimination": 0.51,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "Having three cups of coffee a day can’t be bad for our health, _____?",
+      "options": {
+        "A": "can it",
+        "B": "can they",
+        "C": "is it",
+        "D": "are they"
+      },
+      "answer": "A",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 9,
+      "topic": "指出句中正確的文法（單題）",
+      "content_code": "Ad-Ⅳ-1",
+      "pass_rate": 0.672,
+      "discrimination": 0.65,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "You can’t push that door open with only one hand. It’s too heavy. You have to use _____!",
+      "options": {
+        "A": "all",
+        "B": "another",
+        "C": "both",
+        "D": "one"
+      },
+      "answer": "C",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 10,
+      "topic": "指出適合句中的單字或片語（單題）",
+      "content_code": "Ac-Ⅳ-4",
+      "pass_rate": 0.6037,
+      "discrimination": 0.65,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "Alan works hard in his new job, and he wants to know _____ his boss feels about him.",
+      "options": {
+        "A": "how",
+        "B": "that",
+        "C": "whether",
+        "D": "why"
+      },
+      "answer": "A",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 11,
+      "topic": "指出句中正確的文法（單題）",
+      "content_code": "Ad-Ⅳ-1",
+      "pass_rate": 0.7006,
+      "discrimination": 0.63,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "I thought the girl _____ was Kate, but it was her sister, Candy. They sounded almost the same.",
+      "options": {
+        "A": "answered the phone",
+        "B": "she answered the phone",
+        "C": "who answered the phone",
+        "D": "and answered the phone"
+      },
+      "answer": "C",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 12,
+      "topic": "指出句中正確的文法（單題）",
+      "content_code": "Ad-Ⅳ-1",
+      "pass_rate": 0.5015,
+      "discrimination": 0.58,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "Ken is going abroad with a woman he met online, though he doesn’t know _____ well.",
+      "options": {
+        "A": "her",
+        "B": "each other",
+        "C": "any",
+        "D": "another"
+      },
+      "answer": "A",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 13,
+      "topic": "指出適合句中的單字或片語（單題）",
+      "content_code": "Ac-Ⅳ-4",
+      "pass_rate": 0.5593,
+      "discrimination": 0.62,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "Joe is happy he is not at the _____ of the class now. His grades are better than half of his classmates’ \nthis school year.",
+      "options": {
+        "A": "side",
+        "B": "front",
+        "C": "center",
+        "D": "bottom"
+      },
+      "answer": "D",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 14,
+      "topic": "指出適合句中的單字或片語（單題）",
+      "content_code": "Ac-Ⅳ-4",
+      "pass_rate": 0.5182,
+      "discrimination": 0.6,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "Look! There is not a cloud in the sky. I think the chances of getting some rain today are really _____.",
+      "options": {
+        "A": "far",
+        "B": "good",
+        "C": "possible",
+        "D": "small"
+      },
+      "answer": "D",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 15,
+      "topic": "指出適合句中的單字或片語（單題）",
+      "content_code": "Ac-Ⅳ-4",
+      "pass_rate": 0.3817,
+      "discrimination": 0.44,
+      "stars": "★★★★",
+      "category": "高鑑別挑戰題",
+      "stem": "On windy days, the flowers in my garden _____ like shy children with their heads down.",
+      "options": {
+        "A": "bow",
+        "B": "fall",
+        "C": "rise",
+        "D": "smell"
+      },
+      "answer": "A",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 16,
+      "topic": "指出句中正確的文法（單題）",
+      "content_code": "Ad-Ⅳ-1",
+      "pass_rate": 0.5834,
+      "discrimination": 0.43,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "Mr. Olson went to the doctor when he found he _____ his hair. He hoped he would be able to keep his \nthick hair.",
+      "options": {
+        "A": "was losing",
+        "B": "is losing",
+        "C": "will lose",
+        "D": "has lost"
+      },
+      "answer": "A",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 17,
+      "topic": "指出句中正確的文法（單題）",
+      "content_code": "Ad-Ⅳ-1",
+      "pass_rate": 0.5355,
+      "discrimination": 0.58,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "Do you know what Lindsey’s first job was? Before becoming a movie star, she _____ the floors at the \nsupermarket.",
+      "options": {
+        "A": "mops",
+        "B": "is mopping",
+        "C": "has mopped",
+        "D": "mopped"
+      },
+      "answer": "D",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 18,
+      "topic": "指出適合句中的單字或片語（單題）",
+      "content_code": "Ac-Ⅳ-4",
+      "pass_rate": 0.4402,
+      "discrimination": 0.35,
+      "stars": "★★★★",
+      "category": "高鑑別挑戰題",
+      "stem": "Our dog Lassie hides under the bed every time the moon comes out. She has been _____ for years, but \nwe don’t know why.",
+      "options": {
+        "A": "it",
+        "B": "like this",
+        "C": "like us",
+        "D": "that"
+      },
+      "answer": "B",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 19,
+      "topic": "指出句中正確的文法（單題）",
+      "content_code": "Ad-Ⅳ-1",
+      "pass_rate": 0.7326,
+      "discrimination": 0.65,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "Tom: Sam, could you help me in the kitchen now? \nSam: No, I _____ TV. It’s the most important game of the season.",
+      "options": {
+        "A": "watch",
+        "B": "watched",
+        "C": "have watched",
+        "D": "am watching"
+      },
+      "answer": "D",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 20,
+      "topic": "找出已明確敘述的細節",
+      "content_code": "Ae-Ⅳ-5",
+      "pass_rate": 0.8189,
+      "discrimination": 0.57,
+      "stars": "★☆☆☆",
+      "category": "穩賺基本盤",
+      "stem": "Amanda wants to make fruit tea by following The Best Fruit Tea You Can Make at Home. She has \nseveral kinds of fruit in the kitchen: apples, bananas, oranges, papayas, pears, and strawberries. Which \nare some of the fruits she can use to make the fruit tea?",
+      "options": {
+        "A": "Oranges, papayas and pears.",
+        "B": "Apples, bananas and oranges.",
+        "C": "Apples, oranges and strawberries.",
+        "D": "Bananas, papayas and strawberries."
+      },
+      "answer": "C",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 21,
+      "topic": "找出已明確敘述的細節",
+      "content_code": "Ae-Ⅳ-5",
+      "pass_rate": 0.6172,
+      "discrimination": 0.41,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "According to the reading, which is correct when we make the fruit tea?",
+      "options": {
+        "A": "Boiling water with sugar in it.",
+        "B": "Making sure to take out the fruit.",
+        "C": "Putting in the fruit and the lemon juice at the same time.",
+        "D": "Leaving the teabags in the pot of hot water for 2 to 3 minutes."
+      },
+      "answer": "D",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 22,
+      "topic": "推論文中隱含的訊息",
+      "content_code": "Ae-Ⅳ-6",
+      "pass_rate": 0.7334,
+      "discrimination": 0.66,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "According to the comics, what kind of person is Hawkins?",
+      "options": {
+        "A": "He sees good things in people.",
+        "B": "He never goes to work on time.",
+        "C": "He blindly follows other people.",
+        "D": "He talks about things he can’t do."
+      },
+      "answer": "D",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 23,
+      "topic": "根據上下文意猜測字詞的意義",
+      "content_code": "Ae-Ⅳ-6",
+      "pass_rate": 0.7107,
+      "discrimination": 0.66,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "What does it mean when we say someone bombed something?",
+      "options": {
+        "A": "They gave it up.",
+        "B": "They failed at it.",
+        "C": "They were fine with it.",
+        "D": "They were careful about it."
+      },
+      "answer": "B",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 24,
+      "topic": "找出已明確敘述的細節",
+      "content_code": "Ae-Ⅳ-2",
+      "pass_rate": 0.681,
+      "discrimination": 0.66,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "Which question can the brochure answer?",
+      "options": {
+        "A": "Can I order tickets online?",
+        "B": "How much are the tickets?",
+        "C": "How can I get to the Marigolds’ Home?",
+        "D": "When can I visit the Marigolds’ Home?"
+      },
+      "answer": "D",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 25,
+      "topic": "找出已明確敘述的細節",
+      "content_code": "Ae-Ⅳ-2",
+      "pass_rate": 0.4952,
+      "discrimination": 0.61,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "What breaks the rules for visitors to the Marigolds’ Home?",
+      "options": {
+        "A": "Eating burgers in the Rose Garden.",
+        "B": "Taking pictures in the Main House.",
+        "C": "Entering the Rabbit’s Temple without shoes.",
+        "D": "Taking pet dogs for a walk on the playground."
+      },
+      "answer": "D",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 26,
+      "topic": "在圖表中找出所需的資訊",
+      "content_code": "Ae-Ⅳ-2",
+      "pass_rate": 0.6553,
+      "discrimination": 0.62,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "After shopping at the gift shop of the Main House, Lizzy walks out and sees the Family Library in front \nof her. She wants to visit the Rose Garden. How can she get there?",
+      "options": {
+        "A": "Turn left and walk past the Main House, then go straight and turn right at the corner.",
+        "B": "Turn left and walk past Sir Archie’s House, then turn right and walk past the Main House.",
+        "C": "Turn right and go straight to the Farmyard, then turn right and go straight, then turn left at the  corner.",
+        "D": "Turn right and walk through the Butterfly Garden, then walk past the Rabbit’s Temple and the café."
+      },
+      "answer": "C",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 27,
+      "topic": "指出內容的主旨",
+      "content_code": "Ae-Ⅳ-8",
+      "pass_rate": 0.5901,
+      "discrimination": 0.61,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "Why was Beatrice Harrison called the Nightingale Lady?",
+      "options": {
+        "A": "She wrote songs about nightingales.",
+        "B": "She sang as beautifully as a nightingale did.",
+        "C": "She taught nightingales to sing in a radio show.",
+        "D": "She was famous for playing music with nightingales."
+      },
+      "answer": "D",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 28,
+      "topic": "掌握上下文意了解文章中的句法連貫：代詞指涉",
+      "content_code": "Ae-Ⅳ-5",
+      "pass_rate": 0.5975,
+      "discrimination": 0.55,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "Which is NOT used in the reading to mean the nightingale(s)?",
+      "options": {
+        "A": "Her visitor.",
+        "B": "The little singers.",
+        "C": "The artist.",
+        "D": "Her garden friends."
+      },
+      "answer": "C",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 29,
+      "topic": "指出內容的主旨",
+      "content_code": "Ae-Ⅳ-5",
+      "pass_rate": 0.6445,
+      "discrimination": 0.71,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "Why does Alex Jackson write about Rose Lacey?",
+      "options": {
+        "A": "Because she died.",
+        "B": "Because she is very sick.",
+        "C": "Because she is moving away.",
+        "D": "Because she is leaving for another job."
+      },
+      "answer": "A",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 30,
+      "topic": "找出已明確敘述的細節",
+      "content_code": "Ae-Ⅳ-5",
+      "pass_rate": 0.67,
+      "discrimination": 0.67,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "How did Rose Lacey and Alex Jackson get to know each other?",
+      "options": {
+        "A": "They met at a party.",
+        "B": "They were relatives.",
+        "C": "They worked in the same office.",
+        "D": "They took a course on movies together."
+      },
+      "answer": "A",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 31,
+      "topic": "推論文中隱含的訊息",
+      "content_code": "Ae-Ⅳ-5",
+      "pass_rate": 0.5331,
+      "discrimination": 0.6,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "What is special about Rose Lacey’s articles?",
+      "options": {
+        "A": "They are important to movie makers.",
+        "B": "They talk about movies from a fresh angle.",
+        "C": "They give interesting information about actors.",
+        "D": "They are good examples of how to write stories."
+      },
+      "answer": "B",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 32,
+      "topic": "指出內容的主旨",
+      "content_code": "Ae-Ⅳ-2",
+      "pass_rate": 0.6536,
+      "discrimination": 0.66,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "Why does the title say “Glass Bottles’ Second Life”?",
+      "options": {
+        "A": "People collect sea glass and use it to make new glass bottles.",
+        "B": "People collect sea glass at the beach and use it to make wishes.",
+        "C": "Glass bottles that are thrown into the sea become the homes of sea animals.",
+        "D": "Glass bottles that are thrown into the sea become sea glass which is used in art pieces."
+      },
+      "answer": "D",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 33,
+      "topic": "在圖表中找出所需的資訊",
+      "content_code": "Ae-Ⅳ-2",
+      "pass_rate": 0.5774,
+      "discrimination": 0.56,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "According to the reading, how is sea glass made?",
+      "options": {
+        "A": "Sea glass becomes rounder after it is pushed up to the beach.",
+        "B": "Colder sea water helps pieces of glass become sea glass faster.",
+        "C": "Pieces of glass become white on the outside after many years in the sea.",
+        "D": "Glass bottles break into pieces when they are dug out from the sea floor."
+      },
+      "answer": "C",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 34,
+      "topic": "推論文中隱含的訊息",
+      "content_code": "Ae-Ⅳ-2",
+      "pass_rate": 0.5514,
+      "discrimination": 0.67,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "According to the reading, why will less sea glass be found in the future?",
+      "options": {
+        "A": "People do not make as many glass items as before.",
+        "B": "People have learned not to throw garbage into the sea.",
+        "C": "Artists are using too much sea glass in their art pieces.",
+        "D": "Waves are not big enough to push sea glass up to the beach."
+      },
+      "answer": "A",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 35,
+      "topic": "根據上下文意猜測字詞的意義",
+      "content_code": "Ae-Ⅳ-5",
+      "pass_rate": 0.6292,
+      "discrimination": 0.69,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "What does the prevalence of English mean?",
+      "options": {
+        "A": "That English is very common.",
+        "B": "That English is not welcomed.",
+        "C": "That English is easy and simple.",
+        "D": "That English is not a national language."
+      },
+      "answer": "A",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 36,
+      "topic": "指出作者的目的或態度",
+      "content_code": "Ae-Ⅳ-7",
+      "pass_rate": 0.4646,
+      "discrimination": 0.52,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "In the first reading, which is one of the ways that Anna Adams uses to make readers believe in her \nideas?",
+      "options": {
+        "A": "Sharing her own life stories.",
+        "B": "Borrowing from people’s experience.",
+        "C": "Using examples from another language.",
+        "D": "Showing information from news reports."
+      },
+      "answer": "B",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 37,
+      "topic": "掌握上下文意了解文章中的句法連貫：代詞指涉",
+      "content_code": "Ae-Ⅳ-5",
+      "pass_rate": 0.5022,
+      "discrimination": 0.53,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "Which words in the second reading are NOT used to describe Icelandic?",
+      "options": {
+        "A": "A language in its sickbed.",
+        "B": "A dying language.",
+        "C": "Our first language.",
+        "D": "This beautiful language."
+      },
+      "answer": "B",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 38,
+      "topic": "指出作者的目的或態度",
+      "content_code": "Ae-Ⅳ-7",
+      "pass_rate": 0.559,
+      "discrimination": 0.53,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "Are Anna Adams and Gunnar Eggertsson worried about the future of Icelandic?",
+      "options": {
+        "A": "No, they are not.",
+        "B": "Yes, they both are.",
+        "C": "Adams is, but Eggertsson is not.",
+        "D": "Adams is not, but Eggertsson is."
+      },
+      "answer": "C",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 39,
+      "topic": "推論文中隱含的訊息",
+      "content_code": "Ae-Ⅳ-7",
+      "pass_rate": 0.4801,
+      "discrimination": 0.53,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "Which idea do Anna Adams and Gunnar Eggertsson both talk about in the readings?",
+      "options": {
+        "A": "Whether Icelanders speak better English than Icelandic.",
+        "B": "Whether the number of Icelandic speakers is big enough.",
+        "C": "Whether school subjects should be taught only in Icelandic.",
+        "D": "Whether Iceland should allow more foreigners to work in Iceland."
+      },
+      "answer": "B",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 40,
+      "topic": "根據上下文辨認符合文意的字句（克漏字）",
+      "content_code": "Ae-Ⅳ-6",
+      "pass_rate": 0.6818,
+      "discrimination": 0.66,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "",
+      "options": {
+        "A": "give you a piece of good land",
+        "B": "choose a person to be the next king",
+        "C": "put the beautiful ones in my castle",
+        "D": "decide who will work in my garden"
+      },
+      "answer": "B",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 41,
+      "topic": "根據上下文辨認符合文意的字句（克漏字）",
+      "content_code": "Ae-Ⅳ-6",
+      "pass_rate": 0.5826,
+      "discrimination": 0.65,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "",
+      "options": {
+        "A": "But he lost his pot a few weeks later",
+        "B": "Months passed but nothing grew from it",
+        "C": "But soon the plant that grew from it died",
+        "D": "The seed grew into a big tree in a short time"
+      },
+      "answer": "B",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 42,
+      "topic": "根據上下文辨認符合文意的字句（克漏字）",
+      "content_code": "Ae-Ⅳ-6",
+      "pass_rate": 0.491,
+      "discrimination": 0.54,
+      "stars": "★★★☆",
+      "category": "衝A勝負題",
+      "stem": "",
+      "options": {
+        "A": "the last one to give up",
+        "B": "the first one to share good news",
+        "C": "the first one to bring his pot to the king",
+        "D": "the only one to take good care of his plant"
+      },
+      "answer": "B",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    },
+    {
+      "num": 43,
+      "topic": "根據上下文辨認符合文意的字句（克漏字）",
+      "content_code": "Ae-Ⅳ-6",
+      "pass_rate": 0.6085,
+      "discrimination": 0.66,
+      "stars": "★★☆☆",
+      "category": "進階核心題",
+      "stem": "",
+      "options": {
+        "A": "wise",
+        "B": "strong",
+        "C": "honest",
+        "D": "popular"
+      },
+      "answer": "C",
+      "fast_technique": "關鍵字句定位法：先掃讀題目問句，鎖定特定名詞、時間、地點，回原文定位同義改寫句。",
+      "trap_5b": "被生詞干擾而反覆糾結，忽略上下文明確的情境線索與轉折連詞（however, although）。"
+    }
+  ]
+}

@@ -1,0 +1,2972 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>114年國中教育會考【自然科】5B逆襲衝A實戰講義（A4左右對開版）</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; break-after: page; }
+    .no-break { page-break-inside: avoid; break-inside: avoid; }
+    .no-print, .floating-nav { display: none !important; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color: #243342;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6f8;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 12px auto;
+    padding: 12mm 15mm;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; width: 100%; min-height: 100vh; padding: 10mm 12mm; border-radius: 0; }
+  }
+  
+  /* Floating Nav */
+  @media screen {
+    .floating-nav {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.96);
+      padding: 8px 14px;
+      border-radius: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      border: 1px solid #cbd8e6;
+      backdrop-filter: blur(6px);
+    }
+    .nav-btn {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b4c7e;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #f0f4f9;
+      border: 1px solid #cbd8e6;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-btn:hover {
+      background: #2b4c7e;
+      color: #ffffff;
+    }
+    .btn-print {
+      background: #2b4c7e;
+      color: #ffffff;
+      border: none;
+    }
+    .btn-print:hover {
+      background: #1c3559;
+    }
+  }
+
+  /* Header & Footer */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #cbd8e6;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #486581;
+  }
+  .page-footer {
+    position: absolute;
+    bottom: 8mm;
+    left: 15mm;
+    right: 15mm;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 4px;
+    font-size: 8pt;
+    color: #829ab1;
+  }
+
+  /* Question items */
+  .q-item {
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed #e2e8f0;
+  }
+  .q-item:last-child {
+    border-bottom: none;
+  }
+  .q-head {
+    display: flex;
+    gap: 8px;
+    font-size: 8.5pt;
+    margin-bottom: 4px;
+  }
+  .q-num {
+    font-weight: 800;
+    color: #2b4c7e;
+    background: #eef3f9;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 8pt;
+    flex-shrink: 0;
+  }
+  .q-stem {
+    flex-grow: 1;
+    line-height: 1.45;
+  }
+  .q-img {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .q-img img {
+    max-width: 95%;
+    max-height: 48mm;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid #d9e2ec;
+    background: #ffffff;
+    padding: 3px;
+  }
+  .q-opts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px 10px;
+    margin-left: 30px;
+    font-size: 8pt;
+    margin-top: 4px;
+  }
+  .q-opt {
+    color: #334e68;
+  }
+  .opt-label {
+    font-weight: 700;
+    color: #2b4c7e;
+  }
+  .scratch-area {
+    margin-top: 5px;
+    height: 10mm;
+    border: 1px dashed #cbd8e6;
+    border-radius: 4px;
+    background: #fbfcfd;
+    position: relative;
+  }
+  .scratch-label {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 7pt;
+    color: #9fb3c8;
+  }
+
+  /* Card Item */
+  .card-item {
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
+    overflow: hidden;
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f4f8;
+    border-bottom: 1px solid #d9e2ec;
+    padding: 3px 8px;
+  }
+  .card-title {
+    font-weight: 800;
+    font-size: 8.5pt;
+    color: #2b4c7e;
+  }
+  .badge-stars {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #c07d32;
+    margin-left: 4px;
+  }
+  .badge-pass {
+    background: #334e68;
+    color: #ffffff;
+    font-size: 7.5pt;
+    padding: 1px 6px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .badge-cat {
+    background: #fef3e2;
+    color: #a8581e;
+    font-size: 7pt;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-left: 3px;
+    border: 1px solid #f9dab3;
+  }
+  .card-body {
+    padding: 5px 8px;
+    font-size: 8pt;
+    line-height: 1.4;
+  }
+  .tech-box {
+    background: #f2f8f4;
+    border-left: 3px solid #2d6a4f;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+  }
+  .trap-box {
+    background: #fdf5f5;
+    border-left: 3px solid #b83a3a;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+  }
+  .note-grid {
+    background: #f8fafc;
+    border-top: 1px dashed #d9e2ec;
+    padding: 3px 8px;
+    font-size: 7pt;
+    color: #486581;
+  }
+  .check-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+  .note-lines {
+    height: 6mm;
+    background: repeating-linear-gradient(#f8fafc, #f8fafc 2.8mm, #e2e8f0 2.8mm, #e2e8f0 3.0mm);
+    border-radius: 2px;
+  }
+
+  /* Cover Styles */
+  .cover-container {
+    height: 265mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #cbd8e6;
+    border-radius: 8px;
+    padding: 20mm;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  }
+  .cover-badge {
+    background: #2b4c7e;
+    color: #ffffff;
+    font-size: 11pt;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  .cover-title {
+    font-size: 26pt;
+    font-weight: 900;
+    color: #102a43;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .cover-sub {
+    font-size: 12pt;
+    font-weight: 600;
+    color: #486581;
+    margin-bottom: 25px;
+  }
+  .cover-box {
+    background: #f0f4f8;
+    border: 1px solid #cbd8e6;
+    border-radius: 6px;
+    padding: 15px 25px;
+    font-size: 9.5pt;
+    color: #243342;
+    text-align: left;
+    max-width: 150mm;
+    line-height: 1.7;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="floating-nav no-print">
+  <a href="../../../index.html" class="nav-btn">🏠 獅甲會考專區</a>
+  <a href="../index.html" class="nav-btn">📂 回本屆題庫</a>
+  <button onclick="window.print()" class="nav-btn btn-print">🖨️ 列印 A4 講義</button>
+</div>
+
+
+<!-- 封面 -->
+<div class="page">
+  <div class="cover-container">
+    <div class="cover-badge">★ 國中教育會考・5B逆襲衝A專用 ★</div>
+    <div class="cover-title">114 年國中教育會考<br>【自然科】解題破譯實戰講義</div>
+    <div class="cover-sub">全 50 題題目剖析 ✕ 名師秒殺招 ✕ 5B避坑指南 ✕ 完整題圖</div>
+    
+    <div class="cover-box">
+      <strong>🎯 自然科 5B 衝 A 核心黃金法則：</strong><br>
+      • <strong>穩賺基本盤 100% 入袋</strong>：前 40% 的基本觀念題，審題圈關鍵字，一題不漏！<br>
+      • <strong>題眼圈選秒殺招</strong>：長篇情境題先看最後問句，看清圖表橫縱座標與極端值。<br>
+      • <strong>避開 5B 典型心魔</strong>：單位換算、正負號變號、未依題目限制條件盲目作答。<br>
+      • <strong>模擬實戰計時</strong>：左頁實戰模擬，右頁名師破譯與避坑自我檢核。
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 1 頁（封面）</span>
+  </div>
+</div>
+
+<!-- 考前叮嚀與各題通過率矩陣 -->
+<div class="page">
+  <div class="page-header">
+    <span>【考前算牌矩陣】114年自然科</span>
+    <span>衝 A 門檻與命題難度落點分佈</span>
+  </div>
+  <div style="padding: 10px 5px; font-size: 8.5pt; line-height: 1.6;">
+    <h3 style="color: #2b4c7e; margin-top: 0; font-size: 11pt;">📊 命題難度星級與各題分佈矩陣</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 8pt; text-align: center;">
+      <thead>
+        <tr style="background: #eef3f9; color: #2b4c7e; border-bottom: 2px solid #cbd8e6;">
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">難度星級</th>
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">類別定位</th>
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">通過率區間</th>
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">建議應對策略</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★☆☆☆</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">穩賺基本盤</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">P ≥ 75%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">秒殺送分題，細心圈題眼，確保 100% 答對率。</td>
+        </tr>
+        <tr style="background: #fbfcfd;">
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★★☆☆</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">進階核心題</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">60% ≤ P &lt; 75%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">考查單一核心概念或圖表推論，善用公式與圖解法。</td>
+        </tr>
+        <tr>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★★★☆</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">衝A勝負題</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">45% ≤ P &lt; 60%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">跨單元整合或多步驟計算，5B 躍升 A 的關鍵戰場！</td>
+        </tr>
+        <tr style="background: #fbfcfd;">
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★★★★</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">高鑑別挑戰題</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">P &lt; 45%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">長篇閱讀素養題，先排除不可能選項，善用代入法反推。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="color: #2b4c7e; font-size: 11pt;">📋 5B 衝 A 臨場應試心法</h3>
+    <ul style="padding-left: 20px; color: #334e68; line-height: 1.8;">
+      <li><strong>答題節奏嚴格控管</strong>：先易後難，卡住超過 90 秒立即做記號跳過，全卷答完再回頭攻堅。</li>
+      <li><strong>草稿欄充分利用</strong>：左頁設計「草稿與推導區」，動筆畫圖列式比大腦空想要精準 10 倍！</li>
+      <li><strong>畫卡雙重確認</strong>：每寫完 5 題對照一次題號與答案卡，嚴防跳題劃錯格的致命悲劇。</li>
+    </ul>
+  </div>
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 2 頁（策略導航）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 1 ～ 4 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">1</span>
+      <div class="q-stem">孕婦產檢時常使用超聲波來檢查腹中胎兒的生長情形，當醫生使用超聲波進行檢查時，孕婦對超聲<br>波的聽覺感受，下列說明何者最合理？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 孕婦會聽見低沉的轟隆聲</div><div class="q-opt"><span class="opt-label">(B)</span> 孕婦會聽見尖銳刺耳的聲音</div><div class="q-opt"><span class="opt-label">(C)</span> 因頻率過高，故孕婦聽不見超聲波</div><div class="q-opt"><span class="opt-label">(D)</span> 因波速過快，故孕婦聽不見超聲波</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">2</span>
+      <div class="q-stem">小陞想以圖(一)中的裝置或器材，測量一顆形狀不規則小石頭的密度，他應選擇哪兩項來測量？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q2_1.jpeg" alt="題號 2 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲與丁</div><div class="q-opt"><span class="opt-label">(B)</span> 甲與丙</div><div class="q-opt"><span class="opt-label">(C)</span> 乙與丁</div><div class="q-opt"><span class="opt-label">(D)</span> 乙與丙</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">3</span>
+      <div class="q-stem">有報導指出：「在都市觀察到麻雀的頻率有變少的趨勢，可能的原因很多，其中之一為白尾八哥的<br>入侵。白尾八哥築巢偏好的位置與麻雀相近，食物種類也相似，甚至被觀察到會以麻雀幼鳥為食。」<br>根據上述報導，白尾八哥與麻雀之間最符合下列哪兩種交互作用？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 競爭、掠食</div><div class="q-opt"><span class="opt-label">(B)</span> 競爭、共生</div><div class="q-opt"><span class="opt-label">(C)</span> 共生、掠食</div><div class="q-opt"><span class="opt-label">(D)</span> 寄生、掠食</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">4</span>
+      <div class="q-stem">小志將物質分成元素、化合物和混合物三類，並舉例如表(一)。表中各例子所含原<br>子種類多寡的比較，下列何者正確？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q4_1.jpeg" alt="題號 4 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 笑氣＞硫磺</div><div class="q-opt"><span class="opt-label">(B)</span> 硫磺＞笑氣</div><div class="q-opt"><span class="opt-label">(C)</span> 硫磺＞花岡岩</div><div class="q-opt"><span class="opt-label">(D)</span> 三個例子都一樣多</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 3 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 1 ～ 4 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 1 題 【正確答案：(C)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 81.5%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.51</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 2 題 【正確答案：(B)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 81.3%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 3 題 【正確答案：(A)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 90.4%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.39</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">棋盤方格與生理流程圖：先判斷顯隱性特徵（有中生無或無中生有），鎖定基因型比例。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆有性生殖與無性生殖之染色體套數變化。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 4 題 【正確答案：(A)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 68.5%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.65</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 4 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 5 ～ 8 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">5</span>
+      <div class="q-stem">圖(二)為一鋒面的剖面示意圖，黑色曲線表示鋒面，兩側分別為甲、<br>乙空氣，箭頭為空氣沿著鋒面上升的方向，並呈現鋒面附近的雲雨<br>分布情形。關於此鋒面兩側甲、乙空氣的性質比較，下列何者最合<br>理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q5_1.jpeg" alt="題號 5 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲、乙皆為暖空氣</div><div class="q-opt"><span class="opt-label">(B)</span> 甲、乙皆為冷空氣</div><div class="q-opt"><span class="opt-label">(C)</span> 甲為暖空氣、乙為冷空氣</div><div class="q-opt"><span class="opt-label">(D)</span> 甲為冷空氣、乙為暖空氣</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">6</span>
+      <div class="q-stem">臺灣地下水資源豐富，許多地區都有取用地下水，若使用不當則可能造成災害。小盈想在簡報中說<br>明過度抽取地下水所造成的影響，則下列照片及其說明何者最適合？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q6_1.jpeg" alt="題號 6 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> </div><div class="q-opt"><span class="opt-label">(B)</span> </div><div class="q-opt"><span class="opt-label">(C)</span> </div><div class="q-opt"><span class="opt-label">(D)</span> </div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">7</span>
+      <div class="q-stem">端午節有「立蛋」的習俗，網路上有民眾說只有在端午節正午時，生雞蛋才可<br>立得起來。如圖(三)，該說法的論點是「端午節時太陽直射北半球，臺灣正好在<br>北半球，因此只有在端午節正午時，太陽對生雞蛋的引力與地球對生雞蛋的引<br>力會恰好相反，兩力相互拉扯才使得生雞蛋能夠直立。」下列四種實驗設計及<br>結果，何者最適合拿來反駁上述說法？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q7_1.jpeg" alt="題號 7 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 將生雞蛋煮熟後剝殼，改於聖誕節正午時在臺灣成功立蛋</div><div class="q-opt"><span class="opt-label">(B)</span> 使用同一種的生雞蛋，改於聖誕節正午時在臺灣成功立蛋</div><div class="q-opt"><span class="opt-label">(C)</span> 把生雞蛋換成生鴨蛋，並於端午節正午時在臺灣成功立蛋</div><div class="q-opt"><span class="opt-label">(D)</span> 另拿不同種的生雞蛋，並於端午節正午時在臺灣成功立蛋</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">8</span>
+      <div class="q-stem">圖(四)為某蘆筍植株的示意圖，圖中甲部位經過日光照射，呈現綠色；乙部位未受<br>到日光照射，呈現白色。有關兩部位進行生理作用時所釋出的氣體，下列敘述何者<br>最合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q8_1.jpeg" alt="題號 8 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲能釋出O2，但乙不能</div><div class="q-opt"><span class="opt-label">(B)</span> 甲能釋出CO2，但乙不能</div><div class="q-opt"><span class="opt-label">(C)</span> 乙能釋出O2，但甲不能</div><div class="q-opt"><span class="opt-label">(D)</span> 乙能釋出CO2，但甲不能</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 5 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 5 ～ 8 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 5 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 69.8%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 6 題 【正確答案：(A)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 94.9%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.32</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 7 題 【正確答案：(B)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 77.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 8 題 【正確答案：(A)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 68.3%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.61</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 6 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 9 ～ 12 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">9</span>
+      <div class="q-stem">將一支未削尖的鉛筆置於桌面，鉛筆右端為軟質橡皮，左端為硬質木頭，在<br>其兩端分別以手指施水平力，且兩力作用於同一直線上，施力後保持靜止平<br>衡，如圖(五)。其中手指施於鉛筆左、右兩端力的大小分別為F 左、F 右，鉛<br>筆施於左、右兩端手指的反作用力大小分別為F′左、F′右。已知F 左為1 N，若<br>不考慮鉛筆與桌面間的摩擦力，則下列關係何者正確？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q9_1.jpeg" alt="題號 9 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> F′右＜F 右＜1 N</div><div class="q-opt"><span class="opt-label">(B)</span> F′右＜F 右＝1 N</div><div class="q-opt"><span class="opt-label">(C)</span> F′右＝F 右＜1 N</div><div class="q-opt"><span class="opt-label">(D)</span> F′右＝F 右＝1 N</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">10</span>
+      <div class="q-stem">如圖(六)，甲、乙、丙三個金屬球，甲球帶負電，乙、丙兩球帶正電，剛<br>開始乙球距離甲球2 m，距離丙球1 m，之後將乙球向左移動1 m，使乙<br>球距離甲球1 m，距離丙球2 m。若甲、乙間的靜電力大小為F 甲乙，乙、<br>丙間的靜電力大小為F 乙丙，則移動前後，有關F 甲乙、F 乙丙的大小變化，<br>下列何者正確？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q10_1.jpeg" alt="題號 10 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> F 甲乙變大，F 乙丙變大</div><div class="q-opt"><span class="opt-label">(B)</span> F 甲乙變大，F 乙丙變小</div><div class="q-opt"><span class="opt-label">(C)</span> F 甲乙變小，F 乙丙變大</div><div class="q-opt"><span class="opt-label">(D)</span> F 甲乙變小，F 乙丙變小</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">11</span>
+      <div class="q-stem">某電玩公司為了防止兒童誤吞遊戲主機的遊戲卡，因而在遊戲卡塗上苯甲地那銨。苯甲地那銨是非<br>常苦的物質，其濃度只要達到______，也就是每1000 g 的溶液中含有30 mg 的苯甲地那銨，便會<br>苦到讓人難以忍受。上述空格最適合填入下列何者？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 30%</div><div class="q-opt"><span class="opt-label">(B)</span> 30 mg</div><div class="q-opt"><span class="opt-label">(C)</span> 30 ppm</div><div class="q-opt"><span class="opt-label">(D)</span> 30 g/cm3</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">12</span>
+      <div class="q-stem">當看到喜愛的明星時，小明站在原地大聲尖叫，<br>而阿華則是追著明星跑。表(二)整理上述兩人行<br>為中神經傳導的過程，其中哪一項目的敘述正<br>確？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q12_1.jpeg" alt="題號 12 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 受器</div><div class="q-opt"><span class="opt-label">(B)</span> 動器</div><div class="q-opt"><span class="opt-label">(C)</span> 控制的中樞</div><div class="q-opt"><span class="opt-label">(D)</span> 傳導的神經</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 7 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 9 ～ 12 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 9 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 74.8%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 10 題 【正確答案：(B)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 72.2%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 11 題 【正確答案：(C)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 71.0%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 12 題 【正確答案：(C)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 69.6%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.54</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 8 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 13 ～ 16 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">13</span>
+      <div class="q-stem">房產專家建議，若可以選擇，住在臺北的居民，其陽臺面對的方向盡量不要朝向北邊、東北邊。因<br>為冬天的時候容易下雨，且陽臺面對的方向易有強風，雨水會直接打向陽臺，容易使晾晒的衣物淋<br>溼。專家的這個建議是否適用於其他地區？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 適用於臺南，因為冬天時位處季風迎風面的臺南氣候偏溼</div><div class="q-opt"><span class="opt-label">(B)</span> 適用於基隆，因為冬天時位處季風背風面的基隆氣候偏溼</div><div class="q-opt"><span class="opt-label">(C)</span> 不適用於宜蘭，因為冬天時位處季風迎風面的宜蘭氣候偏乾</div><div class="q-opt"><span class="opt-label">(D)</span> 不適用於高雄，因為冬天時位處季風背風面的高雄氣候偏乾</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">14</span>
+      <div class="q-stem">有三顆小球，在紅光照射下，觀察到小球分別呈現紅色、紅色、黑色，關於這三顆小球在白光照射<br>下所呈現顏色的推論，下列何者最合理？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 至少有一顆紅球</div><div class="q-opt"><span class="opt-label">(B)</span> 至少有一顆黑球</div><div class="q-opt"><span class="opt-label">(C)</span> 最多有兩顆白球</div><div class="q-opt"><span class="opt-label">(D)</span> 最多有兩顆綠球</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">15</span>
+      <div class="q-stem">目前認為地球表層是由數個大小與形狀不同的板塊所組成，<br>圖(七)為現今的板塊分布示意圖，並標出其中幾個板塊的名<br>稱。根據上述資訊，下列說明何者最合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q15_1.jpeg" alt="題號 15 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 這些板塊的交界與各個大陸的海陸交界都吻合</div><div class="q-opt"><span class="opt-label">(B)</span> 這些板塊會移動而使陸地與海底的地形也隨著改變</div><div class="q-opt"><span class="opt-label">(C)</span> 這些板塊的交界上，皆形成了高聳巨大的陸地山脈</div><div class="q-opt"><span class="opt-label">(D)</span> 這些板塊皆位於軟流圈之上，且交界均為中洋脊的位置</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">16</span>
+      <div class="q-stem">圖(八)是某地的地層剖面示意圖。已知該地由火山灰堆積形成的<br>岩層約在8 百萬年前形成，岩脈約在6 百萬年前形成，且該地的<br>地層並未經過上下翻轉。根據圖中資訊，下列關於各地層形成時<br>間之推論，何者最不合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q16_1.jpeg" alt="題號 16 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 砂岩形成的時間，比頁岩形成的時間晚</div><div class="q-opt"><span class="opt-label">(B)</span> 岩脈形成的時間，比石灰岩形成的時間晚</div><div class="q-opt"><span class="opt-label">(C)</span> 石灰岩形成的時間，可能在7 百萬年前</div><div class="q-opt"><span class="opt-label">(D)</span> 頁岩形成的時間，可能介於6～8 百萬年前之間</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 9 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 13 ～ 16 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 13 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 70.1%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.61</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 14 題 【正確答案：(C)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 67.5%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 15 題 【正確答案：(B)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 74.3%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 16 題 【正確答案：(C)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 67.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 10 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 17 ～ 20 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">17</span>
+      <div class="q-stem">已知Ca 和Cl 的原子序分別為20、17，Ca2+和Cl−的質子數和電子數如表(三)，<br>表中w、x、y、z 的數值大小比較，下列何者正確？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q17_1.jpeg" alt="題號 17 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> w＞z</div><div class="q-opt"><span class="opt-label">(B)</span> x＞y</div><div class="q-opt"><span class="opt-label">(C)</span> x＞z</div><div class="q-opt"><span class="opt-label">(D)</span> y＞w</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">18</span>
+      <div class="q-stem">一個質量2 kg 的長方體木塊靜置於水平桌面上，若對木塊施一水平向東的外力F，其摩擦力(f)與<br>外力(F)的關係圖如圖(九)。根據此圖判斷下列敘述何者正確？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q18_1.jpeg" alt="題號 18 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 最大靜摩擦力為300 gw</div><div class="q-opt"><span class="opt-label">(B)</span> 外力F 由0 增加至300 gw 時，木塊即開始向東運動</div><div class="q-opt"><span class="opt-label">(C)</span> 若外力F 小於400 gw 時，則外力F 越小，靜摩擦力也越小</div><div class="q-opt"><span class="opt-label">(D)</span> 若外力F 大於400 gw 時，則外力F 越大，動摩擦力也越大</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">19</span>
+      <div class="q-stem">為了減少溫室氣體，地質學家將二氧化碳變成岩石的一部分 <br>將發電廠產生的二氧化碳灌入大量的水中，以管線將這些氣泡水輸送到數公里遠的區域，接著透<br>過高壓將氣泡水注入地下一千公尺深的岩層中，這些氣泡水會和鈣、鎂等離子反應而「固化」，<br>並填充岩層空隙。二氧化碳一旦固化後，就能存在岩層中。 <br>上述二氧化碳變成岩石一部分的過程，是利用下列二氧化碳(水溶液)的何種性質？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 密度大於空氣</div><div class="q-opt"><span class="opt-label">(B)</span> 溶於水呈酸性</div><div class="q-opt"><span class="opt-label">(C)</span> 可與鈣離子反應產生難溶於水的碳酸鹽</div><div class="q-opt"><span class="opt-label">(D)</span> 可與鈉離子反應產生易溶於水的碳酸鹽</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">20</span>
+      <div class="q-stem">一群健康成人吃了等量的食物甲或乙後，平均血糖濃度的變化如<br>圖(十)。已知健康成人空腹平均血糖濃度約為90 mg/dL，根據此<br>圖推論，下列何者最合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q20_1.jpeg" alt="題號 20 附圖"></div>
+<div class="q-img"><img src="images/nature_q20_2.jpeg" alt="題號 20 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 進食後，甲比乙更早導致升糖素分泌量增加</div><div class="q-opt"><span class="opt-label">(B)</span> 進食後，甲比乙更早導致胰島素分泌量增加</div><div class="q-opt"><span class="opt-label">(C)</span> 進食後，乙比甲更早導致升糖素分泌量增加</div><div class="q-opt"><span class="opt-label">(D)</span> 進食後，乙比甲更早導致胰島素分泌量增加</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 11 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 17 ～ 20 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 17 題 【正確答案：(A)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 65.8%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 18 題 【正確答案：(C)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 58.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.61</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 19 題 【正確答案：(C)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 60.4%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.45</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 20 題 【正確答案：(B)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 54.5%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.45</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 12 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 21 ～ 24 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">21</span>
+      <div class="q-stem">購買高濃度的酒精，可自行稀釋及分裝成消毒用酒精，但並非所有的塑膠容器都適合盛裝高濃度酒<br>精，有些會被乙醇溶解或腐蝕而使容器變輕。下列研究將三種為熱塑性聚合物材質的容器，分別在<br>50℃和70℃的溫度下，浸入高濃度的酒精中，容器的質量變化率如圖(十一)： <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>僅依據上述資訊，下列說明何者最合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q21_1.jpeg" alt="題號 21 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 三種材質中，PET 最適合盛裝高濃度酒精</div><div class="q-opt"><span class="opt-label">(B)</span> 在兩種溫度下，PP 都是最不適合盛裝高濃度酒精</div><div class="q-opt"><span class="opt-label">(C)</span> 鏈狀聚合物的材質比網狀聚合物更適合盛裝高濃度酒精</div><div class="q-opt"><span class="opt-label">(D)</span> 與50℃相比，三種材質皆是在70℃的條件下容器耗損率較高</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">22</span>
+      <div class="q-stem">圖(十二)為某植物的莖部剖面示意圖。若想利用某儀器探測其蒸散作用的速率，<br>關於實驗所需探測的圖中部位及對應理由，下列何者最合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q22_1.jpeg" alt="題號 22 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲，因為它是運輸水分的部位</div><div class="q-opt"><span class="opt-label">(B)</span> 甲，因為它是運輸有機養分的部位</div><div class="q-opt"><span class="opt-label">(C)</span> 乙，因為它是運輸水分的部位</div><div class="q-opt"><span class="opt-label">(D)</span> 乙，因為它是運輸有機養分的部位</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">23</span>
+      <div class="q-stem">下列選項為四種在海面上的等壓線分布圖，已知各圖中涵蓋的空間範圍皆相同，數值代表該等壓線<br>的氣壓，單位為百帕。根據等壓線上的數值推論，下列哪張圖中的甲處風速最大？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q23_1.jpeg" alt="題號 23 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> </div><div class="q-opt"><span class="opt-label">(B)</span> </div><div class="q-opt"><span class="opt-label">(C)</span> </div><div class="q-opt"><span class="opt-label">(D)</span> </div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">24</span>
+      <div class="q-stem">表(四)為部分鳥類資料，推論表中所有鳥類在分類上的敘<br>述，何者是可能的？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q24_1.jpeg" alt="題號 24 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 最多包含3 個目、4 個屬</div><div class="q-opt"><span class="opt-label">(B)</span> 最多包含3 個目、6 個屬</div><div class="q-opt"><span class="opt-label">(C)</span> 最多包含4 個目、4 個屬</div><div class="q-opt"><span class="opt-label">(D)</span> 最多包含4 個目、6 個屬</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 13 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 21 ～ 24 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 21 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 65.3%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 22 題 【正確答案：(C)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 64.6%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 23 題 【正確答案：(B)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 50.4%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 24 題 【正確答案：(A)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 56.2%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.41</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 14 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 25 ～ 28 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">25</span>
+      <div class="q-stem">下列實驗探討鋅銅電池電極的面積大小對於電池電壓與電流的影響： <br>實驗器材：大電極(3.0 cm×8.0 cm)：大銅片、大鋅片各兩片 <br>小電極(1.0 cm×8.0 cm)：小銅片、小鋅片各兩片 <br>除了電極面積不同，其餘實驗條件皆相同，並以三用電表檢測電壓與電流，結果如表(五)： <br> <br>關於此實驗的說明，下列何者合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q25_1.jpeg" alt="題號 25 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 電極面積不同對於電功率變化的影響，負極大於正極</div><div class="q-opt"><span class="opt-label">(B)</span> 電極面積不同對於電功率變化的影響，正極大於負極</div><div class="q-opt"><span class="opt-label">(C)</span> 正極面積相同，負極面積不同，對於電壓值變化比例的影響大於電流值</div><div class="q-opt"><span class="opt-label">(D)</span> 負極面積相同，正極面積不同，對於電壓值變化比例的影響大於電流值</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">26</span>
+      <div class="q-stem">阿偉想要藉由實驗比較鋁和銅的比熱大小關係，若加熱條件相同，且忽略熱量散失，則下列四種方<br>式，哪一種最合理？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 分別加熱相同體積的鋁和銅，先開始熔化者比熱較小</div><div class="q-opt"><span class="opt-label">(B)</span> 分別加熱相同體積的鋁和銅，溫度上升較快者比熱較小</div><div class="q-opt"><span class="opt-label">(C)</span> 分別加熱相同質量的鋁和銅，先開始熔化者比熱較小</div><div class="q-opt"><span class="opt-label">(D)</span> 分別加熱相同質量的鋁和銅，溫度上升較快者比熱較小</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">27</span>
+      <div class="q-stem">博物館展示一臺19 世紀的骨董複式顯微鏡，如圖(十三)。小文<br>根據博物館提供的說明，比較該顯微鏡和現代複式顯微鏡各構造<br>的功能，何者差異最大？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q27_1.jpeg" alt="題號 27 附圖"></div>
+<div class="q-img"><img src="images/nature_q27_2.jpeg" alt="題號 27 附圖"></div>
+
+    <div class="q-opts"></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">28</span>
+      <div class="q-stem">有些物質可使棕色的碘液進行還原反應，反應後溶液呈無色，例如許多水果所含有的維生素C。圖<br>(十四)以維生素C 和綠茶茶水分別進行實驗： <br> <br>僅依據本實驗結果，下列推論何者最合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q28_1.jpeg" alt="題號 28 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 綠茶茶水中必定含有維生素C</div><div class="q-opt"><span class="opt-label">(B)</span> 綠茶茶水中必定含有能被氧化的物質</div><div class="q-opt"><span class="opt-label">(C)</span> 綠茶茶水進行氧化反應，維生素C 進行還原反應</div><div class="q-opt"><span class="opt-label">(D)</span> 因實驗結果溶液顏色改變，故綠茶茶水可做為酸鹼指示劑</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 15 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 25 ～ 28 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 25 題 【正確答案：(B)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 52.8%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.45</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 26 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 61.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 27 題 【正確答案：(D)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 41.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.22</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 28 題 【正確答案：(B)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 57.2%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 16 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 29 ～ 32 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">29</span>
+      <div class="q-stem">甲、乙、丙三個相同的試管中，分別裝有密度不同的X、Y 兩種液<br>體，兩種液體不發生化學反應且互不相溶，所占體積及靜止平衡時<br>的狀態如圖(十五)。若裝有液體的甲、乙、丙三試管，其總質量分<br>別為m 甲、m 乙、m 丙，則下列關係何者正確？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q29_1.jpeg" alt="題號 29 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> m 甲＝m 乙＝m 丙</div><div class="q-opt"><span class="opt-label">(B)</span> m 甲＞m 丙＞m 乙</div><div class="q-opt"><span class="opt-label">(C)</span> m 乙＞m 甲＞m 丙</div><div class="q-opt"><span class="opt-label">(D)</span> m 丙＞m 甲＞m 乙</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">30</span>
+      <div class="q-stem">假設孔雀魚的黑眼睛及紅眼睛由一對遺傳因子所控制，遺傳因子有顯<br>性A 與隱性a 兩種。將甲、乙兩隻黑眼睛孔雀魚交配，所生下的眾多<br>子代有黑眼睛及紅眼睛兩種，其中任意選擇兩隻黑眼睛的子代標記為<br>丙、丁，此過程如圖(十六)。在不考慮突變的情況下，推測甲、乙、丙、<br>丁中，哪兩隻控制眼睛顏色性狀的基因型一定相同？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q30_1.jpeg" alt="題號 30 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲、乙</div><div class="q-opt"><span class="opt-label">(B)</span> 甲、丙</div><div class="q-opt"><span class="opt-label">(C)</span> 乙、丁</div><div class="q-opt"><span class="opt-label">(D)</span> 丙、丁</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">31</span>
+      <div class="q-stem">圖(十七)為甲、乙兩組電流磁效應實驗，兩組實驗所用材料相同，乙組較甲組多連接一顆電池，銅<br>線的擺放方向均為南北向。已知下列選項中磁針黑色部分為N 極，則甲、乙兩組實驗中磁針的偏<br>轉方向，哪一組最合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q31_1.jpeg" alt="題號 31 附圖"></div>
+<div class="q-img"><img src="images/nature_q31_2.jpeg" alt="題號 31 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> </div><div class="q-opt"><span class="opt-label">(B)</span> </div><div class="q-opt"><span class="opt-label">(C)</span> </div><div class="q-opt"><span class="opt-label">(D)</span> </div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">32</span>
+      <div class="q-stem">在適當的條件下，H2S 和SO2 會發生反應，生成H2O 和S。<br>小如記錄某一反應裝置內反應前、反應後各物質的質量，如<br>表(六)。下列何組數據最可能是上述反應後各物質的質量？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q32_1.jpeg" alt="題號 32 附圖"></div>
+<div class="q-img"><img src="images/nature_q32_2.jpeg" alt="題號 32 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> </div><div class="q-opt"><span class="opt-label">(B)</span> </div><div class="q-opt"><span class="opt-label">(C)</span> </div><div class="q-opt"><span class="opt-label">(D)</span> </div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 17 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 29 ～ 32 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 29 題 【正確答案：(D)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 53.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.62</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 30 題 【正確答案：(A)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 63.1%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.64</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">棋盤方格與生理流程圖：先判斷顯隱性特徵（有中生無或無中生有），鎖定基因型比例。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆有性生殖與無性生殖之染色體套數變化。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 31 題 【正確答案：(A)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 47.1%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.54</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 32 題 【正確答案：(B)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 47.4%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 18 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 33 ～ 36 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">33</span>
+      <div class="q-stem">如圖(十八)，地質鑽探是以鑽頭從地表垂直向下挖掘，取得岩石樣本進行分<br>析，如果有斷層通過某處的地下，便可藉由地質鑽探了解斷層的特性。某次<br>地震後，斷層破裂至地表，其震央與地表上斷層的位置如圖(十九)，甲、乙<br>為斷層附近兩處可供地質鑽探使用的土地，若想進行鑽探並鑽至斷層面，<br>下列選擇方式何者最能達到目的？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q33_1.jpeg" alt="題號 33 附圖"></div>
+<div class="q-img"><img src="images/nature_q33_2.jpeg" alt="題號 33 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 若斷層為正斷層選甲處，若斷層為逆斷層則選乙處</div><div class="q-opt"><span class="opt-label">(B)</span> 若斷層為逆斷層選甲處，若斷層為正斷層則選乙處</div><div class="q-opt"><span class="opt-label">(C)</span> 無論是正斷層或逆斷層，皆選擇與震央不同側的甲處</div><div class="q-opt"><span class="opt-label">(D)</span> 無論是正斷層或逆斷層，皆選擇與震央相同側的乙處</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">34</span>
+      <div class="q-stem">甲、乙兩種生物的比較如表(七)。關於甲、乙所屬的分類，依序為下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q34_1.jpeg" alt="題號 34 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 原生生物界、真菌界</div><div class="q-opt"><span class="opt-label">(B)</span> 原生生物界、植物界</div><div class="q-opt"><span class="opt-label">(C)</span> 真菌界、原生生物界</div><div class="q-opt"><span class="opt-label">(D)</span> 真菌界、原核生物界</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">35</span>
+      <div class="q-stem">圖(二十)為細胞進行甲、乙兩種不同分裂方式的染色體變化示意圖。<br>若比較「以葉片繁殖出幼苗」及「以種子萌芽成幼苗」的過程中發<br>生的分裂方式，下列敘述何者最合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q35_1.jpeg" alt="題號 35 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 兩者皆進行甲</div><div class="q-opt"><span class="opt-label">(B)</span> 兩者皆進行乙</div><div class="q-opt"><span class="opt-label">(C)</span> 以葉片繁殖的進行甲，以種子萌芽的進行乙</div><div class="q-opt"><span class="opt-label">(D)</span> 以葉片繁殖的進行乙，以種子萌芽的進行甲</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">36</span>
+      <div class="q-stem">有甲、乙、丙三杯濃度相同的澱粉液，分別加入經不同條件處理的等量澱粉酶，<br>經相同的作用時間後，以碘液與本氏液分別檢測此三杯溶液，結果如表(八)。<br>根據此結果推測，哪杯澱粉液加入的澱粉酶應已完全失去作用？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q36_1.jpeg" alt="題號 36 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 僅甲</div><div class="q-opt"><span class="opt-label">(B)</span> 僅乙</div><div class="q-opt"><span class="opt-label">(C)</span> 甲和丙</div><div class="q-opt"><span class="opt-label">(D)</span> 乙和丙</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 19 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 33 ～ 36 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 33 題 【正確答案：(D)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 42.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 34 題 【正確答案：(D)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 53.3%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">棋盤方格與生理流程圖：先判斷顯隱性特徵（有中生無或無中生有），鎖定基因型比例。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆有性生殖與無性生殖之染色體套數變化。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 35 題 【正確答案：(A)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 32.7%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">棋盤方格與生理流程圖：先判斷顯隱性特徵（有中生無或無中生有），鎖定基因型比例。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易混淆有性生殖與無性生殖之染色體套數變化。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 36 題 【正確答案：(A)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 41.6%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 20 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 37 ～ 40 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">37</span>
+      <div class="q-stem">圖(二十一)為距離太陽最近的五顆行星其公轉軌道示意圖(未依實際距離及大小繪製)，假設這五顆<br>行星與太陽皆位於同一平面上，有關星體的排列方式，下列敘述何者最合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q37_1.jpeg" alt="題號 37 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 若地球、金星、水星呈一直線，地球可能位於金星與水星之間</div><div class="q-opt"><span class="opt-label">(B)</span> 若太陽、地球、火星呈一直線，太陽可能位於地球與火星之間</div><div class="q-opt"><span class="opt-label">(C)</span> 若金星、太陽、水星呈一直線，太陽不可能位於金星與水星之間</div><div class="q-opt"><span class="opt-label">(D)</span> 若火星、地球、木星呈一直線，地球不可能位於火星與木星之間</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">38</span>
+      <div class="q-stem">在核發節能標章時須檢測不同品牌、型號的產品是否符合標準，其檢測方式也隨年代而改進。表<br>(九)為81 年至106 年期間檢測某類電扇的風速時，針對電扇樣品位置條件所做的改變，關於這項<br>改變的目的，最可能為下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q38_1.jpeg" alt="題號 38 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 設立可觀察的對照組</div><div class="q-opt"><span class="opt-label">(B)</span> 增加不同變因的實驗組</div><div class="q-opt"><span class="opt-label">(C)</span> 增加電扇樣品位置的控制變因</div><div class="q-opt"><span class="opt-label">(D)</span> 訂立電扇樣品位置的操作(縱)變因</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">39</span>
+      <div class="q-stem">一質量固定的物體在水平面上做向東的直線運動，圖(二十二)為其速度<br>(v)與時間(t)的關係圖。若此物體在t＝2 s、t＝5 s、t＝7 s 時，所受合力<br>的大小分別為F2、F5、F7，則其大小關係應為下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q39_1.jpeg" alt="題號 39 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> F2＜F7＜F5</div><div class="q-opt"><span class="opt-label">(B)</span> F2＞F7＞F5</div><div class="q-opt"><span class="opt-label">(C)</span> F2＝F7＞F5</div><div class="q-opt"><span class="opt-label">(D)</span> F2＝F7＜F5</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">40</span>
+      <div class="q-stem">在燒瓶中裝水並加熱到沸騰後，停止加熱，塞住瓶口，翻轉倒置燒<br>瓶，使瓶內的空氣位於上方，如圖(二十三)。此時拿一袋冰塊放在燒<br>瓶的上方，瓶內的氣壓會改變，而水會由下而上開始冒出氣泡，是一<br>種物理變化，如圖(二十四)。根據上述說明，關於冰塊降溫造成此現<br>象的解釋，下列何者最合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q40_1.jpeg" alt="題號 40 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 瓶內的水蒸氣凝結，接著藉由水汽化達到新的平衡</div><div class="q-opt"><span class="opt-label">(B)</span> 瓶內的水蒸氣蒸發，接著藉由水汽化達到新的平衡</div><div class="q-opt"><span class="opt-label">(C)</span> 瓶內的氣壓降低，接著藉由水分解反應產生氣體達到新的平衡</div><div class="q-opt"><span class="opt-label">(D)</span> 瓶內的氣壓升高，接著藉由水分解反應產生氣體達到新的平衡</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 21 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 37 ～ 40 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 37 題 【正確答案：(B)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 46.9%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 38 題 【正確答案：(C)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 40.6%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.35</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 39 題 【正確答案：(C)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 43.1%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 40 題 【正確答案：(A)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 46.2%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.36</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 22 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 41 ～ 44 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">41</span>
+      <div class="q-stem">圖(二十五)為一篇介紹零碳排放飛機文章中出現的燃料<br>資訊圖，圖中顯示單位質量與單位體積的燃料燃燒所產<br>生的能量之比較。以產生相同的能量為前提，與其他燃<br>料比較，液化氫具有下列何種特點？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q41_1.jpeg" alt="題號 41 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 液化氫會較重，但占用的空間小</div><div class="q-opt"><span class="opt-label">(B)</span> 液化氫會較重，且占用的空間大</div><div class="q-opt"><span class="opt-label">(C)</span> 液化氫會較輕，且占用的空間小</div><div class="q-opt"><span class="opt-label">(D)</span> 液化氫會較輕，但占用的空間大</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">42</span>
+      <div class="q-stem">瑞典學生拍攝影片表達節能的重要性，影片中請來奧運自行車選手<br>踩單車發電烤吐司，最終選手踩到精疲力竭，才烤好一片吐司，如<br>圖(二十六)，過程中發電的平均電功率約700 W，總共產生的電能<br>約0.021 kWh。若以一度電3 元計算，上述過程產生的電能，其對<br>應的電費應如何計算？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_q42_1.jpeg" alt="題號 42 附圖"></div>
+<div class="q-img"><img src="images/nature_q42_2.jpeg" alt="題號 42 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 700 3 1000 元</div><div class="q-opt"><span class="opt-label">(B)</span> 0.021 3 元</div><div class="q-opt"><span class="opt-label">(C)</span> 0.021 700 3 1000  元</div><div class="q-opt"><span class="opt-label">(D)</span> 0.021 1000 3 700  元</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">43</span>
+      <div class="q-stem">根據實驗結果，關於不同溫度對蒜頭變綠色的影響，下列說明何者最合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_passage_q43_q44_1.jpeg" alt="題號 43 附圖"></div>
+<div class="q-img"><img src="images/nature_passage_q43_q44_2.jpeg" alt="題號 43 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 全程在10℃，變色的速率最快</div><div class="q-opt"><span class="opt-label">(B)</span> 全程在25℃，變色的速率最快</div><div class="q-opt"><span class="opt-label">(C)</span> 先低溫處理，接著改在25℃放置會減緩變色的速率</div><div class="q-opt"><span class="opt-label">(D)</span> 先低溫處理，接著改在25℃放置會加快變色的速率</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">44</span>
+      <div class="q-stem">僅根據實驗三的結果，推測使蒜頭變綠色的有利環境，最可能是下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_passage_q43_q44_1.jpeg" alt="題號 44 附圖"></div>
+<div class="q-img"><img src="images/nature_passage_q43_q44_2.jpeg" alt="題號 44 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 酸性越弱的環境</div><div class="q-opt"><span class="opt-label">(B)</span> 酸性越強的環境</div><div class="q-opt"><span class="opt-label">(C)</span> 有– COOH 原子團的環境</div><div class="q-opt"><span class="opt-label">(D)</span> 沒有– COOH 原子團的環境</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 23 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 41 ～ 44 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 41 題 【正確答案：(D)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 30.9%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.29</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 42 題 【正確答案：(B)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 36.9%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">公式單位對照法：看清橫縱軸單位，先在空白區列出公式 $F=ma$、$V=IR$ 反推數值趨勢。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易忽略單位換算（如公克與公斤、秒與小時），造成計算失分。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 43 題 【正確答案：(D)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 59.3%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 44 題 【正確答案：(C)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 42.4%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.38</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 24 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 45 ～ 48 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">45</span>
+      <div class="q-stem">僅根據小花檢測的初步結果，下列推論何者最合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_passage_q45_q46_1.jpeg" alt="題號 45 附圖"></div>
+<div class="q-img"><img src="images/nature_passage_q45_q46_3.jpeg" alt="題號 45 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 出血時間過短，須進一步檢查</div><div class="q-opt"><span class="opt-label">(B)</span> 出血時間於容許範圍內，可能無異常</div><div class="q-opt"><span class="opt-label">(C)</span> 出血時間於容許範圍內，但可能罹患X 減少症或其他凝血因子異常</div><div class="q-opt"><span class="opt-label">(D)</span> 出血時間過長，可能罹患X 減少症或其他凝血因子異常</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">46</span>
+      <div class="q-stem">表中的X 最可能為下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_passage_q45_q46_1.jpeg" alt="題號 46 附圖"></div>
+<div class="q-img"><img src="images/nature_passage_q45_q46_3.jpeg" alt="題號 46 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 淋巴</div><div class="q-opt"><span class="opt-label">(B)</span> 白血球</div><div class="q-opt"><span class="opt-label">(C)</span> 紅血球</div><div class="q-opt"><span class="opt-label">(D)</span> 血小板</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">47</span>
+      <div class="q-stem">阿貴在做砝碼質量為200 g 的實驗時，他施一個鉛直向上的定力將彈簧秤以穩定且緩慢的速度提高<br>10 cm，並使砝碼上升5 cm，此過程彈簧秤拉力所作的功為多少gw．cm？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_passage_q47_q48_1.jpeg" alt="題號 47 附圖"></div>
+<div class="q-img"><img src="images/nature_passage_q47_q48_2.jpeg" alt="題號 47 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 1000</div><div class="q-opt"><span class="opt-label">(B)</span> 1500</div><div class="q-opt"><span class="opt-label">(C)</span> 2000</div><div class="q-opt"><span class="opt-label">(D)</span> 3000</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">48</span>
+      <div class="q-stem">阿貴經多次重複同樣的實驗所得結果均與圖(二十九)相同，而圖中的三點連線之延長線與縱軸F 交<br>點不是原點。若不考慮摩擦力，則關於交點不是原點的原因，下列敘述何者最合理？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_passage_q47_q48_1.jpeg" alt="題號 48 附圖"></div>
+<div class="q-img"><img src="images/nature_passage_q47_q48_2.jpeg" alt="題號 48 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 此實驗的誤差很大</div><div class="q-opt"><span class="opt-label">(B)</span> 此實驗裝置屬於費力的簡單機械</div><div class="q-opt"><span class="opt-label">(C)</span> 阿貴所記錄彈簧秤讀數F，其數值同時受到彈簧秤質量及砝碼質量的影響</div><div class="q-opt"><span class="opt-label">(D)</span> 阿貴所記錄彈簧秤讀數F，其數值同時受到動滑輪質量及砝碼質量的影響</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 25 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 45 ～ 48 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 45 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 65.3%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 46 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 72.0%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.55</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 47 題 【正確答案：(B)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 41.5%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.28</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 48 題 【正確答案：(D)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 53.8%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.54</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">變因分析法：圈出唯一被改變的「操縱變因」，其餘皆為控制變因，結論必與應變變因對應。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 考生常混淆操作變因與對照組設定，被長篇實驗情境干擾。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 26 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 49 ～ 50 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">49</span>
+      <div class="q-stem">考量月球在甲、乙兩處的月相，下列俯視圖何者最可能是阿平進行模擬時，球於兩處的亮暗面分布<br>狀態？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_passage_q49_q50_1.jpeg" alt="題號 49 附圖"></div>
+<div class="q-img"><img src="images/nature_passage_q49_q50_2.jpeg" alt="題號 49 附圖"></div>
+<div class="q-img"><img src="images/nature_q49_1.jpeg" alt="題號 49 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> </div><div class="q-opt"><span class="opt-label">(B)</span> </div><div class="q-opt"><span class="opt-label">(C)</span> </div><div class="q-opt"><span class="opt-label">(D)</span> </div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">50</span>
+      <div class="q-stem">根據圖(三十一)模擬的月球移動路徑，當月球由甲處移動至乙處的這段時間，地球自轉或繞太陽公<br>轉了幾圈？</div>
+    </div>
+    <div class="q-img"><img src="images/nature_passage_q49_q50_1.jpeg" alt="題號 50 附圖"></div>
+<div class="q-img"><img src="images/nature_passage_q49_q50_2.jpeg" alt="題號 50 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 地球大約自轉了半圈</div><div class="q-opt"><span class="opt-label">(B)</span> 地球大約自轉了15 圈</div><div class="q-opt"><span class="opt-label">(C)</span> 地球繞太陽大約公轉了半圈</div><div class="q-opt"><span class="opt-label">(D)</span> 地球繞太陽大約公轉了15 圈</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 27 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 49 ～ 50 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 49 題 【正確答案：(C)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 37.4%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 50 題 【正確答案：(B)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 53.1%</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.58</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">地質天體方位圖解：掌握順逆時針流動方向與冷暖鋒面位置，正反比趨勢直擊正解。</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">斷層上盤下盤容易搞反（斷層面上方為上盤），注意看剖面斜率。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <strong>自我檢核：</strong>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>114年國中教育會考・自然科實戰講義</span>
+    <span>第 28 頁（名師解析）</span>
+  </div>
+</div>
+
+<!-- 封底 -->
+<div class="page">
+  <div class="cover-container" style="border-style: solid; border-color: #2b4c7e; justify-content: flex-start; padding-top: 30px;">
+    <div class="cover-badge" style="background: #2b4c7e;">★ 考前衝刺・名師最後叮嚀 ★</div>
+    <div class="cover-title" style="font-size: 22pt;">自然科【衝 A 臨場 4 大保命守則】</div>
+    
+    <div class="cover-box" style="margin-top: 15px; font-size: 9.5pt; line-height: 1.8;">
+      1. <strong>字斟句酌圈題眼</strong>：題幹中的「何者非」、「依據本文」、「唯一改變條件」務必用筆重重圈起！<br>
+      2. <strong>圖表橫縱軸先看清</strong>：圖表永遠是考題的心臟，看清單位（公尺/公里、秒/小時）才不會白白失分。<br>
+      3. <strong>卡題 60 秒果斷跳過</strong>：會考是算總分而非拼單題，先將能穩拿的分數全部放進口袋！<br>
+      4. <strong>相信第一直覺與常理</strong>：極端絕對的選項往往是陷阱，冷靜回歸基礎概念即可迎刃而解。
+    </div>
+
+    <div style="width: 100%; max-width: 150mm; margin-top: 25px; text-align: left;">
+      <h3 style="color: #2b4c7e; border-bottom: 2px solid #bee3f8; padding-bottom: 4px; font-size: 11pt;">📋 我的會考自然衝 A 自我檢核清單</h3>
+      <div style="font-size: 9pt; line-height: 2.2; color: #334e68;">
+        <label><input type="checkbox"> 我已確實訂正本講義中所有的「衝A勝負題」與「高鑑別挑戰題」</label><br>
+        <label><input type="checkbox"> 我能用自己的話向同學解釋本卷中 3 道最容易失分的題目</label><br>
+        <label><input type="checkbox"> 我已掌握每單元名師秒殺招，不再盲目耗費過多時間運算</label><br>
+        <label><input type="checkbox"> 我已準備好以沉著自信的狀態迎戰國中教育會考！</label>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 29 頁（封底）</span>
+  </div>
+</div>
+</body>
+</html>

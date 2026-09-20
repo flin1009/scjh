@@ -38,3 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// 4. Switch Handout Year Showcase
+window.switchHandoutYear = function(year, btn) {
+  document.querySelectorAll('#handout-year-pills .year-pill').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  const yearEl = document.getElementById('handout-section-year');
+  if (yearEl) yearEl.textContent = year;
+  document.querySelectorAll('.handout-card .handout-link-btn').forEach(a => {
+    const sub = a.getAttribute('data-subject');
+    if (sub) {
+      a.href = `exams/${year}/handouts/${sub}.html`;
+    }
+  });
+};

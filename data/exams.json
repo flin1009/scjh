@@ -167,7 +167,8 @@
           "title": "115年試題疑義新聞稿暨釋復內容",
           "file": "https://cap.rcpet.edu.tw/115doubt.html"
         }
-      ]
+      ],
+      "has_handouts": true
     },
     {
       "year": 114,
@@ -194,7 +195,8 @@
             "B+": "28-31 題",
             "B": "18-27 題",
             "C": "0-17 題"
-          }
+          },
+          "handout_html": "exams/114/handouts/chinese.html"
         },
         {
           "id": "english",
@@ -206,7 +208,8 @@
           "exam_pdf": "https://drive.google.com/file/d/1Or0bC16Jn2hA0uAF2zrryHoY46ywIQjK/view?usp=drive_link",
           "listening_pdf": "https://drive.google.com/file/d/1NQNXowVBpE4N7i790_88YXZ03zt2ktFn/view?usp=drive_link",
           "answer_pdf": "https://drive.google.com/file/d/175hz0lHG4GTDNxYet9lrRDu0lmC_G08o/view?usp=drive_link",
-          "analysis_pdf": "https://drive.google.com/drive/folders/1diphWMmFmHVSsLzkX8hvMgTHfbtfvc5f?usp=drive_link"
+          "analysis_pdf": "https://drive.google.com/drive/folders/1diphWMmFmHVSsLzkX8hvMgTHfbtfvc5f?usp=drive_link",
+          "handout_html": "exams/114/handouts/english.html"
         },
         {
           "id": "math",
@@ -217,7 +220,8 @@
           "a_cutoff": "精熟等級",
           "exam_pdf": "https://drive.google.com/file/d/1c2AGC67Bq344EdGSZkO9SZhrY50hHTJx/view?usp=drive_link",
           "answer_pdf": "https://drive.google.com/file/d/175hz0lHG4GTDNxYet9lrRDu0lmC_G08o/view?usp=drive_link",
-          "analysis_pdf": "https://drive.google.com/drive/folders/1diphWMmFmHVSsLzkX8hvMgTHfbtfvc5f?usp=drive_link"
+          "analysis_pdf": "https://drive.google.com/drive/folders/1diphWMmFmHVSsLzkX8hvMgTHfbtfvc5f?usp=drive_link",
+          "handout_html": "exams/114/handouts/math.html"
         },
         {
           "id": "nature",
@@ -237,7 +241,8 @@
             "B+": "29-35 題",
             "B": "18-28 題",
             "C": "0-17 題"
-          }
+          },
+          "handout_html": "exams/114/handouts/nature.html"
         },
         {
           "id": "society",
@@ -257,7 +262,8 @@
             "B+": "35-40 題",
             "B": "21-34 題",
             "C": "0-20 題"
-          }
+          },
+          "handout_html": "exams/114/handouts/society.html"
         },
         {
           "id": "writing",
@@ -269,7 +275,8 @@
           "exam_pdf": "https://drive.google.com/file/d/15yGt7NgV0OsYTP8LdYF7BCntfTjZwQ7q/view?usp=drive_link",
           "answer_pdf": "https://drive.google.com/file/d/11HW_piDqYm9Gq6qo-BSONsxZ-jgTri4h/view?usp=drive_link",
           "sample1_pdf": "https://drive.google.com/file/d/12qsAjT9hZmLlUVlyIVuWXBVh2EwN_dNn/view?usp=drive_link",
-          "sample2_pdf": "https://drive.google.com/file/d/1-dF82RWJZmPur8ZS_H2FTZ94KEHFc5R5/view?usp=drive_link"
+          "sample2_pdf": "https://drive.google.com/file/d/1-dF82RWJZmPur8ZS_H2FTZ94KEHFc5R5/view?usp=drive_link",
+          "handout_html": "exams/114/handouts/writing.html"
         }
       ],
       "stats_docs": [
@@ -293,7 +300,8 @@
           "title": "114年試題疑義新聞稿暨釋覆內容",
           "file": "https://cap.rcpet.edu.tw/114doubt.html"
         }
-      ]
+      ],
+      "has_handouts": true
     },
     {
       "year": 113,
@@ -320,7 +328,8 @@
             "B+": "30-32 題",
             "B": "18-29 題",
             "C": "0-17 題"
-          }
+          },
+          "handout_html": "exams/113/handouts/chinese.html"
         },
         {
           "id": "english",
@@ -332,7 +341,8 @@
           "exam_pdf": "https://drive.google.com/file/d/1ZU8SG-4jdV1DGvPzpgzoi_hhRiD4NT3S/view?usp=drive_link",
           "listening_pdf": "https://drive.google.com/file/d/1iAZySLpGHqKdwyIlriM58ve8vW9aMV0Q/view?usp=drive_link",
           "answer_pdf": "https://drive.google.com/file/d/1cWlogP9FBRX1eD5kjgVDP2_6f8VCLSB4/view?usp=drive_link",
-          "analysis_pdf": "https://drive.google.com/drive/folders/1f39LUoFXo4ygPCH3alu5j80K4TSpqsfl?usp=drive_link"
+          "analysis_pdf": "https://drive.google.com/drive/folders/1f39LUoFXo4ygPCH3alu5j80K4TSpqsfl?usp=drive_link",
+          "handout_html": "exams/113/handouts/english.html"
         },
         {
           "id": "math",
@@ -343,7 +353,8 @@
           "a_cutoff": "精熟等級",
           "exam_pdf": "https://drive.google.com/file/d/1MXfrOI_4KyxF6A-2NNd_J_eIuo3Epa46/view?usp=drive_link",
           "answer_pdf": "https://drive.google.com/file/d/1cWlogP9FBRX1eD5kjgVDP2_6f8VCLSB4/view?usp=drive_link",
-          "analysis_pdf": "https://drive.google.com/drive/folders/1f39LUoFXo4ygPCH3alu5j80K4TSpqsfl?usp=drive_link"
+          "analysis_pdf": "https://drive.google.com/drive/folders/1f39LUoFXo4ygPCH3alu5j80K4TSpqsfl?usp=drive_link",
+          "handout_html": "exams/113/handouts/math.html"
         },
         {
           "id": "nature",
@@ -363,7 +374,8 @@
             "B+": "30-36 題",
             "B": "19-29 題",
             "C": "0-18 題"
-          }
+          },
+          "handout_html": "exams/113/handouts/nature.html"
         },
         {
           "id": "society",
@@ -383,7 +395,8 @@
             "B+": "36-41 題",
             "B": "21-35 題",
             "C": "0-20 題"
-          }
+          },
+          "handout_html": "exams/113/handouts/society.html"
         },
         {
           "id": "writing",
@@ -395,7 +408,8 @@
           "exam_pdf": "https://drive.google.com/file/d/1fhW7ywN8LoIGGroAMQS5JzqCStKlY2Ux/view?usp=drive_link",
           "answer_pdf": "https://drive.google.com/file/d/1YzrMP9JN6st0fcL5Vg_D0J75wUSBHOpW/view?usp=drive_link",
           "sample1_pdf": "https://drive.google.com/file/d/1K7Z2yQ9s-UpgoYSuOKhxnTvv9TlFwwFO/view?usp=drive_link",
-          "sample2_pdf": "https://drive.google.com/file/d/1RX4DlMGGUTXRUBIwueC4LGo6p7Lox4iN/view?usp=drive_link"
+          "sample2_pdf": "https://drive.google.com/file/d/1RX4DlMGGUTXRUBIwueC4LGo6p7Lox4iN/view?usp=drive_link",
+          "handout_html": "exams/113/handouts/writing.html"
         }
       ],
       "stats_docs": [
@@ -415,7 +429,8 @@
           "title": "113年試題疑義新聞稿暨釋覆內容",
           "file": "https://cap.rcpet.edu.tw/113doubt.html"
         }
-      ]
+      ],
+      "has_handouts": true
     }
   ]
 }

@@ -13,6 +13,8 @@ window.MathJax = {
 };
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
 <style>
   @page {
     size: A4 portrait;
@@ -22,42 +24,89 @@ window.MathJax = {
     body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .page { page-break-after: always; break-after: page; }
     .no-break { page-break-inside: avoid; break-inside: avoid; }
+    .no-print, .floating-nav { display: none !important; }
   }
   * { box-sizing: border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
-    color: #1a202c;
+    color: #243342;
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    background-color: #f7fafc;
+    background-color: #f5f6f8;
   }
   .page {
     width: 210mm;
     min-height: 297mm;
-    margin: 10px auto;
+    margin: 12px auto;
     padding: 12mm 15mm;
     background: #ffffff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
     position: relative;
     overflow: hidden;
+    border-radius: 4px;
   }
   @media print {
     body { background: #fff; }
-    .page { margin: 0; box-shadow: none; width: 100%; min-height: 100vh; padding: 10mm 12mm; }
+    .page { margin: 0; box-shadow: none; width: 100%; min-height: 100vh; padding: 10mm 12mm; border-radius: 0; }
   }
   
+  /* Floating Nav */
+  @media screen {
+    .floating-nav {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.96);
+      padding: 8px 14px;
+      border-radius: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      border: 1px solid #cbd8e6;
+      backdrop-filter: blur(6px);
+    }
+    .nav-btn {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b4c7e;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #f0f4f9;
+      border: 1px solid #cbd8e6;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-btn:hover {
+      background: #2b4c7e;
+      color: #ffffff;
+    }
+    .btn-print {
+      background: #2b4c7e;
+      color: #ffffff;
+      border: none;
+    }
+    .btn-print:hover {
+      background: #1c3559;
+    }
+  }
+
   /* Header & Footer */
   .page-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #2b6cb0;
-    padding-bottom: 5px;
-    margin-bottom: 12px;
-    font-size: 11pt;
-    font-weight: bold;
-    color: #2b6cb0;
+    border-bottom: 1.5px solid #cbd8e6;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #486581;
   }
   .page-footer {
     position: absolute;
@@ -66,270 +115,550 @@ window.MathJax = {
     right: 15mm;
     display: flex;
     justify-content: space-between;
-    font-size: 9pt;
-    color: #a0aec0;
     border-top: 1px solid #e2e8f0;
     padding-top: 4px;
+    font-size: 8pt;
+    color: #829ab1;
   }
 
-  /* Cover Page */
-  .cover-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 250mm;
-    text-align: center;
-    border: 3px double #2b6cb0;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  .cover-badge {
-    background: #c53030;
-    color: white;
-    font-size: 14pt;
-    font-weight: 800;
-    padding: 6px 18px;
-    border-radius: 20px;
-    margin-bottom: 25px;
-    letter-spacing: 2px;
-  }
-  .cover-title {
-    font-size: 28pt;
-    font-weight: 900;
-    color: #1a365d;
-    margin: 10px 0;
-    line-height: 1.2;
-  }
-  .cover-sub {
-    font-size: 16pt;
-    font-weight: 600;
-    color: #4a5568;
-    margin-bottom: 30px;
-  }
-  .cover-box {
-    background: #ebf8ff;
-    border-left: 6px solid #3182ce;
-    padding: 15px 25px;
-    text-align: left;
-    margin: 20px 0;
-    font-size: 11pt;
-    border-radius: 4px;
-    max-width: 150mm;
-  }
-  .cover-box strong { color: #2b6cb0; font-size: 12pt; }
-  .cover-meta {
-    margin-top: 40px;
-    font-size: 10pt;
-    color: #718096;
-  }
-
-  /* Left Page Styles (Exam) */
-  .left-page { border-right: 1px dashed #cbd5e0; }
+  /* Question items */
   .q-item {
-    margin-bottom: 18px;
-    padding-bottom: 12px;
-    border-bottom: 1px dotted #e2e8f0;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed #e2e8f0;
   }
-  .q-item:last-child { border-bottom: none; }
+  .q-item:last-child {
+    border-bottom: none;
+  }
   .q-head {
     display: flex;
-    align-items: flex-start;
-    font-size: 11pt;
-    font-weight: 700;
-    color: #2d3748;
-    margin-bottom: 6px;
+    gap: 8px;
+    font-size: 8.5pt;
+    margin-bottom: 4px;
   }
   .q-num {
-    background: #edf2f7;
-    border: 1px solid #cbd5e0;
-    color: #2b6cb0;
     font-weight: 800;
+    color: #2b4c7e;
+    background: #eef3f9;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 4px;
-    padding: 1px 7px;
-    margin-right: 8px;
-    font-size: 10pt;
+    font-size: 8pt;
+    flex-shrink: 0;
   }
   .q-stem {
-    font-size: 10.5pt;
-    line-height: 1.55;
-    flex: 1;
-  }
-  .q-stem strong { color: #1a365d; font-weight: 800; text-decoration: underline; text-decoration-color: #f6ad55; text-decoration-thickness: 3px; }
-  .q-img-wrap {
-    text-align: center;
-    margin: 8px 0;
+    flex-grow: 1;
+    line-height: 1.45;
   }
   .q-img {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .q-img img {
+    max-width: 95%;
     max-height: 48mm;
-    max-width: 90%;
     object-fit: contain;
-    border: 1px solid #edf2f7;
     border-radius: 4px;
-    padding: 2px;
+    border: 1px solid #d9e2ec;
+    background: #ffffff;
+    padding: 3px;
   }
   .q-opts {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px 12px;
-    margin: 8px 0 10px 24px;
-    font-size: 10pt;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px 10px;
+    margin-left: 30px;
+    font-size: 8pt;
+    margin-top: 4px;
   }
   .q-opt {
-    display: flex;
-    align-items: center;
+    color: #334e68;
   }
-  .opt-label { font-weight: bold; margin-right: 4px; color: #4a5568; }
+  .opt-label {
+    font-weight: 700;
+    color: #2b4c7e;
+  }
   .scratch-area {
-    margin-top: 6px;
-    height: 25mm;
-    border: 1px dashed #cbd5e0;
-    background: repeating-linear-gradient(#fafafa, #fafafa 6mm, #edf2f7 6mm, #edf2f7 6.3mm);
+    margin-top: 5px;
+    height: 10mm;
+    border: 1px dashed #cbd8e6;
     border-radius: 4px;
+    background: #fbfcfd;
     position: relative;
   }
   .scratch-label {
     position: absolute;
     top: 2px;
     right: 5px;
-    font-size: 8pt;
-    color: #a0aec0;
+    font-size: 7pt;
+    color: #9fb3c8;
   }
 
-  /* Right Page Styles (Explanation & 5B Card) */
+  /* Card Item */
   .card-item {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #d9e2ec;
     border-radius: 6px;
-    margin-bottom: 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
     overflow: hidden;
   }
   .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ebf8ff;
-    border-bottom: 1px solid #bee3f8;
-    padding: 5px 10px;
+    background: #f0f4f8;
+    border-bottom: 1px solid #d9e2ec;
+    padding: 3px 8px;
   }
   .card-title {
     font-weight: 800;
-    font-size: 10.5pt;
-    color: #2b6cb0;
+    font-size: 8.5pt;
+    color: #2b4c7e;
   }
   .badge-stars {
-    font-size: 9pt;
+    font-size: 8pt;
     font-weight: 700;
-    color: #dd6b20;
-    margin-left: 5px;
+    color: #c07d32;
+    margin-left: 4px;
   }
   .badge-pass {
-    background: #2b6cb0;
+    background: #334e68;
     color: #ffffff;
-    font-size: 8pt;
+    font-size: 7.5pt;
     padding: 1px 6px;
     border-radius: 10px;
     font-weight: 600;
   }
   .badge-cat {
-    background: #feebc8;
-    color: #c05621;
-    font-size: 8pt;
-    padding: 1px 6px;
+    background: #fef3e2;
+    color: #a8581e;
+    font-size: 7pt;
+    padding: 1px 5px;
     border-radius: 4px;
     font-weight: 700;
-    margin-left: 4px;
+    margin-left: 3px;
+    border: 1px solid #f9dab3;
   }
   .card-body {
-    padding: 8px 10px;
-    font-size: 9.5pt;
-    line-height: 1.45;
+    padding: 5px 8px;
+    font-size: 8pt;
+    line-height: 1.4;
   }
   .tech-box {
-    background: #f0fff4;
-    border-left: 4px solid #38a169;
-    padding: 6px 10px;
-    margin-bottom: 6px;
+    background: #f2f8f4;
+    border-left: 3px solid #2d6a4f;
+    padding: 4px 6px;
+    margin-bottom: 4px;
     border-radius: 2px;
-  }
-  .tech-label {
-    font-weight: 800;
-    color: #22543d;
-    display: flex;
-    align-items: center;
-    margin-bottom: 2px;
   }
   .trap-box {
-    background: #fff5f5;
-    border-left: 4px solid #e53e3e;
-    padding: 6px 10px;
-    margin-bottom: 6px;
+    background: #fdf5f5;
+    border-left: 3px solid #b83a3a;
+    padding: 4px 6px;
+    margin-bottom: 4px;
     border-radius: 2px;
   }
-  .trap-label {
-    font-weight: 800;
-    color: #742a2a;
-    display: flex;
-    align-items: center;
-    margin-bottom: 2px;
-  }
   .note-grid {
-    background: #f7fafc;
-    border-top: 1px dashed #e2e8f0;
-    padding: 6px 10px;
-    font-size: 8.5pt;
-    color: #4a5568;
+    background: #f8fafc;
+    border-top: 1px dashed #d9e2ec;
+    padding: 3px 8px;
+    font-size: 7pt;
+    color: #486581;
   }
   .check-tags {
     display: flex;
     gap: 8px;
-    margin-bottom: 3px;
-    font-size: 8pt;
-    color: #718096;
+    margin-bottom: 2px;
   }
   .note-lines {
-    height: 12mm;
-    background: repeating-linear-gradient(#f7fafc, #f7fafc 4mm, #e2e8f0 4mm, #e2e8f0 4.2mm);
+    height: 6mm;
+    background: repeating-linear-gradient(#f8fafc, #f8fafc 2.8mm, #e2e8f0 2.8mm, #e2e8f0 3.0mm);
     border-radius: 2px;
   }
 
-  /* Context reading styling */
-  .context-box {
-    background: #fffaf0;
-    border: 1px solid #feebc8;
-    border-radius: 6px;
-    padding: 10px 14px;
-    margin-bottom: 12px;
-    font-size: 9.5pt;
-    line-height: 1.5;
-  }
-  .context-title {
-    font-weight: 800;
-    color: #c05621;
-    font-size: 10pt;
-    margin-bottom: 5px;
+  /* Cover Styles */
+  .cover-container {
+    height: 265mm;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    border: 2px solid #cbd8e6;
+    border-radius: 8px;
+    padding: 20mm;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
   }
-
-  /* Non-choice full-page styling */
-  .non-step-box {
-    background: #f7fafc;
-    border: 1px solid #e2e8f0;
+  .cover-badge {
+    background: #2b4c7e;
+    color: #ffffff;
+    font-size: 11pt;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  .cover-title {
+    font-size: 26pt;
+    font-weight: 900;
+    color: #102a43;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .cover-sub {
+    font-size: 12pt;
+    font-weight: 600;
+    color: #486581;
+    margin-bottom: 25px;
+  }
+  .cover-box {
+    background: #f0f4f8;
+    border: 1px solid #cbd8e6;
     border-radius: 6px;
-    padding: 10px 12px;
+    padding: 15px 25px;
     font-size: 9.5pt;
-    margin-bottom: 8px;
-  }
-  .non-step-title {
-    font-weight: bold;
-    color: #2b6cb0;
-    margin-bottom: 4px;
+    color: #243342;
+    text-align: left;
+    max-width: 150mm;
+    line-height: 1.7;
   }
 </style>
+
+
 </head>
 <body>
+
+<!-- Floating Nav Bar for Handouts -->
+<div class="handout-floating-nav" style="position: fixed; top: 14px; right: 16px; z-index: 9999; display: flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 8px 16px; border-radius: 30px; box-shadow: 0 4px 14px rgba(0,0,0,0.15); border: 1px solid #cbd5e1;">
+  <a href="../../../index.html" style="color: #1e40af; text-decoration: none; font-weight: 700; font-size: 0.88rem;">🏠 回首頁</a>
+  <span style="color: #cbd5e1;">|</span>
+  <a href="../../index.html" style="color: #1e40af; text-decoration: none; font-weight: 700; font-size: 0.88rem;">📚 歷屆題庫</a>
+  <span style="color: #cbd5e1;">|</span>
+  <button onclick="window.print()" style="background: none; border: none; color: #059669; font-weight: 700; font-size: 0.88rem; cursor: pointer;">🖨️ 列印 A4</button>
+</div>
+
+
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; break-after: page; }
+    .no-break { page-break-inside: avoid; break-inside: avoid; }
+    .no-print, .floating-nav { display: none !important; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color: #243342;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6f8;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 12px auto;
+    padding: 12mm 15mm;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; width: 100%; min-height: 100vh; padding: 10mm 12mm; border-radius: 0; }
+  }
+  
+  /* Floating Nav */
+  @media screen {
+    .floating-nav {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.96);
+      padding: 8px 14px;
+      border-radius: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      border: 1px solid #cbd8e6;
+      backdrop-filter: blur(6px);
+    }
+    .nav-btn {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b4c7e;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #f0f4f9;
+      border: 1px solid #cbd8e6;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-btn:hover {
+      background: #2b4c7e;
+      color: #ffffff;
+    }
+    .btn-print {
+      background: #2b4c7e;
+      color: #ffffff;
+      border: none;
+    }
+    .btn-print:hover {
+      background: #1c3559;
+    }
+  }
+
+  /* Header & Footer */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #cbd8e6;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #486581;
+  }
+  .page-footer {
+    position: absolute;
+    bottom: 8mm;
+    left: 15mm;
+    right: 15mm;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 4px;
+    font-size: 8pt;
+    color: #829ab1;
+  }
+
+  /* Question items */
+  .q-item {
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed #e2e8f0;
+  }
+  .q-item:last-child {
+    border-bottom: none;
+  }
+  .q-head {
+    display: flex;
+    gap: 8px;
+    font-size: 8.5pt;
+    margin-bottom: 4px;
+  }
+  .q-num {
+    font-weight: 800;
+    color: #2b4c7e;
+    background: #eef3f9;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 8pt;
+    flex-shrink: 0;
+  }
+  .q-stem {
+    flex-grow: 1;
+    line-height: 1.45;
+  }
+  .q-img {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .q-img img {
+    max-width: 95%;
+    max-height: 48mm;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid #d9e2ec;
+    background: #ffffff;
+    padding: 3px;
+  }
+  .q-opts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px 10px;
+    margin-left: 30px;
+    font-size: 8pt;
+    margin-top: 4px;
+  }
+  .q-opt {
+    color: #334e68;
+  }
+  .opt-label {
+    font-weight: 700;
+    color: #2b4c7e;
+  }
+  .scratch-area {
+    margin-top: 5px;
+    height: 10mm;
+    border: 1px dashed #cbd8e6;
+    border-radius: 4px;
+    background: #fbfcfd;
+    position: relative;
+  }
+  .scratch-label {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 7pt;
+    color: #9fb3c8;
+  }
+
+  /* Card Item */
+  .card-item {
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
+    overflow: hidden;
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f4f8;
+    border-bottom: 1px solid #d9e2ec;
+    padding: 3px 8px;
+  }
+  .card-title {
+    font-weight: 800;
+    font-size: 8.5pt;
+    color: #2b4c7e;
+  }
+  .badge-stars {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #c07d32;
+    margin-left: 4px;
+  }
+  .badge-pass {
+    background: #334e68;
+    color: #ffffff;
+    font-size: 7.5pt;
+    padding: 1px 6px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .badge-cat {
+    background: #fef3e2;
+    color: #a8581e;
+    font-size: 7pt;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-left: 3px;
+    border: 1px solid #f9dab3;
+  }
+  .card-body {
+    padding: 5px 8px;
+    font-size: 8pt;
+    line-height: 1.4;
+  }
+  .tech-box {
+    background: #f2f8f4;
+    border-left: 3px solid #2d6a4f;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+  }
+  .trap-box {
+    background: #fdf5f5;
+    border-left: 3px solid #b83a3a;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+  }
+  .note-grid {
+    background: #f8fafc;
+    border-top: 1px dashed #d9e2ec;
+    padding: 3px 8px;
+    font-size: 7pt;
+    color: #486581;
+  }
+  .check-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+  .note-lines {
+    height: 6mm;
+    background: repeating-linear-gradient(#f8fafc, #f8fafc 2.8mm, #e2e8f0 2.8mm, #e2e8f0 3.0mm);
+    border-radius: 2px;
+  }
+
+  /* Cover Styles */
+  .cover-container {
+    height: 265mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #cbd8e6;
+    border-radius: 8px;
+    padding: 20mm;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  }
+  .cover-badge {
+    background: #2b4c7e;
+    color: #ffffff;
+    font-size: 11pt;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  .cover-title {
+    font-size: 26pt;
+    font-weight: 900;
+    color: #102a43;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .cover-sub {
+    font-size: 12pt;
+    font-weight: 600;
+    color: #486581;
+    margin-bottom: 25px;
+  }
+  .cover-box {
+    background: #f0f4f8;
+    border: 1px solid #cbd8e6;
+    border-radius: 6px;
+    padding: 15px 25px;
+    font-size: 9.5pt;
+    color: #243342;
+    text-align: left;
+    max-width: 150mm;
+    line-height: 1.7;
+  }
+</style>
+
+
+
 
 <!-- Cover Page -->
 <div class="page">

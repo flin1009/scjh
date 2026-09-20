@@ -2,185 +2,428 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>115年國中教育會考【國文科】5B逆襲衝A實戰講義（A4左右對開版）</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
 <style>
-  @page { size: A4 portrait; margin: 10mm 12mm; }
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+  }
   @media print {
     body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .page { page-break-after: always; break-after: page; }
     .no-break { page-break-inside: avoid; break-inside: avoid; }
+    .no-print, .floating-nav { display: none !important; }
   }
   * { box-sizing: border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
-    color: #1a202c; line-height: 1.5; margin: 0; padding: 0; background-color: #f7fafc;
+    color: #243342;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6f8;
   }
   .page {
-    width: 210mm; min-height: 297mm; margin: 10px auto; padding: 12mm 15mm;
-    background: #ffffff; box-shadow: 0 0 10px rgba(0,0,0,0.1); position: relative; overflow: hidden;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 12px auto;
+    padding: 12mm 15mm;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
   }
   @media print {
     body { background: #fff; }
-    .page { margin: 0; box-shadow: none; width: 100%; min-height: 100vh; padding: 10mm 12mm; }
+    .page { margin: 0; box-shadow: none; width: 100%; min-height: 100vh; padding: 10mm 12mm; border-radius: 0; }
   }
+  
+  /* Floating Nav */
+  @media screen {
+    .floating-nav {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.96);
+      padding: 8px 14px;
+      border-radius: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      border: 1px solid #cbd8e6;
+      backdrop-filter: blur(6px);
+    }
+    .nav-btn {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b4c7e;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #f0f4f9;
+      border: 1px solid #cbd8e6;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-btn:hover {
+      background: #2b4c7e;
+      color: #ffffff;
+    }
+    .btn-print {
+      background: #2b4c7e;
+      color: #ffffff;
+      border: none;
+    }
+    .btn-print:hover {
+      background: #1c3559;
+    }
+  }
+
+  /* Header & Footer */
   .page-header {
-    display: flex; justify-content: space-between; align-items: center;
-    border-bottom: 2px solid #805ad5; padding-bottom: 5px; margin-bottom: 12px;
-    font-size: 11pt; font-weight: bold; color: #805ad5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #cbd8e6;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #486581;
   }
   .page-footer {
-    position: absolute; bottom: 8mm; left: 15mm; right: 15mm;
-    display: flex; justify-content: space-between; font-size: 9pt; color: #a0aec0;
-    border-top: 1px solid #e2e8f0; padding-top: 4px;
+    position: absolute;
+    bottom: 8mm;
+    left: 15mm;
+    right: 15mm;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 4px;
+    font-size: 8pt;
+    color: #829ab1;
   }
-  .cover-container {
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    height: 250mm; text-align: center; border: 3px double #805ad5; padding: 20px; border-radius: 8px;
+
+  /* Question items */
+  .q-item {
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed #e2e8f0;
   }
-  .cover-badge {
-    background: #c53030; color: white; font-size: 14pt; font-weight: 800; padding: 6px 18px;
-    border-radius: 20px; margin-bottom: 25px; letter-spacing: 2px;
+  .q-item:last-child {
+    border-bottom: none;
   }
-  .cover-title { font-size: 28pt; font-weight: 900; color: #44337a; margin: 10px 0; line-height: 1.2; }
-  .cover-sub { font-size: 16pt; font-weight: 600; color: #4a5568; margin-bottom: 30px; }
-  .cover-box {
-    background: #faf5ff; border-left: 6px solid #805ad5; padding: 15px 25px; text-align: left;
-    margin: 20px 0; font-size: 11pt; border-radius: 4px; max-width: 150mm; line-height: 1.8;
+  .q-head {
+    display: flex;
+    gap: 8px;
+    font-size: 8.5pt;
+    margin-bottom: 4px;
   }
-  .q-item { margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px dotted #e2e8f0; }
-  .q-head { display: flex; align-items: flex-start; font-size: 10.5pt; font-weight: 700; color: #2d3748; margin-bottom: 5px; }
   .q-num {
-    background: #f3e8ff; border: 1px solid #d6bcfa; color: #6b46c1; font-weight: 800;
-    border-radius: 4px; padding: 1px 7px; margin-right: 8px; font-size: 9.5pt;
+    font-weight: 800;
+    color: #2b4c7e;
+    background: #eef3f9;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 8pt;
+    flex-shrink: 0;
   }
-  .q-stem { font-size: 10pt; line-height: 1.6; flex: 1; }
+  .q-stem {
+    flex-grow: 1;
+    line-height: 1.45;
+  }
+  .q-img {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .q-img img {
+    max-width: 95%;
+    max-height: 48mm;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid #d9e2ec;
+    background: #ffffff;
+    padding: 3px;
+  }
   .q-opts {
-    display: grid; grid-template-columns: 1fr; gap: 4px; margin: 6px 0 8px 24px; font-size: 9.5pt;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px 10px;
+    margin-left: 30px;
+    font-size: 8pt;
+    margin-top: 4px;
   }
-  .opt-label { font-weight: bold; margin-right: 4px; color: #6b46c1; }
+  .q-opt {
+    color: #334e68;
+  }
+  .opt-label {
+    font-weight: 700;
+    color: #2b4c7e;
+  }
   .scratch-area {
-    margin-top: 4px; height: 18mm; border: 1px dashed #cbd5e0;
-    background: repeating-linear-gradient(#fafafa, #fafafa 5mm, #edf2f7 5mm, #edf2f7 5.2mm);
-    border-radius: 4px; position: relative;
+    margin-top: 5px;
+    height: 10mm;
+    border: 1px dashed #cbd8e6;
+    border-radius: 4px;
+    background: #fbfcfd;
+    position: relative;
   }
-  .scratch-label { position: absolute; top: 2px; right: 5px; font-size: 8pt; color: #a0aec0; }
-  
+  .scratch-label {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 7pt;
+    color: #9fb3c8;
+  }
+
+  /* Card Item */
   .card-item {
-    background: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px;
-    margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
+    overflow: hidden;
   }
   .card-header {
-    display: flex; justify-content: space-between; align-items: center;
-    background: #faf5ff; border-bottom: 1px solid #e9d8fd; padding: 4px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f4f8;
+    border-bottom: 1px solid #d9e2ec;
+    padding: 3px 8px;
   }
-  .card-title { font-weight: 800; font-size: 10pt; color: #6b46c1; }
-  .badge-stars { font-size: 8.5pt; font-weight: 700; color: #dd6b20; margin-left: 5px; }
-  .badge-pass { background: #805ad5; color: #ffffff; font-size: 8pt; padding: 1px 6px; border-radius: 10px; font-weight: 600; }
-  .badge-cat { background: #feebc8; color: #c05621; font-size: 7.5pt; padding: 1px 5px; border-radius: 4px; font-weight: 700; margin-left: 4px; }
-  .card-body { padding: 6px 10px; font-size: 9pt; line-height: 1.45; }
-  .tech-box { background: #f0fff4; border-left: 4px solid #38a169; padding: 5px 8px; margin-bottom: 5px; border-radius: 2px; }
-  .trap-box { background: #fff5f5; border-left: 4px solid #e53e3e; padding: 5px 8px; margin-bottom: 5px; border-radius: 2px; }
-  .note-grid { background: #f7fafc; border-top: 1px dashed #e2e8f0; padding: 5px 8px; font-size: 8pt; color: #4a5568; }
-  .check-tags { display: flex; gap: 8px; margin-bottom: 2px; }
-  .note-lines { height: 10mm; background: repeating-linear-gradient(#f7fafc, #f7fafc 3.5mm, #e2e8f0 3.5mm, #e2e8f0 3.7mm); border-radius: 2px; }
+  .card-title {
+    font-weight: 800;
+    font-size: 8.5pt;
+    color: #2b4c7e;
+  }
+  .badge-stars {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #c07d32;
+    margin-left: 4px;
+  }
+  .badge-pass {
+    background: #334e68;
+    color: #ffffff;
+    font-size: 7.5pt;
+    padding: 1px 6px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .badge-cat {
+    background: #fef3e2;
+    color: #a8581e;
+    font-size: 7pt;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-left: 3px;
+    border: 1px solid #f9dab3;
+  }
+  .card-body {
+    padding: 5px 8px;
+    font-size: 8pt;
+    line-height: 1.4;
+  }
+  .tech-box {
+    background: #f2f8f4;
+    border-left: 3px solid #2d6a4f;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+  }
+  .trap-box {
+    background: #fdf5f5;
+    border-left: 3px solid #b83a3a;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+  }
+  .note-grid {
+    background: #f8fafc;
+    border-top: 1px dashed #d9e2ec;
+    padding: 3px 8px;
+    font-size: 7pt;
+    color: #486581;
+  }
+  .check-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+  .note-lines {
+    height: 6mm;
+    background: repeating-linear-gradient(#f8fafc, #f8fafc 2.8mm, #e2e8f0 2.8mm, #e2e8f0 3.0mm);
+    border-radius: 2px;
+  }
+
+  /* Cover Styles */
+  .cover-container {
+    height: 265mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #cbd8e6;
+    border-radius: 8px;
+    padding: 20mm;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  }
+  .cover-badge {
+    background: #2b4c7e;
+    color: #ffffff;
+    font-size: 11pt;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  .cover-title {
+    font-size: 26pt;
+    font-weight: 900;
+    color: #102a43;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .cover-sub {
+    font-size: 12pt;
+    font-weight: 600;
+    color: #486581;
+    margin-bottom: 25px;
+  }
+  .cover-box {
+    background: #f0f4f8;
+    border: 1px solid #cbd8e6;
+    border-radius: 6px;
+    padding: 15px 25px;
+    font-size: 9.5pt;
+    color: #243342;
+    text-align: left;
+    max-width: 150mm;
+    line-height: 1.7;
+  }
 </style>
+
 </head>
 <body>
 
-<!-- Floating Nav Bar for Handouts -->
-<div class="handout-floating-nav" style="position: fixed; top: 14px; right: 16px; z-index: 9999; display: flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 8px 16px; border-radius: 30px; box-shadow: 0 4px 14px rgba(0,0,0,0.15); border: 1px solid #cbd5e1;">
-  <a href="../../../index.html" style="color: #1e40af; text-decoration: none; font-weight: 700; font-size: 0.88rem;">🏠 回首頁</a>
-  <span style="color: #cbd5e1;">|</span>
-  <a href="../../index.html" style="color: #1e40af; text-decoration: none; font-weight: 700; font-size: 0.88rem;">📚 歷屆題庫</a>
-  <span style="color: #cbd5e1;">|</span>
-  <button onclick="window.print()" style="background: none; border: none; color: #059669; font-weight: 700; font-size: 0.88rem; cursor: pointer;">🖨️ 列印 A4</button>
+<div class="floating-nav no-print">
+  <a href="../../../index.html" class="nav-btn">🏠 獅甲會考專區</a>
+  <a href="../index.html" class="nav-btn">📂 回本屆題庫</a>
+  <button onclick="window.print()" class="nav-btn btn-print">🖨️ 列印 A4 講義</button>
 </div>
-<style>
-  @media print {
-    .handout-floating-nav { display: none !important; }
-  }
-</style>
 
 
+<!-- 封面 -->
 <div class="page">
   <div class="cover-container">
     <div class="cover-badge">★ 國中教育會考・5B逆襲衝A專用 ★</div>
     <div class="cover-title">115 年國中教育會考<br>【國文科】解題破譯實戰講義</div>
-    <div class="cover-sub">全 42 題素養題型破解 ✕ 名師快讀抓題眼 ✕ 5B避坑心魔手冊</div>
+    <div class="cover-sub">全 42 題題目剖析 ✕ 名師秒殺招 ✕ 5B避坑指南 ✕ 完整題圖</div>
     
     <div class="cover-box">
-      <strong>🎯 國文科 5B 衝 A 算牌黃金法則：</strong><br>
-      • <strong>會考 A 門檻答對題數：36 ～ 42 題</strong>（容錯上限僅 <strong>6 題</strong>！）<br>
-      • <strong>勝率第一防線</strong>：前 25 題單題（字詞、語常、短篇）最多只能錯 2 題，基本盤穩穩落袋。<br>
-      • <strong>長篇勝負手</strong>：題幹動輒 400 字，嚴格遵守「先看問題再掃首末段」，轉折詞後找答案！
+      <strong>🎯 國文科 5B 衝 A 核心黃金法則：</strong><br>
+      • <strong>穩賺基本盤 100% 入袋</strong>：前 40% 的基本觀念題，審題圈關鍵字，一題不漏！<br>
+      • <strong>題眼圈選秒殺招</strong>：長篇情境題先看最後問句，看清圖表橫縱座標與極端值。<br>
+      • <strong>避開 5B 典型心魔</strong>：單位換算、正負號變號、未依題目限制條件盲目作答。<br>
+      • <strong>模擬實戰計時</strong>：左頁實戰模擬，右頁名師破譯與避坑自我檢核。
     </div>
-
-    <div style="margin-top: 25px; font-size: 11pt; color: #2d3748; line-height: 1.8;">
-      <strong>【方案 A 左右對開使用指引】</strong><br>
-      📖 <strong>左頁【實戰題本區】</strong>：嚴格遮蓋右頁，模擬考場計時裸測，圈出限定詞。<br>
-      ⚡ <strong>右頁【名師破譯區】</strong>：對照秒殺招與 5B 盲點，親筆寫下錯題反思！
-    </div>
-
-    <div style="margin-top: 40px; font-size: 10pt; color: #718096;">
-      版權所有・專供會考複習自學與補習班輔導教學使用 ｜ 規格：A4 雙頁對開版（全冊 32 頁）
-    </div>
-  </div>
-</div>
-
-<div class="page">
-  <div class="page-header">
-    <span>【國文科衝 A 戰術手冊】</span>
-    <span>名師核心教案</span>
-  </div>
-  <div style="padding: 10px 5px; font-size: 10pt; line-height: 1.7;">
-    <h2 style="color: #6b46c1; margin-top: 0;">一、 5B 國文生的三大致命傷與解藥</h2>
-    <div style="background: #faf5ff; border-left: 5px solid #805ad5; padding: 10px 15px; margin-bottom: 15px;">
-      <strong>1. 讀太慢，後面題組憑感覺猜</strong>：<br>
-      👉 <strong>解藥【倒讀審題法】</strong>：不要一字一字讀文章！先看題目「問哪一段」、「問誰的觀點」，帶著問題關鍵詞精準回文定位。
-    </div>
-    <div style="background: #faf5ff; border-left: 5px solid #805ad5; padding: 10px 15px; margin-bottom: 15px;">
-      <strong>2. 被「過度推論」與「部分正確」的選項拐騙</strong>：<br>
-      👉 <strong>解藥【消去法原則】</strong>：選項中出現「完全、必然、絕對、始終」通常是陷阱；選項內容文章「沒提到」的立刻劃掉。
-    </div>
-    <div style="background: #faf5ff; border-left: 5px solid #805ad5; padding: 10px 15px; margin-bottom: 15px;">
-      <strong>3. 文言文看不懂幾個字就崩潰</strong>：<br>
-      👉 <strong>解藥【情境大意抓取】</strong>：會考文言文不考冷僻字！抓出故事主角（誰）、做了什麼事、最後受到什麼讚美或懲罰，掌握道德或處世寓意即得解！
-    </div>
-
-    <h2 style="color: #6b46c1; margin-top: 20px;">二、 70 分鐘考場配速時間鐘</h2>
-    <table style="width: 100%; border-collapse: collapse; font-size: 9.5pt; text-align: center;">
-      <tr style="background: #805ad5; color: white;">
-        <th style="padding: 6px; border: 1px solid #d6bcfa;">時間區間</th>
-        <th style="padding: 6px; border: 1px solid #d6bcfa;">測驗範圍</th>
-        <th style="padding: 6px; border: 1px solid #d6bcfa;">配速與策略目標</th>
-      </tr>
-      <tr>
-        <td style="padding: 6px; border: 1px solid #e2e8f0;">00 ～ 25 分鐘</td>
-        <td style="padding: 6px; border: 1px solid #e2e8f0;">第 1 ～ 20 題（字詞、語常、短篇）</td>
-        <td style="padding: 6px; border: 1px solid #e2e8f0; text-align: left;">每題 70 秒，穩抓基本盤，最多只能錯 1 題。</td>
-      </tr>
-      <tr style="background: #f7fafc;">
-        <td style="padding: 6px; border: 1px solid #e2e8f0;">25 ～ 55 分鐘</td>
-        <td style="padding: 6px; border: 1px solid #e2e8f0;">第 21 ～ 42 題（長文閱讀、跨域題組）</td>
-        <td style="padding: 6px; border: 1px solid #e2e8f0; text-align: left;">先看題眼再掃文章，長題組每組控制在 4～5 分鐘。</td>
-      </tr>
-      <tr>
-        <td style="padding: 6px; border: 1px solid #e2e8f0;">55 ～ 70 分鐘</td>
-        <td style="padding: 6px; border: 1px solid #e2e8f0;">全卷檢查 ✕ 劃卡雙重確認</td>
-        <td style="padding: 6px; border: 1px solid #e2e8f0; text-align: left;">覆核題目是否漏看「不是、錯誤」，檢查劃卡無跳號。</td>
-      </tr>
-    </table>
   </div>
   <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 2 頁（名師戰術手冊）</span>
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 1 頁（封面）</span>
+  </div>
+</div>
+
+<!-- 考前叮嚀與各題通過率矩陣 -->
+<div class="page">
+  <div class="page-header">
+    <span>【考前算牌矩陣】115年國文科</span>
+    <span>衝 A 門檻與命題難度落點分佈</span>
+  </div>
+  <div style="padding: 10px 5px; font-size: 8.5pt; line-height: 1.6;">
+    <h3 style="color: #2b4c7e; margin-top: 0; font-size: 11pt;">📊 命題難度星級與各題分佈矩陣</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 8pt; text-align: center;">
+      <thead>
+        <tr style="background: #eef3f9; color: #2b4c7e; border-bottom: 2px solid #cbd8e6;">
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">難度星級</th>
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">類別定位</th>
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">通過率區間</th>
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">建議應對策略</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★☆☆☆</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">穩賺基本盤</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">P ≥ 75%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">秒殺送分題，細心圈題眼，確保 100% 答對率。</td>
+        </tr>
+        <tr style="background: #fbfcfd;">
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★★☆☆</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">進階核心題</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">60% ≤ P &lt; 75%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">考查單一核心概念或圖表推論，善用公式與圖解法。</td>
+        </tr>
+        <tr>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★★★☆</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">衝A勝負題</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">45% ≤ P &lt; 60%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">跨單元整合或多步驟計算，5B 躍升 A 的關鍵戰場！</td>
+        </tr>
+        <tr style="background: #fbfcfd;">
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★★★★</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">高鑑別挑戰題</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">P &lt; 45%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">長篇閱讀素養題，先排除不可能選項，善用代入法反推。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="color: #2b4c7e; font-size: 11pt;">📋 5B 衝 A 臨場應試心法</h3>
+    <ul style="padding-left: 20px; color: #334e68; line-height: 1.8;">
+      <li><strong>答題節奏嚴格控管</strong>：先易後難，卡住超過 90 秒立即做記號跳過，全卷答完再回頭攻堅。</li>
+      <li><strong>草稿欄充分利用</strong>：左頁設計「草稿與推導區」，動筆畫圖列式比大腦空想要精準 10 倍！</li>
+      <li><strong>畫卡雙重確認</strong>：每寫完 5 題對照一次題號與答案卡，嚴防跳題劃錯格的致命悲劇。</li>
+    </ul>
+  </div>
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 2 頁（策略導航）</span>
   </div>
 </div>
 
 <div class="page">
   <div class="page-header">
-    <span>【實戰題本模擬區】第 1 單元：試題精析（第 1 ～ 3 題）</span>
-    <span>會考模擬・計時作答</span>
+    <span>【實戰題本模擬區】第 1 ～ 4 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
   </div>
 
   <div class="q-item no-break">
@@ -188,8 +431,9 @@
       <span class="q-num">1</span>
       <div class="q-stem">下列文句中的「即」字，何者為「靠近」之意？</div>
     </div>
+    
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 被熱水燙傷之後，應該立「即」用大量冷水沖洗</div><div class="q-opt"><span class="opt-label">(B)</span> 他們兩個人的關係若「即」若離，真令人難以捉摸</div><div class="q-opt"><span class="opt-label">(C)</span> 本活動摸彩中獎者，憑票根「即」可至服務臺領取獎品</div><div class="q-opt"><span class="opt-label">(D)</span> 我不是你的傭人，別以為我可以招之「即」來，揮之即去</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
   <div class="q-item no-break">
@@ -197,8 +441,9 @@
       <span class="q-num">2</span>
       <div class="q-stem">「臺灣 泰式餐館幾乎都供應的椒麻雞，其實是出身雲南的混血菜。滇、緬、泰、越、寮位置鄰<br>近，料理自然互相滲透，彼此影響。這道菜傳到泰北，再到臺灣，背景是烽火連天的歲月。像<br>當年孤軍，遊走在滇、緬、泰邊境，流著四川的麻辣血源和泰國的酸辣風格。」關於料理的敘<br>述，下列何者最接近本文的觀點？</div>
     </div>
+    
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 料理會因地緣關係而互相影響</div><div class="q-opt"><span class="opt-label">(B)</span> 異鄉遊子對童年吃食特別難忘</div><div class="q-opt"><span class="opt-label">(C)</span> 戰火頻仍地區的料理多半偏辣</div><div class="q-opt"><span class="opt-label">(D)</span> 餐館會依消費者需求調整口味</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
   <div class="q-item no-break">
@@ -206,8 +451,21 @@
       <span class="q-num">3</span>
       <div class="q-stem">上課時老師提供這兩則資料給同學討論，關於資料的解讀，下列何者的發言最恰當？</div>
     </div>
+    <div class="q-img"><img src="images/chinese_q3_1.jpeg" alt="題號 3 附圖"></div>
+
     <div class="q-opts"></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">4</span>
+      <div class="q-stem">根據右列資料判斷，「鬲」最可能屬於下列<br>哪一種造字法則？</div>
+    </div>
+    <div class="q-img"><img src="images/chinese_q4_1.jpeg" alt="題號 4 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 象形</div><div class="q-opt"><span class="opt-label">(B)</span> 指事</div><div class="q-opt"><span class="opt-label">(C)</span> 會意</div><div class="q-opt"><span class="opt-label">(D)</span> 形聲</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
   <div class="page-footer">
@@ -216,11 +474,10 @@
   </div>
 </div>
 
-
 <div class="page">
   <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 1 單元：試題精析（第 1 ～ 3 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
+    <span>【名師破題與5B避坑專欄】第 1 ～ 4 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -232,25 +489,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 86.1%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.44</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">字詞代入法：將選項詞義替換進原句，語意通順、邏輯無違和即為正解。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">5B 學生常憑語感直覺亂猜，忽略字詞在不同語境下的引申義。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -265,25 +522,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 93.5%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.4</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.4</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">首末段快讀法：首段引出論題，末段總結立場。文中若出現「但是、然而、卻」，觀點永遠在轉折詞後！</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">容易被「部分正確」或「過度推論」的選項誘答，忘了作者的核心訴求。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -298,81 +555,28 @@
       </div>
       <div>
         <span class="badge-pass">通過率 88.8%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.45</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.45</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 4 頁（名師解析）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【實戰題本模擬區】第 2 單元：試題精析（第 4 ～ 6 題）</span>
-    <span>會考模擬・計時作答</span>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">4</span>
-      <div class="q-stem">根據右列資料判斷，「鬲」最可能屬於下列<br>哪一種造字法則？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 象形</div><div class="q-opt"><span class="opt-label">(B)</span> 指事</div><div class="q-opt"><span class="opt-label">(C)</span> 會意</div><div class="q-opt"><span class="opt-label">(D)</span> 形聲</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">5</span>
-      <div class="q-stem">「散文貴在自由□體例的自由、選材的自由、篇幅的自由、表達思想的自由。寫作者可以依憑<br>自己的認知，採用喜歡的書寫方式。」根據文意脈絡，缺空處最適合填入下列哪一個標點符<br>號？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 、</div><div class="q-opt"><span class="opt-label">(B)</span> ？</div><div class="q-opt"><span class="opt-label">(C)</span> ……</div><div class="q-opt"><span class="opt-label">(D)</span> ──</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">6</span>
-      <div class="q-stem">下列文句，何者用字完全正確？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 看朋友有難，他一無反顧出面幫忙</div><div class="q-opt"><span class="opt-label">(B)</span> 我只是區區一個無名小足，人微言輕</div><div class="q-opt"><span class="opt-label">(C)</span> 各種詐騙手法層出不窮，令人防不慎防</div><div class="q-opt"><span class="opt-label">(D)</span> 早上公車發生擦撞，幸好乘客都安然無恙</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 5 頁（實戰測驗）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 2 單元：試題精析（第 4 ～ 6 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -384,28 +588,93 @@
       </div>
       <div>
         <span class="badge-pass">通過率 74.7%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.36</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.36</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 4 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 5 ～ 8 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">5</span>
+      <div class="q-stem">「散文貴在自由□體例的自由、選材的自由、篇幅的自由、表達思想的自由。寫作者可以依憑<br>自己的認知，採用喜歡的書寫方式。」根據文意脈絡，缺空處最適合填入下列哪一個標點符<br>號？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 、</div><div class="q-opt"><span class="opt-label">(B)</span> ？</div><div class="q-opt"><span class="opt-label">(C)</span> ……</div><div class="q-opt"><span class="opt-label">(D)</span> ──</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">6</span>
+      <div class="q-stem">下列文句，何者用字完全正確？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 看朋友有難，他一無反顧出面幫忙</div><div class="q-opt"><span class="opt-label">(B)</span> 我只是區區一個無名小足，人微言輕</div><div class="q-opt"><span class="opt-label">(C)</span> 各種詐騙手法層出不窮，令人防不慎防</div><div class="q-opt"><span class="opt-label">(D)</span> 早上公車發生擦撞，幸好乘客都安然無恙</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">7</span>
+      <div class="q-stem">下列文句「」中的字，何者讀音正確？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 海嘯過後，小鎮滿目「瘡」痍：ㄘㄤ</div><div class="q-opt"><span class="opt-label">(B)</span> 此事部長的心意已決，不容他人置「喙」：ㄓㄨㄛˊ</div><div class="q-opt"><span class="opt-label">(C)</span> 電影首映會當晚，導演「偕」同主要演員一起出席：ㄒㄧㄝˊ</div><div class="q-opt"><span class="opt-label">(D)</span> 這兩者「孰」輕孰重，你要考慮清楚，以免將來後悔：ㄕㄡˊ</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">8</span>
+      <div class="q-stem">根據資料，下列關於《第十二夜》的推論，何者最恰當？</div>
+    </div>
+    <div class="q-img"><img src="images/chinese_q8_1.jpeg" alt="題號 8 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 旨在陳述耶穌受難一事</div><div class="q-opt"><span class="opt-label">(B)</span> 每年固定連續演出十二天</div><div class="q-opt"><span class="opt-label">(C)</span> 劇名由來與主顯節的日期有關</div><div class="q-opt"><span class="opt-label">(D)</span> 英國宮廷因此劇而有戲劇展演的習俗</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 5 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 5 ～ 8 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -417,25 +686,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 77.7%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.55</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.55</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -450,81 +719,28 @@
       </div>
       <div>
         <span class="badge-pass">通過率 54.6%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.44</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 6 頁（名師解析）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【實戰題本模擬區】第 3 單元：試題精析（第 7 ～ 9 題）</span>
-    <span>會考模擬・計時作答</span>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">7</span>
-      <div class="q-stem">下列文句「」中的字，何者讀音正確？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 海嘯過後，小鎮滿目「瘡」痍：ㄘㄤ</div><div class="q-opt"><span class="opt-label">(B)</span> 此事部長的心意已決，不容他人置「喙」：ㄓㄨㄛˊ</div><div class="q-opt"><span class="opt-label">(C)</span> 電影首映會當晚，導演「偕」同主要演員一起出席：ㄒㄧㄝˊ</div><div class="q-opt"><span class="opt-label">(D)</span> 這兩者「孰」輕孰重，你要考慮清楚，以免將來後悔：ㄕㄡˊ</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">8</span>
-      <div class="q-stem">根據資料，下列關於《第十二夜》的推論，何者最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 旨在陳述耶穌受難一事</div><div class="q-opt"><span class="opt-label">(B)</span> 每年固定連續演出十二天</div><div class="q-opt"><span class="opt-label">(C)</span> 劇名由來與主顯節的日期有關</div><div class="q-opt"><span class="opt-label">(D)</span> 英國宮廷因此劇而有戲劇展演的習俗</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">9</span>
-      <div class="q-stem">「烘書之情何所似，有如老翁撫病子。心知元氣不可復，但求無死斯足矣。書燒之時又何其，<br>有如慈父怒啼兒。恨死擲去不回顧，徐徐復自撫摩之。此情自痴還自笑，心血既乾轉煩惱。上<br>壽八十能幾何，為爾多累何其多。」關於這首詩的說明，下列敘述何者最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 「心知元氣不可復」指作者時日無多而焚書</div><div class="q-opt"><span class="opt-label">(B)</span> 「恨死擲去不回顧」代表愛書之情至死不渝</div><div class="q-opt"><span class="opt-label">(C)</span> 「徐徐復自撫摩之」表達作者不忍書燒之情</div><div class="q-opt"><span class="opt-label">(D)</span> 「上壽八十能幾何」意指書籍保存有其時限</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 7 頁（實戰測驗）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 3 單元：試題精析（第 7 ～ 9 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -536,25 +752,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 71.5%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.42</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.42</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -569,28 +785,94 @@
       </div>
       <div>
         <span class="badge-pass">通過率 74.9%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.45</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.45</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 6 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 9 ～ 12 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">9</span>
+      <div class="q-stem">「烘書之情何所似，有如老翁撫病子。心知元氣不可復，但求無死斯足矣。書燒之時又何其，<br>有如慈父怒啼兒。恨死擲去不回顧，徐徐復自撫摩之。此情自痴還自笑，心血既乾轉煩惱。上<br>壽八十能幾何，為爾多累何其多。」關於這首詩的說明，下列敘述何者最恰當？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 「心知元氣不可復」指作者時日無多而焚書</div><div class="q-opt"><span class="opt-label">(B)</span> 「恨死擲去不回顧」代表愛書之情至死不渝</div><div class="q-opt"><span class="opt-label">(C)</span> 「徐徐復自撫摩之」表達作者不忍書燒之情</div><div class="q-opt"><span class="opt-label">(D)</span> 「上壽八十能幾何」意指書籍保存有其時限</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">10</span>
+      <div class="q-stem">《魏三體石經》每字皆刻三種字體，右圖為部分拓<br>本，已知其中二種字體為古文1、篆書。據此判斷，<br>圖中第三種字體應為下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/chinese_q10_1.jpeg" alt="題號 10 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 行書</div><div class="q-opt"><span class="opt-label">(B)</span> 草書</div><div class="q-opt"><span class="opt-label">(C)</span> 楷書</div><div class="q-opt"><span class="opt-label">(D)</span> 隸書</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">11</span>
+      <div class="q-stem">根據本文，下列何者最符合「寫真式描寫」？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 他們明明知道要滴下眉毛上的汗珠，才能撿起田中的麥穗，而為什麼要謝天</div><div class="q-opt"><span class="opt-label">(B)</span> 他用兩手攀著上面，兩腳再向上縮，他肥胖的身子向左微傾，顯出努力的樣子</div><div class="q-opt"><span class="opt-label">(C)</span> 頃刻間這周遭瀰漫了清晨富麗的溫柔，頃刻間你的心懷也分潤了白天誕生的光榮</div><div class="q-opt"><span class="opt-label">(D)</span> 有一些事，卻像夏日的小河、冬天的落葉，像春花，也像秋草，似無所見，又非視而不見</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">12</span>
+      <div class="q-stem">宋 趙彥衛《雲麓漫鈔》：「五代帝王多裹朝天襆頭，二腳上翹。四方之主，各創新樣，或翹上<br>而反折於下，或如團扇蕉葉之狀，合抱於前。後蜀之君始以漆紗為之，楚國國主二角左右長尺<br>餘，謂之龍角，人或誤觸之，則終日頭痛。至後漢高祖裹襆頭，左右長尺餘，橫直之，不復上<br>翹，迄今不改。」根據本文，宋代帝王襆頭的樣式與下列何者最接近？</div>
+    </div>
+    <div class="q-img"><img src="images/chinese_q12_1.jpeg" alt="題號 12 附圖"></div>
+
+    <div class="q-opts"></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 7 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 9 ～ 12 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -602,81 +884,28 @@
       </div>
       <div>
         <span class="badge-pass">通過率 60.6%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.48</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 8 頁（名師解析）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【實戰題本模擬區】第 4 單元：試題精析（第 10 ～ 12 題）</span>
-    <span>會考模擬・計時作答</span>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">10</span>
-      <div class="q-stem">《魏三體石經》每字皆刻三種字體，右圖為部分拓<br>本，已知其中二種字體為古文1、篆書。據此判斷，<br>圖中第三種字體應為下列何者？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 行書</div><div class="q-opt"><span class="opt-label">(B)</span> 草書</div><div class="q-opt"><span class="opt-label">(C)</span> 楷書</div><div class="q-opt"><span class="opt-label">(D)</span> 隸書</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">11</span>
-      <div class="q-stem">根據本文，下列何者最符合「寫真式描寫」？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 他們明明知道要滴下眉毛上的汗珠，才能撿起田中的麥穗，而為什麼要謝天</div><div class="q-opt"><span class="opt-label">(B)</span> 他用兩手攀著上面，兩腳再向上縮，他肥胖的身子向左微傾，顯出努力的樣子</div><div class="q-opt"><span class="opt-label">(C)</span> 頃刻間這周遭瀰漫了清晨富麗的溫柔，頃刻間你的心懷也分潤了白天誕生的光榮</div><div class="q-opt"><span class="opt-label">(D)</span> 有一些事，卻像夏日的小河、冬天的落葉，像春花，也像秋草，似無所見，又非視而不見</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">12</span>
-      <div class="q-stem">宋 趙彥衛《雲麓漫鈔》：「五代帝王多裹朝天襆頭，二腳上翹。四方之主，各創新樣，或翹上<br>而反折於下，或如團扇蕉葉之狀，合抱於前。後蜀之君始以漆紗為之，楚國國主二角左右長尺<br>餘，謂之龍角，人或誤觸之，則終日頭痛。至後漢高祖裹襆頭，左右長尺餘，橫直之，不復上<br>翹，迄今不改。」根據本文，宋代帝王襆頭的樣式與下列何者最接近？</div>
-    </div>
-    <div class="q-opts"></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 9 頁（實戰測驗）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 4 單元：試題精析（第 10 ～ 12 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -688,25 +917,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 69.8%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.48</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -721,25 +950,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 66.0%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.44</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -754,25 +983,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 58.3%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.47</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.47</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -780,15 +1009,14 @@
 
   <div class="page-footer">
     <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 10 頁（名師解析）</span>
+    <span>第 8 頁（名師解析）</span>
   </div>
 </div>
 
-
 <div class="page">
   <div class="page-header">
-    <span>【實戰題本模擬區】第 5 單元：試題精析（第 13 ～ 15 題）</span>
-    <span>會考模擬・計時作答</span>
+    <span>【實戰題本模擬區】第 13 ～ 16 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
   </div>
 
   <div class="q-item no-break">
@@ -796,8 +1024,9 @@
       <span class="q-num">13</span>
       <div class="q-stem">關於文中人物書法的比較，下列敘述何者最恰當？</div>
     </div>
+    
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 作者認為高帝書法不如僧虔</div><div class="q-opt"><span class="opt-label">(B)</span> 作者認為子敬書法天下第一</div><div class="q-opt"><span class="opt-label">(C)</span> 子敬覺得高帝的草書缺乏風骨</div><div class="q-opt"><span class="opt-label">(D)</span> 僧虔自認與高帝賭書猶雞之搏狸</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
   <div class="q-item no-break">
@@ -805,8 +1034,9 @@
       <span class="q-num">14</span>
       <div class="q-stem">根據本文，「30×30 目標」的兩個數字所代表的意義，最可能是下列何者？ <br> <br>前者 <br>後者</div>
     </div>
+    
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 大會舉行的年分  海洋保護區的面積百分比</div><div class="q-opt"><span class="opt-label">(B)</span> 陸域和海域保護區的面積百分比  預計達成目標的年分</div><div class="q-opt"><span class="opt-label">(C)</span> 預計達成目標的年分  陸域和海域保護區的面積百分比</div><div class="q-opt"><span class="opt-label">(D)</span> 海洋保護區的面積百分比  大會舉行的年分</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
   <div class="q-item no-break">
@@ -814,21 +1044,32 @@
       <span class="q-num">15</span>
       <div class="q-stem">「吉爾吉斯毛氈地毯色彩鮮豔，圖案多樣，製作技藝與知識通常由家族的年長婦女傳授，完成<br>後可用上至少30 年。年長者會在動工與結束時祈福，製作時需靠團隊合作：在年長婦女的監督<br>下，由年輕婦女執行，男性則負責剃羊毛、幫忙壓製，最後拿去販賣。這不但是吉爾吉斯人最<br>重要的工藝之一，也有助社群凝聚，創造認同感與文化延續性，因此獲得聯合國教科文組織認<br>可為文化遺產。」根據本文，吉爾吉斯毛氈地毯有助社群凝聚、創造認同感與文化延續性的原<br>因，最不可能是下列何者？</div>
     </div>
+    
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 成品可以使用至少30 年</div><div class="q-opt"><span class="opt-label">(B)</span> 需要團隊分工合作才能完成</div><div class="q-opt"><span class="opt-label">(C)</span> 由年長婦女教導年輕婦女製作</div><div class="q-opt"><span class="opt-label">(D)</span> 年長者會在動工與結束時祈福</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">16</span>
+      <div class="q-stem">下列友人對話中的稱謂，何者使用最恰當？</div>
+    </div>
+    <div class="q-img"><img src="images/chinese_q16_1.jpeg" alt="題號 16 附圖"></div>
+
+    <div class="q-opts"></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
   <div class="page-footer">
     <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 11 頁（實戰測驗）</span>
+    <span>第 9 頁（實戰測驗）</span>
   </div>
 </div>
 
-
 <div class="page">
   <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 5 單元：試題精析（第 13 ～ 15 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
+    <span>【名師破題與5B避坑專欄】第 13 ～ 16 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -840,25 +1081,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 61.8%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.59</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.59</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -873,25 +1114,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 56.8%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.4</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.4</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -906,81 +1147,28 @@
       </div>
       <div>
         <span class="badge-pass">通過率 56.5%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.48</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 12 頁（名師解析）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【實戰題本模擬區】第 6 單元：試題精析（第 16 ～ 18 題）</span>
-    <span>會考模擬・計時作答</span>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">16</span>
-      <div class="q-stem">下列友人對話中的稱謂，何者使用最恰當？</div>
-    </div>
-    <div class="q-opts"></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">17</span>
-      <div class="q-stem">「宋代 賈似道的《促織經》是橫跨哲學、文學、醫學與口傳知識的系統性著作，足以與現代問<br>世的偉大昆蟲手冊相提並論，而歐洲最早的昆蟲專書則是在《促織經》成書將近三百年後才出<br>版。但賈似道的企圖心與歐洲博物學家不同，他不像他們那樣對收集充滿熱情，或想用自己的<br>方式擁有自然界。他只想寫給喜愛鬥蟋蟀的賭徒參考。」根據本文，下列關於《促織經》的推<br>論何者最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 是歐洲昆蟲專書的啟蒙</div><div class="q-opt"><span class="opt-label">(B)</span> 是中國最早的跨領域學術研究</div><div class="q-opt"><span class="opt-label">(C)</span> 意在激發人們探索自然的熱情</div><div class="q-opt"><span class="opt-label">(D)</span> 教人如何提高鬥蟋蟀的致勝機率</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">18</span>
-      <div class="q-stem">「子產相鄭，往見壺丘子林，與其弟子坐，必以年1。夫居相於萬乘之國，而能捨之，謀志論<br>行，而以心與人相索，其唯子產乎？故相鄭十八年，唯刑三人、殺二人，桃李之垂於行者，莫<br>之援2也。」關於文中子產的敘述，下列何者最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 求才若渴，四處招募各國的賢士</div><div class="q-opt"><span class="opt-label">(B)</span> 認為教育乃治國根本，極力興學</div><div class="q-opt"><span class="opt-label">(C)</span> 推行嚴刑峻法，令人民路不拾遺</div><div class="q-opt"><span class="opt-label">(D)</span> 跳脫身分貴賤的框架，以誠待人</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 13 頁（實戰測驗）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 6 單元：試題精析（第 16 ～ 18 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -992,28 +1180,92 @@
       </div>
       <div>
         <span class="badge-pass">通過率 51.1%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.5</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.5</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 10 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 17 ～ 20 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">17</span>
+      <div class="q-stem">「宋代 賈似道的《促織經》是橫跨哲學、文學、醫學與口傳知識的系統性著作，足以與現代問<br>世的偉大昆蟲手冊相提並論，而歐洲最早的昆蟲專書則是在《促織經》成書將近三百年後才出<br>版。但賈似道的企圖心與歐洲博物學家不同，他不像他們那樣對收集充滿熱情，或想用自己的<br>方式擁有自然界。他只想寫給喜愛鬥蟋蟀的賭徒參考。」根據本文，下列關於《促織經》的推<br>論何者最恰當？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 是歐洲昆蟲專書的啟蒙</div><div class="q-opt"><span class="opt-label">(B)</span> 是中國最早的跨領域學術研究</div><div class="q-opt"><span class="opt-label">(C)</span> 意在激發人們探索自然的熱情</div><div class="q-opt"><span class="opt-label">(D)</span> 教人如何提高鬥蟋蟀的致勝機率</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">18</span>
+      <div class="q-stem">「子產相鄭，往見壺丘子林，與其弟子坐，必以年1。夫居相於萬乘之國，而能捨之，謀志論<br>行，而以心與人相索，其唯子產乎？故相鄭十八年，唯刑三人、殺二人，桃李之垂於行者，莫<br>之援2也。」關於文中子產的敘述，下列何者最恰當？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 求才若渴，四處招募各國的賢士</div><div class="q-opt"><span class="opt-label">(B)</span> 認為教育乃治國根本，極力興學</div><div class="q-opt"><span class="opt-label">(C)</span> 推行嚴刑峻法，令人民路不拾遺</div><div class="q-opt"><span class="opt-label">(D)</span> 跳脫身分貴賤的框架，以誠待人</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">19</span>
+      <div class="q-stem">下列文句「」中的成語，何者使用最恰當？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 這篇作品文采出眾，「胸無點墨」的人是寫不出來的</div><div class="q-opt"><span class="opt-label">(B)</span> 辛勤工作之餘也要適時休息，才能達到「休戚與共」</div><div class="q-opt"><span class="opt-label">(C)</span> 這兩個友好的國家交流往來頻繁，關係「間不容髮」</div><div class="q-opt"><span class="opt-label">(D)</span> 他嚮往「瓜田李下」的鄉間生活，毫不猶豫搬離市區</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">20</span>
+      <div class="q-stem">關於文中人物的敘述，下列何者最恰當？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 小吏仗勢欺人，目無尊長</div><div class="q-opt"><span class="opt-label">(B)</span> 縣令治事有方，管理嚴格</div><div class="q-opt"><span class="opt-label">(C)</span> 蔣堂寫信推薦蘇子美為吳中令</div><div class="q-opt"><span class="opt-label">(D)</span> 蘇子美有識人之明而成為名臣</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 11 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 17 ～ 20 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -1025,25 +1277,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 55.7%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.56</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -1058,81 +1310,28 @@
       </div>
       <div>
         <span class="badge-pass">通過率 48.7%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.44</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.44</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 14 頁（名師解析）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【實戰題本模擬區】第 7 單元：試題精析（第 19 ～ 21 題）</span>
-    <span>會考模擬・計時作答</span>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">19</span>
-      <div class="q-stem">下列文句「」中的成語，何者使用最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 這篇作品文采出眾，「胸無點墨」的人是寫不出來的</div><div class="q-opt"><span class="opt-label">(B)</span> 辛勤工作之餘也要適時休息，才能達到「休戚與共」</div><div class="q-opt"><span class="opt-label">(C)</span> 這兩個友好的國家交流往來頻繁，關係「間不容髮」</div><div class="q-opt"><span class="opt-label">(D)</span> 他嚮往「瓜田李下」的鄉間生活，毫不猶豫搬離市區</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">20</span>
-      <div class="q-stem">關於文中人物的敘述，下列何者最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 小吏仗勢欺人，目無尊長</div><div class="q-opt"><span class="opt-label">(B)</span> 縣令治事有方，管理嚴格</div><div class="q-opt"><span class="opt-label">(C)</span> 蔣堂寫信推薦蘇子美為吳中令</div><div class="q-opt"><span class="opt-label">(D)</span> 蘇子美有識人之明而成為名臣</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">21</span>
-      <div class="q-stem">根據這則笑話，以鬚者的立場來看，下列何者最硬？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 石頭與鋼鐵</div><div class="q-opt"><span class="opt-label">(B)</span> 鬚者的面皮</div><div class="q-opt"><span class="opt-label">(C)</span> 面皮上的髭鬚</div><div class="q-opt"><span class="opt-label">(D)</span> 無鬚者的面皮</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 15 頁（實戰測驗）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 7 單元：試題精析（第 19 ～ 21 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -1144,25 +1343,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 50.1%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.46</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -1177,28 +1376,93 @@
       </div>
       <div>
         <span class="badge-pass">通過率 42.2%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.31</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.31</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 12 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 21 ～ 24 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">21</span>
+      <div class="q-stem">根據這則笑話，以鬚者的立場來看，下列何者最硬？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 石頭與鋼鐵</div><div class="q-opt"><span class="opt-label">(B)</span> 鬚者的面皮</div><div class="q-opt"><span class="opt-label">(C)</span> 面皮上的髭鬚</div><div class="q-opt"><span class="opt-label">(D)</span> 無鬚者的面皮</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">22</span>
+      <div class="q-stem">「往年士大夫好講水利。有言欲涸梁山泊以為農田者，或詰之曰：『梁山泊涸之，不幸秋夏之<br>交，行潦四集，諸水並入，何以受之？』貢父適在坐，徐曰：『卻於泊之傍鑿一池，大小正同，<br>則可受其水矣。』坐中皆絕倒，言者大慚沮。」關於文中眾人對水利的想法，下列敘述何者最<br>恰當？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 為解決梁山泊秋夏淹水的問題，士大夫提議涸梁山泊為田</div><div class="q-opt"><span class="opt-label">(B)</span> 提出詰問的人擔憂梁山泊因泥沙淤積而難以吸納大量洪水</div><div class="q-opt"><span class="opt-label">(C)</span> 貢父表面提出方法，實則藉此凸顯欲涸梁山泊為田的荒謬</div><div class="q-opt"><span class="opt-label">(D)</span> 眾人對貢父的想法不以為然，仍堅持涸梁山泊為田的建議</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">23</span>
+      <div class="q-stem">甲、乙兩曲皆詠梅，下列關於二者的比較，何者敘述最恰當？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲以雪喻梅，乙以珍珠喻梅</div><div class="q-opt"><span class="opt-label">(B)</span> 二者皆有視覺與嗅覺的摹寫</div><div class="q-opt"><span class="opt-label">(C)</span> 皆於首句提問，次句明確回答</div><div class="q-opt"><span class="opt-label">(D)</span> 二者的視線推移皆是由近而遠</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">24</span>
+      <div class="q-stem">關於這二節詩的分析，下列敘述何者最恰當？</div>
+    </div>
+    <div class="q-img"><img src="images/chinese_passage_q24_q25_1.jpeg" alt="題號 24 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 第一節以「野性」暗示作者正值年少</div><div class="q-opt"><span class="opt-label">(B)</span> 第二節以「切碎」呼應「零零落落」</div><div class="q-opt"><span class="opt-label">(C)</span> 第一節穿插驚嘆語句，表達吃不到的遺憾</div><div class="q-opt"><span class="opt-label">(D)</span> 第二節藉心肝腸肺的描摹，象徵人心險惡</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 13 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 21 ～ 24 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -1210,81 +1474,28 @@
       </div>
       <div>
         <span class="badge-pass">通過率 48.9%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.48</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 16 頁（名師解析）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【實戰題本模擬區】第 8 單元：試題精析（第 22 ～ 24 題）</span>
-    <span>會考模擬・計時作答</span>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">22</span>
-      <div class="q-stem">「往年士大夫好講水利。有言欲涸梁山泊以為農田者，或詰之曰：『梁山泊涸之，不幸秋夏之<br>交，行潦四集，諸水並入，何以受之？』貢父適在坐，徐曰：『卻於泊之傍鑿一池，大小正同，<br>則可受其水矣。』坐中皆絕倒，言者大慚沮。」關於文中眾人對水利的想法，下列敘述何者最<br>恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 為解決梁山泊秋夏淹水的問題，士大夫提議涸梁山泊為田</div><div class="q-opt"><span class="opt-label">(B)</span> 提出詰問的人擔憂梁山泊因泥沙淤積而難以吸納大量洪水</div><div class="q-opt"><span class="opt-label">(C)</span> 貢父表面提出方法，實則藉此凸顯欲涸梁山泊為田的荒謬</div><div class="q-opt"><span class="opt-label">(D)</span> 眾人對貢父的想法不以為然，仍堅持涸梁山泊為田的建議</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">23</span>
-      <div class="q-stem">甲、乙兩曲皆詠梅，下列關於二者的比較，何者敘述最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲以雪喻梅，乙以珍珠喻梅</div><div class="q-opt"><span class="opt-label">(B)</span> 二者皆有視覺與嗅覺的摹寫</div><div class="q-opt"><span class="opt-label">(C)</span> 皆於首句提問，次句明確回答</div><div class="q-opt"><span class="opt-label">(D)</span> 二者的視線推移皆是由近而遠</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">24</span>
-      <div class="q-stem">關於這二節詩的分析，下列敘述何者最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 第一節以「野性」暗示作者正值年少</div><div class="q-opt"><span class="opt-label">(B)</span> 第二節以「切碎」呼應「零零落落」</div><div class="q-opt"><span class="opt-label">(C)</span> 第一節穿插驚嘆語句，表達吃不到的遺憾</div><div class="q-opt"><span class="opt-label">(D)</span> 第二節藉心肝腸肺的描摹，象徵人心險惡</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 17 頁（實戰測驗）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 8 單元：試題精析（第 22 ～ 24 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -1296,25 +1507,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 54.1%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.43</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.43</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -1329,25 +1540,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 45.9%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.37</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.37</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -1362,25 +1573,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 79.9%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.45</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.45</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -1388,15 +1599,14 @@
 
   <div class="page-footer">
     <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 18 頁（名師解析）</span>
+    <span>第 14 頁（名師解析）</span>
   </div>
 </div>
 
-
 <div class="page">
   <div class="page-header">
-    <span>【實戰題本模擬區】第 9 單元：試題精析（第 25 ～ 27 題）</span>
-    <span>會考模擬・計時作答</span>
+    <span>【實戰題本模擬區】第 25 ～ 28 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
   </div>
 
   <div class="q-item no-break">
@@ -1404,8 +1614,10 @@
       <span class="q-num">25</span>
       <div class="q-stem">關於這二節詩的共同點，下列敘述何者最恰當？</div>
     </div>
+    <div class="q-img"><img src="images/chinese_passage_q24_q25_1.jpeg" alt="題號 25 附圖"></div>
+
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 皆透過描寫食物帶出生活的況味</div><div class="q-opt"><span class="opt-label">(B)</span> 皆引用典故連結食物與文化的關係</div><div class="q-opt"><span class="opt-label">(C)</span> 皆各自運用兩種顏色的對比，意象鮮明</div><div class="q-opt"><span class="opt-label">(D)</span> 皆以當季食材入詩，強調美好事物稍縱即逝</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
   <div class="q-item no-break">
@@ -1413,8 +1625,11 @@
       <span class="q-num">26</span>
       <div class="q-stem">根據甲文，下列關於垂直農場的推論，何者最恰當？</div>
     </div>
+    <div class="q-img"><img src="images/chinese_passage_q26_q29_1.jpeg" alt="題號 26 附圖"></div>
+<div class="q-img"><img src="images/chinese_passage_q26_q29_2.jpeg" alt="題號 26 附圖"></div>
+
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 產量與用水量皆高出土壤種植方式</div><div class="q-opt"><span class="opt-label">(B)</span> 受天然風災直接的影響少於傳統農業</div><div class="q-opt"><span class="opt-label">(C)</span> 亞洲因生產成本較低，更適合垂直農場的發展</div><div class="q-opt"><span class="opt-label">(D)</span> 2050 年全球將有七成的人必須吃垂直農場栽種的蔬菜</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
   <div class="q-item no-break">
@@ -1422,21 +1637,35 @@
       <span class="q-num">27</span>
       <div class="q-stem">「循環經濟」強調的是資源可持續回復，循環再生。乙文畫線處的做法，何者最能呼應「循環<br>經濟」？</div>
     </div>
+    <div class="q-img"><img src="images/chinese_passage_q26_q29_1.jpeg" alt="題號 27 附圖"></div>
+<div class="q-img"><img src="images/chinese_passage_q26_q29_2.jpeg" alt="題號 27 附圖"></div>
+
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> ①</div><div class="q-opt"><span class="opt-label">(B)</span> ②</div><div class="q-opt"><span class="opt-label">(C)</span> ③</div><div class="q-opt"><span class="opt-label">(D)</span> ④</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">28</span>
+      <div class="q-stem">乙文提及「研究人員指出這種模式可能較適合用在農業而非畜牧業」，其原因最可能是下列何<br>者？</div>
+    </div>
+    <div class="q-img"><img src="images/chinese_passage_q26_q29_1.jpeg" alt="題號 28 附圖"></div>
+<div class="q-img"><img src="images/chinese_passage_q26_q29_2.jpeg" alt="題號 28 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 友善動物</div><div class="q-opt"><span class="opt-label">(B)</span> 生產效能</div><div class="q-opt"><span class="opt-label">(C)</span> 產品價格</div><div class="q-opt"><span class="opt-label">(D)</span> 消費需求</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
   <div class="page-footer">
     <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 19 頁（實戰測驗）</span>
+    <span>第 15 頁（實戰測驗）</span>
   </div>
 </div>
 
-
 <div class="page">
   <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 9 單元：試題精析（第 25 ～ 27 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
+    <span>【名師破題與5B避坑專欄】第 25 ～ 28 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -1448,25 +1677,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 85.9%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.49</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -1481,25 +1710,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 71.2%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.49</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -1514,81 +1743,28 @@
       </div>
       <div>
         <span class="badge-pass">通過率 87.0%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.45</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.45</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 20 頁（名師解析）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【實戰題本模擬區】第 10 單元：試題精析（第 28 ～ 30 題）</span>
-    <span>會考模擬・計時作答</span>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">28</span>
-      <div class="q-stem">乙文提及「研究人員指出這種模式可能較適合用在農業而非畜牧業」，其原因最可能是下列何<br>者？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 友善動物</div><div class="q-opt"><span class="opt-label">(B)</span> 生產效能</div><div class="q-opt"><span class="opt-label">(C)</span> 產品價格</div><div class="q-opt"><span class="opt-label">(D)</span> 消費需求</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">29</span>
-      <div class="q-stem">根據甲、乙二文，「垂直農場」與「漂浮牧場」共同的特點不包含下列何者？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 可以減少食物里程</div><div class="q-opt"><span class="opt-label">(B)</span> 設置地點都在城市</div><div class="q-opt"><span class="opt-label">(C)</span> 生產所需的資金成本高</div><div class="q-opt"><span class="opt-label">(D)</span> 運作時需投入大量人力</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">30</span>
-      <div class="q-stem">根據本文，畫線處的文句何者最能看出爸爸對孩子的重視？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> ①</div><div class="q-opt"><span class="opt-label">(B)</span> ②</div><div class="q-opt"><span class="opt-label">(C)</span> ③</div><div class="q-opt"><span class="opt-label">(D)</span> ④</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 21 頁（實戰測驗）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 10 單元：試題精析（第 28 ～ 30 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -1600,28 +1776,94 @@
       </div>
       <div>
         <span class="badge-pass">通過率 88.0%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.54</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.54</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 16 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 29 ～ 32 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">29</span>
+      <div class="q-stem">根據甲、乙二文，「垂直農場」與「漂浮牧場」共同的特點不包含下列何者？</div>
+    </div>
+    <div class="q-img"><img src="images/chinese_passage_q26_q29_1.jpeg" alt="題號 29 附圖"></div>
+<div class="q-img"><img src="images/chinese_passage_q26_q29_2.jpeg" alt="題號 29 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 可以減少食物里程</div><div class="q-opt"><span class="opt-label">(B)</span> 設置地點都在城市</div><div class="q-opt"><span class="opt-label">(C)</span> 生產所需的資金成本高</div><div class="q-opt"><span class="opt-label">(D)</span> 運作時需投入大量人力</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">30</span>
+      <div class="q-stem">根據本文，畫線處的文句何者最能看出爸爸對孩子的重視？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> ①</div><div class="q-opt"><span class="opt-label">(B)</span> ②</div><div class="q-opt"><span class="opt-label">(C)</span> ③</div><div class="q-opt"><span class="opt-label">(D)</span> ④</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">31</span>
+      <div class="q-stem">本文中的「我」和馬爾萬，身分最可能是下列何者？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 移民到阿拉伯半島的基督徒</div><div class="q-opt"><span class="opt-label">(B)</span> 為戰亂國家運送物資的船員</div><div class="q-opt"><span class="opt-label">(C)</span> 來自戰爭地區的穆斯林難民</div><div class="q-opt"><span class="opt-label">(D)</span> 幫災民遠離砲火摧殘的善人</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">32</span>
+      <div class="q-stem">關於本文的寫作分析，下列敘述何者最恰當？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 藉記憶中的畫面，呈現霍姆斯的今昔變化</div><div class="q-opt"><span class="opt-label">(B)</span> 列舉多個國家的名稱，凸顯了航程的漫長</div><div class="q-opt"><span class="opt-label">(C)</span> 以等待日出的場景，傳達近鄉情怯的不安</div><div class="q-opt"><span class="opt-label">(D)</span> 透過海的深廣，比喻母親話中溫暖的力量</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 17 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 29 ～ 32 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -1633,25 +1875,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 80.6%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.46</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -1666,81 +1908,28 @@
       </div>
       <div>
         <span class="badge-pass">通過率 84.5%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.56</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 22 頁（名師解析）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【實戰題本模擬區】第 11 單元：試題精析（第 31 ～ 33 題）</span>
-    <span>會考模擬・計時作答</span>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">31</span>
-      <div class="q-stem">本文中的「我」和馬爾萬，身分最可能是下列何者？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 移民到阿拉伯半島的基督徒</div><div class="q-opt"><span class="opt-label">(B)</span> 為戰亂國家運送物資的船員</div><div class="q-opt"><span class="opt-label">(C)</span> 來自戰爭地區的穆斯林難民</div><div class="q-opt"><span class="opt-label">(D)</span> 幫災民遠離砲火摧殘的善人</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">32</span>
-      <div class="q-stem">關於本文的寫作分析，下列敘述何者最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 藉記憶中的畫面，呈現霍姆斯的今昔變化</div><div class="q-opt"><span class="opt-label">(B)</span> 列舉多個國家的名稱，凸顯了航程的漫長</div><div class="q-opt"><span class="opt-label">(C)</span> 以等待日出的場景，傳達近鄉情怯的不安</div><div class="q-opt"><span class="opt-label">(D)</span> 透過海的深廣，比喻母親話中溫暖的力量</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">33</span>
-      <div class="q-stem">關於文中翰林供奉的敘述，下列何者最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 可獨立辦公</div><div class="q-opt"><span class="opt-label">(B)</span> 有很多兼職收入</div><div class="q-opt"><span class="opt-label">(C)</span> 薪水比照八品京官</div><div class="q-opt"><span class="opt-label">(D)</span> 不能幫皇帝處理奏章</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 23 頁（實戰測驗）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 11 單元：試題精析（第 31 ～ 33 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -1752,25 +1941,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 81.4%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.46</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.46</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -1785,28 +1974,94 @@
       </div>
       <div>
         <span class="badge-pass">通過率 50.9%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.45</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.45</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 18 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 33 ～ 36 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">33</span>
+      <div class="q-stem">關於文中翰林供奉的敘述，下列何者最恰當？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 可獨立辦公</div><div class="q-opt"><span class="opt-label">(B)</span> 有很多兼職收入</div><div class="q-opt"><span class="opt-label">(C)</span> 薪水比照八品京官</div><div class="q-opt"><span class="opt-label">(D)</span> 不能幫皇帝處理奏章</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">34</span>
+      <div class="q-stem">根據本文，下列推論何者最恰當？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 尚書和侍郎通常也兼任翰林供奉</div><div class="q-opt"><span class="opt-label">(B)</span> 翰林學士處理政務的能力優於翰林供奉</div><div class="q-opt"><span class="opt-label">(C)</span> 翰林待詔是唐玄宗重要的行政幕僚之一</div><div class="q-opt"><span class="opt-label">(D)</span> 翰林待詔與翰林學士的差別在專門品級的高低</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">35</span>
+      <div class="q-stem">根據本文，下列關於投壺的敘述何者最恰當？</div>
+    </div>
+    <div class="q-img"><img src="images/chinese_passage_q35_q36_1.jpeg" alt="題號 35 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 主人要讓分給客人</div><div class="q-opt"><span class="opt-label">(B)</span> 由先秦的娛樂競技演變而來</div><div class="q-opt"><span class="opt-label">(C)</span> 參賽者各以四箭算一局勝負</div><div class="q-opt"><span class="opt-label">(D)</span> 司正以三局分數的總和判定贏家</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">36</span>
+      <div class="q-stem">右表為某場投壺比賽的計分表，「」表示投中，<br>「」表示未投中。根據本文及右表，下列敘述何者<br>正確？</div>
+    </div>
+    <div class="q-img"><img src="images/chinese_passage_q35_q36_1.jpeg" alt="題號 36 附圖"></div>
+
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 第一局客人勝</div><div class="q-opt"><span class="opt-label">(B)</span> 第二局主人勝</div><div class="q-opt"><span class="opt-label">(C)</span> 第三局客人勝</div><div class="q-opt"><span class="opt-label">(D)</span> 最終贏家是主人    客人投壺狀況 主人投壺狀況  第一局           第二局           第三局         </div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 19 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 33 ～ 36 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -1818,81 +2073,28 @@
       </div>
       <div>
         <span class="badge-pass">通過率 82.7%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.54</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.54</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 24 頁（名師解析）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【實戰題本模擬區】第 12 單元：試題精析（第 34 ～ 36 題）</span>
-    <span>會考模擬・計時作答</span>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">34</span>
-      <div class="q-stem">根據本文，下列推論何者最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 尚書和侍郎通常也兼任翰林供奉</div><div class="q-opt"><span class="opt-label">(B)</span> 翰林學士處理政務的能力優於翰林供奉</div><div class="q-opt"><span class="opt-label">(C)</span> 翰林待詔是唐玄宗重要的行政幕僚之一</div><div class="q-opt"><span class="opt-label">(D)</span> 翰林待詔與翰林學士的差別在專門品級的高低</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">35</span>
-      <div class="q-stem">根據本文，下列關於投壺的敘述何者最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 主人要讓分給客人</div><div class="q-opt"><span class="opt-label">(B)</span> 由先秦的娛樂競技演變而來</div><div class="q-opt"><span class="opt-label">(C)</span> 參賽者各以四箭算一局勝負</div><div class="q-opt"><span class="opt-label">(D)</span> 司正以三局分數的總和判定贏家</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">36</span>
-      <div class="q-stem">右表為某場投壺比賽的計分表，「」表示投中，<br>「」表示未投中。根據本文及右表，下列敘述何者<br>正確？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 第一局客人勝</div><div class="q-opt"><span class="opt-label">(B)</span> 第二局主人勝</div><div class="q-opt"><span class="opt-label">(C)</span> 第三局客人勝</div><div class="q-opt"><span class="opt-label">(D)</span> 最終贏家是主人    客人投壺狀況 主人投壺狀況  第一局           第二局           第三局         </div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 25 頁（實戰測驗）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 12 單元：試題精析（第 34 ～ 36 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -1904,25 +2106,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 77.3%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.56</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.56</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -1937,25 +2139,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 70.8%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.49</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.49</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -1970,25 +2172,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 79.3%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.48</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.48</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -1996,15 +2198,14 @@
 
   <div class="page-footer">
     <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 26 頁（名師解析）</span>
+    <span>第 20 頁（名師解析）</span>
   </div>
 </div>
 
-
 <div class="page">
   <div class="page-header">
-    <span>【實戰題本模擬區】第 13 單元：試題精析（第 37 ～ 39 題）</span>
-    <span>會考模擬・計時作答</span>
+    <span>【實戰題本模擬區】第 37 ～ 40 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
   </div>
 
   <div class="q-item no-break">
@@ -2012,8 +2213,9 @@
       <span class="q-num">37</span>
       <div class="q-stem">根據本文，關於熱帶大頭家蟻入侵肯亞保護區後的生態變化，下列敘述何者最恰當？</div>
     </div>
+    
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 獅子數量減少</div><div class="q-opt"><span class="opt-label">(B)</span> 斑馬易受獅子攻擊</div><div class="q-opt"><span class="opt-label">(C)</span> 金合歡易受大象破壞</div><div class="q-opt"><span class="opt-label">(D)</span> 舉尾蟻不再攻擊大象</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
   <div class="q-item no-break">
@@ -2021,8 +2223,9 @@
       <span class="q-num">38</span>
       <div class="q-stem">依據本文引述的研究發現，無法說明下列何者？</div>
     </div>
+    
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 設置保護區有助於維護自然原始生態</div><div class="q-opt"><span class="opt-label">(B)</span> 外來物種可能會對本地生態造成衝擊</div><div class="q-opt"><span class="opt-label">(C)</span> 面對環境的變遷，生命自會找到出路</div><div class="q-opt"><span class="opt-label">(D)</span> 破壞生物間的互利關係恐有連鎖反應</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
   <div class="q-item no-break">
@@ -2030,21 +2233,31 @@
       <span class="q-num">39</span>
       <div class="q-stem">根據本文，下列「」中的字何者當動詞使用？</div>
     </div>
+    
     <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 「至」忠</div><div class="q-opt"><span class="opt-label">(B)</span> 弗類「若」不孝也</div><div class="q-opt"><span class="opt-label">(C)</span> 嘗從余「客」荔城</div><div class="q-opt"><span class="opt-label">(D)</span> 傳之亦所以志余「過」也</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">40</span>
+      <div class="q-stem">關於文中僮僕遂的敘述，下列何者最恰當？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 生母過世後，託人購買湯餅祭拜表達孝心</div><div class="q-opt"><span class="opt-label">(B)</span> 提醒轎夫選擇平坦的道路，以免自己受傷</div><div class="q-opt"><span class="opt-label">(C)</span> 雖想跟從主人前去杭城，最終仍聽命留下</div><div class="q-opt"><span class="opt-label">(D)</span> 流落南方不幸染疫，死後輾轉歸葬於海山</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
   </div>
 
   <div class="page-footer">
     <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 27 頁（實戰測驗）</span>
+    <span>第 21 頁（實戰測驗）</span>
   </div>
 </div>
 
-
 <div class="page">
   <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 13 單元：試題精析（第 37 ～ 39 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
+    <span>【名師破題與5B避坑專欄】第 37 ～ 40 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -2056,25 +2269,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 80.4%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.52</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.52</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -2089,25 +2302,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 73.3%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.57</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.57</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -2122,81 +2335,28 @@
       </div>
       <div>
         <span class="badge-pass">通過率 51.5%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.51</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.51</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">情境還原法：抓出『主詞（誰）＋動詞（做了什麼）＋語氣詞』，猜出整體故事寓意，不必逐字死譯。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">字義推敲與語境代入法：拆解字根部首，代入上下文檢驗語氣是否和諧流暢。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">文言文看到不懂的單字就慌張停頓。會考從不考偏門注釋，掌握文氣與對比關係即可破題。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">常被字面表象誤導，忽略成語之褒貶色彩或特定適用對象。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 28 頁（名師解析）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【實戰題本模擬區】第 14 單元：試題精析（第 40 ～ 42 題）</span>
-    <span>會考模擬・計時作答</span>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">40</span>
-      <div class="q-stem">關於文中僮僕遂的敘述，下列何者最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 生母過世後，託人購買湯餅祭拜表達孝心</div><div class="q-opt"><span class="opt-label">(B)</span> 提醒轎夫選擇平坦的道路，以免自己受傷</div><div class="q-opt"><span class="opt-label">(C)</span> 雖想跟從主人前去杭城，最終仍聽命留下</div><div class="q-opt"><span class="opt-label">(D)</span> 流落南方不幸染疫，死後輾轉歸葬於海山</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">41</span>
-      <div class="q-stem">下列文句「」中文字的解釋，何者最恰當？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 田饒事魯哀公，而「不見察」：不懂得自我反省</div><div class="q-opt"><span class="opt-label">(B)</span> 「見食相告」者，仁也：看到食物就通知夥伴</div><div class="q-opt"><span class="opt-label">(C)</span> 夫黃鵠「一舉千里」：高踞樹頂，眼界開闊</div><div class="q-opt"><span class="opt-label">(D)</span> 「遂去之燕」，燕以為相：離開了燕國</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="q-item no-break">
-    <div class="q-head">
-      <span class="q-num">42</span>
-      <div class="q-stem">根據本文，田饒認為哀公晉用人才的態度，與下列何者最接近？</div>
-    </div>
-    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 肥水不落外人田</div><div class="q-opt"><span class="opt-label">(B)</span> 遠來的和尚會念經</div><div class="q-opt"><span class="opt-label">(C)</span> 不求有功，但求無過</div><div class="q-opt"><span class="opt-label">(D)</span> 內舉不避親，外舉不避仇</div></div>
-    <div class="scratch-area"><span class="scratch-label">題眼圈註與審題草稿區</span></div>
-  </div>
-
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 29 頁（實戰測驗）</span>
-  </div>
-</div>
-
-
-<div class="page">
-  <div class="page-header">
-    <span>【名師破題與5B避坑專欄】第 14 單元：試題精析（第 40 ～ 42 題）</span>
-    <span style="color: #c53030;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -2208,28 +2368,72 @@
       </div>
       <div>
         <span class="badge-pass">通過率 41.5%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.45</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.45</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 22 頁（名師解析）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 41 ～ 42 題實戰與解析</span>
+    <span>會考模擬・計時實戰</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">41</span>
+      <div class="q-stem">下列文句「」中文字的解釋，何者最恰當？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 田饒事魯哀公，而「不見察」：不懂得自我反省</div><div class="q-opt"><span class="opt-label">(B)</span> 「見食相告」者，仁也：看到食物就通知夥伴</div><div class="q-opt"><span class="opt-label">(C)</span> 夫黃鵠「一舉千里」：高踞樹頂，眼界開闊</div><div class="q-opt"><span class="opt-label">(D)</span> 「遂去之燕」，燕以為相：離開了燕國</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">42</span>
+      <div class="q-stem">根據本文，田饒認為哀公晉用人才的態度，與下列何者最接近？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 肥水不落外人田</div><div class="q-opt"><span class="opt-label">(B)</span> 遠來的和尚會念經</div><div class="q-opt"><span class="opt-label">(C)</span> 不求有功，但求無過</div><div class="q-opt"><span class="opt-label">(D)</span> 內舉不避親，外舉不避仇</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>115年國中教育會考・國文科實戰講義</span>
+    <span>第 23 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 41 ～ 42 題實戰與解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
   </div>
 
   <div class="card-item no-break">
@@ -2241,25 +2445,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 68.2%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.51</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.51</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">情境還原法：抓出『主詞（誰）＋動詞（做了什麼）＋語氣詞』，猜出整體故事寓意，不必逐字死譯。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">文言文看到不懂的單字就慌張停頓。會考從不考偏門注釋，掌握文氣與對比關係即可破題。</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -2274,25 +2478,25 @@
       </div>
       <div>
         <span class="badge-pass">通過率 35.4%</span>
-        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.42</span>
+        <span style="font-size: 7.5pt; color: #718096; margin-left: 3px;">鑑別度 0.42</span>
       </div>
     </div>
     <div class="card-body">
       <div class="tech-box">
-        <div style="font-weight: 800; color: #22543d; font-size: 8.5pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
-        <div style="font-size: 8.5pt; color: #15803d;">消去法：先排除「無中生有」與「因果倒置」的干擾選項，帶著題幹問句定位原文對應段落。</div>
+        <div style="font-weight: 800; color: #1e4620; font-size: 8pt;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; color: #1e4620;">首尾呼應抓題眼：閱讀題先看題幹問句與各段首末句，圈出論點核心詞再對照選項。</div>
       </div>
       <div class="trap-box">
-        <div style="font-weight: 800; color: #742a2a; font-size: 8.5pt;">⚠️【5B 盲點與避坑警訊】</div>
-        <div style="font-size: 8.5pt;">長篇文本從頭逐字讀到尾導致時間不夠。一定要「先讀題目最後一句問什麼」，再回文掃描！</div>
+        <div style="font-weight: 800; color: #6e2020; font-size: 8pt;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">主觀過度延伸推論，務必以文章客觀提及的事實為唯一判斷依據。</div>
       </div>
     </div>
     <div class="note-grid">
       <div class="check-tags">
         <strong>自我檢核：</strong>
-        <label><input type="checkbox"> 概念盲點</label>
-        <label><input type="checkbox"> 粗心漏看</label>
-        <label><input type="checkbox"> 被誘答選項騙</label>
+        <label><input type="checkbox"> 觀念不清</label>
+        <label><input type="checkbox"> 粗心計算</label>
+        <label><input type="checkbox"> 題意誤解</label>
       </div>
       <div class="note-lines"></div>
     </div>
@@ -2300,66 +2504,37 @@
 
   <div class="page-footer">
     <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 30 頁（名師解析）</span>
+    <span>第 24 頁（名師解析）</span>
   </div>
 </div>
 
+<!-- 封底 -->
 <div class="page">
-  <div class="page-header">
-    <span>【考前最後衝刺】</span>
-    <span>國文科高頻考點精華清單</span>
-  </div>
-  <div style="padding: 10px 5px; font-size: 9.5pt; line-height: 1.8;">
-    <h3 style="color: #6b46c1; margin-top: 0;">一、 常用詞語與標點符號必拿考點</h3>
-    • <strong>破折號（——）</strong>：聲音延續或語氣轉變、語意補充說明。<br>
-    • <strong>夾注號（（ ）或 —— ——）</strong>：文中註釋說明，若刪去不影響原句結構。<br>
-    • <strong>分號（；）</strong>：用於並列的分句之間，句型通常對稱工整。<br>
-    • <strong>倒裝句型識別</strong>：文言文「何陋之有？」（有何陋）、「不患人之不己知」（不知己）。
-
-    <h3 style="color: #6b46c1; margin-top: 15px;">二、 題組快讀四大定位標誌</h3>
-    • <strong>因果詞</strong>：因為、因此、由於、是以、緣由 $\implies$ 尋找事件源頭與結論。<br>
-    • <strong>轉折詞</strong>：然而、但是、卻、儘管、不料 $\implies$ <strong>答案 80% 藏在轉折後！</strong><br>
-    • <strong>總結詞</strong>：總之、由此可見、看來、說明了 $\implies$ 全文核心主旨觀點。<br>
-    • <strong>舉例詞</strong>：例如、譬如、猶如 $\implies$ 例子只是佐證，不要把例子當成主旨！
-  </div>
-  <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 31 頁（考點精華）</span>
-  </div>
-</div>
-
-<div class="page">
-  <div class="cover-container" style="border-style: solid; border-color: #805ad5; justify-content: flex-start; padding-top: 30px;">
-    <div class="cover-badge" style="background: #6b46c1;">★ 考前衝刺・名師最後叮嚀 ★</div>
+  <div class="cover-container" style="border-style: solid; border-color: #2b4c7e; justify-content: flex-start; padding-top: 30px;">
+    <div class="cover-badge" style="background: #2b4c7e;">★ 考前衝刺・名師最後叮嚀 ★</div>
     <div class="cover-title" style="font-size: 22pt;">國文科【衝 A 臨場 4 大保命守則】</div>
     
-    <div class="cover-box" style="margin-top: 15px; font-size: 10.5pt; line-height: 1.8;">
-      1. <strong>前 20 題絕對慢工出細活</strong>：字形字音字義、成語、修辭是純記憶基本盤，一題都不能粗心掉！<br>
-      2. <strong>圈出題幹「否定詞」</strong>：看到「何者**錯誤**」、「**未**提及」、「**不**恰當」，立刻用原子筆大力圈起來！<br>
-      3. <strong>長文切忌反覆重讀</strong>：讀完一遍沒抓到重點，先看選項，選項會告訴你文章在討論哪四個概念！<br>
-      4. <strong>留 10 分鐘檢查劃卡</strong>：國文題目多達 42 題，最怕題號跳格劃錯，考前 10 分鐘務必逐題核對卡號！
+    <div class="cover-box" style="margin-top: 15px; font-size: 9.5pt; line-height: 1.8;">
+      1. <strong>字斟句酌圈題眼</strong>：題幹中的「何者非」、「依據本文」、「唯一改變條件」務必用筆重重圈起！<br>
+      2. <strong>圖表橫縱軸先看清</strong>：圖表永遠是考題的心臟，看清單位（公尺/公里、秒/小時）才不會白白失分。<br>
+      3. <strong>卡題 60 秒果斷跳過</strong>：會考是算總分而非拼單題，先將能穩拿的分數全部放進口袋！<br>
+      4. <strong>相信第一直覺與常理</strong>：極端絕對的選項往往是陷阱，冷靜回歸基礎概念即可迎刃而解。
     </div>
 
     <div style="width: 100%; max-width: 150mm; margin-top: 25px; text-align: left;">
-      <h3 style="color: #6b46c1; border-bottom: 2px solid #e9d8fd; padding-bottom: 4px;">📋 我的會考國文衝 A 自我檢核清單</h3>
-      <div style="font-size: 10pt; line-height: 2;">
-        <label><input type="checkbox"> 我能精準分辨常用字義並熟練代入檢驗</label><br>
-        <label><input type="checkbox"> 我遇到長文會先讀問題最後一句再看文章</label><br>
-        <label><input type="checkbox"> 我能在閱讀中迅速抓住「轉折詞」後的論點</label><br>
-        <label><input type="checkbox"> 文言文我懂得抓故事因果大意，不糾結生難字</label><br>
-        <label><input type="checkbox"> 我能在 70 分鐘內保留 10 分鐘核對 2B 劃卡</label>
+      <h3 style="color: #2b4c7e; border-bottom: 2px solid #bee3f8; padding-bottom: 4px; font-size: 11pt;">📋 我的會考國文衝 A 自我檢核清單</h3>
+      <div style="font-size: 9pt; line-height: 2.2; color: #334e68;">
+        <label><input type="checkbox"> 我已確實訂正本講義中所有的「衝A勝負題」與「高鑑別挑戰題」</label><br>
+        <label><input type="checkbox"> 我能用自己的話向同學解釋本卷中 3 道最容易失分的題目</label><br>
+        <label><input type="checkbox"> 我已掌握每單元名師秒殺招，不再盲目耗費過多時間運算</label><br>
+        <label><input type="checkbox"> 我已準備好以沉著自信的狀態迎戰國中教育會考！</label>
       </div>
-    </div>
-
-    <div style="margin-top: 35px; font-size: 12pt; font-weight: 800; color: #c53030;">
-      穩定心態・看清題目・你一定能穩奪 36 題衝進 A 等級！
     </div>
   </div>
   <div class="page-footer">
-    <span>115年國中教育會考・國文科實戰講義</span>
-    <span>第 32 頁（封底・自我檢核）</span>
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 25 頁（封底）</span>
   </div>
 </div>
-
 </body>
 </html>

@@ -112,8 +112,13 @@
     <section class="section-block" id="handouts-section">
       <div class="section-header">
         <div>
-          <h2 class="section-title">🚀 115 衝刺專屬：5B 衝 A 實戰特訓講義</h2>
+          <h2 class="section-title">🚀 <span id="handout-section-year">115</span> 衝刺專屬：5B 衝 A 實戰特訓講義</h2>
           <p class="section-subtitle">專為國三生設計之考前精準奪分教材，A4 左右對開版面、支援線上閱讀與紙本列印</p>
+        </div>
+        <div class="year-pills" id="handout-year-pills">
+          <button class="year-pill active" onclick="switchHandoutYear(115, this)">115 年</button>
+          <button class="year-pill" onclick="switchHandoutYear(114, this)">114 年</button>
+          <button class="year-pill" onclick="switchHandoutYear(113, this)">113 年</button>
         </div>
       </div>
 
@@ -127,7 +132,7 @@
             </div>
             <p class="handout-desc">深入剖析會考國文白話文情意題、文言文斷句核心邏輯，掌握最後 3 題關鍵分。</p>
           </div>
-          <a href="exams/115/handouts/chinese.html" target="_blank" class="handout-link-btn">
+          <a href="exams/115/handouts/chinese.html" target="_blank" data-subject="chinese" class="handout-link-btn">
             線上閱讀講義 ↗
           </a>
         </div>
@@ -141,7 +146,7 @@
             </div>
             <p class="handout-desc">圖表題快篩破題法、長篇閱讀資訊對照技巧，加權 90.7 分達標直通精熟。</p>
           </div>
-          <a href="exams/115/handouts/english.html" target="_blank" class="handout-link-btn">
+          <a href="exams/115/handouts/english.html" target="_blank" data-subject="english" class="handout-link-btn">
             線上閱讀講義 ↗
           </a>
         </div>
@@ -155,7 +160,7 @@
             </div>
             <p class="handout-desc">收錄歷年圖形題解題思維、幾何輔助線法則與非選兩大題書寫評分要點。</p>
           </div>
-          <a href="exams/115/handouts/math.html" target="_blank" class="handout-link-btn">
+          <a href="exams/115/handouts/math.html" target="_blank" data-subject="math" class="handout-link-btn">
             線上閱讀講義 ↗
           </a>
         </div>
@@ -169,7 +174,7 @@
             </div>
             <p class="handout-desc">整合力學、波動、遺傳法規與地科天文圖表，掌握素養題幹提煉重要線索。</p>
           </div>
-          <a href="exams/115/handouts/nature.html" target="_blank" class="handout-link-btn">
+          <a href="exams/115/handouts/nature.html" target="_blank" data-subject="nature" class="handout-link-btn">
             線上閱讀講義 ↗
           </a>
         </div>
@@ -183,7 +188,7 @@
             </div>
             <p class="handout-desc">跨冊時序整合、地圖投影解讀、憲法基本人權素養，精準掌握最後 48 題門檻。</p>
           </div>
-          <a href="exams/115/handouts/society.html" target="_blank" class="handout-link-btn">
+          <a href="exams/115/handouts/society.html" target="_blank" data-subject="society" class="handout-link-btn">
             線上閱讀講義 ↗
           </a>
         </div>
@@ -197,7 +202,7 @@
             </div>
             <p class="handout-desc">會考官方公告指引、樣卷剖析、文章首尾呼應與思辨升華寫作技法。</p>
           </div>
-          <a href="exams/115/handouts/writing.html" target="_blank" class="handout-link-btn">
+          <a href="exams/115/handouts/writing.html" target="_blank" data-subject="writing" class="handout-link-btn">
             線上閱讀講義 ↗
           </a>
         </div>

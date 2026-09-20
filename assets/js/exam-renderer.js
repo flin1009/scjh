@@ -1,7 +1,7 @@
 // Exam Renderer: Data-driven generation of exam tabs, subject cards, and cutoff tables
 (function () {
   let examData = null;
-  let activeYear = 115;
+  let activeYear = window.DEFAULT_YEAR || 115;
 
   // Path prefix resolver (handles both root and subfolder calls)
   function getRelativePrefix() {
