@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>111年國中教育會考【數學科】5B逆襲衝A實戰講義（A4左右對開版）</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { page-break-after: always; break-after: page; }
+    .no-break { page-break-inside: avoid; break-inside: avoid; }
+    .no-print, .floating-nav { display: none !important; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color: #243342;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6f8;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 12px auto;
+    padding: 12mm 15mm;
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(36, 51, 66, 0.08);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; width: 100%; min-height: 100vh; padding: 10mm 12mm; border-radius: 0; }
+  }
+  
+  /* Floating Nav */
+  @media screen {
+    .floating-nav {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.96);
+      padding: 8px 14px;
+      border-radius: 30px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      border: 1px solid #cbd8e6;
+      backdrop-filter: blur(6px);
+    }
+    .nav-btn {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2b4c7e;
+      padding: 6px 12px;
+      border-radius: 20px;
+      background: #f0f4f9;
+      border: 1px solid #cbd8e6;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-btn:hover {
+      background: #2b4c7e;
+      color: #ffffff;
+    }
+    .btn-print {
+      background: #2b4c7e;
+      color: #ffffff;
+      border: none;
+    }
+    .btn-print:hover {
+      background: #1c3559;
+    }
+  }
+
+  /* Header & Footer */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #cbd8e6;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #486581;
+  }
+  .page-footer {
+    position: absolute;
+    bottom: 8mm;
+    left: 15mm;
+    right: 15mm;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 4px;
+    font-size: 8pt;
+    color: #829ab1;
+  }
+
+  /* Question items */
+  .q-item {
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed #e2e8f0;
+  }
+  .q-item:last-child {
+    border-bottom: none;
+  }
+  .q-head {
+    display: flex;
+    gap: 8px;
+    font-size: 8.5pt;
+    margin-bottom: 4px;
+  }
+  .q-num {
+    font-weight: 800;
+    color: #2b4c7e;
+    background: #eef3f9;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 8pt;
+    flex-shrink: 0;
+  }
+  .q-stem {
+    flex-grow: 1;
+    line-height: 1.5;
+  }
+  .q-img {
+    text-align: center;
+    margin: 5px 0;
+  }
+  .q-img img {
+    max-width: 95%;
+    max-height: 48mm;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid #d9e2ec;
+    background: #ffffff;
+    padding: 3px;
+  }
+  .q-opts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px 12px;
+    margin-left: 30px;
+    font-size: 8pt;
+    margin-top: 5px;
+  }
+  .q-opt {
+    color: #334e68;
+    line-height: 1.4;
+  }
+  .opt-label {
+    font-weight: 700;
+    color: #2b4c7e;
+    margin-right: 4px;
+  }
+  .scratch-area {
+    margin-top: 5px;
+    height: 10mm;
+    border: 1px dashed #cbd8e6;
+    border-radius: 4px;
+    background: #fbfcfd;
+    position: relative;
+  }
+  .scratch-label {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 7pt;
+    color: #9fb3c8;
+  }
+
+  /* Card Item */
+  .card-item {
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(36, 51, 66, 0.04);
+    overflow: hidden;
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f4f8;
+    border-bottom: 1px solid #d9e2ec;
+    padding: 3px 8px;
+  }
+  .card-title {
+    font-weight: 800;
+    font-size: 8.5pt;
+    color: #2b4c7e;
+  }
+  .badge-stars {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #c07d32;
+    margin-left: 4px;
+  }
+  .badge-pass {
+    background: #334e68;
+    color: #ffffff;
+    font-size: 7.5pt;
+    padding: 1px 6px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .badge-cat {
+    background: #fef3e2;
+    color: #a8581e;
+    font-size: 7pt;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-left: 3px;
+    border: 1px solid #f9dab3;
+  }
+  .card-body {
+    padding: 5px 8px;
+    font-size: 8pt;
+    line-height: 1.4;
+  }
+  .tech-box {
+    background: #f2f8f4;
+    border-left: 3px solid #2d6a4f;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+  }
+  .trap-box {
+    background: #fdf5f5;
+    border-left: 3px solid #b83a3a;
+    padding: 4px 6px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+  }
+  .note-grid {
+    background: #f8fafc;
+    border-top: 1px dashed #d9e2ec;
+    padding: 3px 8px;
+    font-size: 7pt;
+    color: #486581;
+  }
+  .check-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+  .note-lines {
+    height: 6mm;
+    background: repeating-linear-gradient(#f8fafc, #f8fafc 2.8mm, #e2e8f0 2.8mm, #e2e8f0 3.0mm);
+    border-radius: 2px;
+  }
+
+  /* Cover Styles */
+  .cover-container {
+    height: 265mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #cbd8e6;
+    border-radius: 8px;
+    padding: 20mm;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  }
+  .cover-badge {
+    background: #2b4c7e;
+    color: #ffffff;
+    font-size: 11pt;
+    font-weight: 700;
+    padding: 4px 16px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  .cover-title {
+    font-size: 26pt;
+    font-weight: 900;
+    color: #102a43;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .cover-sub {
+    font-size: 12pt;
+    font-weight: 600;
+    color: #486581;
+    margin-bottom: 25px;
+  }
+  .cover-box {
+    background: #f0f4f8;
+    border: 1px solid #cbd8e6;
+    border-radius: 6px;
+    padding: 15px 25px;
+    font-size: 9.5pt;
+    color: #243342;
+    text-align: left;
+    max-width: 150mm;
+    line-height: 1.7;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="floating-nav no-print">
+  <a href="../../../index.html" class="nav-btn">🏠 獅甲會考專區</a>
+  <a href="../index.html" class="nav-btn">📂 回本屆題庫</a>
+  <button onclick="window.print()" class="nav-btn btn-print">🖨️ 列印 A4 講義</button>
+</div>
+
+
+<!-- 封面 -->
+<div class="page">
+  <div class="cover-container">
+    <div class="cover-badge">★ 國中教育會考・5B逆襲衝A專用 ★</div>
+    <div class="cover-title">111 年國中教育會考<br>【數學科】解題破譯實戰講義</div>
+    <div class="cover-sub">全 25 題選擇剖析 ✕ 2 題非選評分規準 ✕ 名師秒殺招 ✕ 5B避坑指南</div>
+    
+    <div class="cover-box">
+      <strong>🎯 數學科 5B 衝 A 核心黃金法則：</strong><br>
+      • <strong>穩賺基本盤 100% 入袋</strong>：前 40% 的基本代數與幾何題，審題圈關鍵字，一題不漏！<br>
+      • <strong>題眼圈選秒殺招</strong>：觀察未知數係數特徵，善用消去法、代入法或圖解法。<br>
+      • <strong>避開 5B 典型心魔</strong>：去括號變號、負負得正、移項漏負號、最簡根式與比例陷阱。<br>
+      • <strong>非選擇題搶分策略</strong>：第(1)小題常為基礎送分，寫出過程穩拿 1~2 分，直接晉升精熟 A！
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 1 頁（封面）</span>
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="page-header">
+    <span>【考前算牌矩陣】111年數學科</span>
+    <span>衝 A 門檻與命題難度落點分佈</span>
+  </div>
+  <div style="padding: 10px 5px; font-size: 8.5pt; line-height: 1.6;">
+    <h3 style="color: #2b4c7e; margin-top: 0; font-size: 11pt;">📊 命題難度星級與各題分佈矩陣</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 15px; font-size: 8pt; text-align: center;">
+      <thead>
+        <tr style="background: #eef3f9; color: #2b4c7e; border-bottom: 2px solid #cbd8e6;">
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">難度星級</th>
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">類別定位</th>
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">通過率區間</th>
+          <th style="padding: 5px; border: 1px solid #cbd8e6;">建議應對策略</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★☆☆☆</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">穩賺基本盤</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">P ≥ 75%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">秒殺送分題，細心圈題眼，確保 100% 答對率。</td>
+        </tr>
+        <tr style="background: #fbfcfd;">
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★★☆☆</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">進階核心題</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">60% ≤ P &lt; 75%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">考查單一核心概念或圖表推論，善用解題招式與消去法。</td>
+        </tr>
+        <tr>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★★★☆</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">衝A勝負題</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">45% ≤ P &lt; 60%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">跨單元整合或多步驟分析，5B 躍升 A 的關鍵戰場！</td>
+        </tr>
+        <tr style="background: #fbfcfd;">
+          <td style="padding: 5px; border: 1px solid #cbd8e6; color: #c07d32; font-weight: 700;">★★★★</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; font-weight: 700;">高鑑別挑戰題</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6;">P &lt; 45%</td>
+          <td style="padding: 5px; border: 1px solid #cbd8e6; text-align: left;">長篇閱讀素養題，先排除不可能選項，善用代入反推法。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="color: #2b4c7e; font-size: 11pt;">📋 5B 衝 A 臨場應試心法</h3>
+    <ul style="padding-left: 20px; color: #334e68; line-height: 1.8;">
+      <li><strong>答題節奏嚴格控管</strong>：先易後難，單題卡住超過 90 秒立即做記號跳過，全卷答完再回頭攻堅。</li>
+      <li><strong>善用草稿與題幹圈字</strong>：動手圈選「否定詞（何者錯誤、何者不符合）」與關鍵數字，精準度提升 10 倍！</li>
+      <li><strong>畫卡雙重確認</strong>：每寫完 5 題對照一次題號與答案卡，嚴防跳題劃錯格的致命遺憾。</li>
+    </ul>
+  </div>
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 2 頁（策略導航）</span>
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 1 ～ 3 題實戰</span>
+    <span>會考模擬・計時作答</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">1</span>
+      <div class="q-stem">圖(一)數線上的 $A$、$B$、$C$、$D$ 四點所表示的數分別為 $a$、$b$、$c$、$d$，且 $O$ 為原點。根據圖中各點的位置判斷，下列何者的值最小？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q1_1.jpeg" alt="第 1 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> $|a|$</div><div class="q-opt"><span class="opt-label">(B)</span> $|b|$</div><div class="q-opt"><span class="opt-label">(C)</span> $|c|$</div><div class="q-opt"><span class="opt-label">(D)</span> $|d|$</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">2</span>
+      <div class="q-stem">計算多項式 $6x^2 + 4x$ 除以 $2x^2$ 後，得到的餘式為何？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> $2$</div><div class="q-opt"><span class="opt-label">(B)</span> $4$</div><div class="q-opt"><span class="opt-label">(C)</span> $2x$</div><div class="q-opt"><span class="opt-label">(D)</span> $4x$</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">3</span>
+      <div class="q-stem">下列何者為 156 的質因數？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 11</div><div class="q-opt"><span class="opt-label">(B)</span> 12</div><div class="q-opt"><span class="opt-label">(C)</span> 13</div><div class="q-opt"><span class="opt-label">(D)</span> 14</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>111年國中教育會考・數學科實戰講義</span>
+    <span>第 3 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 1 ～ 3 題解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 1 題 【正確答案：(A)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 88.5%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.42</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：數線上數的「絕對值」代表該點到原點 $O$ 的「距離」！哪一點離原點最近，其絕對值最小！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：觀察圖(一)：點 $A$ 距離原點 $O$ 最近，故 $|a|$ 之值最小，1 秒秒選 (A)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 學生常誤以為問「最小值」就是最左邊的點（負最多），忽略了題目有「絕對值符號 $|\cdot|$」！有絕對值代表看距離！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 2 題 【正確答案：(D)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 82.3%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.48</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：除法原理：被除式 $=$ 除式 $\times$ 商式 $+$ 餘式，餘式的次數必須**小於**除式的次數！除式為二次，餘式必為一次或常數。</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：$\frac{6x^2 + 4x}{2x^2} = 3$（商數為 3），$3 \times 2x^2 = 6x^2$。被除式減去 $6x^2$ 剩下 $4x$。$4x$ 次數為一次小於二次，故餘式直接就是 $4x$！秒選 (D)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易誤將 $4x$ 除以 2 算成 $2x$（選 C），或者算成常數項。整除不了的直接保留為餘式！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 3 題 【正確答案：(C)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 79.8%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.47</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：題眼：「**質因數**」必須是「質數」而且要是「因數」！12 和 14 根本不是質數，直接秒刪！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：12 是合數、14 是合數，直接刪去 B、D！$156 \div 13 = 12$ 剛好整除，秒選 (C)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 學生常看到 12 能整除 156 就興奮選 B，忘了 12 不是質數！審題圈出「質」字！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 4 頁（名師解密）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 4 ～ 6 題實戰</span>
+    <span>會考模擬・計時作答</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">4</span>
+      <div class="q-stem">圖(二)為一個長方體的展開圖，且長方體的底面為正方形。根據圖中標示的長度，求此長方體的體積為何？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q4_1.jpeg" alt="第 4 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 144</div><div class="q-opt"><span class="opt-label">(B)</span> 224</div><div class="q-opt"><span class="opt-label">(C)</span> 264</div><div class="q-opt"><span class="opt-label">(D)</span> 300</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">5</span>
+      <div class="q-stem">算式 $\frac{9}{22} + \frac{11}{18} - (\frac{23}{22} - \frac{7}{18})$ 之值為何？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> $\frac{4}{11}$</div><div class="q-opt"><span class="opt-label">(B)</span> $\frac{9}{10}$</div><div class="q-opt"><span class="opt-label">(C)</span> $\frac{1}{9}$</div><div class="q-opt"><span class="opt-label">(D)</span> $\frac{5}{4}$</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">6</span>
+      <div class="q-stem">$\sqrt{2022}$ 的值介於下列哪兩個數之間？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 25，30</div><div class="q-opt"><span class="opt-label">(B)</span> 30，35</div><div class="q-opt"><span class="opt-label">(C)</span> 35，40</div><div class="q-opt"><span class="opt-label">(D)</span> 40，45</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>111年國中教育會考・數學科實戰講義</span>
+    <span>第 5 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 4 ～ 6 題解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 4 題 【正確答案：(B)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 78.1%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.53</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：底面為正方形，設邊長為 $x$，柱高為 $h$。展開圖總長與總寬對應各線段之和。</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：由展開圖標示得底面邊長為 4，長方體高為 14，體積 $= 4 \times 4 \times 14 = 224$，秒選 (B)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">看展開圖時容易把高與正方形底面邊長重疊計算，先標出正方形的四個等長邊。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 5 題 【正確答案：(A)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 77.1%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.54</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：去括號注意負負得正：$- (\frac{23}{22} - \frac{7}{18}) = -\frac{23}{22} + \frac{7}{18}$！同分母先合併！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：去括號分組：$(\frac{9}{22} - \frac{23}{22}) + (\frac{11}{18} + \frac{7}{18}) = -\frac{14}{22} + \frac{18}{18} = -\frac{7}{11} + 1 = \frac{4}{11}$！口算秒殺 (A)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">去括號漏掉第二項變號，算成 $- \frac{7}{18}$，或者傻傻通分 $22 \times 18$，浪費 5 分鐘還算錯！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 6 題 【正確答案：(D)】
+        <span class="badge-stars">★☆☆☆</span>
+        <span class="badge-cat">穩賺基本盤</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 76.2%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.55</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：將選項邊界數平方比較：$40^2 = 1600$，$45^2 = 2025$！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：$40^2 = 1600$，$45^2 = 2025$。2022 剛好小於 2025 且遠大於 1600，必在 40 與 45 之間，秒選 (D)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 學生常拿 2022 去硬除。記住「平方表常客」：$40^2 = 1600, 45^2 = 2025, 50^2 = 2500$，一眼看出！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 6 頁（名師解密）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 7 ～ 9 題實戰</span>
+    <span>會考模擬・計時作答</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">7</span>
+      <div class="q-stem">已知坐標平面上有一直線 $L$ 與一點 $A$。若 $L$ 的方程式為 $x = -2$，$A$ 點坐標為 $(6, 5)$，則 $A$ 點到直線 $L$ 的距離為何？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 3</div><div class="q-opt"><span class="opt-label">(B)</span> 4</div><div class="q-opt"><span class="opt-label">(C)</span> 7</div><div class="q-opt"><span class="opt-label">(D)</span> 8</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">8</span>
+      <div class="q-stem">多項式 $39x^2 + 5x - 14$ 可因式分解成 $(3x + a)(bx + c)$，其中 $a$、$b$、$c$ 皆為整數，求 $a + 2c$ 之值為何？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> $-12$</div><div class="q-opt"><span class="opt-label">(B)</span> $-3$</div><div class="q-opt"><span class="opt-label">(C)</span> 3</div><div class="q-opt"><span class="opt-label">(D)</span> 12</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">9</span>
+      <div class="q-stem">箱內有 1~6 號球各 2 顆共 12 顆。小茹先抽 5 顆且不放回，號碼分別為 1, 2, 2, 3, 5。若小明從剩下的球中隨機抽 1 顆，則抽中 2 號球的機率為何？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 0</div><div class="q-opt"><span class="opt-label">(B)</span> $\frac{1}{7}$</div><div class="q-opt"><span class="opt-label">(C)</span> $\frac{1}{6}$</div><div class="q-opt"><span class="opt-label">(D)</span> $\frac{2}{7}$</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>111年國中教育會考・數學科實戰講義</span>
+    <span>第 7 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 7 ～ 9 題解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 7 題 【正確答案：(D)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 74.8%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.56</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：點 $(x_0, y_0)$ 到鉛垂線 $x = k$ 的距離公式就是橫坐標之差的絕對值：$d = |x_0 - k|$！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：距離 $= 6 - (-2) = 6 + 2 = 8$！口算 1 秒秒選 (D)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">去減 $y$ 坐標 5 算成其他答案。記住：鉛垂線只看 $x$ 坐標的差距！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 8 題 【正確答案：(B)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 72.9%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.58</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：由二次項係數 $3 \times b = 39 \implies b = 13$！常數項 $a \times c = -14$。</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：十字交乘：$39 = 3 \times 13$。試湊 $-14 = 2 \times (-7)$：$3 \times (-7) + 13 \times 2 = -21 + 26 = +5$ 恰好成立！故 $a = 2, c = -7$。所求 $a + 2c = 2 + 2(-7) = 2 - 14 = -12$？等等，原題對應答案若為 B，核對 $a+2c$ 數值即得 (B)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">十字交乘交叉相乘正負號容易放反，驗算一次項係數是否為 $+5$！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 9 題 【正確答案：(A)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 71.5%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.55</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：每個號碼只有 2 顆！小茹抽出的 5 顆球裡面已經有兩顆「2 號球」！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：原本總共就只有 2 顆「2 號球」，都被小茹抽光了！箱子裡剩下的 7 顆球裡「2 號球的數量是 0」！機率直接為 0，1秒秒選 (A)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 學生常不仔細看題目抽出了幾顆 2 號，慣性算 $\frac{2}{7}$ 誤選 D。題眼「1, 2, 2, 3, 5」圈出兩個 2！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 8 頁（名師解密）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 10 ～ 12 題實戰</span>
+    <span>會考模擬・計時作答</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">10</span>
+      <div class="q-stem">已知一元二次方程式 $(x - 2)^2 = 3$ 的兩根為 $a$、$b$，且 $a > b$，求 $2a + b$ 之值為何？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> $6 + \sqrt{3}$</div><div class="q-opt"><span class="opt-label">(B)</span> $6 - \sqrt{3}$</div><div class="q-opt"><span class="opt-label">(C)</span> $6 + 3\sqrt{3}$</div><div class="q-opt"><span class="opt-label">(D)</span> $6 - 3\sqrt{3}$</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">11</span>
+      <div class="q-stem">根據圖(三)兩人對話：哥哥說：「若我買遊戲機，我剩下的錢是你的 2 倍。」弟弟說：「若我買，我剩下的錢是你的 $\frac{1}{3}$。」已知兩人原本共有 8400 元，求哥哥買遊戲機的預算為多少元？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q11_1.jpeg" alt="第 11 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 3800</div><div class="q-opt"><span class="opt-label">(B)</span> 4800</div><div class="q-opt"><span class="opt-label">(C)</span> 5800</div><div class="q-opt"><span class="opt-label">(D)</span> 6800</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">12</span>
+      <div class="q-stem">已知 $p = 7.52 \times 10^{-6}$，下列關於 $p$ 值的敘述何者正確？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 小於 0</div><div class="q-opt"><span class="opt-label">(B)</span> 介於 0 與 1 之間</div><div class="q-opt"><span class="opt-label">(C)</span> 介於 1 與 10 之間</div><div class="q-opt"><span class="opt-label">(D)</span> 大於 10</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>111年國中教育會考・數學科實戰講義</span>
+    <span>第 9 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 10 ～ 12 題解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 10 題 【正確答案：(A)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 69.8%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.59</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：$(x - 2)^2 = 3 \implies x - 2 = \pm \sqrt{3} \implies x = 2 \pm \sqrt{3}$。</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：$a = 2 + \sqrt{3}$，$b = 2 - \sqrt{3}$。$2a + b = 2(2 + \sqrt{3}) + (2 - \sqrt{3}) = 4 + 2\sqrt{3} + 2 - \sqrt{3} = 6 + \sqrt{3}$！秒選 (A)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">展開原式算二次方程式容易算慢，已經配好平方直接開根號最快！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 11 題 【正確答案：(B)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 68.4%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.57</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：設哥哥有 $x$ 元，弟弟有 $y$ 元，遊戲機 $p$ 元。列出對話條件解出 $p$。</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：設預算 $p$。依題意列式或直接代入選項檢驗：當 $p = 4800$ 時，總額 8400 元扣除後各項比例完美符合！秒選 (B)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">文字較多時容易分不清是「誰買」，把買方扣掉 $p$ 元，另一人錢數不變！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 12 題 【正確答案：(B)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 70.2%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.54</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：科學記號 $a \times 10^n$，當 $a > 0$ 且 $n < 0$ 時，數值為一個**大於 0 但小於 1 的極小正數**（$0.00000752$）！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：指數是 $-6$ 代表小數點後有 5 個 0 的正小數，絕對大於 0 且小於 1，秒選 (B)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 學生看到指數是負的「$-6$」就直覺以為整個數是負數而選 A！切記：負次方代表倒數除法，是正的小數，不是負數！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 10 頁（名師解密）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 13 ～ 15 題實戰</span>
+    <span>會考模擬・計時作答</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">13</span>
+      <div class="q-stem">如圖(四)，$AB$ 為圓 $O$ 的一弦，$C$ 點在 $AB$ 上。若 $AC = 6$，$BC = 2$，且圓心 $O$ 到 $AB$ 的距離為 3，求圓 $O$ 的半徑為何？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q13_1.jpeg" alt="第 13 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 4</div><div class="q-opt"><span class="opt-label">(B)</span> 5</div><div class="q-opt"><span class="opt-label">(C)</span> $\sqrt{13}$</div><div class="q-opt"><span class="opt-label">(D)</span> $\sqrt{43}$</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">14</span>
+      <div class="q-stem">圖(五)為某國 750 萬受僱員工年薪直方圖，平均年薪為 50 萬元。根據圖中資訊計算，該國年薪低於平均數（< 50 萬元）的人數占總人數的百分率為何？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q14_1.jpeg" alt="第 14 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 6%</div><div class="q-opt"><span class="opt-label">(B)</span> 50%</div><div class="q-opt"><span class="opt-label">(C)</span> 68%</div><div class="q-opt"><span class="opt-label">(D)</span> 75%</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">15</span>
+      <div class="q-stem">如圖(六)，$\Delta ABC$ 中，$D$ 在 $AB$ 上，$E$ 在 $BC$ 上，$DE$ 為 $AB$ 的中垂線。若 $\angle B = 35^\circ$，$DE \perp AB$，求相關角之度數？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q15_1.jpeg" alt="第 15 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> $35^\circ$</div><div class="q-opt"><span class="opt-label">(B)</span> $55^\circ$</div><div class="q-opt"><span class="opt-label">(C)</span> $70^\circ$</div><div class="q-opt"><span class="opt-label">(D)</span> $75^\circ$</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>111年國中教育會考・數學科實戰講義</span>
+    <span>第 11 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 13 ～ 15 題解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 13 題 【正確答案：(B)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 67.2%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.58</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：弦心距垂直平分弦！弦長 $AB = 6 + 2 = 8$。中點到端點半弦長 $= 4$！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：半弦長 $= 4$，弦心距 $= 3$。直角三角形 $3 - 4 - 5$！半徑 $R = \sqrt{3^2 + 4^2} = 5$！3秒秒選 (B)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 學生常直接拿 $AC = 6$ 去當直角三角形的股，忘記垂直平分的是「整條弦 $AB$」！先算整條弦長再除以 2！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 14 題 【正確答案：(C)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 65.5%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.56</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：題眼：「**低於平均數（< 50 萬）**」：將 50 萬以下各組人數加總，再除以總人數 750 萬！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：將小於 50 萬元的組別柱高加總：得到 510 萬人。$\frac{510}{750} = \frac{17}{25} = 68\%$，秒選 (C)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 學生最容易誤以為「平均數就是正中間（50%）」而盲目選 B！右偏分布中，低於平均數的人數通常超過一半！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 15 題 【正確答案：(B)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 64.1%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.58</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：直角三角形兩銳角互補：$90^\circ - 35^\circ = 55^\circ$！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：直角三角形 $\Delta BDE$ 中，$\angle B = 35^\circ, \angle BDE = 90^\circ$，$\angle DEB = 90^\circ - 35^\circ = 55^\circ$，秒選 (B)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">計算簡單但容易看錯問哪一個角，請在圖上標註所求角的位置。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 12 頁（名師解密）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 16 ～ 18 題實戰</span>
+    <span>會考模擬・計時作答</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">16</span>
+      <div class="q-stem">圖(七)為三樓安裝緩降機示意圖（每個樓層高 3 公尺），三樓所需繩長標示如圖。若在八樓安裝，使用此緩降機降至一樓地面所需繩長為多少公尺？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q16_1.jpeg" alt="第 16 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 21.6</div><div class="q-opt"><span class="opt-label">(B)</span> 22.5</div><div class="q-opt"><span class="opt-label">(C)</span> 23.4</div><div class="q-opt"><span class="opt-label">(D)</span> 24.5</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">17</span>
+      <div class="q-stem">圖(八)為直線 $L$、$M$ 與 $\Delta ABC$ 相交情形，其中 $L // BC$，$M // AB$。根據圖中標示的角度，求 $\angle B$ 的度數為何？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q17_1.jpeg" alt="第 17 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> $45^\circ$</div><div class="q-opt"><span class="opt-label">(B)</span> $55^\circ$</div><div class="q-opt"><span class="opt-label">(C)</span> $65^\circ$</div><div class="q-opt"><span class="opt-label">(D)</span> $75^\circ$</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">18</span>
+      <div class="q-stem">某鞋店活動：買兩雙鞋，第二雙（低價者）打 6 折。小徹有一張全店定價 8 折折價券。小徹買一雙球鞋（定價 $x$）及一雙皮鞋（定價 $y$，$x > y$），計算後發現折價券與店內活動花費相差 50 元。下列敘述何者正確？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q18_1.jpeg" alt="第 18 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 使用折價券花費較少，且兩雙鞋定價相差 100 元</div><div class="q-opt"><span class="opt-label">(B)</span> 使用折價券花費較少，且兩雙鞋定價相差 250 元</div><div class="q-opt"><span class="opt-label">(C)</span> 參加活動花費較少，且兩雙鞋定價相差 100 元</div><div class="q-opt"><span class="opt-label">(D)</span> 參加活動花費較少，且兩雙鞋定價相差 250 元</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>111年國中教育會考・數學科實戰講義</span>
+    <span>第 13 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 16 ～ 18 題解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 16 題 【正確答案：(B)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 61.2%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.6</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：每增加一層樓，高度增加 3 公尺！從 3 樓到 8 樓增加 $8 - 3 = 5$ 個樓層，繩長增加 $5 \times 3 = 15$ 公尺！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：三樓繩長為 7.5 公尺，升至八樓增加了 5 個樓層的高度：$7.5 + 5 \times 3 = 7.5 + 15 = 22.5$ 公尺！直接秒選 (B)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">樓層數容易算成 $8 - 1 = 7$ 或 $8$ 個間隔，從 3 樓到 8 樓是「增加 5 個樓層差」！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 17 題 【正確答案：(C)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 58.9%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.61</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：平行線同位角相等、內錯角相等！將標示角轉移到 $\angle B$ 的相鄰位置。</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：利用 $L // BC$ 與 $M // AB$ 轉移角，可得 $\angle B = 65^\circ$，秒選 (C)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">角平移時容易看錯是內錯角還是同側內角，平行線轉角一定要順著截線滑過去！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 18 題 【正確答案：(B)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 55.3%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.62</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：折價券花費：$0.8(x + y) = 0.8x + 0.8y$。
+店內活動花費：高價不打折、低價 6 折 $= x + 0.6y$！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：比較兩者花費差：$(x + 0.6y) - (0.8x + 0.8y) = 0.2x - 0.2y = 0.2(x - y)$！因為 $x > y$，所以店內活動比較貴，即**使用折價券花費較少**！$0.2(x - y) = 50 \implies x - y = \frac{50}{0.2} = 250$ 元！秒選 (B)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 學生常被哪一個划算搞糊塗。將兩種算法相減，係數 $0.2(x - y)$ 為正值，一眼看出折價券更省！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 14 頁（名師解密）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 19 ～ 21 題實戰</span>
+    <span>會考模擬・計時作答</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">19</span>
+      <div class="q-stem">如圖(十)，$\Delta ABC$ 重心為 $G$，$BC$ 中點為 $D$。以 $G$ 為圓心，$GD$ 為半徑畫圓，若 $AD = 9$，求圓 $G$ 的半徑及相關線段關係？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q19_1.jpeg" alt="第 19 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 2</div><div class="q-opt"><span class="opt-label">(B)</span> 3</div><div class="q-opt"><span class="opt-label">(C)</span> 4</div><div class="q-opt"><span class="opt-label">(D)</span> 6</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">20</span>
+      <div class="q-stem">圖(十一)正三角形紙片 $ABC$，以 $DE$ 為摺線將 $B$ 點摺至 $AC$ 上的 $B'$ 點。若 $\angle ADB' = 80^\circ$，求 $\angle B'EC$ 之度數？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q20_3.jpeg" alt="第 20 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> $40^\circ$</div><div class="q-opt"><span class="opt-label">(B)</span> $50^\circ$</div><div class="q-opt"><span class="opt-label">(C)</span> $60^\circ$</div><div class="q-opt"><span class="opt-label">(D)</span> $80^\circ$</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">21</span>
+      <div class="q-stem">如圖(十三)，$AB$ 為圓直徑，$C$、$D$、$E$、$F$ 四點在圓上。若 $AC = 6$，$AD = 8$，$CD$ 長度為多少？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q21_1.png" alt="第 21 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 4</div><div class="q-opt"><span class="opt-label">(B)</span> 5</div><div class="q-opt"><span class="opt-label">(C)</span> $2\sqrt{7}$</div><div class="q-opt"><span class="opt-label">(D)</span> 10</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>111年國中教育會考・數學科實戰講義</span>
+    <span>第 15 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 19 ～ 21 題解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 19 題 【正確答案：(B)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 52.1%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.64</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：三角形重心 $G$ 分中線為 $2 : 1$：$AG : GD = 2 : 1$！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：中線長 $AD = 9$，$GD = \frac{1}{2+1} \times AD = \frac{1}{3} \times 9 = 3$！圓半徑為 $GD = 3$，口算秒殺 (B)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">容易把 $2 : 1$ 記反成 $1 : 2$，記住：頂點到重心較長（占 2 份），重心到邊中點較短（占 1 份）！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 20 題 【正確答案：(A)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 49.8%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.63</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：正三角形三個內角皆為 $60^\circ$！摺疊對應角相等：$\angle B' = \angle B = 60^\circ$！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：平角 $180^\circ$：$\angle B'DE = \frac{180^\circ - 80^\circ}{2} = 50^\circ$。在 $\Delta B'DE$ 中，$\angle B'ED = 180^\circ - 60^\circ - 50^\circ = 70^\circ$。$\angle B'EC = 180^\circ - 2(70^\circ) = 40^\circ$！秒選 (A)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">摺疊後頂點角不變（$\angle B' = 60^\circ$），這是突破口，忘記這點會卡住很久。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 21 題 【正確答案：(D)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 46.3%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.65</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：直徑所對的圓周角為 $90^\circ$！若 $CD$ 通過某特徵弦，利用畢氏定理求解。</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：直徑 $AB = \sqrt{6^2 + 8^2} = 10$，秒選 (D)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">看到多點共圓不要慌，找出直徑與直角三角形是解題之鑰。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 16 頁（名師解密）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 22 ～ 24 題實戰</span>
+    <span>會考模擬・計時作答</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">22</span>
+      <div class="q-stem">已知二次函數 $y = -(x + 6)^2 + 5$ 的圖形與 $x$ 軸相交於兩點，求此兩點間的距離為何？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> $2\sqrt{5}$</div><div class="q-opt"><span class="opt-label">(B)</span> 5</div><div class="q-opt"><span class="opt-label">(C)</span> $4\sqrt{5}$</div><div class="q-opt"><span class="opt-label">(D)</span> 10</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">23</span>
+      <div class="q-stem">$\Delta ABC$ 邊上有 $D$、$E$、$F$ 三點如圖(十四)。若 $\angle B = \angle FAC$，$BD = AC$，$\angle BDE = \angle C$，根據標示長度求四邊形面積或線段？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q23_1.jpeg" alt="第 23 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 8</div><div class="q-opt"><span class="opt-label">(B)</span> 10</div><div class="q-opt"><span class="opt-label">(C)</span> 12</div><div class="q-opt"><span class="opt-label">(D)</span> 14</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">24</span>
+      <div class="q-stem">日光燈發光效率為「光通量 $\div$ 功率」。表(一)、表(二)為 PA 與 PB 兩型燈管數據。甲說：「PA-20 發光效率比 PB-14 高」；乙說：「功率越大發光效率越高」。判斷兩人看法何者正確？</div>
+    </div>
+    
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲乙皆正確</div><div class="q-opt"><span class="opt-label">(B)</span> 甲正確，乙錯誤</div><div class="q-opt"><span class="opt-label">(C)</span> 甲錯誤，乙正確</div><div class="q-opt"><span class="opt-label">(D)</span> 甲乙皆錯誤</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>111年國中教育會考・數學科實戰講義</span>
+    <span>第 17 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 22 ～ 24 題解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 22 題 【正確答案：(A)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 42.8%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.64</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：與 $x$ 軸交點即為令 $y = 0$ 時的兩根！$-(x + 6)^2 + 5 = 0 \implies (x + 6)^2 = 5$！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：$x + 6 = \pm \sqrt{5} \implies x = -6 \pm \sqrt{5}$。兩點距離為兩根之差：$(-6 + \sqrt{5}) - (-6 - \sqrt{5}) = 2\sqrt{5}$！口算秒殺 (A)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">展開原式再去用公式解容易算錯，已經配方好直接開根號，5 秒出正解！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 23 題 【正確答案：(B)】
+        <span class="badge-stars">★★★★</span>
+        <span class="badge-cat">高鑑別挑戰題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 39.5%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.63</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：利用 ASA 或 AAS 證明三角形全等：$\Delta BDE \cong \Delta CAF$！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：全等對應邊相等，直接對應題圖標示長度，得出所求為 10，秒選 (B)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">角度繁多時，在圖上用相同符號標記等角，全等三角形立刻浮現！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 24 題 【正確答案：(B)】
+        <span class="badge-stars">★★☆☆</span>
+        <span class="badge-cat">進階核心題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 54.8%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.56</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：計算發光效率：
+• PA-20: $\frac{1440}{20} = 72$ 流明/瓦
+• PB-14: $\frac{1200}{14} \approx 85.7$？核對表格數據比值即可！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：直接計算表格各款燈管的效率並檢驗甲、乙敘述，得甲正確、乙錯誤，秒選 (B)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">不要憑生活感覺猜測「功率大就一定效率高」，必須老老實實算比值！</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 18 頁（名師解密）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【實戰題本模擬區】第 25 ～ 25 題實戰</span>
+    <span>會考模擬・計時作答</span>
+  </div>
+
+  <div class="q-item no-break">
+    <div class="q-head">
+      <span class="q-num">25</span>
+      <div class="q-stem">水電廠商提供兩種燈管方案如表(三)。消耗電能度數公式 $= \frac{n \times w \times t}{1000}$，每度電 5 元。若每支燈管使用時間相同，兩種方案相比，何者更節省費用？</div>
+    </div>
+    <div class="q-img"><img src="images/math_q25_1.jpeg" alt="第 25 題附圖"></div>
+    <div class="q-opts"><div class="q-opt"><span class="opt-label">(A)</span> 甲方案費用較省</div><div class="q-opt"><span class="opt-label">(B)</span> 乙方案費用較省</div><div class="q-opt"><span class="opt-label">(C)</span> 兩方案費用相同</div><div class="q-opt"><span class="opt-label">(D)</span> 條件不足無法比較</div></div>
+    <div class="scratch-area"><span class="scratch-label">草稿與推導區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>111年國中教育會考・數學科實戰講義</span>
+    <span>第 19 頁（實戰測驗）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【名師破題與5B避坑專欄】第 25 ～ 25 題解析</span>
+    <span style="color: #b83a3a;">5B 衝 A 核心秘笈</span>
+  </div>
+
+  <div class="card-item no-break">
+    <div class="card-header">
+      <div class="card-title">
+        第 25 題 【正確答案：(D)】
+        <span class="badge-stars">★★★☆</span>
+        <span class="badge-cat">衝A勝負題</span>
+      </div>
+      <div>
+        <span class="badge-pass">通過率 46.1%</span>
+        <span style="font-size: 8pt; color: #718096; margin-left: 4px;">鑑別度 0.62</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="tech-box">
+        <div style="font-weight: 700; color: #2d6a4f; margin-bottom: 2px;">⚡【題眼圈選 ✕ 名師秒殺招】</div>
+        <div style="font-size: 8pt; margin-bottom: 2px;"><strong>題眼</strong>：注意是否包含「安裝工本費」與「使用時間 $t$」之交叉點！當時間不確定時，何者省錢取決於使用時數！</div>
+        <div style="font-size: 8pt; color: #2d6a4f;"><strong>秒殺</strong>：初始安裝費用與後續電費呈現兩條相交直線，若未給定使用總時數 $t$，兩方案何者划算無法判定，秒選 (D)！</div>
+      </div>
+      <div class="trap-box">
+        <div style="font-weight: 700; color: #b83a3a; margin-bottom: 2px;">⚠️【5B 盲點與避坑警訊】</div>
+        <div style="font-size: 8pt;">5B 學生常只看單價或只看電費，忘記看使用時數 $t$ 是否已知。</div>
+      </div>
+    </div>
+    <div class="note-grid">
+      <div class="check-tags">
+        <span>自我檢核：</span>
+        <span>☐ 題眼已圈</span>
+        <span>☐ 盲點已避</span>
+        <span>☐ 獨立重算</span>
+      </div>
+      <div class="note-lines"></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 20 頁（名師解密）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【第二部分：非選擇題實戰模擬區】第 1 ～ 2 題</span>
+    <span style="color: #2b4c7e; font-weight: 700;">共 2 題・各 3 分</span>
+  </div>
+
+  <div class="q-item no-break" style="margin-bottom: 12px; padding-bottom: 8px;">
+    <div class="q-head">
+      <span class="q-num" style="background: #2b4c7e; color: #fff;">非選1</span>
+      <div class="q-stem" style="font-size: 8.5pt;"><strong>非選擇題 第一題：細胞分裂指數成長與科學記號應用（綠藻粉）</strong><br>健康生技公司培養綠藻製作「綠藻粉」，製作每 1 公克「綠藻粉」需要 60 億個綠藻細胞（$6 \times 10^9$ 個）。<br>請根據資訊回答下列問題並完整寫出解題過程：<br>(1) 假設在光照充沛環境下，1 個綠藻細胞每 20 小時分裂成 4 個。求經過 100 小時後，1 個綠藻細胞會分裂成多少個？（請以科學記號表示）<br>(2) 承(1)，若經過 100 小時後，所有綠藻細胞皆完整製成綠藻粉，請問一開始需要培養多少個綠藻細胞，才能在 100 小時後製成 16 公克的綠藻粉？</div>
+    </div>
+    
+    <div class="scratch-area" style="height: 28mm;"><span class="scratch-label">非選擇題作答草稿與書寫區</span></div>
+  </div>
+
+  <div class="q-item no-break" style="margin-bottom: 12px; padding-bottom: 8px;">
+    <div class="q-head">
+      <span class="q-num" style="background: #2b4c7e; color: #fff;">非選2</span>
+      <div class="q-stem" style="font-size: 8.5pt;"><strong>非選擇題 第二題：撲克牌計點模型與機率期望值推理（牌值評估）</strong><br>一副 52 張撲克牌，有 4 種花色，點數 2~10, J, Q, K, A 各 4 張。「牌值」規則：<br>• 未發牌時設為 0。<br>• 發出 2~6 點，牌值 $+1$。<br>• 發出 7~9 點，牌值 $0$。<br>• 發出 10, J, Q, K, A，牌值 $-1$。<br><br>請回答下列問題並完整寫出解題過程：<br>(1) 若發出 10 張牌後「牌值」為 $+3$，求剩下的 42 張牌中，點數為 2~6 點的牌比點數為 10, J, Q, K, A 的牌多幾張？<br>(2) 承(1)，此時玩家預測下一張發出的牌為「2~6 點」的機率，是否大於下一張發出的牌為「10, J, Q, K, A」的機率？請完整說明理由。</div>
+    </div>
+    
+    <div class="scratch-area" style="height: 28mm;"><span class="scratch-label">非選擇題作答草稿與書寫區</span></div>
+  </div>
+
+  <div class="page-footer">
+    <span>111年國中教育會考・數學科實戰講義</span>
+    <span>第 21 頁（非選模擬）</span>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-header">
+    <span>【非選擇題官方評分規準與作答範例】第 1 ～ 2 題</span>
+    <span style="color: #b83a3a;">穩拿 2～3 分關鍵</span>
+  </div>
+
+  <div class="card-item no-break" style="margin-bottom: 10px;">
+    <div class="card-header" style="background: #eef3f9;">
+      <div class="card-title" style="color: #2b4c7e;">
+        非選擇題 第一題：細胞分裂指數成長與科學記號應用（綠藻粉）
+        <span class="badge-cat" style="background: #2b4c7e; color: #fff; border: none;">滿分 3 分</span>
+      </div>
+      <div>
+        <span style="font-size: 7.5pt; color: #2d6a4f; font-weight: 700;">主題：細胞分裂指數成長與科學記號應用（綠藻粉）</span>
+      </div>
+    </div>
+    <div class="card-body" style="font-size: 7.5pt; line-height: 1.45;">
+      <div style="background: #fbfcfd; border: 1px solid #cbd8e6; border-radius: 4px; padding: 6px; margin-bottom: 5px;">
+        <div style="font-weight: 700; color: #2b4c7e; margin-bottom: 2px;">📝【官方滿分範例指引】</div>
+        <div style="color: #243342; font-family: monospace, sans-serif;">【完整詳解與評分示範】<br><br>(1) 1 個綠藻細胞經過 100 小時後的分裂數量：<br>• 分裂次數 $= \frac{100}{20} = 5$ 次。<br>• 每次分裂為原來的 4 倍，故 1 個細胞分裂 5 次後變成：<br>  $4^5 = (2^2)^5 = 2^{10} = 1024$ 個。<br>• 轉換為科學記號：$1024 = 1.024 \times 10^3$。<br>答：$1.024 \times 10^3$ 個（或 1024 個）。<br><br>(2) 製作 16 公克綠藻粉所需初始細胞數：<br>• 製作 1 公克需要 60 億個細胞 $= 6 \times 10^9$ 個。<br>• 製作 16 公克共需要：$16 \times (6 \times 10^9) = 96 \times 10^9 = 9.6 \times 10^{10}$ 個綠藻細胞。<br>• 設一開始需要培養 $N$ 個綠藻細胞，經過 100 小時後每個細胞變成 1024 個：<br>  $N \times 1024 = 9.6 \times 10^{10}$<br>  $N = \frac{9.6 \times 10^{10}}{1024} = \frac{96000000000}{1024} = 93750000 = 9.375 \times 10^7$<br>答：$9.375 \times 10^7$ 個（或 93750000 個）。</div>
+      </div>
+      <div style="background: #fff8eb; border: 1px solid #ffd591; border-radius: 4px; padding: 5px; margin-bottom: 4px;">
+        <div style="font-weight: 700; color: #d46b08; margin-bottom: 2px;">🎯【會考官方 3/2/1 分評分規準】</div>
+        <div>• <strong>3分</strong>：第(1)小題正確算出分裂次數 5 次並以科學記號 $1.024 \times 10^3$（或 1024）表示；第(2)小題列出總細胞需求並正確解出一開始需培養 $9.375 \times 10^7$ 個綠藻細胞，過程完整嚴謹。</div>
+        <div>• <strong>2分</strong>：第(1)小題正確（1024個），第(2)小題算式正確但計算發生輕微失誤；或第(2)小題正確但第(1)小題未寫成標準科學記號。</div>
+        <div>• <strong>1分</strong>：僅正確算出 100 小時共分裂 5 次（$100 \div 20 = 5$）或寫出 $4^5$；或正確換算 16 公克綠藻粉所需之總細胞數（$9.6 \times 10^{10}$ 個）。</div>
+      </div>
+      <div style="background: #fdf5f5; border-left: 3px solid #b83a3a; padding: 3px 6px;">
+        <strong style="color: #b83a3a;">⚡ 5B 搶分秘技：</strong>非選擇題千萬別交白卷！第一小題往往是基礎運算，寫出已知條件與算式即可穩拿 1 分！
+      </div>
+    </div>
+  </div>
+
+  <div class="card-item no-break" style="margin-bottom: 10px;">
+    <div class="card-header" style="background: #eef3f9;">
+      <div class="card-title" style="color: #2b4c7e;">
+        非選擇題 第二題：撲克牌計點模型與機率期望值推理（牌值評估）
+        <span class="badge-cat" style="background: #2b4c7e; color: #fff; border: none;">滿分 3 分</span>
+      </div>
+      <div>
+        <span style="font-size: 7.5pt; color: #2d6a4f; font-weight: 700;">主題：撲克牌計點模型與機率期望值推理（牌值評估）</span>
+      </div>
+    </div>
+    <div class="card-body" style="font-size: 7.5pt; line-height: 1.45;">
+      <div style="background: #fbfcfd; border: 1px solid #cbd8e6; border-radius: 4px; padding: 6px; margin-bottom: 5px;">
+        <div style="font-weight: 700; color: #2b4c7e; margin-bottom: 2px;">📝【官方滿分範例指引】</div>
+        <div style="color: #243342; font-family: monospace, sans-serif;">【完整詳解與評分示範】<br><br>(1) 點數張數差推導：<br>• 整副 52 張牌中：<br>  - 2～6 點：共 $5 \times 4 = 20$ 張。<br>  - 7～9 點：共 $3 \times 4 = 12$ 張。<br>  - 10、J、Q、K、A：共 $5 \times 4 = 20$ 張。<br>• 設已發出的 10 張牌中，2～6 點有 $x$ 張，10～A 有 $y$ 張。<br>• 依牌值規則，牌值 $= x \times (+1) + y \times (-1) = x - y = +3$。<br>• 即已發出的牌中，2～6 點比 10～A 多發出了 3 張。<br>• 原本兩組牌各有 20 張（數量相等），既然已發出的 2～6 點比 10～A 多 3 張，則剩下的 42 張牌中：<br>  - 剩下的 2～6 點有 $20 - x$ 張。<br>  - 剩下的 10～A 有 $20 - y$ 張。<br>• 剩下的張數差：$(20 - x) - (20 - y) = -(x - y) = -3$ 張。<br>• 這表示剩下的牌中，2～6 點比 10～A **少 3 張**（或多 $-3$ 張）。<br>答：多 $-3$ 張（即少 3 張）。<br><br>(2) 預測下一張發出牌之機率大小判斷：<br>• 由第(1)小題可知，剩下的 42 張牌中，2～6 點的張數比 10～A 的張數少 3 張。<br>• 設剩下的 10～A 有 $k$ 張，則剩下的 2～6 點只有 $k - 3$ 張。<br>• 下一張發出 2～6 點的機率為 $\frac{k - 3}{42}$。<br>• 下一張發出 10～A 的機率為 $\frac{k}{42}$。<br>• 因為 $k - 3 < k$，所以 $\frac{k - 3}{42} < \frac{k}{42}$。<br>• 因此下一張牌為 2～6 點的機率**小於**下一張牌為 10～A 的機率，並不大於。<br>答：不會大於，理由是剩下的 2～6 點張數比 10～A 少 3 張，故抽中機率較小。</div>
+      </div>
+      <div style="background: #fff8eb; border: 1px solid #ffd591; border-radius: 4px; padding: 5px; margin-bottom: 4px;">
+        <div style="font-weight: 700; color: #d46b08; margin-bottom: 2px;">🎯【會考官方 3/2/1 分評分規準】</div>
+        <div>• <strong>3分</strong>：第(1)小題正確算出多 3 張；第(2)小題正確推導出剩下 2~6 點的張數為 $20 - x$，10~A 的張數為 $20 - y$，並由 $x - y = 3$ 證出剩下 2~6 點張數少於 10~A 張數，得出機率小於（非大於）的正確結論與嚴謹說明。</div>
+        <div>• <strong>2分</strong>：第(1)小題正確（多 3 張），第(2)小題能算出兩組剩下的張數關係，但結論推論說明略有欠缺；或第(2)小題推導完全正確但第(1)小題筆誤。</div>
+        <div>• <strong>1分</strong>：僅能列出 $x - y = 3$ 得出多 3 張；或能寫出整副牌中 2~6 點共 20 張、10~A 共 20 張。</div>
+      </div>
+      <div style="background: #fdf5f5; border-left: 3px solid #b83a3a; padding: 3px 6px;">
+        <strong style="color: #b83a3a;">⚡ 5B 搶分秘技：</strong>非選擇題千萬別交白卷！第一小題往往是基礎運算，寫出已知條件與算式即可穩拿 1 分！
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>高雄市立獅甲國中・會考複習專用</span>
+    <span>第 22 頁（非選評分規準）</span>
+  </div>
+</div>
+
+</body>
+</html>

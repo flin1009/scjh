@@ -7,7 +7,7 @@
   // Path prefix resolver (handles root, /exams/, and /exams/11X/)
   function getRelativePrefix() {
     const p = window.location.pathname.replace(/\\/g, '/');
-    if (p.includes('/exams/115/') || p.includes('/exams/114/') || p.includes('/exams/113/')) {
+    if (/\/exams\/11\d\//.test(p)) {
       return '../../';
     }
     if (p.includes('/exams/')) {
