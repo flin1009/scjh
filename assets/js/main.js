@@ -41,8 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 4. Switch Handout Year Showcase
 window.switchHandoutYear = function(year, btn) {
-  document.querySelectorAll('#handout-year-pills .year-pill').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
+  document.querySelectorAll('#handout-year-pills .year-pill').forEach(b => {
+    b.classList.toggle('active', b.getAttribute('onclick')?.includes(`${year}`));
+  });
   const yearEl = document.getElementById('handout-section-year');
   if (yearEl) yearEl.textContent = year;
   document.querySelectorAll('.handout-card .handout-link-btn').forEach(a => {

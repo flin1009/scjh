@@ -2,11 +2,15 @@
 (function () {
   let examData = null;
   let activeYear = window.DEFAULT_YEAR || 115;
+  let activeStatsYear = window.DEFAULT_YEAR || 115;
 
-  // Path prefix resolver (handles both root and subfolder calls)
+  // Path prefix resolver (handles root, /exams/, and /exams/11X/)
   function getRelativePrefix() {
-    const p = window.location.pathname;
-    if (p.includes('/exams/') || p.includes('\\exams\\')) {
+    const p = window.location.pathname.replace(/\\/g, '/');
+    if (p.includes('/exams/115/') || p.includes('/exams/114/') || p.includes('/exams/113/')) {
+      return '../../';
+    }
+    if (p.includes('/exams/')) {
       return '../';
     }
     return './';
@@ -41,9 +45,10 @@
     if (!examData || !examData.years) return;
     renderYearTabs();
     renderYearContent(activeYear);
+    renderStatsDocs(activeStatsYear);
   }
 
-  // 1. Render Year Tabs
+  // 1. Render Top Year Tabs
   function renderYearTabs() {
     const tabsContainer = document.getElementById('year-tabs-container');
     if (!tabsContainer) return;
@@ -62,6 +67,13 @@
         btn.classList.add('active');
         activeYear = item.year;
         renderYearContent(activeYear);
+        
+        // Sync stats & cutoffs & handouts
+        renderStatsDocs(activeYear);
+        if (typeof window.switchHandoutYear === 'function') {
+          const pill = document.querySelector(`#handout-year-pills button[onclick*="${activeYear}"]`);
+          window.switchHandoutYear(activeYear, pill);
+        }
       });
       tabsContainer.appendChild(btn);
     });
@@ -135,29 +147,6 @@
       });
     }
 
-    // Render Stats Docs
-    const statsContainer = document.getElementById('year-stats-docs');
-    if (statsContainer) {
-      statsContainer.innerHTML = '';
-      if (yearObj.stats_docs && yearObj.stats_docs.length > 0) {
-        yearObj.stats_docs.forEach(doc => {
-          const item = document.createElement('a');
-          item.className = 'download-item';
-          item.href = resolveUrl(doc.file);
-          item.target = '_blank';
-          item.rel = 'noopener';
-          item.innerHTML = `
-            <div class="download-info">
-              <h5>📊 ${doc.title}</h5>
-              <p>官方公布資料・點擊於新視窗開啟</p>
-            </div>
-            <div class="btn-icon-download">↗</div>
-          `;
-          statsContainer.appendChild(item);
-        });
-      }
-    }
-
     // Render Cutoff Table if element exists
     renderCutoffTable(yearObj);
   }
@@ -165,7 +154,19 @@
   // 3. Render Cutoff Table for Selected Year
   function renderCutoffTable(yearObj) {
     const tableBody = document.getElementById('cutoff-table-tbody');
-    if (!tableBody) return;
+    const cutoffYearSpan = document.getElementById('cutoff-section-year');
+    if (cutoffYearSpan && yearObj) {
+      cutoffYearSpan.textContent = yearObj.year;
+    }
+    
+    // Update cutoff year pills if present
+    if (yearObj) {
+      document.querySelectorAll('#cutoff-year-pills .year-pill').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('onclick')?.includes(`${yearObj.year}`));
+      });
+    }
+
+    if (!tableBody || !yearObj) return;
 
     tableBody.innerHTML = '';
     yearObj.subjects.forEach(sub => {
@@ -186,6 +187,90 @@
       tableBody.appendChild(tr);
     });
   }
+
+  // 4. Render Stats Docs (Supports single year or 'all')
+  function renderStatsDocs(year) {
+    activeStatsYear = year;
+    const statsContainer = document.getElementById('year-stats-docs');
+    const statsYearSpan = document.getElementById('stats-section-year');
+    if (statsYearSpan) {
+      statsYearSpan.textContent = year === 'all' ? '歷屆全套' : year;
+    }
+
+    // Update stats year pills active status
+    document.querySelectorAll('#stats-year-pills .year-pill').forEach(b => {
+      if (year === 'all') {
+        b.classList.toggle('active', b.getAttribute('onclick')?.includes("'all'"));
+      } else {
+        b.classList.toggle('active', b.getAttribute('onclick')?.includes(`${year}`));
+      }
+    });
+
+    if (!statsContainer || !examData || !examData.years) return;
+
+    statsContainer.innerHTML = '';
+
+    let docsToRender = [];
+    if (year === 'all') {
+      examData.years.forEach(y => {
+        if (y.stats_docs) {
+          y.stats_docs.forEach(doc => {
+            docsToRender.push({ ...doc, year: y.year });
+          });
+        }
+      });
+    } else {
+      const yearObj = examData.years.find(y => y.year == year);
+      if (yearObj && yearObj.stats_docs) {
+        yearObj.stats_docs.forEach(doc => {
+          docsToRender.push({ ...doc, year: yearObj.year });
+        });
+      }
+    }
+
+    if (docsToRender.length === 0) {
+      statsContainer.innerHTML = '<p style="color: #64748b; padding: 20px;">尚無相關統計資料。</p>';
+      return;
+    }
+
+    docsToRender.forEach(doc => {
+      const item = document.createElement('a');
+      item.className = 'download-item';
+      item.href = resolveUrl(doc.file);
+      item.target = '_blank';
+      item.rel = 'noopener';
+      
+      const badgeHtml = `
+        <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 5px;">
+          <span style="background: #2b4c7e; color: #ffffff; font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; font-weight: 700;">${doc.year} 年</span>
+          ${doc.tag ? `<span style="background: #e2e8f0; color: #334e68; font-size: 0.72rem; padding: 2px 6px; border-radius: 4px; font-weight: 600;">${doc.tag}</span>` : ''}
+        </div>
+      `;
+
+      item.innerHTML = `
+        <div class="download-info">
+          ${badgeHtml}
+          <h5>📊 ${doc.title}</h5>
+          <p>${doc.desc || '心測中心官方發布資料・點擊於新視窗開啟'}</p>
+        </div>
+        <div class="btn-icon-download">↗</div>
+      `;
+      statsContainer.appendChild(item);
+    });
+  }
+
+  // Global window functions for pill clicks
+  window.switchStatsYear = function(year, btn) {
+    renderStatsDocs(year);
+  };
+
+  window.switchCutoffYear = function(year, btn) {
+    if (!examData || !examData.years) return;
+    const yearObj = examData.years.find(y => y.year == year);
+    if (yearObj) {
+      renderCutoffTable(yearObj);
+    }
+  };
 
   // Auto initialize on DOM ready
   document.addEventListener('DOMContentLoaded', loadData);

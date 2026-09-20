@@ -146,27 +146,69 @@ const EXAM_DATA = window.EMBEDDED_EXAM_DATA = {
       "stats_docs": [
         {
           "title": "115年各科等級加標示與答對題數對照表",
-          "file": "https://drive.google.com/file/d/1PpG5c7rijz5guz6T1XwkeIRwtrV3f0uL/view?usp=drive_link"
+          "file": "https://drive.google.com/file/d/1PpG5c7rijz5guz6T1XwkeIRwtrV3f0uL/view?usp=drive_link",
+          "tag": "核心標準",
+          "desc": "各科 A++、A+、A、B++、B+、B、C 答對題數與加權級距切點"
         },
         {
           "title": "115年各科等級加標示人數百分比統計表",
-          "file": "https://drive.google.com/file/d/1Cosscfa4fXDuPmmjW5jKawtPr0yhPFdL/view?usp=drive_link"
+          "file": "https://drive.google.com/file/d/1Cosscfa4fXDuPmmjW5jKawtPr0yhPFdL/view?usp=drive_link",
+          "tag": "常態分佈",
+          "desc": "全國考生在各科目精熟、基礎、待加強等級人數與累計百分比"
         },
         {
-          "title": "115年各科各題通過率統計",
-          "file": "https://drive.google.com/file/d/18wrAaXAakCwra1WXdS1HPxLDvPBlyp_S/view?usp=drive_link"
+          "title": "115年各科各題通過率統計表",
+          "file": "https://drive.google.com/file/d/18wrAaXAakCwra1WXdS1HPxLDvPBlyp_S/view?usp=drive_link",
+          "tag": "難度指標",
+          "desc": "國英數自社全卷每一道題目的全國平均答對率（通過率P值）"
         },
         {
-          "title": "115年各科各題鑑別度統計",
-          "file": "https://drive.google.com/file/d/1460OoCkq7sKCUc1UqyQY01kJR3agO2eA/view?usp=drive_link"
+          "title": "115年各科各題鑑別度統計表",
+          "file": "https://drive.google.com/file/d/1460OoCkq7sKCUc1UqyQY01kJR3agO2eA/view?usp=drive_link",
+          "tag": "鑑別指標",
+          "desc": "高分組與低分組答對率差值（鑑別度D值），掌握衝A關鍵題"
         },
         {
-          "title": "115年寫作測驗各級分人數百分比",
-          "file": "https://drive.google.com/file/d/1YUzK5n4Dju_PMNumnuUtnIFNiWeWBiS7/view?usp=drive_link"
+          "title": "115年各科計分與閱卷結果說明",
+          "file": "https://drive.google.com/file/d/1z8t9ynUqMNzlHBbdaYjnRakUMLK0LIiX/view?usp=drive_link",
+          "tag": "官方發布",
+          "desc": "心測中心官方計分原則、英語聽閱讀加權與數學非選計分辦法"
+        },
+        {
+          "title": "115年各等級類別暨寫作測驗級分人數百分比",
+          "file": "https://drive.google.com/file/d/19L4yeX62fwJEJSJXGnfNPSLmSa7VldNL/view?usp=drive_link",
+          "tag": "交叉分析",
+          "desc": "各能力等級考生在寫作測驗 1~6 級分的分佈交叉比對"
+        },
+        {
+          "title": "115年寫作測驗各級分人數百分比統計表",
+          "file": "https://drive.google.com/file/d/1YUzK5n4Dju_PMNumnuUtnIFNiWeWBiS7/view?usp=drive_link",
+          "tag": "寫作大數據",
+          "desc": "全國考生寫作測驗 6 級分、5 級分至 1 級分人數累計百分比"
+        },
+        {
+          "title": "115年數學非選擇題各級分人數百分比統計表",
+          "file": "https://drive.google.com/file/d/1i7RqcdQ5btxWk3RM7G-vsyvWdsGJmapF/view?usp=drive_link",
+          "tag": "數學非選",
+          "desc": "數學非選第一題與第二題 3分、2分、1分、0分的全國得分率分佈"
         },
         {
           "title": "115年試題疑義新聞稿暨釋復內容",
-          "file": "https://cap.rcpet.edu.tw/115doubt.html"
+          "file": "https://cap.rcpet.edu.tw/115doubt.html",
+          "tag": "試題爭點",
+          "desc": "各界針對 115 試題疑義申訴之官方正式釋復報告與題意定案"
+        },
+        {
+          "title": "115年國中教育會考各科試題分析（全套資料夾）",
+          "file": "https://drive.google.com/drive/folders/1jGFuoXvMF7kiCdIO63SDayH2dC4C5WEO?usp=drive_link",
+          "tag": "深度分析",
+          "desc": "心測中心研究員針對各科命題思維、學生答題迷思概念之專題報告"
+        },
+        {
+          "title": "115年國中教育會考試題說明與注意事項",
+          "file": "https://drive.google.com/file/d/1uCImBYbMxkme8DxV2Wj5RdxBnNgTeD5n/view?usp=drive_link",
+          "tag": "簡章規範",
+          "desc": "會考各科題本說明、答題規範與非選擇題作答注意事項"
         }
       ],
       "has_handouts": true
@@ -283,23 +325,69 @@ const EXAM_DATA = window.EMBEDDED_EXAM_DATA = {
       "stats_docs": [
         {
           "title": "114年各科能力等級加標示與答對題數對照表",
-          "file": "https://drive.google.com/file/d/1ath-dpjr8pS9qG9MBgkmCrhjcGN_SRqX/view?usp=drive_link"
+          "file": "https://drive.google.com/file/d/1ath-dpjr8pS9qG9MBgkmCrhjcGN_SRqX/view?usp=drive_link",
+          "tag": "核心標準",
+          "desc": "各科 A++、A+、A、B++、B+、B、C 答對題數與加權級距切點"
         },
         {
           "title": "114年各科等級加標示人數百分比統計表",
-          "file": "https://drive.google.com/file/d/1HRUm5-qi-DR6FO5ofUQsEgKvlBOtyW0w/view?usp=drive_link"
+          "file": "https://drive.google.com/file/d/1HRUm5-qi-DR6FO5ofUQsEgKvlBOtyW0w/view?usp=drive_link",
+          "tag": "常態分佈",
+          "desc": "全國考生在各科目精熟、基礎、待加強等級人數與累計百分比"
         },
         {
-          "title": "114年各題通過率統計",
-          "file": "https://drive.google.com/file/d/1hwzaBmzmD0sYPw4q1KVCBW6Vq5OviriH/view?usp=drive_link"
+          "title": "114年各科各題通過率統計表",
+          "file": "https://drive.google.com/file/d/1hwzaBmzmD0sYPw4q1KVCBW6Vq5OviriH/view?usp=drive_link",
+          "tag": "難度指標",
+          "desc": "國英數自社全卷每一道題目的全國平均答對率（通過率P值）"
         },
         {
-          "title": "114年各題鑑別度統計",
-          "file": "https://drive.google.com/file/d/1deYp06C-xErJpmPGVHJ6T7hptfEkkJ70/view?usp=drive_link"
+          "title": "114年各科各題鑑別度統計表",
+          "file": "https://drive.google.com/file/d/1deYp06C-xErJpmPGVHJ6T7hptfEkkJ70/view?usp=drive_link",
+          "tag": "鑑別指標",
+          "desc": "高分組與低分組答對率差值（鑑別度D值），掌握衝A關鍵題"
+        },
+        {
+          "title": "114年各科計分與閱卷結果說明",
+          "file": "https://drive.google.com/file/d/1YMlxyY9RhJj4GnqiKzigwRXBGf3kSV6F/view?usp=drive_link",
+          "tag": "官方發布",
+          "desc": "心測中心官方計分原則、英語聽閱讀加權與數學非選計分辦法"
+        },
+        {
+          "title": "114年各等級類別暨寫作測驗級分人數百分比",
+          "file": "https://drive.google.com/file/d/1rlvHxakydc-EqMAaUS4PY0LOa9UdkKPj/view?usp=drive_link",
+          "tag": "交叉分析",
+          "desc": "各能力等級考生在寫作測驗 1~6 級分的分佈交叉比對"
+        },
+        {
+          "title": "114年寫作測驗各級分人數百分比統計表",
+          "file": "https://drive.google.com/file/d/1h6Z-vm-3R3_oq7Lg3KNpqZjQyiDp7KPw/view?usp=drive_link",
+          "tag": "寫作大數據",
+          "desc": "全國考生寫作測驗 6 級分、5 級分至 1 級分人數累計百分比"
+        },
+        {
+          "title": "114年數學非選擇題各級分人數百分比統計表",
+          "file": "https://drive.google.com/file/d/1NMloL9VhJa-5VOuiEt7mHw9i4uBnJza8/view?usp=drive_link",
+          "tag": "數學非選",
+          "desc": "數學非選第一題與第二題 3分、2分、1分、0分的全國得分率分佈"
         },
         {
           "title": "114年試題疑義新聞稿暨釋覆內容",
-          "file": "https://cap.rcpet.edu.tw/114doubt.html"
+          "file": "https://cap.rcpet.edu.tw/114doubt.html",
+          "tag": "試題爭點",
+          "desc": "各界針對 114 試題疑義申訴之官方正式釋復報告與題意定案"
+        },
+        {
+          "title": "114年國中教育會考各科試題分析（全套資料夾）",
+          "file": "https://drive.google.com/drive/folders/1diphWMmFmHVSsLzkX8hvMgTHfbtfvc5f?usp=drive_link",
+          "tag": "深度分析",
+          "desc": "心測中心研究員針對各科命題思維、學生答題迷思概念之專題報告"
+        },
+        {
+          "title": "114年國中教育會考試題說明與注意事項",
+          "file": "https://drive.google.com/file/d/11HW_piDqYm9Gq6qo-BSONsxZ-jgTri4h/view?usp=drive_link",
+          "tag": "簡章規範",
+          "desc": "會考各科題本說明、答題規範與非選擇題作答注意事項"
         }
       ],
       "has_handouts": true
@@ -416,19 +504,69 @@ const EXAM_DATA = window.EMBEDDED_EXAM_DATA = {
       "stats_docs": [
         {
           "title": "113年各科能力等級加標示與答對題數對照表",
-          "file": "https://drive.google.com/file/d/1t0f7uXr1iunZ7wPXCwhsiKhF9Rflr7tE/view?usp=drive_link"
+          "file": "https://drive.google.com/file/d/1t0f7uXr1iunZ7wPXCwhsiKhF9Rflr7tE/view?usp=drive_link",
+          "tag": "核心標準",
+          "desc": "各科 A++、A+、A、B++、B+、B、C 答對題數與加權級距切點"
         },
         {
-          "title": "113年各科各題通過率統計",
-          "file": "https://drive.google.com/file/d/1NpFiGL8A6KVR-Hyn_M7u1JhvXNOTqPOr/view?usp=drive_link"
+          "title": "113年各科等級加標示人數百分比統計表",
+          "file": "https://drive.google.com/file/d/1psTPcUQ_BpJbIFvPV7Hj4iaQYZJibrt7/view?usp=drive_link",
+          "tag": "常態分佈",
+          "desc": "全國考生在各科目精熟、基礎、待加強等級人數與累計百分比"
         },
         {
-          "title": "113年各科各題鑑別度統計",
-          "file": "https://drive.google.com/file/d/1YOdEP_E1_m2AdpsFk5RnPhDndDrGJ--r/view?usp=drive_link"
+          "title": "113年各科各題通過率統計表",
+          "file": "https://drive.google.com/file/d/1NpFiGL8A6KVR-Hyn_M7u1JhvXNOTqPOr/view?usp=drive_link",
+          "tag": "難度指標",
+          "desc": "國英數自社全卷每一道題目的全國平均答對率（通過率P值）"
+        },
+        {
+          "title": "113年各科各題鑑別度統計表",
+          "file": "https://drive.google.com/file/d/1YOdEP_E1_m2AdpsFk5RnPhDndDrGJ--r/view?usp=drive_link",
+          "tag": "鑑別指標",
+          "desc": "高分組與低分組答對率差值（鑑別度D值），掌握衝A關鍵題"
+        },
+        {
+          "title": "113年各科計分與閱卷結果說明",
+          "file": "https://drive.google.com/file/d/11D_cR5mCsiAgIvCXCN-k7N6pYhNrHi51/view?usp=drive_link",
+          "tag": "官方發布",
+          "desc": "心測中心官方計分原則、英語聽閱讀加權與數學非選計分辦法"
+        },
+        {
+          "title": "113年各等級類別暨寫作測驗級分人數百分比",
+          "file": "https://drive.google.com/file/d/1A_N0778O5ldSG6BztwvjgBFFg2i0RR0F/view?usp=drive_link",
+          "tag": "交叉分析",
+          "desc": "各能力等級考生在寫作測驗 1~6 級分的分佈交叉比對"
+        },
+        {
+          "title": "113年寫作測驗各級分人數百分比統計表",
+          "file": "https://drive.google.com/file/d/1Ot7Uvd1zNc7_WulyvarzGT9JOr9Apx8l/view?usp=drive_link",
+          "tag": "寫作大數據",
+          "desc": "全國考生寫作測驗 6 級分、5 級分至 1 級分人數累計百分比"
+        },
+        {
+          "title": "113年數學非選擇題各級分人數百分比統計表",
+          "file": "https://drive.google.com/file/d/1QG4efOK4_M7hhm_UDpjh1JU-6ZfT77D5/view?usp=drive_link",
+          "tag": "數學非選",
+          "desc": "數學非選第一題與第二題 3分、2分、1分、0分的全國得分率分佈"
         },
         {
           "title": "113年試題疑義新聞稿暨釋覆內容",
-          "file": "https://cap.rcpet.edu.tw/113doubt.html"
+          "file": "https://cap.rcpet.edu.tw/113doubt.html",
+          "tag": "試題爭點",
+          "desc": "各界針對 113 試題疑義申訴之官方正式釋復報告與題意定案"
+        },
+        {
+          "title": "113年國中教育會考各科試題分析（全套資料夾）",
+          "file": "https://drive.google.com/drive/folders/1f39LUoFXo4ygPCH3alu5j80K4TSpqsfl?usp=drive_link",
+          "tag": "深度分析",
+          "desc": "心測中心研究員針對各科命題思維、學生答題迷思概念之專題報告"
+        },
+        {
+          "title": "113年國中教育會考試題說明與注意事項",
+          "file": "https://drive.google.com/file/d/1YzrMP9JN6st0fcL5Vg_D0J75wUSBHOpW/view?usp=drive_link",
+          "tag": "簡章規範",
+          "desc": "會考各科題本說明、答題規範與非選擇題作答注意事項"
         }
       ],
       "has_handouts": true

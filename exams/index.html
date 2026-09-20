@@ -82,8 +82,13 @@
     <section class="section-block">
       <div class="section-header">
         <div>
-          <h3 class="section-title">📊 該年度各科等級加標示與答對題數對照表</h3>
+          <h3 class="section-title">📊 <span id="cutoff-section-year">115</span> 年各科等級加標示與答對題數對照表</h3>
           <p class="section-subtitle">A++、A+、A（精熟）、B++、B+、B（基礎）、C（待加強）門檻</p>
+        </div>
+        <div class="year-pills" id="cutoff-year-pills">
+          <button class="year-pill active" onclick="switchCutoffYear(115, this)">115 年</button>
+          <button class="year-pill" onclick="switchCutoffYear(114, this)">114 年</button>
+          <button class="year-pill" onclick="switchCutoffYear(113, this)">113 年</button>
         </div>
       </div>
 
@@ -112,8 +117,14 @@
     <section class="section-block">
       <div class="section-header">
         <div>
-          <h3 class="section-title">📥 官方統計數據與試題報告</h3>
-          <p class="section-subtitle">心測中心公布之各題通過率、鑑別度與計分說明報告</p>
+          <h3 class="section-title">📥 <span id="stats-section-year">115</span> 年官方統計數據與試題報告</h3>
+          <p class="section-subtitle">心測中心公布之各題通過率、鑑別度、答對題數對照與計分說明報告</p>
+        </div>
+        <div class="year-pills" id="stats-year-pills">
+          <button class="year-pill active" onclick="switchStatsYear(115, this)">115 年</button>
+          <button class="year-pill" onclick="switchStatsYear(114, this)">114 年</button>
+          <button class="year-pill" onclick="switchStatsYear(113, this)">113 年</button>
+          <button class="year-pill" onclick="switchStatsYear('all', this)">📂 全部歷屆年度</button>
         </div>
       </div>
 
