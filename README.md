@@ -12,7 +12,7 @@
   <b>專為國中教育會考（CAP）應屆國三考生、家長與指導教師打造之「歷屆會考題庫全收錄平台」<br>獨創自製「雙冊分裝版（純題目實戰本 ✕ 名師秒殺詳解手冊）」5B 衝 A 實戰教材系統</b>
 </p>
 
-[🌐 線上立即造訪衝刺網](https://flin1009.github.io/scjh/) • [📚 歷屆題庫總覽](https://flin1009.github.io/scjh/exams/index.html) • [📅 國三複習課表](https://flin1009.github.io/scjh/schedule.html) • [❓ 常見問題](#-常見問題-faq)
+[🌐 線上立即造訪衝刺網](https://flin1009.github.io/scjh/) • [📚 歷屆題庫總覽](https://flin1009.github.io/scjh/exams/index.html) • [📅 國三複習課表](https://flin1009.github.io/scjh/schedule.html) • [❓ 常見問題](#-常見問題-faq) • [🇺🇸 English Docs](README.en.md)
 
 </div>
 
@@ -133,6 +133,20 @@ rcpet, education-resources
 * **專案維護**：[flin1009](https://github.com/flin1009)
 * **專案使命**：致力於推動國中教育會考備考資源開源化、數位普及化與公益化，降低教育資源城鄉差距。
 * **參與貢獻**：歡迎公私立國中教師、補教先進與開源愛好者提出 [Issue](https://github.com/flin1009/scjh/issues) 或 [Pull Request](https://github.com/flin1009/scjh/pulls)，共同完善這套屬於全體考生的數位備考智庫！
+
+---
+
+## 🌐 English Architecture Overview
+
+For international educators, developers, and researchers interested in Taiwan's standardized educational testing system, an extensive English documentation is available:
+
+👉 **[Read the Full English Architecture Documentation (README.en.md)](README.en.md)**
+
+* **Project Scope**: Comprehensive test bank & printable curriculum for Taiwan's Comprehensive Assessment Program (CAP / 國中教育會考), covering 5 cohorts (111–115 / 2022–2026) across 6 tested subjects (30 full handouts).
+* **Key Innovations**:
+  * **Dual-Booklet Detachable System**: Clean mock exam booklets followed by rapid-grading expert solution manuals with a 60-second Quick Answer Key.
+  * **Psychometric Big Data**: Empirical pass rates ($P$-value) and item discrimination indices ($D$-value) from RCPET at National Taiwan Normal University.
+  * **Zero-Dependency Print-CSS Engine**: Pure HTML5/CSS3 with precision A4 duplex pagination and $\LaTeX$ mathematical typography via MathJax.
 
 ---
 
